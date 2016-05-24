@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EntregaArea">
+  <Propriedades>
+    <Propriedade Nome="Nome"		      Tipo="texto"	Tamanho="50"	Nulo="False"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

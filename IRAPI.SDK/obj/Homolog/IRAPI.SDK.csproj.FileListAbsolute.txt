@@ -1,0 +1,11 @@
+C:\Git\Code\IRAPI.SDK\bin\Homolog\IRAPI.SDK.dll
+C:\Git\Code\IRAPI.SDK\bin\Homolog\IRAPI.SDK.pdb
+C:\Git\Code\IRAPI.SDK\bin\Homolog\Newtonsoft.Json.dll
+C:\Git\Code\IRAPI.SDK\bin\Homolog\RestSharp.dll
+C:\Git\Code\IRAPI.SDK\bin\Homolog\System.Net.Http.Formatting.dll
+C:\Git\Code\IRAPI.SDK\bin\Homolog\Newtonsoft.Json.xml
+C:\Git\Code\IRAPI.SDK\bin\Homolog\RestSharp.xml
+C:\Git\Code\IRAPI.SDK\bin\Homolog\System.Net.Http.Formatting.xml
+C:\Git\Code\IRAPI.SDK\obj\Homolog\IRAPI.SDK.csprojResolveAssemblyReference.cache
+C:\Git\Code\IRAPI.SDK\obj\Homolog\IRAPI.SDK.dll
+C:\Git\Code\IRAPI.SDK\obj\Homolog\IRAPI.SDK.pdb

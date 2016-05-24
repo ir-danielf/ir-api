@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="SerieItem">
+  <Propriedades>
+    <Propriedade Nome="EventoID"			Tipo="int"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="ApresentacaoID"		Tipo="int"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="SetorID"				Tipo="int"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PrecoID"				Tipo="int"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="SerieID"			Tipo="int"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Promocional" Tipo="bool" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="QuantidadePorPromocional" Tipo="int"  Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>

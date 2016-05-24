@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="DiasSemana">
+  <Propriedades>
+    <Propriedade Nome="ControleEntregaID"		      Tipo="int"	Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="DiaDaSemana"		      Tipo="int"	Nulo="False"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

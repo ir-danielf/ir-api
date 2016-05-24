@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoTaxaEntrega">
+  <Propriedades>
+    <Propriedade Nome="EventoID"				      Tipo="int"			Nulo="False"	Acesso="LE" />
+    <Propriedade Nome="EntregaID"					Tipo="int"			Nulo="False"	Acesso="LE" />
+    <Propriedade Nome="DetalhesEntrega"			Tipo="texto"	Tamanho="2000"	Nulo="True"	Acesso="LE"								/>
+    <Propriedade Nome="DiasAdicionais"    Tipo="int"    Nulo="True" />
+  </Propriedades>
+</Classe>
+

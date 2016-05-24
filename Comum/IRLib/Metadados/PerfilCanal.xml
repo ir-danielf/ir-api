@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PerfilCanal">
+    <Propriedades>
+        <Propriedade Nome="PerfilID"	Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="CanalID"		Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="True"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Logins"	Tipo="DataTable"><!-- Fabio -->
+    		Devolve uma lista de logins dos usuarios do canal e do perfil passado como parametro.
+    		<Parametros>
+    			<Parametro Nome="perfilID" Tipo="int"/>
+    			<Parametro Nome="canalID" Tipo="int"/>
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

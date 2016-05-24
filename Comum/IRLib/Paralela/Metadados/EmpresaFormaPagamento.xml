@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Empresa">
+  <Propriedades>
+    <Propriedade Nome="ID"			Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="EmpresaID"			Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="FormaPagamentoID"			Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Dias"			Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TaxaAdm"			Tipo="decimal"	Tamanho="12" Decimal="2"/>
+    <Propriedade Nome="IR"		      Tipo="booleano"	Tamanho="1"		Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

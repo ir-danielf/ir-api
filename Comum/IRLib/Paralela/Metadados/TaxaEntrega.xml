@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="TaxaEntrega">
+  <Propriedades>
+    <Propriedade Nome="RegiaoID"	    Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Nome"		      Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Valor"		      Tipo="decimal"					Nulo="True"	Acesso="LE"  Tamanho="8" Decimal="2" />
+    <Propriedade Nome="Prazo"		      Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Disponivel"	  Tipo="booleano"					Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Obs"			      Tipo="memo"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Estado"		    Tipo="texto"	Tamanho="2"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ProcedimentoEntrega"		Tipo="texto"	Tamanho="2000"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="DiasTriagem"		Tipo="int"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Padrao"        Tipo="booleano" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="EnviaAlerta"   Tipo="booleano" Nulo="True"/>
+    <Propriedade Nome="PermitirImpressaoInternet"   Tipo="booleano"   Nulo="False" />
+  </Propriedades>
+</Classe>

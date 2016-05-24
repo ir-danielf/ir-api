@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="BilheteriaDados">
+    <Propriedades>
+		<Propriedade Nome="Tabela"		Tipo="inteiro"		Nulo="False"		Acesso="LE" />
+        <Propriedade Nome="TabelaID"	Tipo="inteiro"		Nulo="False"		Acesso="LE" /> <!-- ID do canal para controle -->
+        <Propriedade Nome="CanalID"		Tipo="inteiro"		Nulo="False"		Acesso="LE" /> <!-- ID da tabela em questão. -->
+        <Propriedade Nome="TimeStamp"	Tipo="datahora"		Nulo="False"		Acesso="LE" />
+        <Propriedade Nome="Excluido"	Tipo="bool"			Nulo="False"		Acesso="LE" /> <!-- Registro excluído do buffer -->
+    </Propriedades>
+    <Enums>
+		<Enum Nome="Tabelas">
+			<EnumItems>
+				<EnumItem Nome="Local"					Value="0" />
+				<EnumItem Nome="Evento"					Value="1" />
+				<EnumItem Nome="Apresentacao"			Value="2" />
+				<EnumItem Nome="Setor"					Value="3" />
+				<EnumItem Nome="Preco"					Value="4" />
+				<EnumItem Nome="CanalFormaPagamento"	Value="5" />
+				<EnumItem Nome="CanalPreco"				Value="6" />
+				<EnumItem Nome="Cortesia"				Value="7" />
+				<EnumItem Nome="CanalPacote"			Value="8" />
+				<EnumItem Nome="Pacote"					Value="9" />
+				<EnumItem Nome="PacoteItem"				Value="10" />
+				<EnumItem Nome="TaxaEntrega"			Value="11" />
+			</EnumItems>
+		</Enum>
+    </Enums>
+</Classe>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EntregaAreaCep">
+  <Propriedades>
+    <Propriedade Nome="EntregaAreaID" Tipo="int" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="CepInicial" Tipo="texto"	Tamanho="8" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="CepFinal" Tipo="texto"	Tamanho="8" Nulo="False" Acesso="LE"/>
+  </Propriedades>
+</Classe>

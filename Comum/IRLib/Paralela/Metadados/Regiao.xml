@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Regiao">
+    <Propriedades>
+        <Propriedade Nome="Nome"		Tipo="texto"	Tamanho="20"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="Obs"			Tipo="memo"						Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Taxas" Tipo="DataTable"><!-- Fabio -->
+    		Obter as taxas de entrega dessa regiao
+    	</Metodo>
+    	<Metodo Nome="Todas" Tipo="DataTable"><!-- Fabio -->
+    		Obter todas as regioes
+    	</Metodo>
+    </Metodos>
+</Classe>

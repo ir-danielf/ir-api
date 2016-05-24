@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://impl.net.marketdata.com.br/" xmlns:soaphttp="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" name="IngressoRapidoWSImplService" targetNamespace="http://impl.net.marketdata.com.br/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <xsd:import schemaLocation="IngressoRapidoWSImplPort?WSDL&amp;interface=Client&amp;part=ingressorapidowsimpl_schema1.xsd" namespace="http://impl.net.marketdata.com.br/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="validaCPFResponse">
+    <wsdl:part name="parameters" element="tns:validaCPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="validaCPF">
+    <wsdl:part name="parameters" element="tns:validaCPF" />
+  </wsdl:message>
+  <wsdl:portType name="IngressoRapidoWSEndPoint">
+    <wsdl:operation name="validaCPF">
+      <wsdl:input name="validaCPF" message="tns:validaCPF" />
+      <wsdl:output name="validaCPFResponse" message="tns:validaCPFResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="IngressoRapidoWSImplServiceSoapBinding" type="tns:IngressoRapidoWSEndPoint">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validaCPF">
+      <soap12:operation soapAction="urn:ValidaCPF" style="document" />
+      <wsdl:input name="validaCPF">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="validaCPFResponse">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="IngressoRapidoWSImplService">
+    <wsdl:port name="IngressoRapidoWSImplPort" binding="tns:IngressoRapidoWSImplServiceSoapBinding">
+      <soap12:address location="http://RCA74-DEV:8089/net-ws/services/IngressoRapidoWSImplPort" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

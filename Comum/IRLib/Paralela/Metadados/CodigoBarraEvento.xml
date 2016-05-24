@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CodigoBarraEvento">
+  <Propriedades>
+    <Propriedade Nome="ApresentacaoSetorID"		Tipo="int"	  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Codigo"	      Tipo="texto"  Tamanho="12"	Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="DataInclusao"	      Tipo="datahora" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Status"	      Tipo="booleano" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Utilizado"     Tipo="booleano" Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="EventoID"     Tipo="int" Nulo="True"  Acesso="LE"/>
+
+  </Propriedades>
+</Classe>
+

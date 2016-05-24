@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Agregados">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"	Tipo="int"	Nulo="False"	Acesso="LE" />
+    <Propriedade Nome="Nome"	Tipo="texto"	Tamanho="100"	Nulo="False"		Acesso="LE" />
+    <Propriedade Nome="GrauParentesco"	Tipo="int"	Nulo="False"		Acesso="LE" />
+    <Propriedade Nome="DataNascimento"		    Tipo="data"		Nulo="false"		Acesso="LE" />
+    <Propriedade Nome="Profissao"	Tipo="texto"	Tamanho="30"	Nulo="true"		Acesso="LE" />
+    <Propriedade Nome="SituacaoProfissionalID" Tipo="int" Nulo="true" />
+    <Propriedade Nome="Email" Tipo="texto" Nulo="true" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

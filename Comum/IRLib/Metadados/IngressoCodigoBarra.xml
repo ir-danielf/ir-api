@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="IngressoCodigoBarra">
+  <Propriedades>
+    <Propriedade Nome="EventoID"				Tipo="int"					/>
+    <Propriedade Nome="CodigoBarra"				Tipo="texto" Tamanho="18"	/>
+    <Propriedade Nome="BlackList"				Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TimeStamp"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

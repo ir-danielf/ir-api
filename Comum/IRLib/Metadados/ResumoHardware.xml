@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ResumoHardware">
+    <Propriedades>
+		<Propriedade Nome="Resolucao"		Tipo="texto"	Tamanho="12"	Nulo="True"	Acesso="LE"/>
+		<Propriedade Nome="VersaoOS"		Tipo="texto"	Tamanho="18"	Nulo="True"	Acesso="LE"/>
+		<Propriedade Nome="VersaoFramework"		Tipo="texto"	Tamanho="5"	Nulo="True"	Acesso="LE"/>
+		<Propriedade Nome="LoginUsuario"		Tipo="texto"	Tamanho="25"	Nulo="True"	Acesso="LE"/>
+		<Propriedade Nome="IDMaquina"		Tipo="texto"	Tamanho="40"	Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+</Classe>
+

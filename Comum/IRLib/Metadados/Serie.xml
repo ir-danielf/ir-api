@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Serie">
+  <Propriedades>
+    <Propriedade Nome="Titulo"      Tipo="texto"  Tamanhp="50"  Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="Nome"				Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="RegionalID"    Tipo="int"      Nulo="True"/>
+    <Propriedade Nome="LocalID"				Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="QuantidadeMinimaGrupo"    Tipo="int"    Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="QuantidadeMaximaGrupo"    Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="QuantidadeMinimaApresentacao"    Tipo="int"    Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="QuantidadeMaximaApresentacao"    Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="QuantidadeMinimaIngressosPorApresentacao"    Tipo="int"    Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="QuantidadeMaximaIngressosPorApresentacao"    Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="Descricao"   Tipo="texto"    Tamanho="300" Nulo="True"   Acesso="LE"/>
+    <Propriedade Nome="Regras"      Tipo="texto"    Tamanho="2000"  Nulo="True"   Acesso="LE"/>
+    <Propriedade Nome="Tipo"    Tipo="char"   Tamanho="1"   Nulo="True" Acesso="LE"/>
+  </Propriedades>
+
+</Classe>

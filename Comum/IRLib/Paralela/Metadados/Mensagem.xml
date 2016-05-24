@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Mensagem">
+  <Propriedades>
+    <Propriedade Nome="UsuarioID"		Tipo="int"			Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Mensagem"    Tipo="texto" Tamanho="600"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="Titulo"    Tipo="texto" Tamanho="50"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="Prioriedade" Tipo="int"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="PermanecerAte"   Tipo="datahora" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AlteradoEm"   Tipo="datahora" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Ativo"   Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="EnviadoEm" Tipo="datahora" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="IniciarEm"  Tipo="datahora" Nulo="True" Acesso="LE"/>
+  </Propriedades>
+</Classe>
+

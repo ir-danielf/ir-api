@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstoqueAjusteMotivo">
+    <Propriedades>
+        <Propriedade	Nome="EmpresaID"		Tipo="int"					Nulo="True"		Acesso="LE"/>
+        <Propriedade	Nome="Nome"				Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade	Nome="Descricao"		Tipo="memo"						Nulo="True"		Acesso="LE"/>
+    </Propriedades>
+</Classe>

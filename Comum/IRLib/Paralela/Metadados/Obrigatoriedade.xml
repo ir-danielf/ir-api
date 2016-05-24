@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Obrigatoriedade">
+  <Propriedades>
+    <Propriedade Nome="Nome"				            Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="RG"					            Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CPF"					            Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="Telefone"			          Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="TelefoneComercial"	      Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="Celular"				          Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="DataNascimento"		      Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="Email"				            Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CEPEntrega"					    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="EnderecoEntrega"			    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="NumeroEntrega"				    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="ComplementoEntrega"			Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="BairroEntrega"				    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CidadeEntrega"				    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="EstadoEntrega"				    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CEPCliente"			        Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="EnderecoCliente"	        Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="NumeroCliente"		        Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="ComplementoCliente"	    Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="BairroCliente"		        Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CidadeCliente"		        Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="EstadoCliente"		        Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="NomeEntrega"		          Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CPFEntrega"		          Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="RGEntrega"		            Tipo="bool"										            Acesso="LE" />
+    <Propriedade Nome="CPFResponsavel"          Tipo="bool"   Acesso="LE" />
+    <Propriedade Nome="NomeResponsavel"          Tipo="bool"   Acesso="LE" />
+  
+  </Propriedades>
+</Classe>
+

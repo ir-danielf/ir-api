@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstoqueItem">
+    <Propriedades>
+        <Propriedade Nome="EstoqueID"			Tipo="int"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="ProdutoID"			Tipo="int"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="SaldoAtual"			Tipo="decimal"	Nulo="True"		Acesso="LE" Tamanho="12" Decimal="4"/>
+        <Propriedade Nome="Obs"					Tipo="memo"		Nulo="True"		Acesso="LE"/>     
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="AtualizarSaldo" Tipo="bool">
+			Atualizar saldo atual desse item de estoque
+    		<Parametros>
+    			<Parametro Nome="qtde" Tipo="decimal"/>
+    		</Parametros>			
+    	</Metodo>
+        <Metodo Nome="DefinirID" Tipo="int"><!-- Fabio -->
+			Retorna o ID do EstoqueItem, caso nao haja cria um novo Item de Estoque
+    	</Metodo>
+    </Metodos>
+</Classe>

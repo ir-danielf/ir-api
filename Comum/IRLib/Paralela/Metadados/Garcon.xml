@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Garcon">
+    <Propriedades>
+        <Propriedade Nome="EmpresaID"		Tipo="int"						Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Nome"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Sexo"			Tipo="texto"	Tamanho="1"		Nulo="True"		Acesso="LE"/>
+		<Propriedade Nome="Comissao"		Tipo="decimal"					Nulo="True"		Acesso="LE"		Tamanho="3" Decimal="1"/>
+        <Propriedade Nome="Endereco"		Tipo="texto"	Tamanho="70"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Cidade"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Estado"			Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="CEP"				Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="DDDTelefone"		Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Telefone"		Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Email"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Obs"				Tipo="memo"						Nulo="True"		Acesso="LE"/>
+    </Propriedades>
+</Classe>
+

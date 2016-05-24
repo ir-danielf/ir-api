@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Pacote">
+  <Propriedades>
+    <Propriedade Nome="LocalID"				Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Nome"				Tipo="texto"	Tamanho="30"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="VendaDistribuida"	Tipo="booleano"					Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Quantidade"			Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Obs"					Tipo="memo"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PermitirCancelamentoAvulso" Tipo="booleano" Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="NomenclaturaPacoteID"				Tipo="int"						Nulo="True"	Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="DistribuirCanaisIR" Tipo="bool">
+      <!-- Fabio -->
+      Distribui esse pacote nos canais da Ingresso Rapido (Devolve o sucesso da operação)
+    </Metodo>
+    <Metodo Nome="RemoverDistribuicaoCanaisIR" Tipo="bool">
+      <!-- Fabio -->
+      Remover a distribuicao desse pacote nos canais da Ingresso Rapido (Devolve o sucesso da operação)
+    </Metodo>
+    <Metodo Nome="QuantidadeVendido" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade de vendas nesse pacote. Se nao foi vendido nenhum pacote desse, retorna zero.
+    </Metodo>
+    <Metodo Nome="Valor" Tipo="decimal">
+      <!-- Fabio -->
+      Retorna o valor total do pacote
+    </Metodo>
+    <Metodo Nome="QuantidadeItens" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quatidade de itens do pacote
+    </Metodo>
+    <Metodo Nome="Itens" Tipo="DataTable">
+      <!-- Fabio -->
+      Obtem os itens do pacote
+    </Metodo>
+    <Metodo Nome="Canais" Tipo="DataTable">
+      <!-- Fabio -->
+      Obtem os canais que esse pacote possui
+    </Metodo>
+    <Metodo Nome="InfoVendido" Tipo="DataTable">
+      <!-- Fabio -->
+      Obtem informações (evento,apresentacao,setor...) de todos os ingressos desse pacote vendido passado como parametro
+      <Parametros>
+        <Parametro Nome="ingressosIDs" Tipo="int[]" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="InfoReservado" Tipo="DataTable">
+      <!-- Fabio -->
+      Obtem informações (evento,apresentacao,setor...) de todos os ingressos desse pacote reservado passado como parametro
+      <Parametros>
+        <Parametro Nome="ingressosIDs" Tipo="int[]" />
+        <Parametro Nome="lojaID"  Tipo="int" />
+      </Parametros>
+    </Metodo>
+  </Metodos>
+</Classe>

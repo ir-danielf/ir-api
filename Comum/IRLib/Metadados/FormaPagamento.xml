@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="FormaPagamento">
+  <Propriedades>
+    <Propriedade Nome="Nome"			Tipo="texto"	Tamanho="50"	Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Tipo"			Tipo="int"	 		Nulo="false" Acesso="LE" />
+    <Propriedade Nome="FormaPagamentoTipoID"			Tipo="int"	 		Nulo="false" Acesso="LE" />
+    <Propriedade Nome="Parcelas"	Tipo="int"	 		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="BandeiraID" Tipo="int" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Padrao"				Tipo="booleano"		Nulo="True"/>
+    <Propriedade Nome="TaxaAdministrativa"	Tipo="decimal"	 		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DiasRepasse"	Tipo="int"	 		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Ativo" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="RedePreferencial" Tipo="texto" Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todas"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todas as formas de pagamento (independente de empresa)
+    </Metodo>
+    <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+      FormaPagamento definidos pelos IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorIngressosPorFormaPagamento" Tipo="decimal">
+      Obter valores de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosPorFormaPagamento" Tipo="decimal">
+      Obter quantidade de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorConvenienciaPorFormaPagamento" Tipo="decimal">
+      Obter valor de Conveniência em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorEntregaPorFormaPagamento" Tipo="decimal">
+      Obter valor de Entrega em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+      Vendas Gerenciais por canais com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+      Com porcentagem
+      <Parametros>
+        <Parametro Nome="dataInicial" Tipo="string" />
+        <Parametro Nome="dataFinal" Tipo="string" />
+        <Parametro Nome="comCortesia" Tipo="bool" />
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+        <Parametro Nome="localID" Tipo="int" />
+        <Parametro Nome="empresaID" Tipo="int" />
+        <Parametro Nome="vendasCanal" Tipo="bool" />
+        <Parametro Nome="tipoLinha" Tipo="string" />
+        <Parametro Nome="disponivel" Tipo="bool" />
+        <Parametro Nome="empresaVendeIngressos" Tipo="bool" />
+        <Parametro Nome="empresaPromoveEventos" Tipo="bool" />
+      </Parametros>
+    </Metodo>
+  </Metodos>
+</Classe>
+

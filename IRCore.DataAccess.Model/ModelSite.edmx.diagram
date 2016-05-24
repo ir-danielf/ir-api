@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramID="324c0849ed7842a7960faeaf73c1c63e" Name="Diagram1" ZoomLevel="83" >
+        <EntityTypeShape EntityType="ModelSite.Apresentacao" Width="1.5" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="ModelSite.Cidade" Width="1.5" PointX="13" PointY="2" />
+        <EntityTypeShape EntityType="ModelSite.Estado" Width="1.5" PointX="10.75" PointY="2.125" />
+        <EntityTypeShape EntityType="ModelSite.Evento" Width="1.5" PointX="0.75" PointY="11.625" />
+        <EntityTypeShape EntityType="ModelSite.Setor" Width="1.5" PointX="5.25" PointY="12" />
+        <AssociationConnector Association="ModelSite.FK_Apresentacao_Evento" />
+        <AssociationConnector Association="ModelSite.FK_Setor_Apresentacao" />
+        <AssociationConnector Association="ModelSite.FK__Cidade__EstadoID__27F8EE98" />
+        <EntityTypeShape EntityType="ModelSite.Local" Width="1.5" PointX="9.75" PointY="11.875" />
+        <EntityTypeShape EntityType="ModelSite.Carrinho" Width="1.5" PointX="11.75" PointY="11.875" />
+        <EntityTypeShape EntityType="ModelSite.PontoVenda" Width="1.5" PointX="5.75" PointY="2.75" />
+        <EntityTypeShape EntityType="ModelSite.PontoVendaHorario" Width="1.5" PointX="8" PointY="3.625" />
+        <AssociationConnector Association="ModelSite.FK_PontoVendaHorario_PontoVenda" />
+        <EntityTypeShape EntityType="ModelSite.Login" Width="1.5" PointX="12.75" PointY="4.875" />
+        <EntityTypeShape EntityType="ModelSite.DestaqueConceitual" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="ModelSite.DestaqueConceitualRegiao" Width="1.5" PointX="3" PointY="2.375" />
+        <EntityTypeShape EntityType="ModelSite.DestaqueRegiao" Width="1.5" PointX="3" PointY="8.375" />
+        <EntityTypeShape EntityType="ModelSite.Regiao" Width="1.5" PointX="0.75" PointY="5.375" />
+        <AssociationConnector Association="ModelSite.FK_DestaqueConceitualRegiao_DestaqueConceitual" />
+        <AssociationConnector Association="ModelSite.FK_DestaqueConceitualRegiao_Regiao" />
+        <AssociationConnector Association="ModelSite.FK_DestaqueRegiao_Regiao" />
+        <EntityTypeShape EntityType="ModelSite.Tipo" Width="1.5" PointX="0.75" PointY="8.5" />
+        <EntityTypeShape EntityType="ModelSite.DuvidasFrequentes" Width="1.5" PointX="13.75" PointY="9.875" />
+        <EntityTypeShape EntityType="ModelSite.DestaqueLinkRegiao" Width="1.5" PointX="3" PointY="5.25" />
+        <AssociationConnector Association="ModelSite.FK_DestaqueLinkRegiao_Regiao" />
+        <AssociationConnector Association="ModelSite.FK_DestaqueLinkRegiao_Tipo" />
+        <EntityTypeShape EntityType="ModelSite.EventoSubtipo" Width="1.5" PointX="13.75" PointY="12.875" />
+        <EntityTypeShape EntityType="ModelSite.NewsAssinante" Width="1.5" PointX="3" PointY="16.5" />
+        <AssociationConnector Association="ModelSite.FK_NewsAssinante_Evento" />
+        <EntityTypeShape EntityType="ModelSite.PontoVendaFormaPgto" Width="1.5" PointX="5.75" PointY="8.375" />
+        <EntityTypeShape EntityType="ModelSite.PontoVendaXFormaPgto" Width="1.5" PointX="8" PointY="0.75" />
+        <AssociationConnector Association="ModelSite.FK_PontoVendaXFormaPgto_PontoVenda" />
+        <AssociationConnector Association="ModelSite.FK_PontoVendaXFormaPgto_PontoVendaFormaPgto" />
+        <EntityTypeShape EntityType="ModelSite.PrecoParceiroMidia" Width="1.5" PointX="7.5" PointY="12.125" />
+        <AssociationConnector Association="ModelSite.FK_PrecoParceiroMidia_Apresentacao_" />
+        <AssociationConnector Association="ModelSite.FK_PrecoParceiroMidia_ApresentacaoSetor" />
+        <AssociationConnector Association="ModelSite.FK_DestaqueRegiao_Evento" />
+        <EntityTypeShape EntityType="ModelSite.FormaPagamento" Width="1.5" PointX="14.75" PointY="4.875" />
+        <EntityTypeShape EntityType="ModelSite.FormaPagamentoCotaItem" Width="1.5" PointX="13.75" PointY="15.875" />
+        <EntityTypeShape EntityType="ModelSite.FormaPagamentoEvento" Width="1.5" PointX="15.75" PointY="1.875" />
+        <EntityTypeShape EntityType="ModelSite.FormaPagamentoSerie" Width="1.5" PointX="5.75" PointY="16.875" />
+        <EntityTypeShape EntityType="ModelSite.Banner" Width="1.5" PointX="15.75" PointY="7.875" />
+        <EntityTypeShape EntityType="ModelSite.BanneriMais" Width="1.5" PointX="15.75" PointY="11.875" />
+        <EntityTypeShape EntityType="ModelSite.APIUsuarioToken" Width="1.5" PointX="1.3495792380299323" PointY="19.273615637455887" />
+        <EntityTypeShape EntityType="ModelSite.APIUsuario" Width="1.5" PointX="1.7775423665426402" PointY="29.820559426127261" />
+        <AssociationConnector Association="ModelSite.FK_APIUsuarioToken_APIUsuario" />
+        <EntityTypeShape EntityType="ModelSite.vwPrecoCotaControle" Width="1.5" PointX="3.1940469998838603" PointY="18.631649636957633" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

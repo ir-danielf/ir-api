@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4ad36e6b-51ac-41d2-b29c-5d62e13f01a3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="C:\Users\gustavo.segantini\Desktop\Smiles\SmilesGatewayParceiros\schemas.voegol.com.br.Services.SmilesGateway.wsdl" Protocol="file" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PartnerSmilesGatewayService.wsdl" MetadataType="Wsdl" ID="17c4bd62-a1c7-4b5f-b6bf-8028afc0ec6b" SourceId="1" SourceUrl="file:///C:/Users/gustavo.segantini/Desktop/Smiles/SmilesGatewayParceiros/schemas.voegol.com.br.Services.SmilesGateway.wsdl" />
+    <MetadataFile FileName="Gol.xsd" MetadataType="Schema" ID="60ee1f18-b8fd-40cc-bd5a-3298df0b8521" SourceId="1" SourceUrl="file:///C:/Users/gustavo.segantini/Desktop/Smiles/SmilesGatewayParceiros/Gol.SmilesGateway.Partner.Entities.xsd" />
+    <MetadataFile FileName="schemas.xsd" MetadataType="Schema" ID="d8c62c35-8625-4458-b5bb-333dbcf9c501" SourceId="1" SourceUrl="file:///C:/Users/gustavo.segantini/Desktop/Smiles/SmilesGatewayParceiros/schemas.voegol.com.br.Services.SmilesGateway.xsd" />
+    <MetadataFile FileName="schemas1.xsd" MetadataType="Schema" ID="e4cb113a-6add-48b8-a80b-46d9e7f6b345" SourceId="1" SourceUrl="file:///C:/Users/gustavo.segantini/Desktop/Smiles/SmilesGatewayParceiros/schemas.microsoft.com.2003.10.Serialization.xsd" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

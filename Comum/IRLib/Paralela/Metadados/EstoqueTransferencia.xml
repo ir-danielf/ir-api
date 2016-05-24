@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstoqueTransferencia">
+    <Propriedades>
+        <Propriedade	Nome="EmpresaID"		Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Ordem"			Tipo="texto"	Nulo="True"	Acesso="LE" Tamanho="10"/>
+        <Propriedade	Nome="Data"				Tipo="data"			Nulo="True"		Acesso="LE"/>
+        <Propriedade	Nome="ResponsavelID"	Tipo="int"		Nulo="True"		Acesso="LE"/>
+		<Propriedade	Nome="Obs"				Tipo="memo"			Nulo="True"		Acesso="LE"/>        
+   </Propriedades>
+    <Metodos>
+        <Metodo Nome="Itens"	Tipo="DataTable"><!-- Fabio -->
+			Obter itens dessa transferencia
+    	</Metodo>
+    </Metodos>
+</Classe>

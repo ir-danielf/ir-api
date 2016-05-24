@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Lugar">
+  <Propriedades>
+    <Propriedade Nome="SetorID"				Tipo="int"					/>
+    <Propriedade Nome="Codigo"				Tipo="texto" Tamanho="20"	/>
+    <Propriedade Nome="Quantidade"			Tipo="int"					/>
+    <Propriedade Nome="QuantidadeBloqueada"	Tipo="int"					/>
+    <Propriedade Nome="PosicaoX"			Tipo="int"					/>
+    <Propriedade Nome="PosicaoY"			Tipo="int"					/>
+    <Propriedade Nome="Simbolo"				Tipo="int"					/>
+    <Propriedade Nome="BloqueioID"			Tipo="int"					/>
+    <Propriedade Nome="Classificacao"		Tipo="int"					/>
+    <Propriedade Nome="Grupo"				Tipo="int"					/>
+    <Propriedade Nome="Obs"					Tipo="memo"					/>
+    <Propriedade Nome="PerspectivaLugarID" Tipo ="int"  Nulo="true" Acesso="LE" />
+    <Propriedade Nome="CodigoCinema" Tipo="texto"  Tamanho="20" Nulo="true" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <!-- eu defini o tipo de retorno como DataTable, mas pode ser que nao seja isso.
+		pode ser que queiramos apenas os IDs, ai podemos retornar uma string concatenada ou um array -->
+    <Metodo Nome="Ingressos" Tipo="DataTable">
+      Obter os ingressos desse lugar
+    </Metodo>
+    <Metodo Nome="Bloquear" Tipo="bool">
+      <!-- Fabio -->
+      Bloquear esse lugar
+      <Parametros>
+        <Parametro Nome="bloqueioID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Desbloquear" Tipo="bool">
+      <!-- Fabio -->
+      Desbloquear esse lugar
+    </Metodo>
+  </Metodos>
+</Classe>
+

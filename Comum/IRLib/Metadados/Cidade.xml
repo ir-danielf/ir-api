@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Cidade">
+  <Propriedades>
+    <Propriedade Nome="Nome"					Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EstadoSigla"					Tipo="texto"	Tamanho="2"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EstadoID"				Tipo="int"		Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>

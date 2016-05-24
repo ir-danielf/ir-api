@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Sangria">
+  <Propriedades>
+    <Propriedade Nome="VendaBilheteriaID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="MotivoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="EventoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Nome"				          Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="Identificacao" 	           Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

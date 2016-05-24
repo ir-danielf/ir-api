@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelSiteStoreContainer" CdmEntityContainer="IRCoreEntitiesSite">
+    <EntitySetMapping Name="Apresentacao">
+      <EntityTypeMapping TypeName="ModelSite.Apresentacao">
+        <MappingFragment StoreEntitySet="Apresentacao">
+          <ScalarProperty Name="CalcHorario" ColumnName="CalcHorario" />
+          <ScalarProperty Name="CalcDiaDaSemana" ColumnName="CalcDiaDaSemana" />
+          <ScalarProperty Name="CodigoProgramacao" ColumnName="CodigoProgramacao" />
+          <ScalarProperty Name="Programacao" ColumnName="Programacao" />
+          <ScalarProperty Name="UsarEsquematico" ColumnName="UsarEsquematico" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+          <ScalarProperty Name="Horario" ColumnName="Horario" />
+          <ScalarProperty Name="IR_ApresentacaoID" ColumnName="IR_ApresentacaoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cidade">
+      <EntityTypeMapping TypeName="ModelSite.Cidade">
+        <MappingFragment StoreEntitySet="Cidade">
+          <ScalarProperty Name="EstadoID" ColumnName="EstadoID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Estado">
+      <EntityTypeMapping TypeName="ModelSite.Estado">
+        <MappingFragment StoreEntitySet="Estado">
+          <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Evento">
+      <EntityTypeMapping TypeName="ModelSite.Evento">
+        <MappingFragment StoreEntitySet="Evento">
+          <ScalarProperty Name="OcultarHoraApresentacao" ColumnName="OcultarHoraApresentacao" />
+          <ScalarProperty Name="EntradaFranca" ColumnName="EntradaFranca" />
+          <ScalarProperty Name="ImagemDestaque" ColumnName="ImagemDestaque" />
+          <ScalarProperty Name="LimiteMaximoIngressosEstado" ColumnName="LimiteMaximoIngressosEstado" />
+          <ScalarProperty Name="LimiteMaximoIngressosEvento" ColumnName="LimiteMaximoIngressosEvento" />
+          <ScalarProperty Name="PossuiTaxaProcessamento" ColumnName="PossuiTaxaProcessamento" />
+          <ScalarProperty Name="PermiteVendaPacote" ColumnName="PermiteVendaPacote" />
+          <ScalarProperty Name="FilmeID" ColumnName="FilmeID" />
+          <ScalarProperty Name="MenorPeriodoEntrega" ColumnName="MenorPeriodoEntrega" />
+          <ScalarProperty Name="BannersPadraoSite" ColumnName="BannersPadraoSite" />
+          <ScalarProperty Name="ExibeQuantidade" ColumnName="ExibeQuantidade" />
+          <ScalarProperty Name="PalavraChave" ColumnName="PalavraChave" />
+          <ScalarProperty Name="EscolherLugarMarcado" ColumnName="EscolherLugarMarcado" />
+          <ScalarProperty Name="LocalImagemNome" ColumnName="LocalImagemNome" />
+          <ScalarProperty Name="LocalImagemMapaID" ColumnName="LocalImagemMapaID" />
+          <ScalarProperty Name="DataAberturaVenda" ColumnName="DataAberturaVenda" />
+          <ScalarProperty Name="SubtipoID" ColumnName="SubtipoID" />
+          <ScalarProperty Name="Publicar" ColumnName="Publicar" />
+          <ScalarProperty Name="PublicarSemVendaMotivo" ColumnName="PublicarSemVendaMotivo" />
+          <ScalarProperty Name="Parcelas" ColumnName="Parcelas" />
+          <ScalarProperty Name="DisponivelAvulso" ColumnName="DisponivelAvulso" />
+          <ScalarProperty Name="RetiradaBilheteria" ColumnName="RetiradaBilheteria" />
+          <ScalarProperty Name="EntregaGratuita" ColumnName="EntregaGratuita" />
+          <ScalarProperty Name="Prioridade" ColumnName="Prioridade" />
+          <ScalarProperty Name="Destaque" ColumnName="Destaque" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="Release" ColumnName="Release" />
+          <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+          <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_EventoID" ColumnName="IR_EventoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Setor">
+      <EntityTypeMapping TypeName="ModelSite.Setor">
+        <MappingFragment StoreEntitySet="Setor">
+          <ScalarProperty Name="NVendeLugar" ColumnName="NVendeLugar" />
+          <ScalarProperty Name="CodigoSala" ColumnName="CodigoSala" />
+          <ScalarProperty Name="PrincipalPrecoID" ColumnName="PrincipalPrecoID" />
+          <ScalarProperty Name="AprovadoPublicacao" ColumnName="AprovadoPublicacao" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="QuantidadeMapa" ColumnName="QuantidadeMapa" />
+          <ScalarProperty Name="QtdeDisponivel" ColumnName="QtdeDisponivel" />
+          <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+          <ScalarProperty Name="LugarMarcado" ColumnName="LugarMarcado" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_SetorID" ColumnName="IR_SetorID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Local">
+      <EntityTypeMapping TypeName="ModelSite.Local">
+        <MappingFragment StoreEntitySet="Local">
+          <ScalarProperty Name="LongitudeAsDecimal" ColumnName="LongitudeAsDecimal" />
+          <ScalarProperty Name="LatitudeAsDecimal" ColumnName="LatitudeAsDecimal" />
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="CodigoPraca" ColumnName="CodigoPraca" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="Pais" ColumnName="Pais" />
+          <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+          <ScalarProperty Name="BannersPadraoSite" ColumnName="BannersPadraoSite" />
+          <ScalarProperty Name="TaxaMaximaEmpresa" ColumnName="TaxaMaximaEmpresa" />
+          <ScalarProperty Name="ComoChegar" ColumnName="ComoChegar" />
+          <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+          <ScalarProperty Name="DDDTelefone" ColumnName="DDDTelefone" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_LocalID" ColumnName="IR_LocalID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carrinho">
+      <EntityTypeMapping TypeName="ModelSite.Carrinho">
+        <MappingFragment StoreEntitySet="Carrinho">
+          <ScalarProperty Name="VoucherID" ColumnName="VoucherID" />
+          <ScalarProperty Name="GerenciamentoIngressosID" ColumnName="GerenciamentoIngressosID" />
+          <ScalarProperty Name="PacoteID" ColumnName="PacoteID" />
+          <ScalarProperty Name="ValorTaxaProcessamento" ColumnName="ValorTaxaProcessamento" />
+          <ScalarProperty Name="CotaVerificada" ColumnName="CotaVerificada" />
+          <ScalarProperty Name="CodigoPromocional" ColumnName="CodigoPromocional" />
+          <ScalarProperty Name="DonoCPF" ColumnName="DonoCPF" />
+          <ScalarProperty Name="DonoID" ColumnName="DonoID" />
+          <ScalarProperty Name="SerieID" ColumnName="SerieID" />
+          <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+          <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+          <ScalarProperty Name="CotaItemIDAPS" ColumnName="CotaItemIDAPS" />
+          <ScalarProperty Name="CotaItemID" ColumnName="CotaItemID" />
+          <ScalarProperty Name="VendaBilheteriaID" ColumnName="VendaBilheteriaID" />
+          <ScalarProperty Name="ValeIngressoID" ColumnName="ValeIngressoID" />
+          <ScalarProperty Name="Acumulativo" ColumnName="Acumulativo" />
+          <ScalarProperty Name="ValidadeDiasImpressao" ColumnName="ValidadeDiasImpressao" />
+          <ScalarProperty Name="ValeIngressoNome" ColumnName="ValeIngressoNome" />
+          <ScalarProperty Name="ValidadeData" ColumnName="ValidadeData" />
+          <ScalarProperty Name="ValeIngressoTipoID" ColumnName="ValeIngressoTipoID" />
+          <ScalarProperty Name="LocalImagemNome" ColumnName="LocalImagemNome" />
+          <ScalarProperty Name="PrecoExclusivoCodigoID" ColumnName="PrecoExclusivoCodigoID" />
+          <ScalarProperty Name="Classificacao" ColumnName="Classificacao" />
+          <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+          <ScalarProperty Name="PacoteNome" ColumnName="PacoteNome" />
+          <ScalarProperty Name="PacoteGrupo" ColumnName="PacoteGrupo" />
+          <ScalarProperty Name="TagOrigem" ColumnName="TagOrigem" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+          <ScalarProperty Name="TaxaConveniencia" ColumnName="TaxaConveniencia" />
+          <ScalarProperty Name="PrecoValor" ColumnName="PrecoValor" />
+          <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+          <ScalarProperty Name="PrecoNome" ColumnName="PrecoNome" />
+          <ScalarProperty Name="Setor" ColumnName="Setor" />
+          <ScalarProperty Name="ApresentacaoDataHora" ColumnName="ApresentacaoDataHora" />
+          <ScalarProperty Name="Evento" ColumnName="Evento" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+          <ScalarProperty Name="PrecoID" ColumnName="PrecoID" />
+          <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+          <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+          <ScalarProperty Name="TipoLugar" ColumnName="TipoLugar" />
+          <ScalarProperty Name="IngressoID" ColumnName="IngressoID" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+          <ScalarProperty Name="LugarID" ColumnName="LugarID" />
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PontoVenda">
+      <EntityTypeMapping TypeName="ModelSite.PontoVenda">
+        <MappingFragment StoreEntitySet="PontoVenda">
+          <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+          <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+          <ScalarProperty Name="Estado" ColumnName="Estado" />
+          <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+          <ScalarProperty Name="Compl" ColumnName="Compl" />
+          <ScalarProperty Name="Numero" ColumnName="Numero" />
+          <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Local" ColumnName="Local" />
+          <ScalarProperty Name="IR_PontoVendaID" ColumnName="IR_PontoVendaID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PontoVendaHorario">
+      <EntityTypeMapping TypeName="ModelSite.PontoVendaHorario">
+        <MappingFragment StoreEntitySet="PontoVendaHorario">
+          <ScalarProperty Name="DiaSemana" ColumnName="DiaSemana" />
+          <ScalarProperty Name="HorarioFinal" ColumnName="HorarioFinal" />
+          <ScalarProperty Name="HorarioInicial" ColumnName="HorarioInicial" />
+          <ScalarProperty Name="PontoVendaID" ColumnName="PontoVendaID" />
+          <ScalarProperty Name="IR_PontoVendaHorarioID" ColumnName="IR_PontoVendaHorarioID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Login">
+      <EntityTypeMapping TypeName="ModelSite.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="BiletoUuid" ColumnName="BiletoUuid" />
+          <ScalarProperty Name="SyncDate" ColumnName="SyncDate" />
+          <ScalarProperty Name="SyncStatus" ColumnName="SyncStatus" />
+          <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+          <ScalarProperty Name="AccountKitId" ColumnName="AccountKitId" />
+          <ScalarProperty Name="FaceBookUserInfos" ColumnName="FaceBookUserInfos" />
+          <ScalarProperty Name="FaceBookUserToken" ColumnName="FaceBookUserToken" />
+          <ScalarProperty Name="FaceBookUserID" ColumnName="FaceBookUserID" />
+          <ScalarProperty Name="StatusAtual" ColumnName="StatusAtual" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="UltimoAcesso" ColumnName="UltimoAcesso" />
+          <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CreatedAPIUsuarioId" ColumnName="CreatedAPIUsuarioId" />
+          <ScalarProperty Name="LoginAPIUsuarioId" ColumnName="LoginAPIUsuarioId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DestaqueConceitual">
+      <EntityTypeMapping TypeName="ModelSite.DestaqueConceitual">
+        <MappingFragment StoreEntitySet="DestaqueConceitual">
+          <ScalarProperty Name="Publicado" ColumnName="Publicado" />
+          <ScalarProperty Name="LinkFundo" ColumnName="LinkFundo" />
+          <ScalarProperty Name="LinkLabel" ColumnName="LinkLabel" />
+          <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+          <ScalarProperty Name="Subtitulo" ColumnName="Subtitulo" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Fundo" ColumnName="Fundo" />
+          <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DestaqueConceitualRegiao">
+      <EntityTypeMapping TypeName="ModelSite.DestaqueConceitualRegiao">
+        <MappingFragment StoreEntitySet="DestaqueConceitualRegiao">
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="DestaqueConceitualID" ColumnName="DestaqueConceitualID" />
+          <ScalarProperty Name="RegiaoID" ColumnName="RegiaoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DestaqueRegiao">
+      <EntityTypeMapping TypeName="ModelSite.DestaqueRegiao">
+        <MappingFragment StoreEntitySet="DestaqueRegiao">
+          <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+          <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+          <ScalarProperty Name="RegiaoID" ColumnName="RegiaoID" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Regiao">
+      <EntityTypeMapping TypeName="ModelSite.Regiao">
+        <MappingFragment StoreEntitySet="Regiao">
+          <ScalarProperty Name="IsGeral" ColumnName="IsGeral" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tipo">
+      <EntityTypeMapping TypeName="ModelSite.Tipo">
+        <MappingFragment StoreEntitySet="Tipo">
+          <ScalarProperty Name="Obs" ColumnName="Obs" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_TipoID" ColumnName="IR_TipoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DuvidasFrequentes">
+      <EntityTypeMapping TypeName="ModelSite.DuvidasFrequentes">
+        <MappingFragment StoreEntitySet="DuvidasFrequentes">
+          <ScalarProperty Name="Resposta" ColumnName="Resposta" />
+          <ScalarProperty Name="Pergunta" ColumnName="Pergunta" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DestaqueLinkRegiao">
+      <EntityTypeMapping TypeName="ModelSite.DestaqueLinkRegiao">
+        <MappingFragment StoreEntitySet="DestaqueLinkRegiao">
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+          <ScalarProperty Name="RegiaoID" ColumnName="RegiaoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventoSubtipo">
+      <EntityTypeMapping TypeName="ModelSite.EventoSubtipo">
+        <MappingFragment StoreEntitySet="EventoSubtipo">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+          <ScalarProperty Name="IR_SubtipoID" ColumnName="IR_SubtipoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PontoVendaFormaPgto">
+      <EntityTypeMapping TypeName="ModelSite.PontoVendaFormaPgto">
+        <MappingFragment StoreEntitySet="PontoVendaFormaPgto">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_PontoVendaFormaPgtoID" ColumnName="IR_PontoVendaFormaPgtoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PontoVendaXFormaPgto">
+      <EntityTypeMapping TypeName="ModelSite.PontoVendaXFormaPgto">
+        <MappingFragment StoreEntitySet="PontoVendaXFormaPgto">
+          <ScalarProperty Name="PontoVendaID" ColumnName="PontoVendaID" />
+          <ScalarProperty Name="PontoVendaFormaPgtoID" ColumnName="PontoVendaFormaPgtoID" />
+          <ScalarProperty Name="IR_PontoVendaXFormaPgtoID" ColumnName="IR_PontoVendaXFormaPgtoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewsAssinante">
+      <EntityTypeMapping TypeName="ModelSite.NewsAssinante">
+        <MappingFragment StoreEntitySet="NewsAssinante">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="DataInscricao" ColumnName="DataInscricao" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PrecoParceiroMidia">
+      <EntityTypeMapping TypeName="ModelSite.PrecoParceiroMidia">
+        <MappingFragment StoreEntitySet="PrecoParceiroMidia">
+          <ScalarProperty Name="ParceiroMidiaID" ColumnName="ParceiroMidiaID" />
+          <ScalarProperty Name="CodigoCinema" ColumnName="CodigoCinema" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+          <ScalarProperty Name="Pacote" ColumnName="Pacote" />
+          <ScalarProperty Name="QuantidadePorCliente" ColumnName="QuantidadePorCliente" />
+          <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+          <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_PrecoID" ColumnName="IR_PrecoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pacote">
+      <EntityTypeMapping TypeName="ModelSite.Pacote">
+        <MappingFragment StoreEntitySet="Pacote">
+          <ScalarProperty Name="NomenclaturaPacoteID" ColumnName="NomenclaturaPacoteID" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_PacoteID" ColumnName="IR_PacoteID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PacoteItem">
+      <EntityTypeMapping TypeName="ModelSite.PacoteItem">
+        <MappingFragment StoreEntitySet="PacoteItem">
+          <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+          <ScalarProperty Name="PrecoID" ColumnName="PrecoID" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+          <ScalarProperty Name="PacoteID" ColumnName="PacoteID" />
+          <ScalarProperty Name="IR_PacoteItemID" ColumnName="IR_PacoteItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preco">
+      <EntityTypeMapping TypeName="ModelSite.Preco">
+        <MappingFragment StoreEntitySet="Preco">
+          <ScalarProperty Name="CodigoCinema" ColumnName="CodigoCinema" />
+          <ScalarProperty Name="Serie" ColumnName="Serie" />
+          <ScalarProperty Name="Pacote" ColumnName="Pacote" />
+          <ScalarProperty Name="QuantidadePorCliente" ColumnName="QuantidadePorCliente" />
+          <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+          <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+          <ScalarProperty Name="Valor" ColumnName="Valor" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_PrecoID" ColumnName="IR_PrecoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NomenclaturaPacote">
+      <EntityTypeMapping TypeName="ModelSite.NomenclaturaPacote">
+        <MappingFragment StoreEntitySet="NomenclaturaPacote">
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_NomenclaturaPacoteID" ColumnName="IR_NomenclaturaPacoteID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormaPagamento">
+      <EntityTypeMapping TypeName="ModelSite.FormaPagamento">
+        <MappingFragment StoreEntitySet="FormaPagamento">
+          <ScalarProperty Name="Parcelas" ColumnName="Parcelas" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="IR_FormaPagamentoID" ColumnName="IR_FormaPagamentoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormaPagamentoCotaItem">
+      <EntityTypeMapping TypeName="ModelSite.FormaPagamentoCotaItem">
+        <MappingFragment StoreEntitySet="FormaPagamentoCotaItem">
+          <ScalarProperty Name="FormaPagamentoID" ColumnName="FormaPagamentoID" />
+          <ScalarProperty Name="CotaItemID" ColumnName="CotaItemID" />
+          <ScalarProperty Name="IR_FormaPagamentoCotaItemID" ColumnName="IR_FormaPagamentoCotaItemID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormaPagamentoEvento">
+      <EntityTypeMapping TypeName="ModelSite.FormaPagamentoEvento">
+        <MappingFragment StoreEntitySet="FormaPagamentoEvento">
+          <ScalarProperty Name="FormaPagamentoID" ColumnName="FormaPagamentoID" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+          <ScalarProperty Name="IR_FormaPagamentoEventoID" ColumnName="IR_FormaPagamentoEventoID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FormaPagamentoSerie">
+      <EntityTypeMapping TypeName="ModelSite.FormaPagamentoSerie">
+        <MappingFragment StoreEntitySet="FormaPagamentoSerie">
+          <ScalarProperty Name="FormaPagamentoID" ColumnName="FormaPagamentoID" />
+          <ScalarProperty Name="SerieID" ColumnName="SerieID" />
+          <ScalarProperty Name="IR_FormaPagamentoSerieID" ColumnName="IR_FormaPagamentoSerieID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Banner">
+      <EntityTypeMapping TypeName="ModelSite.Banner">
+        <MappingFragment StoreEntitySet="Banner">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Posicao" ColumnName="Posicao" />
+          <ScalarProperty Name="Localizacao" ColumnName="Localizacao" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Alt" ColumnName="Alt" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BanneriMais">
+      <EntityTypeMapping TypeName="ModelSite.BanneriMais">
+        <MappingFragment StoreEntitySet="BanneriMais">
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+          <ScalarProperty Name="Posicao" ColumnName="Posicao" />
+          <ScalarProperty Name="Localizacao" ColumnName="Localizacao" />
+          <ScalarProperty Name="Target" ColumnName="Target" />
+          <ScalarProperty Name="Url" ColumnName="Url" />
+          <ScalarProperty Name="Alt" ColumnName="Alt" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APIUsuarioToken">
+      <EntityTypeMapping TypeName="ModelSite.APIUsuarioToken">
+        <MappingFragment StoreEntitySet="APIUsuarioToken">
+          <ScalarProperty Name="DataExpiracao" ColumnName="DataExpiracao" />
+          <ScalarProperty Name="DadosSession" ColumnName="DadosSession" />
+          <ScalarProperty Name="DadosIndentificacao" ColumnName="DadosIndentificacao" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Token" ColumnName="Token" />
+          <ScalarProperty Name="APIUsuarioID" ColumnName="APIUsuarioID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="APIUsuario">
+      <EntityTypeMapping TypeName="ModelSite.APIUsuario">
+        <MappingFragment StoreEntitySet="APIUsuario">
+          <ScalarProperty Name="HorasExpiracaoToken" ColumnName="HorasExpiracaoToken" />
+          <ScalarProperty Name="CanalID" ColumnName="CanalID" />
+          <ScalarProperty Name="LojaID" ColumnName="LojaID" />
+          <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+          <ScalarProperty Name="IPOrigem" ColumnName="IPOrigem" />
+          <ScalarProperty Name="DominiosOrigem" ColumnName="DominiosOrigem" />
+          <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
+          <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vwPrecoCotaControle">
+      <EntityTypeMapping TypeName="ModelSite.vwPrecoCotaControle">
+        <MappingFragment StoreEntitySet="vwPrecoCotaControle">
+          <ScalarProperty Name="CotaObrigaEmail" ColumnName="CotaObrigaEmail" />
+          <ScalarProperty Name="CotaObrigaDataNascimento" ColumnName="CotaObrigaDataNascimento" />
+          <ScalarProperty Name="CotaObrigaTelefone" ColumnName="CotaObrigaTelefone" />
+          <ScalarProperty Name="CotaObrigaCPF" ColumnName="CotaObrigaCPF" />
+          <ScalarProperty Name="CotaObrigaRG" ColumnName="CotaObrigaRG" />
+          <ScalarProperty Name="CotaObrigaNome" ColumnName="CotaObrigaNome" />
+          <ScalarProperty Name="CotaNominal" ColumnName="CotaNominal" />
+          <ScalarProperty Name="CotaTermo" ColumnName="CotaTermo" />
+          <ScalarProperty Name="CotaCodigo" ColumnName="CotaCodigo" />
+          <ScalarProperty Name="CotaCartao" ColumnName="CotaCartao" />
+          <ScalarProperty Name="CotaParceiro" ColumnName="CotaParceiro" />
+          <ScalarProperty Name="CotaLimiteQuantidadeCodigo" ColumnName="CotaLimiteQuantidadeCodigo" />
+          <ScalarProperty Name="CotaLimiteQuantidadeCliente" ColumnName="CotaLimiteQuantidadeCliente" />
+          <ScalarProperty Name="CotaLimiteQuantidade" ColumnName="CotaLimiteQuantidade" />
+          <ScalarProperty Name="CotaLimiteQuantidadeTotalPorCliente" ColumnName="CotaLimiteQuantidadeTotalPorCliente" />
+          <ScalarProperty Name="CotaLimiteQuantidadeTotal" ColumnName="CotaLimiteQuantidadeTotal" />
+          <ScalarProperty Name="TemCota" ColumnName="TemCota" />
+          <ScalarProperty Name="PrecoID" ColumnName="PrecoID" />
+          <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

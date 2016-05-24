@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="ValeIngresso">
+  <Propriedades>
+    <Propriedade Nome="ValeIngressoTipoID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="CodigoTroca"		             Tamanho = "14"	    Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataCriacao"					       Tipo="datahora"		Nulo="True"	 Acesso="LE" />
+    <Propriedade Nome="DataExpiracao"		           Tamanho = "8"	    Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Status"		                 Tamanho = "1" 	    Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaID"					 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="ClienteID"						       Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="SessionID"		               Tamanho = "255"	  Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TimeStampReserva"					 Tipo="datahora"		Nulo="True"	 Acesso="LE" />
+    <Propriedade Nome="LojaID"						       Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="UsuarioID"						       Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CanalID"						       Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ClienteNome"			Tipo="texto"					Tamanho="50"	/>
+    <Propriedade Nome="CodigoBarra"		             Tamanho = "20"	    Tipo="texto" Nulo="True" Acesso="LE" />
+
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

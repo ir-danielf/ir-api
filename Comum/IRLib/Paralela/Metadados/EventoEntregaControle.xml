@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoEntregaControle">
+  <Propriedades>
+    <Propriedade Nome="EventoID" Tipo="int" Nulo="False" />
+    <Propriedade Nome="EntregaControleID" Tipo="int" Nulo="False" />
+    <Propriedade Nome="ProcedimentoEntrega"   Tipo="texto"	Tamanho="4000" Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="DiasTriagem" Tipo="int" Nulo="False" />
+  </Propriedades>
+</Classe>

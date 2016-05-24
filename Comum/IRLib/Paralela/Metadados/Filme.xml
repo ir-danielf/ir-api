@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Filme">
+  <Propriedades>
+    <Propriedade Nome="FilmeID" Tipo="int"  Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Nome" Tipo="texto" Nulo="False" Tamanho="50" Acesso="LE"/>
+    <Propriedade Nome="Duracao"					Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="DataCadastro"    Tipo="datahora"       Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Idade"           Tipo="int"            Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="IdadeJustificativa"  Tipo="texto" Tamanho="250" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Dublado" Tipo="booleano" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="IMDB"  Tipo="texto"  Tamanho="4" Nulo="true" Acesso="LE"/>
+    <Propriedade Nome="Sinopse" Tipo="texto" Nulo="True" Tamanho="350" Acesso="LE"/>
+  </Propriedades>
+</Classe>
+
+
+

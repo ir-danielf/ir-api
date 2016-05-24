@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ClienteResposta">
+	<Propriedades>
+		<Propriedade Nome="CampingID"	Tipo="int"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="PerguntaID"	Tipo="int"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="Resposta"	Tipo="texto"	Tamanho="80"	Nulo="false"	Acesso="LE" />
+	</Propriedades>
+	<Metodos>
+	</Metodos>
+</Classe>

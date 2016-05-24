@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Contrato">
+  <Propriedades>
+    <Propriedade Nome="EmpresaID"	              Tipo="int"				      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="UsuarioID"	                Tipo="int"				      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Nome"                      Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="50" />
+    <Propriedade Nome="Codigo"                    Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="20" />
+    <Propriedade Nome="DataCriacao"		          Tipo="DataHora"			   Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Observacoes"            Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="2000" />
+    <Propriedade Nome="TipoRepasse"					    Tipo="int"			        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TipoComissao"           Tipo="int"             Nulo="True" Acesso="LE"  />
+    <Propriedade Nome="TipoPapelPagamento" Tipo="int"             Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PapelCobrancaUtilizacao"   Tipo="booleano"    Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PapelComHolografia"   Tipo="booleano"    Nulo="True" Acesso="LE" />
+    <Propriedade Nome="MaximoParcelas"   Tipo="int"    Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="GravarContrato" Tipo="ClientObjects.EstruturaContrato">
+      <!-- Lucio -->
+      Gravação do Contrato
+      <Parametros>
+        <Parametro Nome="estruturaContrato" Tipo="ClientObjects.EstruturaContrato">
+          Struct do Contrato
+        </Parametro>
+      </Parametros>
+    </Metodo>
+  </Metodos>
+</Classe>
+

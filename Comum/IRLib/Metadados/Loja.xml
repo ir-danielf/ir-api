@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Loja">
+    <Propriedades>
+        <Propriedade Nome="EstoqueID"	          Tipo="int"							      Nulo="True"	  Acesso="LE"/>    
+        <Propriedade Nome="CanalID"		          Tipo="int"						      	Nulo="True"	  Acesso="LE"/>
+        <Propriedade Nome="Nome"		            Tipo="texto"	  Tamanho="50"	Nulo="True"	  Acesso="LE"/>
+        <Propriedade Nome="Endereco"		        Tipo="texto"	  Tamanho="70"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Cidade"			        Tipo="texto"	  Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Estado"			        Tipo="texto"	  Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="CEP"				          Tipo="texto"	  Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="DDDTelefone"		      Tipo="texto"	  Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Telefone"		        Tipo="texto"	  Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Email"			          Tipo="texto"	  Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="TEFTipo"			          Tipo="texto"	  Tamanho="1"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="NroEstabelecimento"	Tipo="texto"    Tamanho="8" 	Nulo="True"	  Acesso="LE"/>
+        <Propriedade Nome="Obs"				          Tipo="memo"						        Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="NumeroPOS"           Tipo="texto"    Tamanho="10"  Nulo="True"   Acesso="LE"/>
+		<Propriedade Nome="UsuarioPosID"		          Tipo="int"						      	Nulo="True"	  Acesso="LE"/>
+		
+	</Propriedades>
+    <Metodos>
+        <Metodo Nome="Papeis" Tipo="DataTable">
+			Obtem papeis para essa loja
+    	</Metodo>
+        <Metodo Nome="Caixas" Tipo="DataTable">
+			Obtem caixas nessa loja
+    		<Parametros>
+    			<Parametro Nome="registroZero" Tipo="string" />
+    		</Parametros>    		
+    	</Metodo>
+        <Metodo Nome="Caixas" Tipo="DataTable">
+			Obtem caixas em função do usuário
+    		<Parametros>
+    			<Parametro Nome="registroZero" Tipo="string" />
+    			<Parametro Nome="usuarioID" Tipo="int" />    			
+    		</Parametros>    		
+    	</Metodo>
+        <Metodo Nome="Usuarios" Tipo="DataTable">
+			Obtem Usuarios dessa loja que abriram Caixa alguma vez
+    		<Parametros>
+    			<Parametro Nome="registroZero" Tipo="string" />
+    		</Parametros>    		
+    	</Metodo>
+        <Metodo Nome="QtdeIngressos" Tipo="int">
+			Obtem qtde de ingressos que esta loja possui 		
+    	</Metodo>
+        <Metodo Nome="QtdeIngressos" Tipo="int">
+			Obtem qtde de ingressos que esta loja possui dada uma determinada Apresentacao e Setor
+    		<Parametros>
+    			<Parametro Nome="ApresentacaoSetorID" Tipo="int" />
+    		</Parametros>    		
+    	</Metodo>
+        <Metodo Nome="QtdeIngressos" Tipo="int">
+			Obtem qtde de ingressos que esta loja possui dada uma determinada Apresentacao e Setor e Preço
+    		<Parametros>
+    			<Parametro Nome="ApresentacaoSetorID" Tipo="int" />
+    			<Parametro Nome="PrecoID" Tipo="int" />
+    		</Parametros>    		
+    	</Metodo>
+        <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+			Vendas Gerenciais por evento com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+			Com porcentagem
+    		<Parametros>
+    			<Parametro Nome="dataInicial" Tipo="string" />
+    			<Parametro Nome="dataFinal" Tipo="string" />
+    			<Parametro Nome="comCortesia" Tipo="bool" />
+    			<Parametro Nome="apresentacaoID" Tipo="int" /> 
+    			<Parametro Nome="eventoID" Tipo="int" /> 
+    			<Parametro Nome="localID" Tipo="int" /> 
+    			<Parametro Nome="empresaID" Tipo="int" />     
+    			<Parametro Nome="vendasCanal" Tipo="bool" />     
+    			<Parametro Nome="tipoLinha" Tipo="string" />       			    			
+    			<Parametro Nome="disponivel" Tipo="bool" />       	
+    			<Parametro Nome="empresaVendeIngressos" Tipo="bool" />       	
+    			<Parametro Nome="empresaPromoveEventos" Tipo="bool" />       	
+    		</Parametros>
+    	</Metodo>    	
+        <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+			Eventos por período do Caixa e situacao dos ingressos
+    		<Parametros>
+    			<Parametro Nome="ingressoLogIDs" Tipo="string" />
+    		</Parametros>      		
+    	</Metodo>
+        <Metodo Nome="QuantidadeIngressosPorLoja" Tipo="int">
+			Obtem quantidade de ingressos em função do IngressoIDs
+    		<Parametros>
+    			<Parametro Nome="ingressoLogIDs" Tipo="string" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="ValorIngressosPorLoja" Tipo="decimal">
+			Obtem valores de ingressos em função do IngressoIDs
+    		<Parametros>
+    			<Parametro Nome="ingressoLogIDs" Tipo="string" />
+    		</Parametros>
+    	</Metodo>    	    	
+    </Metodos>
+</Classe>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Produto">
+	<Propriedades>
+		<Propriedade Nome="EmpresaID"				Tipo="int"						Nulo="True" Acesso="LE" />
+		<Propriedade Nome="Nome"					Tipo="texto"	Tamanho="50"	Nulo="True" Acesso="LE" />
+		<Propriedade Nome="ProdutoCategoriaID"		Tipo="int"						Nulo="True" Acesso="LE" />
+		<Propriedade Nome="PrecoVenda"				Tipo="decimal"	Tamanho="12"	Nulo="True" Acesso="LE" Decimal="2" />
+		<Propriedade Nome="PrecoCompra"				Tipo="decimal"	Tamanho="12"	Nulo="True" Acesso="LE" Decimal="2" />
+		<Propriedade Nome="ForaDeLinha"				Tipo="booleano"					Nulo="True" Acesso="LE" />
+		<Propriedade Nome="UnidadeDeCompra"			Tipo="texto"	Tamanho="20"	Nulo="True" Acesso="LE" />
+		<Propriedade Nome="UnidadeDeUso"			Tipo="texto"	Tamanho="20"	Nulo="True" Acesso="LE" />
+		<Propriedade Nome="CoeficienteDeConversao"	Tipo="decimal"					Nulo="True"	Acesso="LE" Tamanho="12" Decimal="4"/>
+		<Propriedade Nome="Obs"						Tipo="memo"						Nulo="True" Acesso="LE" />
+	</Propriedades>
+    <Metodos>
+    	<Metodo Nome="ItensPedidos"	Tipo="DataTable">
+    		Obter os itens de pedido desse produto
+    	</Metodo>
+        <Metodo Nome="ItensEstoques" Tipo="DataTable">
+			Obter os itens de estoque desse produto
+    	</Metodo>
+    </Metodos>
+</Classe>

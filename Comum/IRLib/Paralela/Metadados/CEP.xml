@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="CEP">
+  <Propriedades>
+    <Propriedade Nome="EstadoID"				Tipo="int"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CidadeID"				Tipo="int"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Cep"					Tipo="texto"	Tamanho="9"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EstadoSigla"					Tipo="texto"	Tamanho="2"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="CidadeNome"					Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Logradouro"					Tipo="texto"	Tamanho="20"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Endereco"					Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Bairro"					Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+
+  </Propriedades>
+</Classe>

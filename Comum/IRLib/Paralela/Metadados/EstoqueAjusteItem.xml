@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstoqueAjusteItem">
+    <Propriedades>
+        <Propriedade Nome="EstoqueAjusteID"			Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="EstoqueItemID"			Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="EstoqueAjusteMotivoID"	Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Quantidade" 				Tipo="decimal"		Nulo="True"		Acesso="LE" Tamanho="12" Decimal="4"/>
+		<Propriedade Nome="Obs"						Tipo="memo"			Nulo="True"		Acesso="LE"/>                
+    </Propriedades>
+</Classe>

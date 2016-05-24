@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ContratoPapel">
+  <Propriedades>
+    <Propriedade Nome="ContratoID"	               Tipo="int"				      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="CanalTipoID"              Tipo="int"            Nulo="True" Acesso="LE" />
+    <Propriedade Nome="IngressoNormalValor" Tipo="decimal"	Tamanho="7" Decimal="2" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PreImpressoValor"      Tipo="decimal"	Tamanho="7" Decimal="2" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CortesiaValor"            Tipo="decimal"	Tamanho="7" Decimal="2" Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>
+

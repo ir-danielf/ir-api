@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="TaxaEntregaEventoPadrao">
+  <Propriedades>    
+    <Propriedade Nome="TaxaEntregaID"     Tipo="int"			Nulo="False"	Acesso="LE" />   
+  </Propriedades>   
+</Classe>
+

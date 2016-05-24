@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Estorno">
+  <Propriedades>
+    <Propriedade Nome="SenhaVenda"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="SenhaCancelamento"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="NumeroChamado"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="ValorEstorno"	Tipo="decimal"  Tamanho="12" Decimal="2"  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Status"	Tipo="texto"	Tamanho="1" Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TipoEstorno"	Tipo="texto"	Tamanho="1" Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="DataSolicitacao"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="DataProcessamento"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="ClienteID"	Tipo="int"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="MotivoID"	Tipo="int"	Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

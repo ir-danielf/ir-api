@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoPontoDeVenda">
+  <Propriedades>
+    <Propriedade Nome="EventoID"	    			        Tipo="int"  	              	          	Acesso="LE" />
+    <Propriedade Nome="PontoDeVendaID"                Tipo="int"	                              Acesso="LE" />
+  </Propriedades>
+</Classe>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="RegionalArea">
+  <Propriedades>
+    <Propriedade Nome="RegionalID"    Tipo="int"      Nulo="True"/>
+    <Propriedade Nome="AreaID"        Tipo="int"      Nulo="True"/>
+  </Propriedades>
+</Classe>

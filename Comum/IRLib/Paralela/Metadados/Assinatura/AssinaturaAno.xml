@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaAno">
+  <Propriedades>
+    <Propriedade Nome="AssinaturaID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Ano" Tipo="int" Tamanho="4" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Informacoes" Tipo="texto"  Tamanho="2000" Nulo="False" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

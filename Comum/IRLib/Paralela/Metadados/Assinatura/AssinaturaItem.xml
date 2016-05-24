@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaItem">
+  <Propriedades>
+    <Propriedade Nome="PrecoTipoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaAnoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ApresentacaoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Pripriedade Nome="SetorID"   Tipo="int"    Nulo="True" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

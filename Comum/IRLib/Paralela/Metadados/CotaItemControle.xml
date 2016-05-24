@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="CotaItemControle">
+<!-- ESTA TABELA UTILIZA CHAVE PRIMARIA COMPOSTA ApresentacaoID e ApresentacaoSetorID - COM ID IDENTITY! -->
+  <Propriedades>
+    <Propriedade Nome="ApresentacaoID"                Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="ApresentacaoSetorID"                Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="Quantidade"                Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="CotaItemID"                Tipo="int"    Nulo="False"  Acesso="LE"/>
+  </Propriedades>
+</Classe>

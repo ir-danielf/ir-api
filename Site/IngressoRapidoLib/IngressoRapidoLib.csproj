@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C69042FC-BB1B-4C28-9B3B-3CA5F9F0F7FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IngressoRapido</RootNamespace>
+    <AssemblyName>IngressoRapido</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Homolog\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Homolog\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Homolog\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|AnyCPU'">
+    <OutputPath>bin\Producao\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|x86'">
+    <OutputPath>bin\x86\Producao\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|x64'">
+    <OutputPath>bin\x64\Producao\</OutputPath>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Maps.Service, Version=0.9.2.30346, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DLLs\Google.Api.Maps.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\Comum\IRLib\DLLS\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Crypto.cs" />
+    <Compile Include="Ecommerce\Amex.cs" />
+    <Compile Include="Ecommerce\Controle.cs" />
+    <Compile Include="Ecommerce\HSBC.cs" />
+    <Compile Include="Ecommerce\InfoRetorno.cs" />
+    <Compile Include="Ecommerce\ItauShopLine.cs" />
+    <Compile Include="Ecommerce\Redecard.cs" />
+    <Compile Include="Ecommerce\Visanet.cs" />
+    <Compile Include="Lib\Apresentacao.cs" />
+    <Compile Include="Lib\ApresentacaoLista.cs" />
+    <Compile Include="Lib\Autor.cs" />
+    <Compile Include="Lib\Banner.cs" />
+    <Compile Include="Lib\BannerLista.cs" />
+    <Compile Include="Lib\CamanhaTipo.cs" />
+    <Compile Include="Lib\Campanha.cs" />
+    <Compile Include="Lib\CampanhaHit.cs" />
+    <Compile Include="Lib\Carrinho.cs" />
+    <Compile Include="Lib\CarrinhoLista.cs" />
+    <Compile Include="Lib\Cidade.cs" />
+    <Compile Include="Lib\Cliente.cs" />
+    <Compile Include="Lib\ClienteEndereco.cs" />
+    <Compile Include="Lib\Config.cs" />
+    <Compile Include="Lib\ConsultaHSBCLista.cs" />
+    <Compile Include="Lib\ControleNav.cs" />
+    <Compile Include="Lib\CotaItem.cs" />
+    <Compile Include="Lib\Cota\CotaItemValidar.cs" />
+    <Compile Include="Lib\EstruturaMapaMobile.cs" />
+    <Compile Include="Lib\EstruturaPrecoQuantidade.cs" />
+    <Compile Include="Lib\EventoTipoDestaque.cs" />
+    <Compile Include="Lib\DAL.cs" />
+    <Compile Include="Lib\EnderecoTipo.cs" />
+    <Compile Include="Lib\EntregaCelular.cs" />
+    <Compile Include="Lib\Entrega\Entrega.cs" />
+    <Compile Include="Lib\Entrega\EntregaAgenda.cs" />
+    <Compile Include="Lib\Entrega\EntregaArea.cs" />
+    <Compile Include="Lib\Entrega\EntregaAreaCep.cs" />
+    <Compile Include="Lib\Entrega\EntregaControle.cs" />
+    <Compile Include="Lib\Entrega\EntregaPeriodo.cs" />
+    <Compile Include="Lib\Entrega\EventoEntregaControle.cs" />
+    <Compile Include="Lib\EnviaEmail.cs" />
+    <Compile Include="Lib\Estado.cs" />
+    <Compile Include="Lib\EstruturaReservados.cs" />
+    <Compile Include="Lib\Evento.cs" />
+    <Compile Include="Lib\EventoLista.cs" />
+    <Compile Include="Lib\Exceptions.cs" />
+    <Compile Include="Lib\Faq.cs" />
+    <Compile Include="Lib\FaqlLista.cs" />
+    <Compile Include="Lib\Filme\Filme.cs" />
+    <Compile Include="Lib\Filme\Programacao.cs" />
+    <Compile Include="Lib\FormaPagamento.cs" />
+    <Compile Include="Lib\FormaPagamentoLista.cs" />
+    <Compile Include="Lib\GridViewGroup.cs" />
+    <Compile Include="Lib\GridViewGroupList.cs" />
+    <Compile Include="Lib\GridViewHelper.cs" />
+    <Compile Include="Lib\GridViewSummary.cs" />
+    <Compile Include="Lib\GridViewSummaryList.cs" />
+    <Compile Include="Lib\IngressoGerenciadorInternet.cs" />
+    <Compile Include="Lib\IngressoTransferencia.cs" />
+    <Compile Include="Lib\IngressoTransferenciaLista.cs" />
+    <Compile Include="Lib\Local.cs" />
+    <Compile Include="Lib\LocalLista.cs" />
+    <Compile Include="Lib\LogErrosSite.cs" />
+    <Compile Include="Lib\LogErrosSiteLista.cs" />
+    <Compile Include="Lib\Login.cs" />
+    <Compile Include="Lib\Lugar.cs" />
+    <Compile Include="Lib\LugarLista.cs" />
+    <Compile Include="Lib\Menu\Categoria.cs" />
+    <Compile Include="Lib\Menu\CriarMenu.cs" />
+    <Compile Include="Lib\Menu\Genero.cs" />
+    <Compile Include="Lib\MinhasCompras.cs" />
+    <Compile Include="Lib\MinhasComprasDetalhes.cs" />
+    <Compile Include="Lib\MinhasComprasDetalhesLista.cs" />
+    <Compile Include="Lib\MinhasComprasLista.cs" />
+    <Compile Include="Lib\NomenclaturaPacote.cs" />
+    <Compile Include="Lib\NovoSite\Cliente.cs" />
+    <Compile Include="Lib\Objetos de Exibicao\ExibicaoEvento.cs" />
+    <Compile Include="Lib\Pacote.cs" />
+    <Compile Include="Lib\PacoteItem.cs" />
+    <Compile Include="Lib\PacoteItemLista.cs" />
+    <Compile Include="Lib\PacoteLista.cs" />
+    <Compile Include="Lib\PontoVenda.cs" />
+    <Compile Include="Lib\PontoVendaFormaPgto.cs" />
+    <Compile Include="Lib\PontoVendaFormaPgtoLista.cs" />
+    <Compile Include="Lib\PontoVendaHorario.cs" />
+    <Compile Include="Lib\PontoVendaHorarioLista.cs" />
+    <Compile Include="Lib\PontoVendaLista.cs" />
+    <Compile Include="Lib\Preco.cs" />
+    <Compile Include="Lib\PrecoExclusivo.cs" />
+    <Compile Include="Lib\PrecoLista.cs" />
+    <Compile Include="Lib\PreReserva.cs" />
+    <Compile Include="Lib\Quiz.cs" />
+    <Compile Include="Lib\Serie\CSS\Calendario.cs" />
+    <Compile Include="Lib\Serie\Serie.cs" />
+    <Compile Include="Lib\Serie\SerieItem.cs" />
+    <Compile Include="Lib\Serie\SerieItemLista.cs" />
+    <Compile Include="Lib\Serie\SerieLista.cs" />
+    <Compile Include="Lib\Setor.cs" />
+    <Compile Include="Lib\SetorLista.cs" />
+    <Compile Include="Lib\Sincronizacao.cs" />
+    <Compile Include="Lib\SiteCrypto.cs" />
+    <Compile Include="Lib\SubTipo.cs" />
+    <Compile Include="Lib\SubTipoLista.cs" />
+    <Compile Include="Lib\TaxaEntrega.cs" />
+    <Compile Include="Lib\TaxaEntregaLista.cs" />
+    <Compile Include="Lib\Template.cs" />
+    <Compile Include="Lib\Tipo.cs" />
+    <Compile Include="Lib\TipoCampanha.cs" />
+    <Compile Include="Lib\TipoLista.cs" />
+    <Compile Include="Lib\Usuario.cs" />
+    <Compile Include="Lib\Util.cs" />
+    <Compile Include="Lib\Utilitarios\AnonymousToList.cs" />
+    <Compile Include="Lib\Utilitarios\Extensions.cs" />
+    <Compile Include="Lib\ValeIngressoInternet.cs" />
+    <Compile Include="Lib\ValeIngressoTipo.cs" />
+    <Compile Include="Lib\ValeIngressoTipoLista.cs" />
+    <Compile Include="Lib\VoceSabia.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryStringSegura\CommonUtil.cs" />
+    <Compile Include="QueryStringSegura\ExpiredQueryStringException.cs" />
+    <Compile Include="QueryStringSegura\HashAlgorithmProvider.cs" />
+    <Compile Include="QueryStringSegura\IHashProvider.cs" />
+    <Compile Include="QueryStringSegura\InvalidQueryStringException.cs" />
+    <Compile Include="QueryStringSegura\ISymmetricCryptoProvider.cs" />
+    <Compile Include="QueryStringSegura\QueryStringSegura.cs" />
+    <Compile Include="QueryStringSegura\SymmetricAlgorithmProvider.cs" />
+    <Compile Include="QueryStringSegura\Tests\CommonUtilFixture.cs" />
+    <Compile Include="QueryStringSegura\Tests\HashAlgorithmProviderFixture.cs" />
+    <Compile Include="QueryStringSegura\Tests\MockHashProvider.cs" />
+    <Compile Include="QueryStringSegura\Tests\MockSymmetricCryptographyProvider.cs" />
+    <Compile Include="QueryStringSegura\Tests\SecureQueryStringFixture.cs" />
+    <Compile Include="QueryStringSegura\Tests\SymmetricAlgorithmProviderFixture.cs" />
+    <Compile Include="Relatorio\Venda.cs" />
+    <Compile Include="Relatorio\VendaLista.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="TemplateParser\Modificators.cs" />
+    <Compile Include="TemplateParser\Parser.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="crypto.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AntiFraudeLib\" />
+    <Folder Include="Lib\Adyen\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Comum\CTLib\CTLib.csproj">
+      <Project>{d6c8573f-35c1-4d4f-b361-e917c52b361d}</Project>
+      <Name>CTLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Comum\IRLib\IRLib.csproj">
+      <Project>{6a046605-146b-4dc3-8270-8593fba71eb6}</Project>
+      <Name>IRLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRCore.Util\IRCore.Util.csproj">
+      <Project>{98388FCF-F690-4576-B6CB-E054F4A72097}</Project>
+      <Name>IRCore.Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

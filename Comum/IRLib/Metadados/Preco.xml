@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Preco">
+  <Propriedades>
+    <Propriedade Nome="Nome"					Tipo="texto"	Tamanho="30"	/>
+    <Propriedade Nome="CorID"					Tipo="int"						/>
+    <Propriedade Nome="PrecoTipoID"					Tipo="int"						/>
+    <Propriedade Nome="Valor"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+    <Propriedade Nome="ApresentacaoSetorID"		Tipo="int"						/>
+    <Propriedade Nome="Quantidade"				Tipo="int"						/>
+    <Propriedade Nome="QuantidadePorCliente"	Tipo="int"						/>
+    <Propriedade Nome="Impressao"				Tipo="texto"		Tamanho="1"/>
+    <Propriedade Nome="IRVende"					Tipo="booleano"					Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ImprimirCarimbo"				Tipo="booleano"		Nulo="True"/>
+    <Propriedade Nome="CarimboTexto1"				Tipo="texto"		Tamanho="30"/>
+    <Propriedade Nome="CarimboTexto2"				Tipo="texto"		Tamanho="40"/>
+    <Propriedade Nome="CodigoCinema" Tipo="texto" Tamanho="20" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="QuantidadeVendido" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade de ingressos vendidos com esse preço. Se nao foi vendido nenhum ingresso, retorna zero.
+    </Metodo>
+    <Metodo Nome="AtualizarCanaisIR" Tipo="bool">
+      <!-- Fabio -->
+      Distribui esse preço nos canais da Ingresso Rapido (Devolve o sucesso da operação)
+    </Metodo>
+    <Metodo Nome="Precos"	Tipo="DataTable">
+      Obtem os preços por canal e apresentcao e setor
+      <Parametros>
+        <Parametro Nome="registroZero" Tipo="string" />
+        <Parametro Nome="canalID" Tipo="int" />
+        <Parametro Nome="apresentacaoSetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Canais"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obtem os canais deste preço
+    </Metodo>
+    <Metodo Nome="ExcluirCascata"	Tipo="bool">
+      Exclui os itens de pacote deste preço e esse preço
+    </Metodo>
+    <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+      Vendas Gerenciais por precos com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+      Com porcentagem
+      <Parametros>
+        <Parametro Nome="dataInicial" Tipo="string" />
+        <Parametro Nome="dataFinal" Tipo="string" />
+        <Parametro Nome="comCortesia" Tipo="bool" />
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+        <Parametro Nome="localID" Tipo="int" />
+        <Parametro Nome="empresaID" Tipo="int" />
+        <Parametro Nome="vendasCanal" Tipo="bool" />
+        <Parametro Nome="tipoLinha" Tipo="string" />
+        <Parametro Nome="disponivel" Tipo="bool" />
+        <Parametro Nome="empresaVendeIngressos" Tipo="bool" />
+        <Parametro Nome="empresaPromoveEventos" Tipo="bool" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+      Precos definidos pelos IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosPorPreco" Tipo="int">
+      Obter quantidade de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorIngressosPorPreco" Tipo="decimal">
+      Obter valores de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+
+  </Metodos>
+</Classe>

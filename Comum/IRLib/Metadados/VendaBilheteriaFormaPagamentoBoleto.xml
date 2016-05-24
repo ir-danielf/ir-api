@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="VendaBilheteriaFormaPagamentoBoleto">
+  <Propriedades>
+    <Propriedade Nome="VendaBilheteriaFormaPagamentoID"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Valor"   Tipo="decimal"	  Tamanho="12"	Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="Parcela"  Tipo="int"		Nulo="True"		Acesso="LE"		/>
+    <Propriedade Nome="TimeStamp"     Tipo="datahora"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ValorPago"   Tipo="decimal"	  Tamanho="12"	Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="DataPagamento"      Tipo="datahora"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataVencimento"     Tipo="datahora"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataConfirmacao"     Tipo="datahora"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Impresso"		       Tipo="booleano"	      Tamanho="1"		Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

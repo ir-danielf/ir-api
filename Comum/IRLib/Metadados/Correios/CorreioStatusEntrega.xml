@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CorreioStatusEntrega">
+  <Propriedades>
+   
+    <Propriedade Nome=	"Tipo"             			    Tipo="texto"	    Tamanho="5"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Status"           			    Tipo="int"	      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Data"             			    Tipo="datahora"	  Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Hora"             			    Tipo="texto"	    Tamanho="10"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Descricao"        			    Tipo="texto"	    Tamanho="100"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Local"            			    Tipo="texto"	    Tamanho="50"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Codigo"           			    Tipo="texto"	    Tamanho="20"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Cidade"           			    Tipo="texto"	    Tamanho="50"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Uf"               			    Tipo="texto"	    Tamanho="4"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"Sto"              			    Tipo="texto"	    Tamanho="20"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome=	"CodigoRastreio"   			    Tipo="texto"	    Tamanho="20"	Nulo="True"	Acesso="LE" />
+
+  </Propriedades>
+</Classe>
+

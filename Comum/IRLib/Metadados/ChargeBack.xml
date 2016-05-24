@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<Classe Nome="ChargeBack">
+  <propriedades>
+    <Propriedade Nome="NumeroProcesso"  Tipo="texto"  Nulo="true"  Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="Cartao"  Tipo="texto"  Nulo="true" Tamanho="60" Acesso="LE" />
+    <Propriedade Nome="CV" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="DataCompra" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="DataCarta" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="ValorChargeBack" Tipo="decimal" Nulo="true" Tamanho="12" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="ValorTransacao" Tipo="decimal" Nulo="true" Tamanho="12" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="AcaoTomadaAF" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="SenhaCompra" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="ValorCompra" Tipo="decimal" Nulo="true" Tamanho="12" Acesso="LE" decimal="2" />
+    <Propriedade Nome="QuatidadeIngressos" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="Fraude" Tipo="texto" Nulo="true" Tamanho="1" Acesso="LE" />
+    <Propriedade Nome="Cancelado" Tipo="texto" Nulo="true" Tamanho="1" Acesso="LE" />
+    <Propriedade Nome="MotivoCancelamento" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="DataCancelamento" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="AprovacaoAutomatica" Tipo="texto" Nulo="true" Tamanho="1" Acesso="LE" />
+    <Propriedade Nome="MaiorDataApresentacao" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="MaiorDataImpressao" Tipo="texto" Nulo="true" Tamanho="30" Acesso="LE" />
+    <Propriedade Nome="UsuarioID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="LojaID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="CanalID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="ClienteID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="EntregaID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="AreaID" Tipo="int" Nulo="true" Acesso="LE" />
+    <Propriedade Nome="Status" Tipo="texto" Nulo="true" Tamanho="1" Acesso="LE" />
+  </propriedades>
+</Classe>

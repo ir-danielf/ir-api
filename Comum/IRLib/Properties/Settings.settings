@@ -1,0 +1,36 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="IRLib.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="IRLib_wsPhones_PhoneModelServiceImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mpocket.com.br:8080/TicketSender/Services/PhoneModelService</Value>
+    </Setting>
+    <Setting Name="IRLib_wsTicket_TicketSendSystemServiceImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://edeploy.mpocket.com.br:8080/TicketSendSystem/Services/TicketSendSystemService</Value>
+    </Setting>
+    <Setting Name="IRLib_wsPhones1_PhoneModelServiceImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://mpocket.com.br:8080/TicketSender/Services/PhoneModelService</Value>
+    </Setting>
+    <Setting Name="IRLib_Mondial_TicketProtectorWebService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://www.mondialticket.com.br/ticketprotectorwebservice/TicketProtector.asmx</Value>
+    </Setting>
+    <Setting Name="IRLib_wsCinema_WSCinema" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://187.84.229.3:7003/WSCinema.ws</Value>
+    </Setting>
+    <Setting Name="IRLib_wsAdyenSandBox_Payment" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pal-test.adyen.com/pal/servlet/soap/Payment</Value>
+    </Setting>
+    <Setting Name="IRLib_wsAdyen_Payment" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">https://pal-live.adyen.com/pal/servlet/soap/Payment</Value>
+    </Setting>
+    <Setting Name="IRLib_FonteNovaService_WSBase" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://10.72.6.8/Circus/ws.php?class=WSBase</Value>
+    </Setting>
+    <Setting Name="IRLib_ServicoDados_ServicoDados" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.ingressorapido.com.br/services/ServicoDadosHomologacao/ServicoDados.asmx</Value>
+    </Setting>
+    <Setting Name="IRLib_wsCEP_BuscaCEP" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.ingressorapido.com.br/wscep/buscacep.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

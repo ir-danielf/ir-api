@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstoqueTransferenciaItem">
+    <Propriedades>
+        <Propriedade Nome="EstoqueItemDeID"			Tipo="int"		Nulo="True"		Acesso="LE"/>    
+        <Propriedade Nome="EstoqueItemParaID"		Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="EstoqueTransferenciaID"	Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Quantidade"				Tipo="decimal"		Nulo="True"		Acesso="LE"		Tamanho="12"	Decimal="4" />
+		<Propriedade Nome="Obs"						Tipo="memo"			Nulo="True"		Acesso="LE"/>        
+    </Propriedades>
+</Classe>
+
+
+
+
+
+
+
+

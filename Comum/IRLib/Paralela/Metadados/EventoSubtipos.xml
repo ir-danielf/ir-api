@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoSubtipos">
+  <Propriedades>
+    <Propriedade Nome="EventoID"	    			        Tipo="int"  	              	          	Acesso="LE" />
+    <Propriedade Nome="EventoTipoID"                Tipo="int"                                Acesso="LE" />
+    <Propriedade Nome="EventoSubtipoID"             Tipo="int"                                Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Caio -->
+      Obter todos os tipos
+    </Metodo>
+  </Metodos>
+</Classe>

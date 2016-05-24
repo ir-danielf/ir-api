@@ -1,0 +1,225 @@
+<%@ CodeTemplate Debug="False" Language="C#" TargetLanguage="C#" Description="Lê um arquivo XML para gerar as classes C# do arquivo <Modulo>.cs." %>
+<%@ Property Name="Modulo" Type="String" Category="Context"
+	Description="Nome do arquivo XML e das CLASSES que serao criadas pelo script." %>
+<%@ Property Name="Local" Type="String" Category="Context"
+	Description="Diretohrio onde se encontra o arquivo XML." %>
+/**************************************************
+* Arquivo: <%= Modulo %>.cs
+* Gerado: <%= DateTime.Now.ToString("dd/MM/yyyy") %>
+* Autor: Celeritas Ltda
+***************************************************/
+<% //Debugger.Break(); %>
+<% string local = "", modulo = "", tipo = "", nome = "", arquivo = "", retorno = ""; %>
+<% System.Xml.XmlDocument doc = new System.Xml.XmlDocument(); %>
+<% modulo = Modulo; %>
+<% local = Local; %>
+<% local.Replace("/","\\"); %>
+<%	if (local != "")
+		arquivo = local + "\\" + modulo + ".xml";
+	else
+		arquivo = modulo + ".xml";
+	arquivo = arquivo.Replace(".xml.xml", ".xml");			
+%>
+<% doc.Load(arquivo); %>
+<% System.Xml.XmlElement root  = doc.DocumentElement; %>
+<% // System.Xml.XmlElement rootp = doc.DocumentElement.SelectSingleNode("/Parametros/Parametro"); %>
+<% modulo = root.Attributes.GetNamedItem("Nome").Value; %>
+
+using System;
+using System.Data;
+using CTLib;
+using System.Linq;
+using System.Collections.Generic;
+
+namespace IRLib{
+
+	public class <%= Modulo %> : <%= Modulo %>_B{
+	
+		public <%= Modulo %>(){}
+	
+		public <%= Modulo %>(int usuarioIDLogado) : base (usuarioIDLogado){}
+
+	<% System.Xml.XmlNodeList xmlMetodos = root.SelectNodes("descendant::Metodos/Metodo"); %>
+	<% // System.Xml.XmlNodeList xmlParametros = root.SelectNodes("descendant::Metodos/Metodo/Parametros/Parametro"); %>
+	<% // System.Xml.XmlNodeList xmlParametros = rootp.SelectNodes("descendant::Parametros/Parametro"); %>
+	<% string visibilidade = "", parametros = "", nome_param = "", tipo_param = "", comportamento = ""; %>
+	<% foreach (System.Xml.XmlNode metodo in xmlMetodos) %>
+	<%  { %>
+	<% // NOME %>
+	<% 		nome	= metodo.Attributes.GetNamedItem("Nome").Value; %>
+	<%		//nome	= nome.ToLower(); %>
+	<% 
+ 	   // TIPO
+		tipo	= metodo.Attributes.GetNamedItem("Tipo").Value;
+			
+		   	// VISIBILIDADE
+			if ( metodo.Attributes.GetNamedItem("Visibilidade") != null){
+				visibilidade = metodo.Attributes.GetNamedItem("Visibilidade").Value;
+				visibilidade = visibilidade.ToLower();
+				switch (visibilidade){
+					case "public":
+					case "publico":
+						visibilidade = "public";
+						break;
+					case "private":
+					case "privado":
+						visibilidade = "private";
+						break;
+					case "protected":
+					case "protegido":
+						visibilidade = "protected";
+						break;
+					case "internal":
+					case "interno":
+						visibilidade = "internal";
+						break;
+					case "static":
+					case "estatico":
+						visibilidade = "public static";
+						break;
+					default:
+						throw new Exception("Visibilidade de"+nome+" errada.");
+						break;
+				}
+			}else{
+				visibilidade = "public";
+			}
+	%>
+	<% int inc = 0; %>
+	<% parametros = ""; %>
+	<% System.Xml.XmlNodeList xmlParametros = metodo.SelectNodes("descendant::Parametros/Parametro"); %>
+	<% string[] comentario_param = new string[xmlParametros.Count]; %>
+	<% string ComentarioSaida = "";	%>
+	<% foreach (System.Xml.XmlNode lista_parametros in xmlParametros) %>
+	<%  { %>
+<% 		// PARÂMETROS
+			nome_param		= lista_parametros.Attributes.GetNamedItem("Nome").Value;
+			tipo_param		= lista_parametros.Attributes.GetNamedItem("Tipo").Value;
+			
+			ComentarioSaida = "";
+			
+			if (metodo.Attributes.GetNamedItem("ComentarioSaida")!=null)
+				ComentarioSaida = metodo.Attributes.GetNamedItem("ComentarioSaida").Value;
+			
+			
+			comentario_param[inc] = lista_parametros.InnerText.Trim();
+			
+			if (comentario_param[inc]!=""){
+				comentario_param[inc] = comentario_param[inc].Replace("\t","");
+				comentario_param[inc] = "/// <param name=\""+nome_param+"\">" + comentario_param[inc].Replace("\r\n","\r\n\t\t///");
+				if (comentario_param[inc].Length >= 11){
+					comentario_param[inc].Substring(0, comentario_param[inc].Length - 11);
+				}
+				comentario_param[inc] += "</param>";
+			}
+				
+			if (lista_parametros.Attributes.GetNamedItem("Comportamento") != null){
+				comportamento	= lista_parametros.Attributes.GetNamedItem("Comportamento").Value;
+				comportamento	= comportamento.ToLower();
+			}else{
+				comportamento = "";
+			}
+			
+	
+				if (inc > 0)
+					parametros += ", ";
+	
+				switch (comportamento){
+					case "valor":
+						parametros += tipo_param + " " + nome_param.ToLower();
+						break;
+					case "ref":
+					case "referencia":
+						parametros += "ref " + tipo_param + " " + nome_param.ToLower();
+						break;
+					case "out":
+					case "retorno":
+						parametros += "out " + tipo_param + " " + nome_param.ToLower();
+						break;
+					default: // valor
+						parametros += tipo_param + " " + nome_param.ToLower();
+						break;
+				}
+			inc ++;
+ 
+ %>
+	<% } %>
+		<%string summary = metodo.InnerText.Trim();
+			if (summary!=""){
+				summary = summary.Replace("\t\t\r\n","");
+				summary = summary.Replace("\t","");
+				summary = "/// " + summary.Replace("\r\n","\r\n\t\t///");
+				//if (summary.Length >= 11){
+				//	summary.Substring(0, summary.Length - 11);
+				//}
+			}
+		%>
+		/// <summary>
+		<% if (summary!=""){ %>
+		<%= summary %>
+		<%}%>
+		/// </summary>
+		<%for (int k=0; k < comentario_param.Length; k++){
+			if (comentario_param[k] != ""){ %>
+		<%= comentario_param[k] %>
+		  <%}else{
+				break;
+			}%>
+		<%}%>
+		<% if (tipo != "void") { %>
+		/// <returns><%= ComentarioSaida %></returns>
+		<% } %>
+		<% switch(tipo.ToLower()){
+			case "int":
+			case "long":
+				retorno = " 0";
+				break;
+			case "decimal":
+				retorno = " 0m";
+				break;
+			case "double":
+				retorno = " 0D";
+				break;
+			case "float":
+				retorno = " 0f";
+				break;
+			case "void":
+				retorno = "";
+				break;
+			case "boolean":
+			case "booleano":
+			case "bool":
+				retorno = " false";
+				break;
+			case "datetime":
+				retorno = " new DateTime()";
+				break;
+			default:
+				retorno = " null";
+				break;
+		}%>		
+		<%string overide;
+		if(visibilidade.IndexOf("static")!=-1)
+			overide = "";
+		else
+			overide = " override";
+		%>
+		<%= visibilidade %><%= overide %> <%= tipo %> <%= nome %>(<%= parametros %>){
+		
+			return<%= retorno %>;
+			
+		}
+		
+<%  }// end foreach %>
+
+	}
+
+	public class <%= Modulo %>Lista : <%= Modulo %>Lista_B{
+	
+		public <%= Modulo %>Lista(){}
+	
+		public <%= Modulo %>Lista(int usuarioIDLogado) : base (usuarioIDLogado){}
+		
+	}
+	
+}

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CodigoPromo">
+  <Propriedades>
+    <Propriedade Nome="ParceiroID"		Tipo="int"	  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Codigo"	      Tipo="texto"  Tamanho="50"	Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="TamanhoCodigo"	Tipo="int"	  Nulo="False" Acesso="LE"/>
+  </Propriedades>
+</Classe>
+

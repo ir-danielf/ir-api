@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ContratoFormaPagamento">
+  <Propriedades>
+    <Propriedade Nome="ContratoID"	              Tipo="int"				      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="FormaPagamentoID"	                Tipo="int"				      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Dias"           Tipo="int"             Nulo="True" Acesso="LE"  />
+    <Propriedade Nome="Taxa"					Tipo="decimal"	Tamanho="5" Decimal="2"/>
+  </Propriedades>
+</Classe>
+

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Parceiro">
+  <Propriedades>
+    <Propriedade Nome="Parceiro"	Tipo="texto" Tamanho="100"	Nulo="True"/>
+    <Propriedade Nome="Tipo" Tipo="inteiro" Nulo="False" />
+    <Propriedade Nome="Url"	Tipo="texto" Tamanho="200"	Nulo="True"/>    
+  </Propriedades>
+</Classe>

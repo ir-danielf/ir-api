@@ -1,0 +1,9 @@
+C:\Git\Code\Comum\CTLib\bin\Producao\CTLib.dll.config
+C:\Git\Code\Comum\CTLib\bin\Producao\CTLib.dll
+C:\Git\Code\Comum\CTLib\bin\Producao\IRCore.Util.dll
+C:\Git\Code\Comum\CTLib\bin\Producao\PagedList.dll
+C:\Git\Code\Comum\CTLib\bin\Producao\log4net.dll
+C:\Git\Code\Comum\CTLib\bin\Producao\PagedList.xml
+C:\Git\Code\Comum\CTLib\bin\Producao\log4net.xml
+C:\Git\Code\Comum\CTLib\obj\Producao\CTLib.csprojResolveAssemblyReference.cache
+C:\Git\Code\Comum\CTLib\obj\Producao\CTLib.dll

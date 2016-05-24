@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Cor">
+    <Propriedades>
+        <Propriedade Nome="Nome"		Tipo="texto"	Tamanho="30"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="RGB"			Tipo="texto"	Tamanho="9"		Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Todas" Tipo="DataTable"><!-- Fabio -->
+			Obter todas as cores
+    	</Metodo>
+        <Metodo Nome="Precos" Tipo="DataTable">
+			Obter preços indicados nessa cor
+    	</Metodo>
+        <Metodo Nome="Cortesias" Tipo="DataTable">
+			Obter cortesias indicados nessa cor
+    	</Metodo>
+        <Metodo Nome="Bloqueios" Tipo="DataTable">
+			Obter bloqueios indicados nessa cor
+    	</Metodo>
+    </Metodos>
+</Classe>
+

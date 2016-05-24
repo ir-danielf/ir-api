@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Setor">
+  <Propriedades>
+    <Propriedade Nome="LocalID"					Tipo="int"						/>
+    <Propriedade Nome="Nome"					Tipo="texto"	Tamanho="20"	/>
+    <Propriedade Nome="Acesso"					Tipo="texto"	Tamanho="50"	/>
+    <Propriedade Nome="NomeInterno"				Tipo="texto"	Tamanho="30"	/>
+    <Propriedade Nome="LugarMarcado"			Tipo="texto"	Tamanho="1"		/>
+    <Propriedade Nome="Produto"					Tipo="bool"						/>
+    <Propriedade Nome="ObservacaoImportante"				Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DistanciaPalco" Tipo="int" Tamanho="4" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AprovadoPublicacao" Tipo="bool"  Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="VersaoBackground"  Tipo="int"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoSala" Tipo="texto" Tamanho="50" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Capacidade"  Tipo="int" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Linhas"  Tipo="int" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Colunas"  Tipo="int" Nulo="True" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="ApresentacoesSetoresIDs" Tipo="int[]">
+      <!-- Fabio -->
+      Retorna as apresentacoesSetoresIDs desse setor
+    </Metodo>
+    <Metodo Nome="Mapa" Tipo="string">
+      <!-- Fabio -->
+      Retorna um 'stringao' com os lugares desse Setor
+    </Metodo>
+    <Metodo Nome="Lugares" Tipo="DataTable">
+      <!-- Fabio -->
+      Obtem os lugares desse setor
+    </Metodo>
+    <Metodo Nome="Quantidade" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade total de lugares desse setor de lugar marcado
+    </Metodo>
+    <Metodo Nome="Quantidade" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade total de lugares desse setor de lugar nao marcado
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeBloqueado" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade de lugares bloqueados desse setor dada uma apresentacao
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeDisponivel" Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade de lugares disponiveis desse setor dada uma apresentacao
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="PrimeiroPrecoDisponivel" Tipo="decimal">
+      <!-- Fabio -->
+      Obtem o primeiro preço cadastrado com ingresso disponivel para esse setor dado uma apresentacao
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="PorcentagemIngressosStatus"	Tipo="DataTable">
+      Obter porcentagem de ingressos (separado por status)
+      Em função do Setor e todas apresentacoes de um evento(inclui o campo CortesiaID)
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosStatus"	Tipo="DataTable">
+      Obter Quantidade de ingressos (separado por status)
+      Em função do Setor e todas apresentacoes de um evento (inclui o campo CortesiaID)
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="TotalIngressos"	Tipo="int">
+      Total de ingressos por Apresentacao
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+      Vendas Gerenciais por setores com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+      Com porcentagem
+      <Parametros>
+        <Parametro Nome="dataInicial" Tipo="string" />
+        <Parametro Nome="dataFinal" Tipo="string" />
+        <Parametro Nome="comCortesia" Tipo="bool" />
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+        <Parametro Nome="localID" Tipo="int" />
+        <Parametro Nome="empresaID" Tipo="int" />
+        <Parametro Nome="vendasCanal" Tipo="bool" />
+        <Parametro Nome="tipoLinha" Tipo="string" />
+        <Parametro Nome="disponivel" Tipo="bool" />
+        <Parametro Nome="empresaVendeIngressos" Tipo="bool" />
+        <Parametro Nome="empresaPromoveEventos" Tipo="bool" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+      Setores definidos pelos IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosPorSetor" Tipo="int">
+      Obter quantidade de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorIngressosPorSetor" Tipo="decimal">
+      Obter valores de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      Obter todos os setores
+    </Metodo>
+  </Metodos>
+</Classe>
+

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PerspectivaLugar">
+  <Propriedades>
+    <Propriedade Nome="SetorID"	Tipo="int" Nulo="false"/>
+    <Propriedade Nome="Descricao"	Tipo="texto" Tamanho="100" Nulo="false"/>
+  </Propriedades>
+</Classe>

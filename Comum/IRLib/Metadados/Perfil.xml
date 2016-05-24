@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Perfil">
+    <Propriedades>
+        <Propriedade Nome="PerfilTipoID"	Tipo="int"	Nulo="True"/>    
+        <Propriedade Nome="Nome"		Tipo="texto"	Tamanho="50"/>
+        <Propriedade Nome="Descricao"		Tipo="memo"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Tipos" Tipo="DataTable"><!-- Fabio -->
+    		Devolve uma lista de tipos de perfil.
+    		<Parametros>
+    			<Parametro Nome="master" Tipo="bool" />
+    		</Parametros>    		
+    	</Metodo>
+    	<Metodo Nome="Logins" Tipo="DataTable"><!-- Fabio -->
+    		Obtem os logins dos usuarios desse perfil especifico
+    		<Parametros>
+    			<Parametro Nome="tipo" Tipo="int" />
+    			<Parametro Nome="perfilid" Tipo="int" />
+    			<Parametro Nome="id" Tipo="int" />
+    		</Parametros>    		
+    	</Metodo>
+    </Metodos>
+</Classe>

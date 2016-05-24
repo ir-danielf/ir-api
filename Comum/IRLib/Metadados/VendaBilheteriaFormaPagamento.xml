@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="VendaBilheteriaFormaPagamento">
+  <Propriedades>
+    <Propriedade Nome="FormaPagamentoID"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaID"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Valor"					      Tipo="decimal"	  Tamanho="12"	Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="Porcentagem"				  Tipo="decimal"		Nulo="True"		Acesso="LE"		Tamanho="5" Decimal="2"/>
+    <Propriedade Nome="Dias"			          Tipo="int"	      Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TaxaAdm"			        Tipo="decimal"	  Tamanho="12" Decimal="2"/>
+    <Propriedade Nome="IR"		              Tipo="booleano"	  Tamanho="1"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="DataDeposito"		    Tipo="datahora"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Atualizado"          Tipo="bit"        Nulo="True"  Acesso="LE"/>
+    <Propriedade Nome="ValeIngressoID"			Tipo="int"	      Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="VendaBilheteriaFormaPagamentoTEFID"    Tipo="int" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="MensagemRetorno"             Tamanho="100"     Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="HoraTransacao"               Tamanho="6"       Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataTransacao"               Tamanho="6"       Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoIR"                    Tamanho="25"      Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NumeroAutorizacao"           Tamanho="25"      Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NSUHost"                     Tamanho="20"      Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NSUSitef"                    Tamanho="20"      Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Cupom"                       Tamanho="300"     Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DadosConfirmacaoVenda"       Tamanho="40"      Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Rede"                        Tamanho="10"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="CodigoRespostaTransacao"     Tamanho="10"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="CodigoRespostaVenda"         Tamanho="10"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="CartaoID"                    Tipo="int"                            Nulo="True" Acesso="LE"/>
+
+    <Propriedade Nome="TokenPayPal"     Tamanho="50"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="PayerIDPaypal"         Tamanho="50"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="CorrelationID"     Tamanho="50"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="TransactionID"         Tamanho="50"      Tipo="texto"        Nulo="True" Acesso="LE"/>
+
+    <Propriedade Nome="Coeficiente"			        Tipo="decimal"	  Tamanho="12" Decimal="5"/>
+    <Propriedade Nome="JurosValor"			        Tipo="decimal"	  Tamanho="12" Decimal="2"/>
+
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

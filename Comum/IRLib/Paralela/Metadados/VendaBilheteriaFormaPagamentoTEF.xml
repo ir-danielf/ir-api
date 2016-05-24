@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="VendaBilheteriaFormaPagamentoTEF">
+  <Propriedades>
+    <Propriedade Nome="CodigoRespostaVenda"		            Tipo="int"						      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="MensagemRetorno"         					Tipo="texto" Tamanho="100"	Nulo="True" Acesso="LE" />
+    <Propriedade Nome="HoraTransacao"				              Tipo="texto" Tamanho="6"    Nulo="True"		Acesso="LE"	/>
+    <Propriedade Nome="DataTransacao"			                Tipo="texto" Tamanho="6"    Nulo="True"		Acesso="LE"	/>
+    <Propriedade Nome="CodigoIR"			                    Tipo="texto" Tamanho="25"   Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NumeroAutorizacao"		              Tipo="texto"	 Tamanho="25"   Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NSUHost"		                        Tipo="int"						      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NSUSitef"		                      Tipo="int"						      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Cupom"         					          Tipo="texto" Tamanho="300"	Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="DadosConfirmacaoVenda"         		Tipo="texto" Tamanho="40"	  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Rede"		                          Tipo="int"						      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoRespostaTransacao"		        Tipo="int"    						  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CartaoID"         Tipo="int"                            Nulo="True" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

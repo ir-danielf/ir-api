@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="MusicaCabeca">
+  <Propriedades>
+    <Propriedade Nome="Nome"  Tipo="texto" Tamanho="50" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Local"  Tipo="texto" Tamanho="50" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Data"  Tipo="datahora" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="QuantidadeCota"  Tipo="int"  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="QuantidadeNormal"  Tipo="int" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="DataLimiteCota"  Tipo="datahora" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Detalhes"  Tipo="texto" Tamanho="2000" Nulo="False" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

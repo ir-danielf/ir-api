@@ -1,0 +1,676 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D099B23D-6352-4336-BAE8-1A5C97F515D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IRCore.DataAccess.Model</RootNamespace>
+    <AssemblyName>IRCore.DataAccess.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Homolog\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Homolog\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|x86'">
+    <OutputPath>bin\x86\Producao\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|AnyCPU'">
+    <OutputPath>bin\Producao\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APIUsuario.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="APIUsuarioToken.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AssinaturaTipoModel.cs" />
+    <Compile Include="Banner.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BanneriMais.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BuscarApresentacoesIngressoResult.cs" />
+    <Compile Include="Carrinho.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CarrinhoExterno.cs" />
+    <Compile Include="cCaixa.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cCanalPreco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cCliente.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cClienteEndereco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cEmpresa.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cEvento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cidade.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteComprasCotaNetModel.cs" />
+    <Compile Include="CortesiaModel.cs" />
+    <Compile Include="EstadosVM.cs" />
+    <Compile Include="CidadesVM.cs" />
+    <Compile Include="EstatisticaIngressos.cs" />
+    <Compile Include="EventoScript.cs" />
+    <Compile Include="GoogleMarkup.cs" />
+    <Compile Include="InfosObrigatoriasIngresso.cs" />
+    <Compile Include="InfoLeiMeia.cs" />
+    <Compile Include="ListaCanalPorNome_Result.cs" />
+    <Compile Include="MeioEntregaVM.cs" />
+    <Compile Include="cPreco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cUsuario.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DestaqueConceitual.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DestaqueConceitualRegiao.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DestaqueLinkRegiao.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DestaqueRegiao.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DuvidasFrequentes.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enumerator\Enumerador.cs" />
+    <Compile Include="Estado.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstornoDadosCartaoCredito.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstornoDadosDepositoBancario.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstornoDadosDinheiro.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstornoHistoricoPlanilhas.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Evento.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoMidia.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoSubtipo.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventoTipoMidia.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPagamento.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPagamentoCotaItem.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPagamentoEvento.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FormaPagamentoSerie.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListaBancos.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ListaEventosPorNome_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Local.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MeuIngresso.cs" />
+    <Compile Include="ModelIngressoExtensions\APIUsuarioTokenExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EstornoCartaoCreditoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EstornoDadosDepositoBancarioExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ParceiroMidiaEntrega.cs" />
+    <Compile Include="ModelIngressoExtensions\VendaBilheteriaFormaPagamentoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\DonoIngressoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ObrigatoriedadeExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\CotaItemExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ValeIngressoTipoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ValeIngressoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EventoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ApresentacaoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ClienteEnderecoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EventoTipoMidiaExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EntregaControleExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EntregaExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\EmpresaExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\UsuarioExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ClienteExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\CaixaExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\VendaExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\ParceiroMidiaExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\DestaqueRegiaoExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\LocalExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\FormaPagamentoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\APIUsuarioExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\NewsAssinanteExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\PacoteItemExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\PacoteExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\SetorExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\TipoExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\EventoExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\CarrinhoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\IngressoExtensions.cs" />
+    <Compile Include="ModelIngressoExtensions\VoucherExtensions.cs" />
+    <Compile Include="ModelIngresso.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelIngresso.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelIngresso.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelIngresso.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelIngresso.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSite.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSite.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSite.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSite.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelSite.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ModelSiteExtensions\LoginExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\PontoVendaExtensions.cs" />
+    <Compile Include="ModelSiteExtensions\ApresentacaoExtensions.cs" />
+    <Compile Include="NewsAssinante.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="NomenclaturaPacote.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pacote.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PacoteItem.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PacoteRetorno.cs" />
+    <Compile Include="PagamentoPayPal.cs" />
+    <Compile Include="Pais.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidia.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidiaArea.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidiaClasse.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidiaClasseSetor.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidiaControleIngresso.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidiaEvento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ParceiroMidiaPraca.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PontoVenda.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PontoVendaFormaPgto.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PontoVendaHorario.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PontoVendaXFormaPgto.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Preco.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrecoParceiroMidia.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProcListaPrefisUsuario_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Regiao.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportClientesTrocaVoucher_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportHistoricoIngressos_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportIngressosDisponiveis_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportVoucherUtilizadoDisponibilizado_Result.cs" />
+    <Compile Include="ReportRetiradaPDV_Result.cs" />
+    <Compile Include="ReportCompradores_Result.cs" />
+    <Compile Include="ReportIngressosLiberados_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportIngressosOffline_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportListaNegra_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportRaioX_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportVoucherTrocas_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ReportWillCall_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="salvar_tCliente2ComContatoTipoID_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SenhaCancelamento.cs" />
+    <Compile Include="SenhaCancelamentoDetalhe.cs" />
+    <Compile Include="SenhaCompraDetalheCancelamento.cs" />
+    <Compile Include="SenhaCompraDetalhe.cs" />
+    <Compile Include="SenhaCompra.cs" />
+    <Compile Include="Setor.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sp_getApresentacaoInfo_Result.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tApresentacao.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tApresentacaoSetor.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tBandeira.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tBloqueio.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCaixa.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCanal.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCanalPreco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCancelamentoLote.cs" />
+    <Compile Include="tCancelamentoLoteApresentacao.cs" />
+    <Compile Include="tCancelamentoLoteFila.cs" />
+    <Compile Include="tCancelamentoLoteFilaIngresso.cs" />
+    <Compile Include="tCartao.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCEP.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCliente.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tClienteEndereco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCompraTemporaria.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tContatoTipo.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCota.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCotaItem.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tDonoIngresso.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEmpresa.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEntrega.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEntregaArea.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEntregaAreaBlackList.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEntregaAreaCep.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEntregaControle.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEvento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEventoEntregaControle.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEventoSubtipo.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tEventoTipo.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tFeriado.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tFormaPagamento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tFormaPagamentoEvento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tIngresso.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tIngressoCliente.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tIngressoLog.cs" />
+    <Compile Include="Tipo.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tLocal.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tLoja.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tLugar.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tMapaEsquematico.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tMapaEsquematicoSetor.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tObrigatoriedade.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPacote.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPacoteItem.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPacoteTemporario.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tParceiro.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tParcelamento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tPreco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tRegiao.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tRegional.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tRegionalArea.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tSetor.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tUsuario.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tValeIngresso.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tValeIngressoTipo.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVendaBilheteria.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVendaBilheteriaAgregados.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVendaBilheteriaEntrega.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVendaBilheteriaFormaPagamento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tVendaBilheteriaItem.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Voucher.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="VoucherClienteRetorno.cs" />
+    <Compile Include="vwPrecoCotaControle.cs">
+      <DependentUpon>ModelSite.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xCaixa.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xCanalPreco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xCliente.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xClienteEndereco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xEmpresa.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xEvento.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xPreco.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xUsuario.cs">
+      <DependentUpon>ModelIngresso.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ModelSite.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelSite.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <EntityDeploy Include="ModelIngresso.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelIngresso.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelIngresso.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelIngresso.edmx</DependentUpon>
+      <LastGenOutput>ModelIngresso.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModelIngresso.edmx.diagram">
+      <DependentUpon>ModelIngresso.edmx</DependentUpon>
+    </None>
+    <None Include="ModelIngresso.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelIngresso.edmx</DependentUpon>
+      <LastGenOutput>ModelIngresso.cs</LastGenOutput>
+    </None>
+    <None Include="ModelSite.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSite.edmx</DependentUpon>
+      <LastGenOutput>ModelSite.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ModelSite.edmx.diagram">
+      <DependentUpon>ModelSite.edmx</DependentUpon>
+    </None>
+    <None Include="ModelSite.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelSite.edmx</DependentUpon>
+      <LastGenOutput>ModelSite.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comum\CTLib\CTLib.csproj">
+      <Project>{D6C8573F-35C1-4D4F-B361-E917C52B361D}</Project>
+      <Name>CTLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comum\IRLib\IRLib.csproj">
+      <Project>{6A046605-146B-4DC3-8270-8593FBA71EB6}</Project>
+      <Name>IRLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCore.Util\IRCore.Util.csproj">
+      <Project>{98388fcf-f690-4576-b6cb-e054f4a72097}</Project>
+      <Name>IRCore.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Site\IngressoRapidoLib\IngressoRapidoLib.csproj">
+      <Project>{C69042FC-BB1B-4C28-9B3B-3CA5F9F0F7FF}</Project>
+      <Name>IngressoRapidoLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

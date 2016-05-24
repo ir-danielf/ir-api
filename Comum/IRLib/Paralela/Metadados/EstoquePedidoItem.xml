@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstoquePedidoItem">
+	<Propriedades>
+		<Propriedade Nome="EstoqueItemID"	Tipo="int"		Nulo="True" Acesso="LE"/>
+		<Propriedade Nome="EstoquePedidoID" Tipo="int"		Nulo="True" Acesso="LE"/>
+		<Propriedade Nome="PrecoCompra"		Tipo="decimal"	Nulo="True" Acesso="LE" Tamanho="12" Decimal="2"/>
+		<Propriedade Nome="Quantidade"		Tipo="decimal"	Nulo="True"	Acesso="LE"	Tamanho="12" Decimal="4"/>
+		<Propriedade Nome="Obs"				Tipo="memo"		Nulo="True" Acesso="LE"/>
+	</Propriedades>
+</Classe>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CupomDesconto">
+  <Propriedades>
+    <Propriedade Nome="Cupom"			Tipo="texto"			Nulo="True"	Acesso="LE" Tamanho="200"/>
+    <Propriedade Nome="Timestamp"		Tipo="DataHora"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Status"		Tipo="text"			Tamanho="1" Nulo="True"	Acesso="LE" />
+
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="ValidarCupom" Tipo="bool">
+      Valida o Cupom entre tCupomDesconto e tCupomDescontoLog
+      <Parametros>
+        <Parametro Nome="cupom" Tipo="string" />
+      </Parametros>
+    </Metodo>
+  </Metodos>
+</Classe>

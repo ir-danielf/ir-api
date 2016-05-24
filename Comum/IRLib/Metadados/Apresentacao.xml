@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Apresentacao">
+  <Propriedades>
+    <Propriedade Nome="EventoID"				Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Horario"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DisponivelVenda"			Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DisponivelAjuste"		Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DisponivelRelatorio"		Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemIngresso"	Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale2"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale3"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Impressao"				Tipo="texto"			Tamanho="1"/>
+    <Propriedade Nome="LocalImagemMapaID"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DescricaoPadrao" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Descricao" Tipo="texto" Tamanho="200" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="UltimoCodigoImpresso"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CotaID"                Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Quantidade"		        Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="QuantidadePorCliente"	Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="MapaEsquematicoID"   	Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Programacao"     Tipo="texto"  Tamanho="2000" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoProgramacao"   Tipo="texto"  Tamanho="100" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Sincronizado"   Tipo="texto"  Tamanho="1" Nulo="True" Acesso="LE" />
+    
+    <Propriedade Nome="Alvara"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AVCB"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="DataEmissaoAlvara"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataValidadeAlvara"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    
+    <Propriedade Nome="DataEmissaoAvcb"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataValidadeAvcb"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Lotacao"		Tipo="int"				Nulo="True" Acesso="LE" />
+
+
+  </Propriedades>
+
+  <!--
+  	Exclusão:
+Observacao
+	Inclusão:
+DescricaoPadrao(bool)
+Descricao(200)
+  -->
+  <Metodos>
+    <Metodo Nome="Novo" Tipo="int[]">
+      <!-- Fabio -->
+      Gerar apresentacoes de acordo com o dataset
+      <Parametros>
+        <Parametro Nome="info" Tipo="DataSet">
+          DataSet contendo todas as informações para gerar apresentacoes
+        </Parametro>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Ingressos" Tipo="DataTable">
+      Obtendo os Ingressos de uma apresentacao em forma de DataTable baseado no Canal
+      <Parametros>
+        <Parametro Nome="canalID" Tipo="int" />
+        <Parametro Nome="status" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeDisponivel"	Tipo="int">
+      <!-- Fabio -->
+      Obtem a quantidade de lugares disponiveis dessa apresentacao dado um setor
+      <Parametros>
+        <Parametro Nome="SetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Caixas" Tipo="DataTable">
+      Obter os Caixas desta Apresentacao
+    </Metodo>
+    <Metodo Nome="Fechamento" Tipo="DataTable">
+      Obtem uma tabela com os valores agrupados por forma de pagamento de uma apresentacao
+    </Metodo>
+    <Metodo Nome="Fechamento" Tipo="DataTable">
+      Obtem uma tabela com os valores agrupados por forma de pagamento de uma apresentacao
+      Em funcao de um certo Caixa (onde pagou)
+      <Parametros>
+        <Parametro Nome="caixaID" 	Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Setores" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter os setores dessa apresentacao
+    </Metodo>
+    <Metodo Nome="VendaProduto" Tipo="DataTable">
+      Obtem uma tabela com os valores agrupados por produto
+    </Metodo>
+    <Metodo Nome="VendaProduto" Tipo="DataTable">
+      Obtem uma tabela com os valores agrupados por produto
+      Em funcao desta Apresentacao e de um certo Caixa
+      Obs: Caixa que vendeu e nao o que pagou
+      <Parametros>
+        <Parametro Nome="caixaID" 	Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ExcluirCascata"	Tipo="bool">
+      Chama Cascata da ApresentacaoSetor e exlcui esta apresentacao
+    </Metodo>
+    <Metodo Nome="PorcentagemIngressosStatus"	Tipo="DataTable">
+      Obter porcentagem de ingressos (separado por status)
+      Em função da Apresentacao (inclui o campo CortesiaID)
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosStatus"	Tipo="DataTable">
+      Obter Quantidade de ingressos (separado por status)
+      Em função da Apresentacao (inclui o campo CortesiaID)
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="TotalIngressos"	Tipo="int">
+      Total de ingressos por Apresentacao
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+      Vendas Gerenciais por apresentacoes com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+      Com porcentagem
+      <Parametros>
+        <Parametro Nome="dataInicial" Tipo="string" />
+        <Parametro Nome="dataFinal" Tipo="string" />
+        <Parametro Nome="comCortesia" Tipo="bool" />
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+        <Parametro Nome="localID" Tipo="int" />
+        <Parametro Nome="empresaID" Tipo="int" />
+        <Parametro Nome="vendasCanal" Tipo="bool" />
+        <Parametro Nome="tipoLinha" Tipo="string" />
+        <Parametro Nome="disponivel" Tipo="bool" />
+        <Parametro Nome="empresaVendeIngressos" Tipo="bool" />
+        <Parametro Nome="empresaPromoveEventos" Tipo="bool" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+      Apresentacoes definidos pelos IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosPorApresentacao" Tipo="int">
+      Obter quantidade de ingressos em função do ingressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorIngressosPorApresentacao" Tipo="decimal">
+      Obter valores de ingressos em função do ingressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+
+  </Metodos>
+</Classe>
+

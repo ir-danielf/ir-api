@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CanalSerie">
+    <Propriedades>
+        <Propriedade Nome="CanalID"					Tipo="int"		Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="SerieID"				Tipo="int"		Nulo="True"	Acesso="LE"/>        
+    </Propriedades>
+    
+</Classe>
+

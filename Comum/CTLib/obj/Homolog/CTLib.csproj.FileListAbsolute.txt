@@ -1,0 +1,12 @@
+C:\Git\Code\Comum\CTLib\bin\Homolog\CTLib.dll.config
+C:\Git\Code\Comum\CTLib\bin\Homolog\CTLib.dll
+C:\Git\Code\Comum\CTLib\bin\Homolog\CTLib.pdb
+C:\Git\Code\Comum\CTLib\bin\Homolog\IRCore.Util.dll
+C:\Git\Code\Comum\CTLib\bin\Homolog\PagedList.dll
+C:\Git\Code\Comum\CTLib\bin\Homolog\log4net.dll
+C:\Git\Code\Comum\CTLib\bin\Homolog\IRCore.Util.pdb
+C:\Git\Code\Comum\CTLib\bin\Homolog\PagedList.xml
+C:\Git\Code\Comum\CTLib\bin\Homolog\log4net.xml
+C:\Git\Code\Comum\CTLib\obj\Homolog\CTLib.csprojResolveAssemblyReference.cache
+C:\Git\Code\Comum\CTLib\obj\Homolog\CTLib.dll
+C:\Git\Code\Comum\CTLib\obj\Homolog\CTLib.pdb

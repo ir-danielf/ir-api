@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Venda">
+	<Propriedades>
+		<Propriedade Nome="CaixaID"		Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="IngressoID"	Tipo="int"		Nulo="True" Acesso="LE"/>
+		<Propriedade Nome="Pago"		Tipo="bool"		Nulo="True" Acesso="LE" />
+	</Propriedades>
+    <Metodos>
+    	<Metodo Nome="TotalIngresso" Tipo="decimal">
+     		Obtehm o total das vendas nao pagas de um ingresso (de todos caixas)
+    		<Parametros>
+    			<Parametro Nome="ingresso" 	Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    	<Metodo Nome="TotalComanda" Tipo="decimal">
+     		Obtehm o total da comanda nao paga
+    		<Parametros>
+    			<Parametro Nome="comandaID" 	Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    	<Metodo Nome="Pagamentos" Tipo="DataTable">
+     		Devolve todas as venda pagamentos do ingresso nao-pago
+    	</Metodo>
+    	<Metodo Nome="PagamentosPorIngresso" Tipo="DataTable">
+     		Devolve todas as venda pagamentos do ingresso nao-pago
+    		<Parametros>
+    			<Parametro Nome="ingressoInformado" 	Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>
+

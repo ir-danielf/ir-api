@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PrecoExclusivoCodigo">
+  <Propriedades>
+    <Propriedade Nome="DescontoID"	          Tipo="int"							      Nulo="True"	  Acesso="LE"/>
+    <Propriedade Nome="Codigo"		            Tipo="texto"	  Tamanho="30"	Nulo="True"	  Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Lucio -->
+      Obter todos os Códigos de Precos Exclusivos
+    </Metodo>
+    <Metodo Nome="ListagemPorPrecoExclusivo" Tipo="DataTable">
+      <!-- Lucio -->
+      Obter os Códigos por Precos Exclusivos
+      <Parametros>
+        <Parametro Nome="PrecoExclusivoID" Tipo="int"/>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ListagemPorCodigo" Tipo="DataTable">
+      <!-- Lucio -->
+      Obter o Código de Precos Exclusivos
+      <Parametros>
+        <Parametro Nome="Codigo" Tipo="string"/>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ListagemPorCodigo" Tipo="DataTable">
+      <!-- Lucio -->
+      Obter o Código através do PreçoID e Código
+      <Parametros>
+        <Parametro Nome="PrecoExclusivoID" Tipo="int"/>
+        <Parametro Nome="Codigo" Tipo="string"/>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="InsereCodigos" Tipo="int">
+      <!-- Lucio -->
+      Obter o Código através do PreçoID e Código
+      <Parametros>
+        <Parametro Nome="PrecoExclusivoID" Tipo="int"/>
+        <Parametro Nome="Codigo" Tipo="string[]"/>
+      </Parametros>
+    </Metodo>
+  </Metodos>
+</Classe>

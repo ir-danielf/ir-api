@@ -1,0 +1,1229 @@
+<%@ CodeTemplate Debug="False" Language="C#" TargetLanguage="C#" Description="Lê um arquivo XML para gerar as classes C# do arquivo <Modulo>DB.cs." %>
+<%@ Property Name="Modulo" Type="String" Category="Context"
+	Description="Nome do arquivo XML e das CLASSES que serao criadas pelo script." %>
+<%@ Property Name="Local" Type="String" Category="Context"
+	Description="Diretohrio onde se encontra o arquivo XML." %>
+/******************************************************
+* Arquivo <%= Modulo %>DB.cs
+* Gerado em: <%= DateTime.Now.ToString("dd/MM/yyyy") %>
+* Autor: Celeritas Ltda
+*******************************************************/
+<% //Debugger.Break(); %>
+<% string modulo, moduloM, local, arquivo,
+	nome, nomep; %>
+<% string[] Nomes, Tipos, Tamanhos, Acessos, NrsParam; %>
+<% int nrElementos = 0; %>
+<% modulo = Modulo; %>
+<% moduloM = Modulo; %>
+<% local = Local; %>
+<% local.Replace("/","\\"); %>
+<%	if (local != "")
+		arquivo = local + "\\" + modulo + ".xml";
+	else
+		arquivo = modulo + ".xml";
+	arquivo = arquivo.Replace(".xml.xml", ".xml");			
+%>
+<% System.Xml.XmlDocument doc = new System.Xml.XmlDocument(); %>
+<% doc.Load(arquivo); %>
+<% System.Xml.XmlElement root  = doc.DocumentElement; %>
+<% // System.Xml.XmlElement rootp = doc.DocumentElement.SelectSingleNode("/Parametros/Parametro"); %>
+<% modulo = root.Attributes.GetNamedItem("Nome").Value; %>
+<% string tTable = "t" + modulo; %>
+<% string acesso = "", acessog = ""; %>
+
+using System;
+using System.Text;
+using System.Data;
+using System.Runtime.Serialization;
+using System.Linq;
+using System.Collections.Generic;
+
+using CTLib;
+
+namespace IRLib {
+
+	#region "<%= Modulo %>_B"
+
+	public abstract class <%= Modulo %>_B : BaseBD {
+	
+	<% System.Xml.XmlNodeList xmlPropriedades = root.SelectNodes("descendant::Propriedades/Propriedade"); %>
+	<% foreach (System.Xml.XmlNode propriedade in xmlPropriedades) %>
+	<%  { %>
+	<% // NOME %>
+	<% 		nome	= propriedade.Attributes.GetNamedItem("Nome").Value; %>
+	<% 		nomep   = nome.ToLower(); %>
+	<%		nrElementos++; %>
+		public <%= nomep %> <%=nome %> = new <%= nomep %>();
+	<%  } // end foreach%>
+	<% Nomes = new string[nrElementos]; %>
+	<% Tipos = new string[nrElementos]; %>
+	<% Tamanhos = new string[nrElementos]; %>
+	<% NrsParam = new string[nrElementos]; %>
+	<% Acessos = new string[nrElementos]; %>
+		
+		public <%= Modulo %>_B(){}
+
+		/// <summary>
+		/// Preenche todos os atributos de <%= modulo %>
+		/// </summary>
+		/// <param name="id">Informe o ID</param>
+		/// <returns></returns>
+		public override void Ler(int id){
+		
+			try{
+		
+				string sql = "SELECT * FROM <%= tTable %> WHERE ID = " + id;
+				bd.Consulta(sql);
+				
+				if (bd.Consulta().Read()){
+					this.Control.ID = id;
+					<% int i = 0; %>
+					<% foreach (System.Xml.XmlNode propriedade in xmlPropriedades) %>
+					<%  { %>
+					<% // NOME %>
+					<% 		Nomes[i]	= propriedade.Attributes.GetNamedItem("Nome").Value; %>
+					<% // TIPOS %>
+					<%		Tipos[i]	= propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();				
+							switch (Tipos[i]){
+							   case "numero":
+							   case "decimal": %>
+					this.<%= Nomes[i] %>.ValorBD = bd.LerDecimal("<%= Nomes[i] %>").ToString();
+								<% break; %>
+							<% case "int": %>
+							<% case "inteiro": %>
+					this.<%= Nomes[i] %>.ValorBD = bd.LerInt("<%= Nomes[i] %>").ToString();
+								<% break; %>
+							<% case "char": %>
+							<% case "string": %>
+							<% case "texto": %>
+							<% case "memo": %>
+							<% case "bool": %>
+							<% case "boolean": %>
+							<% case "booleano": %>
+							<% case "data": %>
+							<% case "hora": %>
+							<% case "datahora": %>
+					this.<%= Nomes[i] %>.ValorBD = bd.LerString("<%= Nomes[i] %>");
+								<% break; %>
+							<% default:
+								  break;
+							}
+					   // TAMANHOS
+				 		if (propriedade.Attributes.GetNamedItem("Tamanho") != null){
+							Tamanhos[i] = propriedade.Attributes.GetNamedItem("Tamanho").Value;
+						}else{
+							Tamanhos[i] = "0";
+						}
+						// ACESSOS
+						if (propriedade.Attributes.GetNamedItem("Acesso") != null){ 
+				 			acesso = propriedade.Attributes.GetNamedItem("Acesso").Value;
+				 			acessog = acesso.ToUpper();
+				 			Acessos[i] = acessog;
+						}else{
+							Acessos[i] = "LE";
+						}
+						i++;
+					} // end foreach %>
+				}else{
+					this.Limpar();
+				}
+				bd.Fechar();
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			finally
+			{
+				bd.Fechar();
+			}			
+		}
+
+		/// <summary>
+		/// Inserir novo(a) <%= modulo %>
+		/// </summary>
+		/// <returns></returns>	
+		public override bool Inserir(){
+		
+			try{
+				<% System.Text.StringBuilder PropriedadesEmLinha = new System.Text.StringBuilder(); %>
+				<% System.Text.StringBuilder NrsParamEmLinha = new System.Text.StringBuilder(); %>			
+				<%
+						int z;
+						for (i = 0, z = 1; i < (Nomes.Length); i++, z++)
+						{
+							if(i > 0){
+								PropriedadesEmLinha.Append(", " + Nomes[i]);
+								NrsParamEmLinha.Append(",");
+							}
+							else
+								PropriedadesEmLinha.Append(Nomes[i]);
+
+							if (i < 10 && z != 10)
+							{
+								if ((Tipos[i] == "numero") || (Tipos[i] == "inteiro") || (Tipos[i] == "int"))
+									NrsParamEmLinha.Append(",@00" + (z).ToString());
+								else
+									NrsParamEmLinha.Append(",'@00" + (z).ToString() + "'");
+								NrsParam[i] = "@00" + (z).ToString();
+							}
+							else if (i < 100 && z != 100)
+							{
+								if ((Tipos[i] == "numero") || (Tipos[i] == "inteiro") || (Tipos[i] == "int"))
+									NrsParamEmLinha.Append(",@0" + (z).ToString());
+								else
+									NrsParamEmLinha.Append(",'@0" + (z).ToString() + "'");
+								NrsParam[i] = "@0" + (z).ToString();
+							}
+							else
+							{
+								if ((Tipos[i] == "numero") || (Tipos[i] == "inteiro") || (Tipos[i] == "int"))
+									NrsParamEmLinha.Append(",'@" + (z).ToString());
+								else
+									NrsParamEmLinha.Append(",'@" + (z).ToString() + "'");							
+								NrsParam[i] = "@" + (z).ToString();
+							}
+						}
+				%>			
+		
+				StringBuilder sql = new StringBuilder();
+				sql.Append("SELECT MAX(ID) AS ID FROM <%= tTable %>");
+				object obj = bd.ConsultaValor(sql);
+				int id = (obj!=null) ? Convert.ToInt32(obj) : 0;
+
+				this.Control.ID = ++id;
+				
+				sql = new StringBuilder();
+				sql.Append("INSERT INTO <%= tTable %>(ID<%= PropriedadesEmLinha.ToString() %>) ");
+				sql.Append("VALUES (@ID<%= NrsParamEmLinha.ToString() %>)");
+				
+				sql.Replace("@ID", this.Control.ID.ToString());
+				<% System.Text.StringBuilder ParamReplace = new System.Text.StringBuilder(); %>
+				<% i = 0; %>
+				<% foreach (System.Xml.XmlNode propriedade in xmlPropriedades) %>
+				<%  { %>
+				<% // NOME %>
+				<% 		Nomes[i] = propriedade.Attributes.GetNamedItem("Nome").Value; %>
+				sql.Replace("<%= NrsParam[i] %>", this.<%= Nomes[i] %>.ValorBD);
+				<% i++; %>
+				<%  } // end foreach%>
+				
+				int x = bd.Executar(sql.ToString());
+				bd.Fechar();
+				
+				bool result = Convert.ToBoolean(x);				
+				
+				return result;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			finally
+			{
+				bd.Fechar();
+			}
+			
+			
+		}
+
+		/// <summary>
+		/// Inserir novo(a) <%= modulo %>
+		/// </summary>
+		/// <returns></returns>	
+		public override bool Inserir(BD bd){
+		
+				StringBuilder sql = new StringBuilder();
+				sql.Append("SELECT MAX(ID) AS ID FROM <%= tTable %>");
+				object obj = bd.ConsultaValor(sql);
+				int id = (obj!=null) ? Convert.ToInt32(obj) : 0;
+
+				this.Control.ID = ++id;
+				
+				sql = new StringBuilder();
+				sql.Append("INSERT INTO <%= tTable %>(ID<%= PropriedadesEmLinha.ToString() %>) ");
+				sql.Append("VALUES (@ID<%= NrsParamEmLinha.ToString() %>)");
+				
+				sql.Replace("@ID", this.Control.ID.ToString());
+				
+				<% i = 0; %>
+				<% foreach (System.Xml.XmlNode propriedade in xmlPropriedades) %>
+				<%  { %> 
+				<% // NOME %>
+				<% 		Nomes[i] = propriedade.Attributes.GetNamedItem("Nome").Value; %>
+				sql.Replace("<%= NrsParam[i] %>", this.<%= Nomes[i] %>.ValorBD);
+				<% i++; %>
+				<%  } // end foreach%>
+				
+				int x = bd.Executar(sql.ToString());
+
+				bool result = Convert.ToBoolean(x);				
+				
+				return result;
+
+		}
+
+
+		/// <summary>
+		/// Atualiza <%= modulo %>
+		/// </summary>
+		/// <returns></returns>	
+		public override bool Atualizar(){
+		
+			try{
+				
+				StringBuilder sql = new StringBuilder();
+				<% System.Text.StringBuilder update = new System.Text.StringBuilder(); %>
+				<%
+					for (i = 0; i < (Nomes.Length); i++){
+						if (i == (Nomes.Length-1)){
+						
+							if ((Tipos[i] == "numero") || (Tipos[i] == "inteiro") || (Tipos[i] == "int"))
+								update.Append(Nomes[i] + " = " + NrsParam[i]);
+							else
+								update.Append(Nomes[i] + " = '" + NrsParam[i] + "'");
+								
+						}else{
+						
+							if ((Tipos[i] == "numero") || (Tipos[i] == "inteiro") || (Tipos[i] == "int"))
+								update.Append(Nomes[i] + " = " + NrsParam[i] + ", ");
+							else
+								update.Append(Nomes[i] + " = '" + NrsParam[i] + "', ");
+						}
+					}
+				%>
+				sql.Append("UPDATE <%= tTable %> SET <%= update.ToString() %> ");
+				sql.Append("WHERE ID = @ID");
+				sql.Replace("@ID", this.Control.ID.ToString());
+				<% i = 0; %>
+				<% foreach (System.Xml.XmlNode propriedade in xmlPropriedades) %>
+				<%  { %>
+				<% // NOME %>
+				<% 		Nomes[i] = propriedade.Attributes.GetNamedItem("Nome").Value; %>
+				sql.Replace("<%= NrsParam[i] %>", this.<%= Nomes[i] %>.ValorBD);
+				<% i++; %>
+				<%  } // end foreach%>
+				
+				int x = bd.Executar(sql.ToString());
+				bd.Fechar();
+				
+				bool result = Convert.ToBoolean(x);
+				
+				return result;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+			finally
+			{
+				bd.Fechar();
+			}
+		}
+
+		/// <summary>
+		/// Atualiza <%= modulo %>
+		/// </summary>
+		/// <returns></returns>	
+		public override bool Atualizar(BD bd){
+		
+			StringBuilder sql = new StringBuilder();
+				
+				sql.Append("UPDATE <%= tTable %> SET <%= update.ToString() %> ");
+				sql.Append("WHERE ID = @ID");
+				sql.Replace("@ID", this.Control.ID.ToString());
+				<% i = 0; %>
+				<% foreach (System.Xml.XmlNode propriedade in xmlPropriedades) %>
+				<%  { %>
+				<% // NOME %>
+				<% 		Nomes[i] = propriedade.Attributes.GetNamedItem("Nome").Value; %>
+				sql.Replace("<%= NrsParam[i] %>", this.<%= Nomes[i] %>.ValorBD);
+				<% i++; %>
+				<%  } // end foreach%>
+				
+				int x = bd.Executar(sql.ToString());
+
+				bool result = Convert.ToBoolean(x);
+				
+				return result;
+				
+
+		}
+
+
+		/// <summary>
+		/// Exclui <%= modulo %> com ID especifico
+		/// </summary>
+		/// <param name="id">Informe o ID</param>
+		/// <returns></returns>
+		public override bool Excluir(int id){
+		
+			try{
+				
+				string sqlDelete = "DELETE FROM <%= tTable %> WHERE ID="+id;
+				
+				int x = bd.Executar(sqlDelete);
+				bd.Fechar();
+				
+				bool result = Convert.ToBoolean(x);
+				return result;
+			
+			}catch(Exception ex){
+				throw ex;
+			}
+			finally
+			{
+				bd.Fechar();
+			}
+		}
+		
+		/// <summary>
+		/// Exclui <%= modulo %> com ID especifico
+		/// </summary>
+		/// <param name="id">Informe o ID</param>
+		/// <returns></returns>
+		public override bool Excluir(BD bd, int id){
+		
+
+				string sqlDelete = "DELETE FROM <%= tTable %> WHERE ID="+id;
+				
+				int x = bd.Executar(sqlDelete);
+
+				bool result = Convert.ToBoolean(x);
+				return result;
+
+		}
+
+		/// <summary>
+		/// Exclui <%= modulo %>
+		/// </summary>
+		/// <returns></returns>		
+		public override bool Excluir(){
+		
+			try{
+				return this.Excluir(this.Control.ID);
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+			
+		}
+
+		public override void Limpar(){
+		
+		<%
+			for (i = 0; i < Nomes.Length; i++){ %>
+			this.<%= Nomes[i] %>.Limpar();
+		<%	}
+		%>
+			this.Control.ID = 0;
+			this.Control.Versao = 0;
+		}
+
+		public override void Desfazer(){
+		
+		<%
+			for (i = 0; i < Nomes.Length; i++){ %>
+			this.<%= Nomes[i] %>.Desfazer();
+		<%	}
+		%>
+		}
+
+		<%
+			bool flag = false;
+			string tipo = "", tipoz = "";
+			for (i = 0; i < Nomes.Length; i++){ %>
+			<%
+				switch (Tipos[i]){
+					case "decimal":
+					case "numero":
+						tipo		= "NumberProperty";
+						tipoz		= "decimal";
+						break;
+					case "int":
+					case "inteiro":
+						tipo		= "IntegerProperty";
+						tipoz		= "int";
+						break;
+					case "char":
+					case "string":
+					case "texto":
+						tipo		= "TextProperty";
+						tipoz		= "string";
+						break;
+					case "date":
+					case "data":
+						tipo		= "DateProperty";
+						tipoz		= "DateTime";
+						break;
+					case "time":
+					case "hora":
+						tipo		= "TextProperty";
+						tipoz		= "string";
+						break;
+					case "datetime":
+					case "datahora":
+						tipo		= "DateTimeProperty";
+						tipoz		= "DateTime";
+						break;
+					case "bool":
+					case "boolean":
+					case "booleano":
+						tipo		= "BooleanProperty";
+						tipoz		= "bool";
+						break;
+					case "memo":
+						tipo		= "TextProperty";
+						tipoz		= "string";
+						break;
+					default:
+						tipo		= "IntegerProperty";
+						tipoz		= "int";
+						break;
+				}
+			%>
+		public class <%= Nomes[i].ToLower() %> : <%= tipo %>{
+		
+			public override string Nome{
+				get{
+					return "<%= Nomes[i] %>";
+				}
+			}
+			
+			public override int Tamanho{
+				get{
+					return <%= Tamanhos[i] %>;
+				}
+			}
+			
+			public override <%= tipoz %> Valor{
+			<% switch (Acessos[i]){
+				case "L": %>
+				get{
+					return base.Valor;
+				}
+					<% break; %>
+				<% case "E": %>
+				set{
+					base.Valor = value;
+				}
+					<% break; %>
+				<% case "LE": %>
+				<% case "EL": %>
+				get{
+					return base.Valor;
+				}
+				set{
+					base.Valor = value;
+				}
+					<% break; %>
+				<% default: %>
+				get{
+					return base.Valor;
+				}
+				set{
+					base.Valor = value;
+				}
+					<% break; %>			
+		<% } %>
+			}
+			
+			<% if (Acessos[i] != "E"){ %>
+			public override string ToString(){
+			<%
+				switch (Tipos[i]){
+					case "decimal":
+					case "numero":
+						%>
+				return base.Valor.ToString("###,##0.00");
+						<%
+						break;
+					case "int":
+					case "inteiro":
+						%>
+				return base.Valor.ToString();
+						<%
+						break;
+					case "memo":
+					case "char":
+					case "string":
+					case "texto":
+						%>
+				return base.Valor;
+						<%
+						break;
+					case "date":
+					case "data":
+						%>
+				return base.Valor.ToString("dd/MM/yyyy");
+						<%
+						break;
+					case "time":
+					case "hora":
+						%>
+				return base.Valor.ToString("HH:mm");
+						<%
+						break;
+					case "datetime":
+					case "datahora":
+						%>
+				return base.Valor.ToString("dd/MM/yyyy HH:mm");
+						<%
+						break;
+					case "bool":
+					case "boolean":
+					case "booleano":
+						%>
+				return base.Valor.ToString();
+						<%
+						break;
+					default:
+						%>
+				return base.Valor.ToString();
+						<%
+						break;
+				}
+			%>
+		<% } %>
+			}
+			
+		}
+
+		<% } %>
+		/// <summary>
+		/// Obtem uma tabela estruturada com todos os campos dessa classe.
+		/// </summary>
+		/// <returns></returns>
+		public static DataTable Estrutura(){
+		
+			//Isso eh util para desacoplamento.
+			//A Tabela fica vazia e usamos ela para associar a uma tela com baixo nivel de acoplamento.
+				
+			try{
+
+				DataTable tabela = new DataTable("<%= Modulo %>");
+				
+				tabela.Columns.Add("ID", typeof(int));
+			<%
+				for(i = 0; i < Nomes.Length; i++){ %>
+				<%
+					switch (Tipos[i]){
+						case "decimal":
+						case "numero":
+							tipoz		= "decimal";
+							break;
+						case "int":
+						case "inteiro":
+							tipoz		= "int";
+							break;
+						case "char":
+						case "string":
+						case "texto":
+							tipoz		= "string";
+							break;
+						case "date":
+						case "data":
+							tipoz		= "DateTime";
+							break;
+						case "time":
+						case "hora":
+							tipoz		= "string";
+							break;
+						case "datetime":
+						case "datahora":
+							tipoz		= "DateTime";
+							break;
+						case "bool":
+						case "boolean":
+						case "booleano":
+							tipoz		= "bool";
+							break;
+						case "memo":
+							tipoz		= "string";
+							break;
+						default:
+							tipoz		= "int";
+							break;
+					}
+				%>			
+				tabela.Columns.Add("<%= Nomes[i] %>", typeof(<%= tipoz %>));
+			<%	} %>		
+			
+				return tabela;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}		
+				
+	<% // Debugger.Break(); %>
+	<% string comentario = ""; %>
+	<% System.Xml.XmlNodeList xmlMetodos = root.SelectNodes("descendant::Metodos/Metodo"); %>
+	<% // System.Xml.XmlNodeList xmlParametros = root.SelectNodes("descendant::Metodos/Metodo/Parametros/Parametro"); %>
+	<% // System.Xml.XmlNodeList xmlParametros = rootp.SelectNodes("descendant::Parametros/Parametro"); %>
+	<% string visibilidade = "", visibilidadep = "", parametros = "", nome_param = "", tipo_param = "", comportamento = "", comportamentop = "", tipop = ""; %>
+	<% foreach (System.Xml.XmlNode metodo in xmlMetodos) %>
+	<%  { %>
+	<% // NOME %>
+	<% 		nome	= metodo.Attributes.GetNamedItem("Nome").Value; %>
+	<% 
+ 	   // TIPO
+		tipo	= metodo.Attributes.GetNamedItem("Tipo").Value;
+		// tipo	= tipo.ToLower();
+			
+		   	// VISIBILIDADE
+			if (metodo.Attributes.GetNamedItem("Visibilidade") != null){
+				visibilidade = metodo.Attributes.GetNamedItem("Visibilidade").Value;
+				visibilidadep = visibilidade.ToLower();
+				visibilidade = "";
+				switch (visibilidadep){
+					case "public":
+					case "publico":
+						visibilidade = "public";
+						break;
+					case "private":
+					case "privado":
+						visibilidade = "private";
+						break;
+					case "protected":
+					case "protegido":
+						visibilidade = "protected";
+						break;
+					case "internal":
+					case "interno":
+						visibilidade = "internal";
+						break;
+					case "static":
+					case "estatico":
+						visibilidade = "static";
+						break;
+					default:
+						throw new Exception("Visibilidade de"+nome+" errada.");
+						break;
+				}
+			}else{
+				visibilidade = "public";
+			}
+		
+	 %>
+	<% if (visibilidade!=""){ %>
+	<% int inc = 0; %>
+	<% parametros = ""; %>
+	<% System.Xml.XmlNodeList xmlParametros = metodo.SelectNodes("descendant::Parametros/Parametro"); %>
+	<% foreach (System.Xml.XmlNode lista_parametros in xmlParametros){ %>
+<% 		// PARÂMETROS
+			nome_param		= lista_parametros.Attributes.GetNamedItem("Nome").Value;
+			tipo_param		= lista_parametros.Attributes.GetNamedItem("Tipo").Value;		
+							
+			if (lista_parametros.Attributes.GetNamedItem("Comportamento") != null){
+				comportamento	= lista_parametros.Attributes.GetNamedItem("Comportamento").Value;
+				comportamentop	= comportamento.ToLower();
+			}else{
+				comportamentop = "";
+			}
+			
+			if (inc > 0)
+				parametros += ", ";
+
+			switch (comportamentop){
+				case "valor":
+					parametros += tipo_param.ToLower() + " " + nome_param.ToLower();
+					break;
+				case "ref":
+				case "referencia":
+					parametros += "ref " + tipo_param.ToLower() + " " + nome_param.ToLower();
+					break;
+				case "out":
+				case "retorno":
+					parametros += "out " + tipo_param.ToLower() + " " + nome_param.ToLower();
+					break;
+				default: // valor
+					parametros += tipo_param + " " + nome_param.ToLower();
+					break;
+			}
+			inc ++;
+ %>
+	<% } %>
+	<% if (visibilidade!="static"){ %>
+		<%= visibilidade %> abstract <%= tipo %> <%= nome %>(<%= parametros %>);
+	<% } %>
+
+<%  }// end foreach %>
+<%  } %>
+	}
+
+	#endregion
+
+	#region "<%= Modulo %>Lista_B"
+	<% moduloM = Modulo.Substring(0,1).ToLower() + Modulo.Substring(1, Modulo.Length-1); %>
+	
+	public abstract class <%= Modulo %>Lista_B : BaseLista {
+	
+		protected <%= Modulo %> <%= moduloM %>;
+	
+		// passar o Usuario logado no sistema
+		public <%= Modulo %>Lista_B(){
+			<%= moduloM %> = new <%= Modulo %>();
+		}
+		
+		public <%= Modulo %> <%= Modulo %>{
+			get{ return <%= moduloM %>; }
+		}
+
+		/// <summary>
+		/// Retorna um IBaseBD de <%= Modulo %> especifico
+		/// </summary>
+		public override IBaseBD this[int indice]{
+			get{
+				if (indice < 0 || indice >= lista.Count){
+					return null;
+				}else{
+					int id = (int)lista[indice];
+					<%= moduloM %>.Ler(id);
+					return <%= moduloM %>;
+				}
+			}
+		}
+		
+		/// <summary>
+		/// Carrega a lista
+		/// </summary>
+		/// <param name="tamanhoMax">Informe o tamanho maximo que a lista pode ter</param>
+		/// <returns></returns>		
+		public void Carregar(int tamanhoMax){
+		
+			try{
+			
+				string sql;
+			
+				if (tamanhoMax==0)
+					sql = "SELECT ID FROM <%= tTable %>";
+				else
+					sql = "SELECT top "+tamanhoMax+" ID FROM <%= tTable %>";
+				
+				if (FiltroSQL!=null && FiltroSQL.Trim()!="")
+					sql += " WHERE " + FiltroSQL.Trim();
+					
+				if (OrdemSQL!=null && OrdemSQL.Trim()!="")
+					sql += " ORDER BY " + OrdemSQL.Trim();
+				
+				lista.Clear();
+				
+				bd.Consulta(sql);
+				
+				while (bd.Consulta().Read())
+					lista.Add(bd.LerInt("ID"));
+				
+				lista.TrimToSize();
+				
+				bd.Fechar();
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+				
+		/// <summary>
+		/// Carrega a lista
+		/// </summary>
+		public override void Carregar(){
+		
+			try{
+			
+				string sql;
+			
+				if (tamanhoMax==0)
+					sql = "SELECT ID FROM <%= tTable %>";
+				else
+					sql = "SELECT top "+tamanhoMax+" ID FROM <%= tTable %>";
+				
+				if (FiltroSQL!=null && FiltroSQL.Trim()!="")
+					sql += " WHERE " + FiltroSQL.Trim();
+					
+				if (OrdemSQL!=null && OrdemSQL.Trim()!="")
+					sql += " ORDER BY " + OrdemSQL.Trim();
+				
+				lista.Clear();
+				
+				bd.Consulta(sql);
+				
+				while (bd.Consulta().Read())
+					lista.Add(bd.LerInt("ID"));
+				
+				lista.TrimToSize();
+				
+				bd.Fechar();
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+
+		/// <summary>
+		/// Preenche <%= Modulo %> corrente da lista
+		/// </summary>
+		/// <param name="id">Informe o ID</param>
+		/// <returns></returns>
+		protected override void Ler(int id){
+			
+			try{
+		
+				<%= moduloM %>.Ler(id);
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+
+		/// <summary>
+		/// Exclui o item corrente da lista
+		/// </summary>
+		/// <returns></returns>
+		public override bool Excluir(){
+		
+			try{
+		
+				bool ok = <%= moduloM %>.Excluir();
+				if (ok)				
+					lista.RemoveAt(Indice);
+			
+				return ok;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+		
+		/// <summary>
+		/// Exclui todos os itens da lista carregada
+		/// </summary>
+		/// <returns></returns>
+		public override bool ExcluirTudo(){
+		
+			try{
+				if (lista.Count == 0)
+					Carregar();
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+			try{
+			
+				bool ok = false;
+
+				if (lista.Count > 0){ //verifica se tem itens
+
+					try{
+						string ids = ToString();
+				
+						string sqlDelete = "DELETE FROM <%= tTable %> WHERE ID in ("+ids+")";
+		
+						int x = bd.Executar(sqlDelete);
+						bd.Fechar();
+			
+						ok = Convert.ToBoolean(x);
+
+					}catch(Exception ex){
+						throw ex;
+					}
+
+				}else{ //nao tem itens na lista
+					//Devolve true como se os itens ja tivessem sido excluidos, com a premissa dos ids existirem de fato.
+					ok = true;
+				}
+				
+				return ok;
+			
+			}catch(Exception ex){
+				throw ex;
+			}
+
+		}	
+		
+		/// <summary>
+		/// Inseri novo(a) <%= Modulo %> na lista
+		/// </summary>
+		/// <returns></returns>		
+		public override bool Inserir(){
+		
+			try{
+		
+				bool ok = <%= moduloM %>.Inserir();
+				if (ok){
+					lista.Add(<%= moduloM %>.Control.ID);
+					Indice = lista.Count - 1;
+				}
+			
+				return ok;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+
+		/// <summary>
+		/// Obtem uma tabela de todos os campos de <%= Modulo %> carregados na lista
+		/// </summary>
+		/// <returns></returns>
+		public override DataTable Tabela(){
+				
+			try{
+				
+					DataTable tabela = new DataTable("<%= Modulo %>");
+				
+					tabela.Columns.Add("ID", typeof(int));
+				<%
+					for(i = 0; i < Nomes.Length; i++){ %>
+					<%
+						switch (Tipos[i]){
+							case "decimal":
+							case "numero":
+								tipoz		= "decimal";
+								break;
+							case "int":
+							case "inteiro":
+								tipoz		= "int";
+								break;
+							case "char":
+							case "string":
+							case "texto":
+								tipoz		= "string";
+								break;
+							case "date":
+							case "data":
+								tipoz		= "DateTime";
+								break;
+							case "time":
+							case "hora":
+								tipoz		= "string";
+								break;
+							case "datetime":
+							case "datahora":
+								tipoz		= "DateTime";
+								break;
+							case "bool":
+							case "boolean":
+							case "booleano":
+								tipoz		= "bool";
+								break;
+							case "memo":
+								tipoz		= "string";
+								break;
+							default:
+								tipoz		= "int";
+								break;
+						}
+					%>			
+					tabela.Columns.Add("<%= Nomes[i] %>", typeof(<%= tipoz %>));
+				<%	} %>
+			
+				if (this.Primeiro()){
+
+					do{
+						DataRow linha = tabela.NewRow();
+						linha["ID"]= <%= moduloM %>.Control.ID;
+					<%
+						for (i = 0; i < Nomes.Length; i++){ %>
+						linha["<%= Nomes[i] %>"]= <%= moduloM %>.<%= Nomes[i] %>.Valor;
+					<%	} %>
+						tabela.Rows.Add(linha);
+					}while(this.Proximo());
+
+				}
+			
+				return tabela;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+			
+		/// <summary>
+		/// Obtem uma tabela a ser jogada num relatorio
+		/// </summary>
+		/// <returns></returns>
+		public override DataTable Relatorio(){
+				
+			try{
+
+				DataTable tabela = new DataTable("Relatorio<%= Modulo %>");
+			
+				if (this.Primeiro()){
+				
+				<%
+					for(i = 0; i < Nomes.Length; i++){ %>
+					<%
+						switch (Tipos[i]){
+							case "decimal":
+							case "numero":
+								tipoz		= "decimal";
+								break;
+							case "int":
+							case "inteiro":
+								tipoz		= "int";
+								break;
+							case "char":
+							case "string":
+							case "texto":
+								tipoz		= "string";
+								break;
+							case "date":
+							case "data":
+								tipoz		= "DateTime";
+								break;
+							case "time":
+							case "hora":
+								tipoz		= "string";
+								break;
+							case "datetime":
+							case "datahora":
+								tipoz		= "DateTime";
+								break;
+							case "bool":
+							case "boolean":
+							case "booleano":
+								tipoz		= "bool";
+								break;
+							case "memo":
+								tipoz		= "string";
+								break;
+							default:
+								tipoz		= "int";
+								break;
+						}
+					%>			
+					tabela.Columns.Add("<%= Nomes[i] %>", typeof(<%= tipoz %>));
+				<%	} %>
+
+					do{
+						DataRow linha = tabela.NewRow();
+					<%
+						for (i = 0; i < Nomes.Length; i++){ %>
+						linha["<%= Nomes[i] %>"]= <%= moduloM %>.<%= Nomes[i] %>.Valor;
+					<%	} %>
+						tabela.Rows.Add(linha);
+					}while(this.Proximo());
+
+				}else{ //erro: nao carregou a lista
+					tabela = null;
+				}		
+			
+				return tabela;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+
+		}		
+		
+		/// <summary>
+		/// Retorna um IDataReader com ID e o Campo.
+		/// </summary>
+		/// <param name="campo">Informe o campo. Exemplo: Nome</param>
+		/// <returns></returns>
+		public override IDataReader ListaPropriedade(string campo){
+		
+			try{
+				string sql;
+				switch (campo){
+				<%
+					for (i = 0; i < Nomes.Length; i++){ %>
+					case "<%= Nomes[i] %>":
+						sql = "SELECT ID, <%= Nomes[i] %> FROM <%= tTable %> WHERE "+FiltroSQL+" ORDER BY <%= Nomes[i] %>";
+						break;
+				<%	}	%>
+					default:
+						sql = null;
+						break;
+				}
+				
+				IDataReader dataReader = bd.Consulta(sql);
+
+				bd.Fechar();
+				
+				return dataReader;
+
+			}catch(Exception ex){
+				throw ex;
+			}
+			
+		}
+		
+		/// <summary>
+		/// Devolve um array dos IDs que compoem a lista
+		/// </summary>
+		/// <returns></returns>		
+		public override int[] ToArray(){
+		
+			try{
+
+				int[] a = (int[])lista.ToArray(typeof(int));
+
+				return a;
+			
+			}catch(Exception ex){
+				throw ex;
+			}
+
+		}
+
+		/// <summary>
+		/// Devolve uma string dos IDs que compoem a lista concatenada por virgula
+		/// </summary>
+		/// <returns></returns>
+		public override string ToString(){
+		
+			try{
+
+				StringBuilder idsBuffer = new StringBuilder();
+
+				int n = lista.Count;
+				for(int i=0; i < n; i++){
+					int id = (int)lista[i];
+					idsBuffer.Append(id+",");
+				}
+					
+				string ids = "";
+
+				if (idsBuffer.Length > 0){
+					ids = idsBuffer.ToString();
+					ids = ids.Substring(0, ids.Length -1);
+				}
+
+				return ids;
+				
+			}catch(Exception ex){
+				throw ex;
+			}
+
+		}		
+		
+	}
+	
+	#endregion
+
+	#region "<%= Modulo %>Exception"
+	
+	[Serializable]
+	public class <%= Modulo %>Exception : Exception {
+
+		public <%= Modulo %>Exception() : base (){}
+
+		public <%= Modulo %>Exception(string msg) : base (msg){}
+
+		public <%= Modulo %>Exception(SerializationInfo info, StreamingContext context) : base(info, context) {}
+
+		public override void GetObjectData(SerializationInfo info, StreamingContext context){
+			base.GetObjectData(info, context);
+		}
+
+	}
+
+	#endregion
+
+}

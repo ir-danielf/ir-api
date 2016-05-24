@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Bloqueio">
+  <Propriedades>
+    <Propriedade Nome="LocalID"				Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="CorID"				  Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Nome"				  Tipo="texto"	  Tamanho="50"	Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Obs"					  Tipo="memo"						        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Assinatura"		Tipo="booleano"						    Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <!-- eu defini o tipo de retorno como DataTable, mas pode ser que nao seja isso.
+		pode ser que queiramos apenas os IDs, ai podemos retornar uma string concatenada ou um array -->
+    <Metodo Nome="Ingressos" Tipo="DataTable">
+      Obter os ingressos desse bloqueio
+    </Metodo>
+  </Metodos>
+</Classe>
+

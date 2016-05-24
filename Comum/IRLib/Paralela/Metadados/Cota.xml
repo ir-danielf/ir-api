@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Cota">
+  
+  <Propriedades>
+    <Propriedade Nome="Nome"        Tipo="texto"  Nulo="False"  Tamanho="100" Acesso="LE"/>
+    <Propriedade Nome="LocalID"     Tipo="int"    Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="Quantidade"     Tipo="int"    Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="QuantidadePorCliente"     Tipo="int"    Nulo="False"  Acesso="LE" />
+  </Propriedades>
+</Classe>
+

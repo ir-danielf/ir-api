@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="VoceSabia">
+	<Propriedades>
+		<Propriedade Nome="Identificacao"             Tipo="texto"	  Tamanho="100"	Nulo="False"	Acesso="LE" />
+		<Propriedade Nome="Texto"		    		  Tipo="texto"	  Tamanho="500"	Nulo="False"	Acesso="LE" />
+	</Propriedades>
+	<Metodos>
+	</Metodos>
+</Classe>

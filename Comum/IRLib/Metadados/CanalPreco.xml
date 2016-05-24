@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CanalPreco">
+    <Propriedades>
+        <Propriedade Nome="CanalID"					Tipo="int"	/>
+        <Propriedade Nome="PrecoID"					Tipo="int"	/>
+        <Propriedade Nome="DataInicio"				Tipo="data"	/>
+		<Propriedade Nome="DataFim"					Tipo="data"	/>
+		<Propriedade Nome="Quantidade"	Tipo="int"	/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Precos" Tipo="DataTable"><!-- Fabio -->
+			Obter preços de um canal especifico
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Validade" Tipo="int"><!-- Fabio -->
+			Obter os dias q faltam para expirar um dado preço (retorna -1 caso não exista dataFim, retorna 0 caso tenha expirado)
+    	</Metodo>
+        <Metodo Nome="Validade" Tipo="int"><!-- Fabio -->
+			Obter os dias q faltam para expirar um dado preço (retorna -1 caso não exista dataFim, retorna 0 caso tenha expirado)
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    			<Parametro Nome="PrecoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="DataValidade" Tipo="DateTime"><!-- Fabio -->
+			Obter a DataFim de dado um preço
+    	</Metodo>
+        <Metodo Nome="DataValidade" Tipo="DateTime"><!-- Fabio -->
+			Obter a DataFim de dado um preço
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    			<Parametro Nome="PrecoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="QuantidadeDisponivel" Tipo="int"><!-- Fabio -->
+			Obter a quantidade disponível dado um preço
+    	</Metodo>
+        <Metodo Nome="QuantidadeDisponivel" Tipo="int"><!-- Fabio -->
+			Obter a quantidade disponível dado um preço
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    			<Parametro Nome="PrecoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais de um preco especifico
+    	</Metodo>
+        <Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais de um preco especificado por parametro
+    		<Parametros>
+    			<Parametro Nome="PrecoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

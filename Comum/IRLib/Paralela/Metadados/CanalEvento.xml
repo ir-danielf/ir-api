@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CanalEvento">
+    <Propriedades>
+        <Propriedade Nome="CanalID"				Tipo="int"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="EventoID"			Tipo="int"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="TaxaConveniencia"	Tipo="int"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="TaxaMinima"	Tipo="decimal"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="TaxaMaxima"	Tipo="decimal"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="TaxaComissao"	Tipo="int"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="ComissaoMinima"	Tipo="decimal"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="ComissaoMaxima"	Tipo="decimal"	Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Eventos" Tipo="DataTable"><!-- Fabio -->
+			Obter eventos de um canal especifico
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais de um evento especifico
+    		<Parametros>
+    			<Parametro Nome="EventoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="BuscaTaxaConveniencia" Tipo="int"><!-- Fabio -->
+			Obter Taxa de Conveniencia de um canal dada o canal e o evento
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    			<Parametro Nome="EventoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

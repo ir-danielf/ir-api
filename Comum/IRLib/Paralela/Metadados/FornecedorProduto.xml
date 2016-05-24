@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="FornecedorProduto">
+    <Propriedades>
+        <Propriedade Nome="FornecedorID"	Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="ProdutoID"		Tipo="int"		Nulo="True"		Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Produtos" Tipo="DataTable"><!-- Fabio -->
+			Obter produtos de um fornecedor especifico
+    		<Parametros>
+    			<Parametro Nome="FornecedorID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Fornecedores" Tipo="DataTable"><!-- Fabio -->
+			Obter fornecedores de um produto especifico
+    		<Parametros>
+    			<Parametro Nome="ProdutoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

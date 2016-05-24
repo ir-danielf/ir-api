@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="MapaEsquematicoSetor">
+  <Propriedades>
+    <Propriedade Nome="MapaID"				Tipo="int"		Null="false"	/>
+    <Propriedade Nome="SetorID"        Tipo="int" Null="false" />
+    <Propriedade Nome="Coordenadas"  Tipo="texto" Tamanho="1000" Null="false" />
+  </Propriedades>
+</Classe>

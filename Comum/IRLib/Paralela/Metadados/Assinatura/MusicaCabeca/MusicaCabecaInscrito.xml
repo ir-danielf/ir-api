@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="MusicaCabecaInscrito">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"  Tipo="int" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="MusicaCabecaID"  Tipo="int" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Presente"  Tipo="bool" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Assinante"  Tipo="bool" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="DataInscricao"  Tipo="datahora" Nulo="False" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

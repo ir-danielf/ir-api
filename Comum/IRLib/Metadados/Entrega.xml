@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Entrega">
+  <Propriedades>
+    <Propriedade Nome="Nome"		      Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PrazoEntrega"		      Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Disponivel"	  Tipo="booleano"					Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ProcedimentoEntrega"		Tipo="texto"	Tamanho="2000"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EnviaAlerta"   Tipo="booleano" Nulo="True"/>
+    <Propriedade Nome="Padrao"        Tipo="booleano" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="PermitirImpressaoInternet"   Tipo="booleano"   Nulo="False" />
+    <Propriedade Nome="Tipo"          Tipo="texto"  Tamanho="1"   Nulo="False"  />
+    <Propriedade Nome="Ativo"         Tipo="booleano" Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="DiasTriagem"		Tipo="int"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="De"		Tipo="int"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Ate"		Tipo="int"	Nulo="True"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

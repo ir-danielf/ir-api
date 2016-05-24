@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="CarregarDadosVendaBilheteria">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCanalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CarregarDadosVendaBilheteriaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CarregarDadosVendaBilheteriaResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CarregarDadosVendaBilheteriaSemCache">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pCanalID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CarregarDadosVendaBilheteriaSemCacheResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CarregarDadosVendaBilheteriaSemCacheResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="CarregarDadosVendaBilheteriaSoapIn">
+    <wsdl:part name="parameters" element="tns:CarregarDadosVendaBilheteria" />
+  </wsdl:message>
+  <wsdl:message name="CarregarDadosVendaBilheteriaSoapOut">
+    <wsdl:part name="parameters" element="tns:CarregarDadosVendaBilheteriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="CarregarDadosVendaBilheteriaSemCacheSoapIn">
+    <wsdl:part name="parameters" element="tns:CarregarDadosVendaBilheteriaSemCache" />
+  </wsdl:message>
+  <wsdl:message name="CarregarDadosVendaBilheteriaSemCacheSoapOut">
+    <wsdl:part name="parameters" element="tns:CarregarDadosVendaBilheteriaSemCacheResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicoDadosSoap">
+    <wsdl:operation name="CarregarDadosVendaBilheteria">
+      <wsdl:input message="tns:CarregarDadosVendaBilheteriaSoapIn" />
+      <wsdl:output message="tns:CarregarDadosVendaBilheteriaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CarregarDadosVendaBilheteriaSemCache">
+      <wsdl:input message="tns:CarregarDadosVendaBilheteriaSemCacheSoapIn" />
+      <wsdl:output message="tns:CarregarDadosVendaBilheteriaSemCacheSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicoDadosSoap" type="tns:ServicoDadosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CarregarDadosVendaBilheteria">
+      <soap:operation soapAction="http://tempuri.org/CarregarDadosVendaBilheteria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarregarDadosVendaBilheteriaSemCache">
+      <soap:operation soapAction="http://tempuri.org/CarregarDadosVendaBilheteriaSemCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicoDadosSoap12" type="tns:ServicoDadosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CarregarDadosVendaBilheteria">
+      <soap12:operation soapAction="http://tempuri.org/CarregarDadosVendaBilheteria" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarregarDadosVendaBilheteriaSemCache">
+      <soap12:operation soapAction="http://tempuri.org/CarregarDadosVendaBilheteriaSemCache" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicoDados">
+    <wsdl:port name="ServicoDadosSoap" binding="tns:ServicoDadosSoap">
+      <soap:address location="http://ir-prd.homologaprojeto.com.br/Shrek/ServicoDados.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicoDadosSoap12" binding="tns:ServicoDadosSoap12">
+      <soap12:address location="http://ir-prd.homologaprojeto.com.br/Shrek/ServicoDados.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

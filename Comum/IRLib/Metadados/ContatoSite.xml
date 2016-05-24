@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="ContatoSite">
+  <Propriedades>
+    <Propriedade Nome="Nome" Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Email" Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="DDD" Tipo="texto" Tamanho="2" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Telefone" Tipo="texto" Tamanho="10" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Mensagem" Tipo="texto" Tamanho="300" Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>

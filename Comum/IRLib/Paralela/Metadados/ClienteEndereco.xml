@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ClienteEndereco">
+  <Propriedades>
+    <Propriedade Nome="ClienteID" Tipo="int"  Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="CEP" Tipo="texto" Tamanho="8" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Endereco" Tipo="texto" Tamanho="60" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Numero" Tipo="texto" Tamanho="10" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Cidade" Tipo="texto" Tamanho="50" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Estado" Tipo="texto" Tamanho="2" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Complemento" Tipo="texto" Tamanho="20" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Bairro" Tipo="texto" Tamanho="100" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Nome" Tipo="texto" Tamanho="100" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="CPF" Tipo="texto" Tamanho="30" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="RG" Tipo="texto" Tamanho="30" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EnderecoTipoID" Tipo="int" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EnderecoPrincipal" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="StatusConsulta" Tipo="int" Nulo="True"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

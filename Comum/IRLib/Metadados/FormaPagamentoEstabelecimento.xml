@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="FormaPagamentoEstabelecimento">
+  <Propriedades>
+    <Propriedade Nome="NroEstabelecimento"			Tipo="texto"	Tamanho="8"	Nulo="false" Acesso="LE" />
+    <Propriedade Nome="FormaPagamentoID"			Tipo="int"	 		Nulo="false" Acesso="LE" />
+    <Propriedade Nome="RedePreferencial"	Tipo="texto" Tamanho="4"	 		Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

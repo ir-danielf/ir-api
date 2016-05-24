@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="EntregaCelular">
+  <Propriedades>
+    <!-- COLUNA ID É IDENTITY -->
+    <Propriedade Nome="DDD"         		            Tipo="int"						      Nulo="False"    Acesso="LE" />
+    <Propriedade Nome="Area"         		            Tipo="int"						      Nulo="True"     Acesso="LE" />
+    <Propriedade Nome="Numero"         		          Tipo="int"						      Nulo="False"    Acesso="LE" />
+    <Propriedade Nome="ModelID"      		            Tipo="int"						      Nulo="False"    Acesso="LE" />
+    <Propriedade Nome="Fabricante"	  			        Tipo="texto" Tamanho="50"   Nulo="False"		Acesso="LE"	/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

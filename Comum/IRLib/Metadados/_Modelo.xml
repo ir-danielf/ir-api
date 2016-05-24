@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Modelo">
+    <Propriedades>
+        <Campo Nome="Campo1"	Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Campo Nome="Campo2"	Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Metodo1"	Tipo="boolean"	Visibilidade="Publico">
+    		Comentarios sobre o mehtodo
+    		<Parametros>
+    			<Parametro Nome="Parametro1" Tipo="string"	Retorna="False"/>
+    			<Parametro Nome="Parametro2" Tipo="string"	Retorna="False"/>
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Metodo2"	Tipo="void"		Visibilidade="Publico">
+			Comentarios sobre o mehtodo
+    		<Parametros>
+    			<Parametro Nome="Parametro1" Tipo="string"	Retorna="False"/>
+    			<Parametro Nome="Parametro2" Tipo="string"	Retorna="False"/>
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+    <Indices>
+        <Indice Nome="01" Campos="Campo1,Campo2"/>
+        <Indice Nome="02" Campos="Campo2"/>
+    </Indices>
+</Classe>

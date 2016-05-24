@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Cortesia">
+    <Propriedades>
+        <Propriedade Nome="Nome"		Tipo="texto"	Tamanho="30"	Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="LocalID"		Tipo="int"						Nulo="True"	Acesso="LE"/>                
+        <Propriedade Nome="CorID"		Tipo="int"						Nulo="True"	Acesso="LE"/>        
+        <Propriedade Nome="Obs"			Tipo="memo"						Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="Padrao"				Tipo="booleano"		Nulo="True"/>
+    </Propriedades>
+    <Metodos>
+    <!-- eu defini o tipo de retorno como DataTable, mas pode ser que nao seja isso.
+		pode ser que queiramos apenas os IDs, ai podemos retornar uma string concatenada ou um array -->
+        <Metodo Nome="Ingressos" Tipo="DataTable">
+			Obter os ingressos dessa cortesia
+    	</Metodo>
+    	<Metodo Nome="Todas" Tipo="DataTable"><!-- Fabio -->
+			Obtem todas as cortesias
+    	</Metodo>
+    </Metodos>
+</Classe>
+

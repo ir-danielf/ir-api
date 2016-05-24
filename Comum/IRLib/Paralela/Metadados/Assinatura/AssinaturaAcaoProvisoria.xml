@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaAcaoProvisoria">
+  <Propriedades>
+    <Propriedade Nome="AssinaturaClienteID"   Tipo="int"                Nulo="False" Acesso="LE" />
+    <Propriedade Nome="ClienteID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="PrecoTipoID"           Tipo="int"                Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Acao" 	                Tipo="texto" Tamanho="1"  Nulo="False"	Acesso="LE" />
+    <Propriedade Nome="EntregaID"             Tipo="int"                Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="Processado"          Tipo="booleano"   Nulo="False" Acesso="LE" />
+    <Propriedade Nome="AgregadoID"            Tipo="int"      Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CanalProduto">
+    <Propriedades>
+        <Propriedade Nome="CanalID"			Tipo="int"						Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="ProdutoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Produtos" Tipo="DataTable"><!-- Fabio -->
+			Obter produtos de uma categoria especifica num canal especifico
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    			<Parametro Nome="CategoriaID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Produtos" Tipo="DataTable"><!-- Fabio -->
+			Obter produtos de um canal especifico
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais de um produto especifico
+    		<Parametros>
+    			<Parametro Nome="ProdutoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

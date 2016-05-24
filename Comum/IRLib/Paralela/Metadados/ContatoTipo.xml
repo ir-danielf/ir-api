@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="ContatoTipo">
+	<Propriedades>
+		<Propriedade Nome="Nome"	Tipo="texto"	tamanho = "100"		Nulo="True" Acesso="LE"/>
+	</Propriedades>
+</Classe>

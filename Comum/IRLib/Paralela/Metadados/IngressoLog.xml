@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="IngressoLog">
+  <Propriedades>
+    <Propriedade Nome="IngressoID"				    Tipo="int"			/>
+    <Propriedade Nome="UsuarioID"				      Tipo="int"			/>
+    <Propriedade Nome="TimeStamp"				      Tipo="datahora"	/>
+    <Propriedade Nome="Acao"					        Tipo="texto"  Tamanho="1"	/>
+    <Propriedade Nome="PrecoID"					      Tipo="int"			/>
+    <Propriedade Nome="CortesiaID"				    Tipo="int"			/>
+    <Propriedade Nome="BloqueioID"				    Tipo="int"			/>
+    <Propriedade Nome="VendaBilheteriaItemID"		Tipo="int"			/>
+    <Propriedade Nome="Obs"						        Tipo="memo"			/>
+    <Propriedade Nome="VendaBilheteriaID"		  Tipo="int"			/>
+    <Propriedade Nome="CaixaID"					      Tipo="int"			/>
+    <Propriedade Nome="LojaID"					      Tipo="int"			/>
+    <Propriedade Nome="CanalID"					      Tipo="int"			/>
+    <Propriedade Nome="EmpresaID"				      Tipo="int"			/>
+    <Propriedade Nome="ClienteID"				      Tipo="int"			/>
+    <Propriedade Nome="CodigoBarra"			      Tipo="texto"  Tamanho="18" />
+    <Propriedade Nome="CodigoImpressao"				Tipo="int"					/>
+    <Propriedade Nome="MotivoId"				Tipo="texto"  Tamanho="1"		Nulo="true"			/>
+    <Propriedade Nome="SupervisorID"				Tipo="int"/>
+    <Propriedade Nome="GerenciamentoIngressosID"				Tipo="int"		Nulo="true"				/>
+    <Propriedade Nome="AssinaturaClienteID"				Tipo="int"		Nulo="true"				/>
+
+    <!-- Renato -->
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Ingresso" Tipo="void">
+      <!-- Fabio -->
+      Alimenta esse IngressoLog de acordo com o Ingresso passado como parametro
+      <Parametros>
+        <Parametro Nome="Ingresso" Tipo="Ingresso" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="IngressoIDsPorAcao" Tipo="string">
+      Obter IngressoIDs por acao
+      Depende tb dos IngressoIDs informados
+      <Parametros>
+        <Parametro Nome="ingressoIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+  </Metodos>
+</Classe>

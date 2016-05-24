@@ -1,0 +1,12 @@
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\CTLib.dll.config
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\CTLib.dll
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\CTLib.pdb
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\IRCore.Util.dll
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\PagedList.dll
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\log4net.dll
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\IRCore.Util.pdb
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\PagedList.xml
+C:\Git\Code\Comum\CTLib\bin\x86\Debug\log4net.xml
+C:\Git\Code\Comum\CTLib\obj\x86\Debug\CTLib.csprojResolveAssemblyReference.cache
+C:\Git\Code\Comum\CTLib\obj\x86\Debug\CTLib.dll
+C:\Git\Code\Comum\CTLib\obj\x86\Debug\CTLib.pdb

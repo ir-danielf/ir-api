@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="EventoTipoPagamento">
+  <Propriedades>
+
+    <Propriedade Nome="EventoID"	                        Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="FormaPagamentoID"	                Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="Dias"	  			          	      	Tipo="int"						      Nulo="True"   Acesso="LE" />
+
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

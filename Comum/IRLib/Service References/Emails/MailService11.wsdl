@@ -1,0 +1,1972 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="EnviarNovaSenha">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarNovaSenhaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarNovaSenhaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Retorno">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="StatusOperacao" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensagem" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EnviarNovaSenhaMobile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarNovaSenhaMobileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarNovaSenhaMobileResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarIndicacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="evento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarIndicacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarIndicacaoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarIndicacaoVale">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="evento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventoID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarIndicacaoValeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarIndicacaoValeResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarFormContato">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emaildestinatario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="responsavel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="telefone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mensagem" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarFormContatoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarFormContatoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaMensagemExcessao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StackTrace" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviaMensagemExcessaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviaMensagemExcessaoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarInseridoCanalEventoLogistica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="evento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="local" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarInseridoCanalEventoLogisticaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarInseridoCanalEventoLogisticaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAcompanhamentoEntrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendaBilheteriaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAcompanhamentoEntregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailAcompanhamentoEntregaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAcompanhamentoRetirada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendaBilheteriaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAcompanhamentoRetiradaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailAcompanhamentoRetiradaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaMudancaSetor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="html" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaMudancaSetorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAlertaMudancaSetorResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAprovacaoSetores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arvore" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAprovacaoSetoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailAprovacaoSetoresResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAgruparMapa">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="arvore" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAgruparMapaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailAgruparMapaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaDeComprasComPrioridadeDeAtendimento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantidade" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="dias" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaDeComprasComPrioridadeDeAtendimentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAlertaDeComprasComPrioridadeDeAtendimentoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarFeedback">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="vendaBilheteriaID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarFeedbackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarFeedbackResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarFeedbackCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="feedback" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarFeedbackClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarFeedbackClienteResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaCodigoBarra">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="regional" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="empresa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="local" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="evento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="horario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="setor" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="quantidade" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="criados" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaCodigoBarraResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAlertaCodigoBarraResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarBoletos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="assinaturas" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarBoletosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarBoletosResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAssinaturas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="assunto" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="corpo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailAssinaturasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailAssinaturasResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailEstorno">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cpf" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="valoresPagos" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailEstornoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailEstornoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlerta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="corpo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAlertaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAlertaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovadaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket_Anexo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket_AnexoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovada_eTicket_AnexoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicketResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovada_eTicketResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaRisco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaRiscoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovadaRiscoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaVir">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaVirResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovadaVirResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarConfirmacaoDeEntrega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendaBilheteriaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarConfirmacaoDeEntregaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarConfirmacaoDeEntregaResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailCancelamentoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamentoFraude">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamentoFraudeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailCancelamentoFraudeResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAprovacaoPagamento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAprovacaoPagamentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAprovacaoPagamentoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSolicitacaoDocumentacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSolicitacaoDocumentacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarSolicitacaoDocumentacaoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMediaPartnerConfirmacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parceiroMidia" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="corpo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarMediaPartnerConfirmacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarMediaPartnerConfirmacaoResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovada_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket_Anexo_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="link" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket_Anexo_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovada_eTicket_Anexo_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovada_eTicket_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovada_eTicket_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaRisco_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaRisco_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovadaRisco_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaVir_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarVendaAprovadaVir_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarVendaAprovadaVir_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarConfirmacaoDeEntrega_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="vendaBilheteriaID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="taxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarConfirmacaoDeEntrega_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarConfirmacaoDeEntrega_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamento_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamento_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailCancelamento_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamentoFraude_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarEmailCancelamentoFraude_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarEmailCancelamentoFraude_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAprovacaoPagamento_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarAprovacaoPagamento_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarAprovacaoPagamento_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSolicitacaoDocumentacao_im">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="nome" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pedido" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="atendente" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="data" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="canal" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pagamento" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="detalhetaxa" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipotaxa" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EnviarSolicitacaoDocumentacao_imResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EnviarSolicitacaoDocumentacao_imResult" type="tns:Retorno" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="EnviarNovaSenhaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarNovaSenha" />
+  </wsdl:message>
+  <wsdl:message name="EnviarNovaSenhaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarNovaSenhaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarNovaSenhaMobileSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarNovaSenhaMobile" />
+  </wsdl:message>
+  <wsdl:message name="EnviarNovaSenhaMobileSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarNovaSenhaMobileResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarIndicacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarIndicacao" />
+  </wsdl:message>
+  <wsdl:message name="EnviarIndicacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarIndicacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarIndicacaoValeSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarIndicacaoVale" />
+  </wsdl:message>
+  <wsdl:message name="EnviarIndicacaoValeSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarIndicacaoValeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarFormContatoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarFormContato" />
+  </wsdl:message>
+  <wsdl:message name="EnviarFormContatoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarFormContatoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviaMensagemExcessaoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviaMensagemExcessao" />
+  </wsdl:message>
+  <wsdl:message name="EnviaMensagemExcessaoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviaMensagemExcessaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarInseridoCanalEventoLogisticaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarInseridoCanalEventoLogistica" />
+  </wsdl:message>
+  <wsdl:message name="EnviarInseridoCanalEventoLogisticaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarInseridoCanalEventoLogisticaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAcompanhamentoEntregaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAcompanhamentoEntrega" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAcompanhamentoEntregaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAcompanhamentoEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAcompanhamentoRetiradaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAcompanhamentoRetirada" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAcompanhamentoRetiradaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAcompanhamentoRetiradaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaMudancaSetorSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaMudancaSetor" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaMudancaSetorSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaMudancaSetorResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAprovacaoSetoresSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAprovacaoSetores" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAprovacaoSetoresSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAprovacaoSetoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAgruparMapaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAgruparMapa" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAgruparMapaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAgruparMapaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaDeComprasComPrioridadeDeAtendimentoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaDeComprasComPrioridadeDeAtendimento" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaDeComprasComPrioridadeDeAtendimentoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaDeComprasComPrioridadeDeAtendimentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarFeedbackSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarFeedback" />
+  </wsdl:message>
+  <wsdl:message name="EnviarFeedbackSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarFeedbackResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarFeedbackClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarFeedbackCliente" />
+  </wsdl:message>
+  <wsdl:message name="EnviarFeedbackClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarFeedbackClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaCodigoBarraSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaCodigoBarra" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaCodigoBarraSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaCodigoBarraResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarBoletosSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarBoletos" />
+  </wsdl:message>
+  <wsdl:message name="EnviarBoletosSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarBoletosResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAssinaturasSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAssinaturas" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailAssinaturasSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailAssinaturasResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailEstornoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailEstorno" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailEstornoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailEstornoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAlerta" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAlertaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAlertaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicket_AnexoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket_Anexo" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicket_AnexoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket_AnexoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicketSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicketSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicketResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaRiscoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaRisco" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaRiscoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaRiscoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaVirSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaVir" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaVirSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaVirResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConfirmacaoDeEntregaSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarConfirmacaoDeEntrega" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConfirmacaoDeEntregaSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarConfirmacaoDeEntregaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamento" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamentoFraudeSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamentoFraude" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamentoFraudeSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamentoFraudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAprovacaoPagamentoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAprovacaoPagamento" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAprovacaoPagamentoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAprovacaoPagamentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSolicitacaoDocumentacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarSolicitacaoDocumentacao" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSolicitacaoDocumentacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarSolicitacaoDocumentacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMediaPartnerConfirmacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarMediaPartnerConfirmacao" />
+  </wsdl:message>
+  <wsdl:message name="EnviarMediaPartnerConfirmacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarMediaPartnerConfirmacaoResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicket_Anexo_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket_Anexo_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicket_Anexo_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket_Anexo_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicket_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovada_eTicket_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovada_eTicket_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaRisco_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaRisco_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaRisco_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaRisco_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaVir_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaVir_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarVendaAprovadaVir_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarVendaAprovadaVir_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConfirmacaoDeEntrega_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarConfirmacaoDeEntrega_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarConfirmacaoDeEntrega_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarConfirmacaoDeEntrega_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamento_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamento_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamento_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamento_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamentoFraude_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamentoFraude_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarEmailCancelamentoFraude_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarEmailCancelamentoFraude_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAprovacaoPagamento_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarAprovacaoPagamento_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarAprovacaoPagamento_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarAprovacaoPagamento_imResponse" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSolicitacaoDocumentacao_imSoapIn">
+    <wsdl:part name="parameters" element="tns:EnviarSolicitacaoDocumentacao_im" />
+  </wsdl:message>
+  <wsdl:message name="EnviarSolicitacaoDocumentacao_imSoapOut">
+    <wsdl:part name="parameters" element="tns:EnviarSolicitacaoDocumentacao_imResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MailServiceSoap">
+    <wsdl:operation name="EnviarNovaSenha">
+      <wsdl:input message="tns:EnviarNovaSenhaSoapIn" />
+      <wsdl:output message="tns:EnviarNovaSenhaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarNovaSenhaMobile">
+      <wsdl:input message="tns:EnviarNovaSenhaMobileSoapIn" />
+      <wsdl:output message="tns:EnviarNovaSenhaMobileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarIndicacao">
+      <wsdl:input message="tns:EnviarIndicacaoSoapIn" />
+      <wsdl:output message="tns:EnviarIndicacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarIndicacaoVale">
+      <wsdl:input message="tns:EnviarIndicacaoValeSoapIn" />
+      <wsdl:output message="tns:EnviarIndicacaoValeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFormContato">
+      <wsdl:input message="tns:EnviarFormContatoSoapIn" />
+      <wsdl:output message="tns:EnviarFormContatoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensagemExcessao">
+      <wsdl:input message="tns:EnviaMensagemExcessaoSoapIn" />
+      <wsdl:output message="tns:EnviaMensagemExcessaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarInseridoCanalEventoLogistica">
+      <wsdl:input message="tns:EnviarInseridoCanalEventoLogisticaSoapIn" />
+      <wsdl:output message="tns:EnviarInseridoCanalEventoLogisticaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAcompanhamentoEntrega">
+      <wsdl:input message="tns:EnviarEmailAcompanhamentoEntregaSoapIn" />
+      <wsdl:output message="tns:EnviarEmailAcompanhamentoEntregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAcompanhamentoRetirada">
+      <wsdl:input message="tns:EnviarEmailAcompanhamentoRetiradaSoapIn" />
+      <wsdl:output message="tns:EnviarEmailAcompanhamentoRetiradaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaMudancaSetor">
+      <wsdl:input message="tns:EnviarAlertaMudancaSetorSoapIn" />
+      <wsdl:output message="tns:EnviarAlertaMudancaSetorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAprovacaoSetores">
+      <wsdl:input message="tns:EnviarEmailAprovacaoSetoresSoapIn" />
+      <wsdl:output message="tns:EnviarEmailAprovacaoSetoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAgruparMapa">
+      <wsdl:input message="tns:EnviarEmailAgruparMapaSoapIn" />
+      <wsdl:output message="tns:EnviarEmailAgruparMapaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaDeComprasComPrioridadeDeAtendimento">
+      <wsdl:input message="tns:EnviarAlertaDeComprasComPrioridadeDeAtendimentoSoapIn" />
+      <wsdl:output message="tns:EnviarAlertaDeComprasComPrioridadeDeAtendimentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFeedback">
+      <wsdl:input message="tns:EnviarFeedbackSoapIn" />
+      <wsdl:output message="tns:EnviarFeedbackSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFeedbackCliente">
+      <wsdl:input message="tns:EnviarFeedbackClienteSoapIn" />
+      <wsdl:output message="tns:EnviarFeedbackClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaCodigoBarra">
+      <wsdl:input message="tns:EnviarAlertaCodigoBarraSoapIn" />
+      <wsdl:output message="tns:EnviarAlertaCodigoBarraSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarBoletos">
+      <wsdl:input message="tns:EnviarBoletosSoapIn" />
+      <wsdl:output message="tns:EnviarBoletosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAssinaturas">
+      <wsdl:input message="tns:EnviarEmailAssinaturasSoapIn" />
+      <wsdl:output message="tns:EnviarEmailAssinaturasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailEstorno">
+      <wsdl:input message="tns:EnviarEmailEstornoSoapIn" />
+      <wsdl:output message="tns:EnviarEmailEstornoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlerta">
+      <wsdl:input message="tns:EnviarAlertaSoapIn" />
+      <wsdl:output message="tns:EnviarAlertaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada">
+      <wsdl:input message="tns:EnviarVendaAprovadaSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_Anexo">
+      <wsdl:input message="tns:EnviarVendaAprovada_eTicket_AnexoSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovada_eTicket_AnexoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket">
+      <wsdl:input message="tns:EnviarVendaAprovada_eTicketSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovada_eTicketSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaRisco">
+      <wsdl:input message="tns:EnviarVendaAprovadaRiscoSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovadaRiscoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaVir">
+      <wsdl:input message="tns:EnviarVendaAprovadaVirSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovadaVirSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConfirmacaoDeEntrega">
+      <wsdl:input message="tns:EnviarConfirmacaoDeEntregaSoapIn" />
+      <wsdl:output message="tns:EnviarConfirmacaoDeEntregaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamento">
+      <wsdl:input message="tns:EnviarEmailCancelamentoSoapIn" />
+      <wsdl:output message="tns:EnviarEmailCancelamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamentoFraude">
+      <wsdl:input message="tns:EnviarEmailCancelamentoFraudeSoapIn" />
+      <wsdl:output message="tns:EnviarEmailCancelamentoFraudeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAprovacaoPagamento">
+      <wsdl:input message="tns:EnviarAprovacaoPagamentoSoapIn" />
+      <wsdl:output message="tns:EnviarAprovacaoPagamentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSolicitacaoDocumentacao">
+      <wsdl:input message="tns:EnviarSolicitacaoDocumentacaoSoapIn" />
+      <wsdl:output message="tns:EnviarSolicitacaoDocumentacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMediaPartnerConfirmacao">
+      <wsdl:input message="tns:EnviarMediaPartnerConfirmacaoSoapIn" />
+      <wsdl:output message="tns:EnviarMediaPartnerConfirmacaoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_im">
+      <wsdl:input message="tns:EnviarVendaAprovada_imSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovada_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_Anexo_im">
+      <wsdl:input message="tns:EnviarVendaAprovada_eTicket_Anexo_imSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovada_eTicket_Anexo_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_im">
+      <wsdl:input message="tns:EnviarVendaAprovada_eTicket_imSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovada_eTicket_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaRisco_im">
+      <wsdl:input message="tns:EnviarVendaAprovadaRisco_imSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovadaRisco_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaVir_im">
+      <wsdl:input message="tns:EnviarVendaAprovadaVir_imSoapIn" />
+      <wsdl:output message="tns:EnviarVendaAprovadaVir_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConfirmacaoDeEntrega_im">
+      <wsdl:input message="tns:EnviarConfirmacaoDeEntrega_imSoapIn" />
+      <wsdl:output message="tns:EnviarConfirmacaoDeEntrega_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamento_im">
+      <wsdl:input message="tns:EnviarEmailCancelamento_imSoapIn" />
+      <wsdl:output message="tns:EnviarEmailCancelamento_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamentoFraude_im">
+      <wsdl:input message="tns:EnviarEmailCancelamentoFraude_imSoapIn" />
+      <wsdl:output message="tns:EnviarEmailCancelamentoFraude_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAprovacaoPagamento_im">
+      <wsdl:input message="tns:EnviarAprovacaoPagamento_imSoapIn" />
+      <wsdl:output message="tns:EnviarAprovacaoPagamento_imSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSolicitacaoDocumentacao_im">
+      <wsdl:input message="tns:EnviarSolicitacaoDocumentacao_imSoapIn" />
+      <wsdl:output message="tns:EnviarSolicitacaoDocumentacao_imSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MailServiceSoap" type="tns:MailServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarNovaSenha">
+      <soap:operation soapAction="http://tempuri.org/EnviarNovaSenha" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarNovaSenhaMobile">
+      <soap:operation soapAction="http://tempuri.org/EnviarNovaSenhaMobile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarIndicacao">
+      <soap:operation soapAction="http://tempuri.org/EnviarIndicacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarIndicacaoVale">
+      <soap:operation soapAction="http://tempuri.org/EnviarIndicacaoVale" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFormContato">
+      <soap:operation soapAction="http://tempuri.org/EnviarFormContato" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensagemExcessao">
+      <soap:operation soapAction="http://tempuri.org/EnviaMensagemExcessao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarInseridoCanalEventoLogistica">
+      <soap:operation soapAction="http://tempuri.org/EnviarInseridoCanalEventoLogistica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAcompanhamentoEntrega">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailAcompanhamentoEntrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAcompanhamentoRetirada">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailAcompanhamentoRetirada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaMudancaSetor">
+      <soap:operation soapAction="http://tempuri.org/EnviarAlertaMudancaSetor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAprovacaoSetores">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailAprovacaoSetores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAgruparMapa">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailAgruparMapa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaDeComprasComPrioridadeDeAtendimento">
+      <soap:operation soapAction="http://tempuri.org/EnviarAlertaDeComprasComPrioridadeDeAtendimento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFeedback">
+      <soap:operation soapAction="http://tempuri.org/EnviarFeedback" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFeedbackCliente">
+      <soap:operation soapAction="http://tempuri.org/EnviarFeedbackCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaCodigoBarra">
+      <soap:operation soapAction="http://tempuri.org/EnviarAlertaCodigoBarra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarBoletos">
+      <soap:operation soapAction="http://tempuri.org/EnviarBoletos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAssinaturas">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailAssinaturas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailEstorno">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailEstorno" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlerta">
+      <soap:operation soapAction="http://tempuri.org/EnviarAlerta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_Anexo">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket_Anexo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaRisco">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovadaRisco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaVir">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovadaVir" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConfirmacaoDeEntrega">
+      <soap:operation soapAction="http://tempuri.org/EnviarConfirmacaoDeEntrega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamento">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailCancelamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamentoFraude">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailCancelamentoFraude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAprovacaoPagamento">
+      <soap:operation soapAction="http://tempuri.org/EnviarAprovacaoPagamento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSolicitacaoDocumentacao">
+      <soap:operation soapAction="http://tempuri.org/EnviarSolicitacaoDocumentacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMediaPartnerConfirmacao">
+      <soap:operation soapAction="http://tempuri.org/EnviarMediaPartnerConfirmacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovada_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_Anexo_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket_Anexo_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaRisco_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovadaRisco_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaVir_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarVendaAprovadaVir_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConfirmacaoDeEntrega_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarConfirmacaoDeEntrega_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamento_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailCancelamento_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamentoFraude_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarEmailCancelamentoFraude_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAprovacaoPagamento_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarAprovacaoPagamento_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSolicitacaoDocumentacao_im">
+      <soap:operation soapAction="http://tempuri.org/EnviarSolicitacaoDocumentacao_im" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MailServiceSoap12" type="tns:MailServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="EnviarNovaSenha">
+      <soap12:operation soapAction="http://tempuri.org/EnviarNovaSenha" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarNovaSenhaMobile">
+      <soap12:operation soapAction="http://tempuri.org/EnviarNovaSenhaMobile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarIndicacao">
+      <soap12:operation soapAction="http://tempuri.org/EnviarIndicacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarIndicacaoVale">
+      <soap12:operation soapAction="http://tempuri.org/EnviarIndicacaoVale" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFormContato">
+      <soap12:operation soapAction="http://tempuri.org/EnviarFormContato" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviaMensagemExcessao">
+      <soap12:operation soapAction="http://tempuri.org/EnviaMensagemExcessao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarInseridoCanalEventoLogistica">
+      <soap12:operation soapAction="http://tempuri.org/EnviarInseridoCanalEventoLogistica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAcompanhamentoEntrega">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailAcompanhamentoEntrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAcompanhamentoRetirada">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailAcompanhamentoRetirada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaMudancaSetor">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAlertaMudancaSetor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAprovacaoSetores">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailAprovacaoSetores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAgruparMapa">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailAgruparMapa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaDeComprasComPrioridadeDeAtendimento">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAlertaDeComprasComPrioridadeDeAtendimento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFeedback">
+      <soap12:operation soapAction="http://tempuri.org/EnviarFeedback" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarFeedbackCliente">
+      <soap12:operation soapAction="http://tempuri.org/EnviarFeedbackCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlertaCodigoBarra">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAlertaCodigoBarra" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarBoletos">
+      <soap12:operation soapAction="http://tempuri.org/EnviarBoletos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailAssinaturas">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailAssinaturas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailEstorno">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailEstorno" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAlerta">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAlerta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_Anexo">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket_Anexo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaRisco">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovadaRisco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaVir">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovadaVir" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConfirmacaoDeEntrega">
+      <soap12:operation soapAction="http://tempuri.org/EnviarConfirmacaoDeEntrega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamento">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailCancelamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamentoFraude">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailCancelamentoFraude" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAprovacaoPagamento">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAprovacaoPagamento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSolicitacaoDocumentacao">
+      <soap12:operation soapAction="http://tempuri.org/EnviarSolicitacaoDocumentacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarMediaPartnerConfirmacao">
+      <soap12:operation soapAction="http://tempuri.org/EnviarMediaPartnerConfirmacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovada_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_Anexo_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket_Anexo_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovada_eTicket_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovada_eTicket_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaRisco_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovadaRisco_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarVendaAprovadaVir_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarVendaAprovadaVir_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarConfirmacaoDeEntrega_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarConfirmacaoDeEntrega_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamento_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailCancelamento_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarEmailCancelamentoFraude_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarEmailCancelamentoFraude_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarAprovacaoPagamento_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarAprovacaoPagamento_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EnviarSolicitacaoDocumentacao_im">
+      <soap12:operation soapAction="http://tempuri.org/EnviarSolicitacaoDocumentacao_im" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MailService">
+    <wsdl:port name="MailServiceSoap" binding="tns:MailServiceSoap">
+      <soap:address location="http://ir-prd.homologaprojeto.com.br/IRServices/MailService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MailServiceSoap12" binding="tns:MailServiceSoap12">
+      <soap12:address location="http://ir-prd.homologaprojeto.com.br/IRServices/MailService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Arquivo">
+  <Propriedades>
+    <Propriedade Nome="DataEmissao"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TipoArquivo"	Tipo="Texto" Tamanho="1"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="UsuarioID"	Tipo="int" Tamanho="1"	Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

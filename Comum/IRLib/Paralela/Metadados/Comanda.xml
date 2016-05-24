@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Comanda">
+	<Propriedades>
+		<Propriedade Nome="GarconID"		Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="VendaID"			Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="CaixaID"			Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="Ordem"			Tipo="texto"	Nulo="True" Acesso="LE" Tamanho="10"/>
+		<Propriedade Nome="IngressoID"		Tipo="int"		Nulo="True" Acesso="LE"/>
+	</Propriedades>
+    <Metodos>
+    	<Metodo Nome="Ultima" Tipo="int">
+    		Ultima Comanda
+    	</Metodo>   
+    	<Metodo Nome="estruturaItensComanda" Tipo="DataTable">
+    		Cria um Datatable com os campos de Itens de Comanda
+    	</Metodo>
+    	<Metodo Nome="Itens" Tipo="DataTable">
+    		Obtem uma tabela com os itens de uma comanda (com valor)
+    		<Parametros>
+    			<Parametro Nome="GarconID" 	Tipo="int" />
+    			<Parametro Nome="ApresentacaoID" 	Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="ObterVendaID" Tipo="int"><!-- Fabio -->
+			Obter vendaID de um determinado ingresso
+    		<Parametros>
+    			<Parametro Nome="ingresso" Tipo="string" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Itens"	Tipo="DataTable">
+			Obter itens dessa comanda
+    	</Metodo>
+        <Metodo Nome="Itens"	Tipo="DataTable">
+			Obter itens dessa comanda pela Ordem
+    		<Parametros>
+    			<Parametro Nome="ordem" Tipo="string" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Ordens" Tipo="DataTable">
+			Obter ordens de comanda dado um ingresso
+    		<Parametros>
+    			<Parametro Nome="ingresso" Tipo="string" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="FecharConta" Tipo="void"><!-- Fabio -->
+			Obter o valor total da conta do ingresso
+    		<Parametros>
+    			<Parametro Nome="ingresso" Tipo="int" />
+    			<Parametro Nome="vendaID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="ValorConta" Tipo="decimal">
+			Obter o valor total da conta do ingresso
+    		<Parametros>
+    			<Parametro Nome="ingresso" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="ValorConta" Tipo="decimal"><!-- Fabio -->
+			Obter o valor total da conta por comanda
+    	</Metodo>
+        <Metodo Nome="Ordens" Tipo="DataTable"><!-- Fabio -->
+			Obter ordens de comanda dado um garcon
+    		<Parametros>
+    			<Parametro Nome="GarconID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>
+
+

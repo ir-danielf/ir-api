@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaBancoIngressoComprovante">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"  Tipo="int" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Timestamp"  Tipo="datahora" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Acao"  Tipo="texto" Tamanho="1" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="UsuarioID"  Tipo="int" Nulo="False" Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

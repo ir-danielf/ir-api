@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Pais">
+  <Propriedades>
+    <!-- NÃO GERAR O PAIS POR AQUI!!! O ID EH IDENTITY -->
+    <Propriedade Nome="Nome"	Tipo="texto"	Tamanho="100"	Nulo="False"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

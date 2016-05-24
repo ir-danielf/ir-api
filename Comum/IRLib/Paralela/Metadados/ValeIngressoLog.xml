@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="ValeIngressoLog">
+  <Propriedades>
+    <Propriedade Nome="Acao"		                 Tamanho = "1" 	    Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TimeStamp"					 Tipo="datahora"		Nulo="True"	 Acesso="LE" />
+    <Propriedade Nome="ValeIngressoID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="UsuarioID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaItemID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="EmpresaID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="CaixaID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="LojaID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="CanalID"				 Tipo="int"				  Nulo="True"  Acesso="LE" />
+    <Propriedade Nome="CodigoTroca"		             Tamanho = "10"	    Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoBarra"		             Tamanho = "20"	    Tipo="texto" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ClienteNome"			Tipo="texto"					Tamanho="50"	/>
+    <Propriedade Nome="Obs"			Tipo="texto"					/>
+    <Propriedade Nome="MotivoID"			Tipo="int"		Nulo="True"			/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

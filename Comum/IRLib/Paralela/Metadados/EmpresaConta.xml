@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EmpresaConta">
+  <Propriedades>
+    <Propriedade Nome="EmpresaID"	           Tipo="int"				      Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Beneficiario"           Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="100" />
+    <Propriedade Nome="Banco"                   Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="50" />
+    <Propriedade Nome="Agencia"                 Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="10" />
+    <Propriedade Nome="Conta"                    Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="10" />
+    <Propriedade Nome="CPFCNPJ"                Tipo="texto"          Nulo="True" Acesso="LE" Tamanho="15" />
+    <Propriedade Nome="ContaPadrao"   Tipo="booleano"    Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>
+

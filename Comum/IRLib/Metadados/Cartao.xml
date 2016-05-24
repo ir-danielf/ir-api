@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Cartao">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"	Tipo="int" Nulo="True"	/>
+    <Propriedade Nome="NroCartao" Tipo="texto" Tamanho="20" />
+    <Propriedade Nome="CheckSumCartao" Tipo="texto" Tamanho="300" />
+    <Propriedade Nome="BandeiraID"	Tipo="int" Nulo="True"	/>
+    <Propriedade Nome="Status" Tipo="texto" Tamanho="1" />
+    <Propriedade Nome="Ativo" Tipo="booleano" Nulo="True"/>
+
+    <Propriedade Nome="CartaoCr" Tipo="texto" Tamanho="500"/>
+    <Propriedade Nome="CVVCr" Tipo="texto" Tamanho="500"/>
+    <Propriedade Nome="DataCr" Tipo="texto" Tamanho="500"/>
+    <Propriedade Nome="NomeCartao" Tipo="texto" Tamanho="50"/>
+    
+  </Propriedades>    
+</Classe>

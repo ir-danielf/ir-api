@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PerfilTipo">
+    <Propriedades>
+        <Propriedade Nome="Nome"	Tipo="texto"	Tamanho="50"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Perfis" Tipo="DataTable"><!-- Fabio -->
+    		Obtem os perfis desse tipo
+    	</Metodo>
+    </Metodos>
+</Classe>

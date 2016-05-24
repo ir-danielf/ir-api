@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaBancoIngressoHistorico">
+  <Propriedades>
+    <Propriedade Nome="AssinaturaBancoIngressoID"  Tipo="int" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="AssinaturaBancoIngressoCreditoID"  Tipo="int" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="AssianturaBancoIngressoComprovanteID"  Tipo="int"  Nulo="False"  Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

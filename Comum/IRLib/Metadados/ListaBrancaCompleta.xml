@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ListaBrancaCompleta">
+  <Propriedades>
+    <Propriedade Nome="CodigoBarra"		Tipo="texto"		Nulo="True"	Acesso="LE"		Tamanho="12" />
+    <Propriedade Nome="Utilizado"		Tipo="booleano"		Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataUtilizado"		Tipo="datahora"		Nulo="True"	Acesso="LE"		Tamanho="12" />
+  </Propriedades>
+</Classe>
+

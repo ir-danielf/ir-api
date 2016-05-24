@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="LeituraCodigo">
+  <Propriedades>
+    <Propriedade Nome="EventoID"				Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ApresentacaoID"	Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="SetorID"	        Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataLeitura"			Tipo="datahora"		Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="CodigoBarra"			Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Portaria"		    Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoResultado"	Tipo="int"			  Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>

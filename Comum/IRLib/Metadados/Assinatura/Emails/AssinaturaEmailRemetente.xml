@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaEmailEnviar">
+  <Propriedades>
+    <Propriedade Nome="Remetente"     Tipo="texto"  Tamanho="200" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="NomeExibicao"  Tipo="texto"  Tamanho="200" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="SMTP"          Tipo="texto"  Tamanho="200" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Senha"         Tipo="texto"  Tamanho="200" Nulo="False" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

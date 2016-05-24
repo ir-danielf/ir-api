@@ -1,0 +1,2350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ModelSite.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APIUsuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Login" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Senha" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+          <Property Name="TipoAcesso" Type="int" Nullable="false" />
+          <Property Name="DominiosOrigem" Type="nvarchar(max)" />
+          <Property Name="IPOrigem" Type="nvarchar" MaxLength="40" />
+          <Property Name="UsuarioID" Type="int" Nullable="false" />
+          <Property Name="LojaID" Type="int" Nullable="false" />
+          <Property Name="CanalID" Type="int" Nullable="false" />
+          <Property Name="HorasExpiracaoToken" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="APIUsuarioToken">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="APIUsuarioID" Type="int" Nullable="false" />
+          <Property Name="Ativo" Type="bit" Nullable="false" />
+          <Property Name="DadosSession" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DataExpiracao" Type="datetime" Nullable="false" />
+          <Property Name="Token" Type="nvarchar" MaxLength="3000" />
+          <Property Name="DadosIndentificacao" Type="nvarchar" MaxLength="3000" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apresentacao">
+          <Key>
+            <PropertyRef Name="IR_ApresentacaoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_ApresentacaoID" Type="int" Nullable="false" />
+          <Property Name="Horario" Type="nvarchar" MaxLength="14" Nullable="false" />
+          <Property Name="EventoID" Type="int" Nullable="false" />
+          <Property Name="UsarEsquematico" Type="bit" Nullable="false" />
+          <Property Name="Programacao" Type="nvarchar" MaxLength="2000" />
+          <Property Name="CodigoProgramacao" Type="nvarchar" MaxLength="100" />
+          <Property Name="CalcDiaDaSemana" Type="int" StoreGeneratedPattern="Computed" />
+          <Property Name="CalcHorario" Type="datetime" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteIR.dbo.Banner' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Banner">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Nome" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Img" Type="nvarchar" MaxLength="255" />
+          <Property Name="Alt" Type="nvarchar" MaxLength="255" />
+          <Property Name="Url" Type="nvarchar" MaxLength="255" />
+          <Property Name="Target" Type="int" />
+          <Property Name="Localizacao" Type="int" />
+          <Property Name="Posicao" Type="int" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteIR.dbo.BanneriMais' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="BanneriMais">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Nome" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Img" Type="nvarchar" MaxLength="255" />
+          <Property Name="Alt" Type="nvarchar" MaxLength="255" />
+          <Property Name="Url" Type="nvarchar" MaxLength="255" />
+          <Property Name="Target" Type="int" />
+          <Property Name="Localizacao" Type="int" />
+          <Property Name="Posicao" Type="int" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="Carrinho">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClienteID" Type="int" />
+          <Property Name="Codigo" Type="nvarchar" MaxLength="20" />
+          <Property Name="LugarID" Type="int" />
+          <Property Name="EventoID" Type="int" />
+          <Property Name="IngressoID" Type="int" />
+          <Property Name="TipoLugar" Type="char" MaxLength="1" />
+          <Property Name="ApresentacaoID" Type="int" />
+          <Property Name="SetorID" Type="int" />
+          <Property Name="PrecoID" Type="int" />
+          <Property Name="LocalID" Type="int" />
+          <Property Name="Local" Type="nvarchar" MaxLength="50" />
+          <Property Name="Evento" Type="nvarchar" MaxLength="50" />
+          <Property Name="ApresentacaoDataHora" Type="nvarchar" MaxLength="14" />
+          <Property Name="Setor" Type="nvarchar" MaxLength="50" />
+          <Property Name="PrecoNome" Type="nvarchar" MaxLength="50" />
+          <Property Name="TimeStamp" Type="nvarchar" MaxLength="25" />
+          <Property Name="PrecoValor" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="TaxaConveniencia" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="SessionID" Type="nvarchar" MaxLength="255" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+          <Property Name="TagOrigem" Type="nvarchar" MaxLength="20" />
+          <Property Name="PacoteGrupo" Type="nvarchar" MaxLength="10" />
+          <Property Name="PacoteNome" Type="nvarchar" MaxLength="255" />
+          <Property Name="Grupo" Type="int" />
+          <Property Name="Classificacao" Type="int" />
+          <Property Name="PrecoExclusivoCodigoID" Type="int" />
+          <Property Name="LocalImagemNome" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValeIngressoTipoID" Type="int" />
+          <Property Name="ValidadeData" Type="nvarchar" MaxLength="14" />
+          <Property Name="ValeIngressoNome" Type="nvarchar" MaxLength="50" />
+          <Property Name="ValidadeDiasImpressao" Type="int" />
+          <Property Name="Acumulativo" Type="nchar" MaxLength="1" />
+          <Property Name="ValeIngressoID" Type="int" />
+          <Property Name="VendaBilheteriaID" Type="int" />
+          <Property Name="CotaItemID" Type="int" />
+          <Property Name="CotaItemIDAPS" Type="int" />
+          <Property Name="IsSpecial" Type="int" />
+          <Property Name="EmpresaID" Type="int" />
+          <Property Name="SerieID" Type="int" />
+          <Property Name="DonoID" Type="int" />
+          <Property Name="DonoCPF" Type="nvarchar" MaxLength="30" />
+          <Property Name="CodigoPromocional" Type="nvarchar" MaxLength="200" />
+          <Property Name="CotaVerificada" Type="bit" />
+          <Property Name="ValorTaxaProcessamento" Type="decimal" Precision="5" Scale="2" />
+          <Property Name="PacoteID" Type="int" />
+          <Property Name="GerenciamentoIngressosID" Type="int" />
+          <Property Name="VoucherID" Type="int" />
+        </EntityType>
+        <EntityType Name="Cidade">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="EstadoID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DestaqueConceitual">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imagem" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Fundo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Subtitulo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="LinkURL" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="LinkLabel" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LinkFundo" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Publicado" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DestaqueConceitualRegiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegiaoID" Type="int" Nullable="false" />
+          <Property Name="DestaqueConceitualID" Type="int" Nullable="false" />
+          <Property Name="Ordem" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DestaqueLinkRegiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RegiaoID" Type="int" Nullable="false" />
+          <Property Name="TipoID" Type="int" Nullable="false" />
+          <Property Name="Titulo" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Link" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DestaqueRegiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventoID" Type="int" Nullable="false" />
+          <Property Name="RegiaoID" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Ordem" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DuvidasFrequentes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Pergunta" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="Resposta" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Sigla" Type="nvarchar" MaxLength="2" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="IR_EventoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_EventoID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LocalID" Type="int" Nullable="false" />
+          <Property Name="TipoID" Type="int" />
+          <Property Name="Release" Type="ntext" />
+          <Property Name="Obs" Type="ntext" />
+          <Property Name="Imagem" Type="nvarchar" MaxLength="50" />
+          <Property Name="Destaque" Type="bit" />
+          <Property Name="Prioridade" Type="int" />
+          <Property Name="EntregaGratuita" Type="bit" />
+          <Property Name="RetiradaBilheteria" Type="bit" />
+          <Property Name="DisponivelAvulso" Type="bit" />
+          <Property Name="Parcelas" Type="int" />
+          <Property Name="PublicarSemVendaMotivo" Type="int" />
+          <Property Name="Publicar" Type="nchar" MaxLength="1" />
+          <Property Name="SubtipoID" Type="int" />
+          <Property Name="DataAberturaVenda" Type="nvarchar" MaxLength="14" />
+          <Property Name="LocalImagemMapaID" Type="int" />
+          <Property Name="LocalImagemNome" Type="nvarchar" MaxLength="4000" />
+          <Property Name="EscolherLugarMarcado" Type="bit" />
+          <Property Name="PalavraChave" Type="nvarchar" MaxLength="2000" />
+          <Property Name="ExibeQuantidade" Type="bit" />
+          <Property Name="BannersPadraoSite" Type="bit" />
+          <Property Name="MenorPeriodoEntrega" Type="int" />
+          <Property Name="FilmeID" Type="int" />
+          <Property Name="PermiteVendaPacote" Type="bit" />
+          <Property Name="PossuiTaxaProcessamento" Type="bit" Nullable="false" />
+          <Property Name="LimiteMaximoIngressosEvento" Type="int" Nullable="false" />
+          <Property Name="LimiteMaximoIngressosEstado" Type="int" Nullable="false" />
+          <Property Name="ImagemDestaque" Type="nvarchar" MaxLength="50" />
+          <Property Name="EntradaFranca" Type="bit" />
+          <Property Name="OcultarHoraApresentacao" Type="bit" />
+        </EntityType>
+        <EntityType Name="EventoSubtipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_SubtipoID" Type="int" />
+          <Property Name="TipoID" Type="int" />
+          <Property Name="Descricao" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="FormaPagamento">
+          <Key>
+            <PropertyRef Name="IR_FormaPagamentoID" />
+            <PropertyRef Name="Nome" />
+            <PropertyRef Name="Parcelas" />
+          </Key>
+          <Property Name="IR_FormaPagamentoID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Parcelas" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteIR.dbo.FormaPagamentoCotaItem' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FormaPagamentoCotaItem">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IR_FormaPagamentoCotaItemID" />
+            <PropertyRef Name="CotaItemID" />
+            <PropertyRef Name="FormaPagamentoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_FormaPagamentoCotaItemID" Type="int" Nullable="false" />
+          <Property Name="CotaItemID" Type="int" Nullable="false" />
+          <Property Name="FormaPagamentoID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteIR.dbo.FormaPagamentoEvento' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FormaPagamentoEvento">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IR_FormaPagamentoEventoID" />
+            <PropertyRef Name="EventoID" />
+            <PropertyRef Name="FormaPagamentoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_FormaPagamentoEventoID" Type="int" Nullable="false" />
+          <Property Name="EventoID" Type="int" Nullable="false" />
+          <Property Name="FormaPagamentoID" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteIR.dbo.FormaPagamentoSerie' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="FormaPagamentoSerie">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IR_FormaPagamentoSerieID" />
+            <PropertyRef Name="SerieID" />
+            <PropertyRef Name="FormaPagamentoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_FormaPagamentoSerieID" Type="int" Nullable="false" />
+          <Property Name="SerieID" Type="int" Nullable="false" />
+          <Property Name="FormaPagamentoID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Local">
+          <Key>
+            <PropertyRef Name="IR_LocalID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_LocalID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Cidade" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Estado" Type="nvarchar" MaxLength="2" />
+          <Property Name="Obs" Type="ntext" />
+          <Property Name="Endereco" Type="nvarchar" MaxLength="150" />
+          <Property Name="CEP" Type="nvarchar" MaxLength="8" />
+          <Property Name="DDDTelefone" Type="nvarchar" MaxLength="2" />
+          <Property Name="Telefone" Type="nvarchar" MaxLength="8" />
+          <Property Name="ComoChegar" Type="nvarchar" MaxLength="3000" />
+          <Property Name="TaxaMaximaEmpresa" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="BannersPadraoSite" Type="bit" />
+          <Property Name="EmpresaID" Type="int" />
+          <Property Name="Pais" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Imagem" Type="nvarchar" MaxLength="30" />
+          <Property Name="CodigoPraca" Type="nvarchar" MaxLength="20" />
+          <Property Name="Latitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="Longitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="LatitudeAsDecimal" Type="decimal" Precision="18" Scale="12" StoreGeneratedPattern="Computed" />
+          <Property Name="LongitudeAsDecimal" Type="decimal" Precision="18" Scale="12" StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClienteID" Type="int" Nullable="false" />
+          <Property Name="CPF" Type="nvarchar" MaxLength="30" />
+          <Property Name="Senha" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="DataCadastro" Type="nvarchar" MaxLength="14" />
+          <Property Name="UltimoAcesso" Type="nvarchar" MaxLength="14" />
+          <Property Name="Ativo" Type="nchar" MaxLength="1" />
+          <Property Name="StatusAtual" Type="nchar" MaxLength="1" Nullable="false" />
+          <Property Name="FaceBookUserID" Type="nvarchar" MaxLength="100" />
+          <Property Name="FaceBookUserToken" Type="nvarchar" MaxLength="300" />
+          <Property Name="FaceBookUserInfos" Type="text" />
+		      <Property Name="SiteID" Type="int" Nullable="false"/>
+          <Property Name="SyncStatus" Type="int" />
+          <Property Name="SyncDate" Type="datetime" />
+          <Property Name="BiletoUuid" Type="nvarchar" MaxLength="255" />
+          <Property Name="AccountKitId" Type="nvarchar" MaxLength="100"/>
+          <Property Name="CreatedAPIUsuarioId" Type="int" Nullable="true" />
+          <Property Name="LoginAPIUsuarioId" Type="int" Nullable="true" />
+        </EntityType>
+        <EntityType Name="NewsAssinante">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventoID" Type="int" />
+          <Property Name="Nome" Type="varchar" MaxLength="255" />
+          <Property Name="Email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="DataInscricao" Type="datetime" Nullable="false" />
+          <Property Name="Status" Type="int" />
+        </EntityType>
+        <EntityType Name="NomenclaturaPacote">
+          <Key>
+            <PropertyRef Name="IR_NomenclaturaPacoteID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_NomenclaturaPacoteID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Pacote">
+          <Key>
+            <PropertyRef Name="IR_PacoteID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PacoteID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="500" />
+          <Property Name="NomenclaturaPacoteID" Type="int" />
+        </EntityType>
+        <EntityType Name="PacoteItem">
+          <Key>
+            <PropertyRef Name="IR_PacoteItemID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PacoteItemID" Type="int" Nullable="false" />
+          <Property Name="PacoteID" Type="int" />
+          <Property Name="EventoID" Type="int" Nullable="false" />
+          <Property Name="PrecoID" Type="int" Nullable="false" />
+          <Property Name="Quantidade" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PontoVenda">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PontoVendaID" Type="int" Nullable="false" />
+          <Property Name="Local" Type="nvarchar" MaxLength="50" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="150" />
+          <Property Name="Endereco" Type="nvarchar" MaxLength="200" />
+          <Property Name="Numero" Type="nvarchar" MaxLength="15" />
+          <Property Name="Compl" Type="nvarchar" MaxLength="20" />
+          <Property Name="Cidade" Type="nvarchar" MaxLength="50" />
+          <Property Name="Estado" Type="nvarchar" MaxLength="2" />
+          <Property Name="Bairro" Type="nvarchar" MaxLength="100" />
+          <Property Name="Obs" Type="nvarchar" MaxLength="300" />
+          <Property Name="Referencia" Type="nvarchar" MaxLength="100" />
+          <Property Name="CEP" Type="nvarchar" MaxLength="9" />
+          <Property Name="Latitude" Type="nvarchar" MaxLength="50" />
+          <Property Name="Longitude" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PontoVendaFormaPgto">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaFormaPgtoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PontoVendaFormaPgtoID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="PontoVendaHorario">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaHorarioID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PontoVendaHorarioID" Type="int" Nullable="false" />
+          <Property Name="PontoVendaID" Type="int" Nullable="false" />
+          <Property Name="HorarioInicial" Type="nvarchar" MaxLength="14" />
+          <Property Name="HorarioFinal" Type="nvarchar" MaxLength="14" />
+          <Property Name="DiaSemana" Type="int" />
+        </EntityType>
+        <EntityType Name="PontoVendaXFormaPgto">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaXFormaPgtoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PontoVendaXFormaPgtoID" Type="int" Nullable="false" />
+          <Property Name="PontoVendaFormaPgtoID" Type="int" />
+          <Property Name="PontoVendaID" Type="int" />
+        </EntityType>
+        <EntityType Name="Preco">
+          <Key>
+            <PropertyRef Name="IR_PrecoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PrecoID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="500" />
+          <Property Name="Valor" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="ApresentacaoID" Type="int" />
+          <Property Name="SetorID" Type="int" Nullable="false" />
+          <Property Name="QuantidadePorCliente" Type="int" />
+          <Property Name="Pacote" Type="bit" />
+          <Property Name="Serie" Type="bit" />
+          <Property Name="CodigoCinema" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="PrecoParceiroMidia">
+          <Key>
+            <PropertyRef Name="IR_PrecoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_PrecoID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="500" />
+          <Property Name="Valor" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="ApresentacaoID" Type="int" />
+          <Property Name="SetorID" Type="int" Nullable="false" />
+          <Property Name="QuantidadePorCliente" Type="int" />
+          <Property Name="Pacote" Type="bit" />
+          <Property Name="Serie" Type="bit" />
+          <Property Name="CodigoCinema" Type="nvarchar" MaxLength="100" />
+          <Property Name="ParceiroMidiaID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Regiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsGeral" Type="bit" />
+        </EntityType>
+        <EntityType Name="Setor">
+          <Key>
+            <PropertyRef Name="IR_SetorID" />
+            <PropertyRef Name="ApresentacaoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_SetorID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="LugarMarcado" Type="char" MaxLength="1" />
+          <Property Name="ApresentacaoID" Type="int" Nullable="false" />
+          <Property Name="QtdeDisponivel" Type="int" />
+          <Property Name="QuantidadeMapa" Type="int" />
+          <Property Name="Obs" Type="ntext" />
+          <Property Name="AprovadoPublicacao" Type="bit" />
+          <Property Name="PrincipalPrecoID" Type="int" />
+          <Property Name="CodigoSala" Type="nvarchar" MaxLength="50" />
+          <Property Name="NVendeLugar" Type="bit" />
+        </EntityType>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="IR_TipoID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IR_TipoID" Type="int" Nullable="false" />
+          <Property Name="Nome" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Obs" Type="ntext" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'SiteIR.dbo.vwPrecoCotaControle' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="vwPrecoCotaControle">
+          <Key>
+            <PropertyRef Name="EventoID" />
+            <PropertyRef Name="PrecoID" />
+          </Key>
+          <Property Name="EventoID" Type="int" Nullable="false" />
+          <Property Name="PrecoID" Type="int" Nullable="false" />
+          <Property Name="TemCota" Type="bit" />
+          <Property Name="CotaLimiteQuantidadeTotal" Type="bit" />
+          <Property Name="CotaLimiteQuantidadeTotalPorCliente" Type="bit" />
+          <Property Name="CotaLimiteQuantidade" Type="bit" />
+          <Property Name="CotaLimiteQuantidadeCliente" Type="bit" />
+          <Property Name="CotaLimiteQuantidadeCodigo" Type="bit" />
+          <Property Name="CotaParceiro" Type="bit" />
+          <Property Name="CotaCartao" Type="bit" />
+          <Property Name="CotaCodigo" Type="bit" />
+          <Property Name="CotaTermo" Type="bit" />
+          <Property Name="CotaNominal" Type="bit" />
+          <Property Name="CotaObrigaNome" Type="bit" />
+          <Property Name="CotaObrigaRG" Type="bit" />
+          <Property Name="CotaObrigaCPF" Type="bit" />
+          <Property Name="CotaObrigaTelefone" Type="bit" />
+          <Property Name="CotaObrigaDataNascimento" Type="bit" />
+          <Property Name="CotaObrigaEmail" Type="bit" />
+        </EntityType>
+        <Association Name="FK__Cidade__EstadoID__27F8EE98">
+          <End Role="Estado" Type="Self.Estado" Multiplicity="1" />
+          <End Role="Cidade" Type="Self.Cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cidade">
+              <PropertyRef Name="EstadoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_APIUsuarioToken_APIUsuario">
+          <End Role="APIUsuario" Type="Self.APIUsuario" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="APIUsuarioToken" Type="Self.APIUsuarioToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APIUsuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="APIUsuarioToken">
+              <PropertyRef Name="APIUsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Apresentacao_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Apresentacao" Type="Self.Apresentacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IR_EventoID" />
+            </Principal>
+            <Dependent Role="Apresentacao">
+              <PropertyRef Name="EventoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueConceitualRegiao_DestaqueConceitual">
+          <End Role="DestaqueConceitual" Type="Self.DestaqueConceitual" Multiplicity="1" />
+          <End Role="DestaqueConceitualRegiao" Type="Self.DestaqueConceitualRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DestaqueConceitual">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueConceitualRegiao">
+              <PropertyRef Name="DestaqueConceitualID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueConceitualRegiao_Regiao">
+          <End Role="Regiao" Type="Self.Regiao" Multiplicity="1" />
+          <End Role="DestaqueConceitualRegiao" Type="Self.DestaqueConceitualRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueConceitualRegiao">
+              <PropertyRef Name="RegiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueLinkRegiao_Regiao">
+          <End Role="Regiao" Type="Self.Regiao" Multiplicity="1" />
+          <End Role="DestaqueLinkRegiao" Type="Self.DestaqueLinkRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueLinkRegiao">
+              <PropertyRef Name="RegiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueLinkRegiao_Tipo">
+          <End Role="Tipo" Type="Self.Tipo" Multiplicity="1" />
+          <End Role="DestaqueLinkRegiao" Type="Self.DestaqueLinkRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo">
+              <PropertyRef Name="IR_TipoID" />
+            </Principal>
+            <Dependent Role="DestaqueLinkRegiao">
+              <PropertyRef Name="TipoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueRegiao_Evento">
+          <End Role="Evento" Type="Self.Evento" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DestaqueRegiao" Type="Self.DestaqueRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IR_EventoID" />
+            </Principal>
+            <Dependent Role="DestaqueRegiao">
+              <PropertyRef Name="EventoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueRegiao_Regiao">
+          <End Role="Regiao" Type="Self.Regiao" Multiplicity="1" />
+          <End Role="DestaqueRegiao" Type="Self.DestaqueRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueRegiao">
+              <PropertyRef Name="RegiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PontoVendaHorario_PontoVenda">
+          <End Role="PontoVenda" Type="Self.PontoVenda" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PontoVendaHorario" Type="Self.PontoVendaHorario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PontoVenda">
+              <PropertyRef Name="IR_PontoVendaID" />
+            </Principal>
+            <Dependent Role="PontoVendaHorario">
+              <PropertyRef Name="PontoVendaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PontoVendaXFormaPgto_PontoVenda">
+          <End Role="PontoVenda" Type="Self.PontoVenda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PontoVendaXFormaPgto" Type="Self.PontoVendaXFormaPgto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PontoVenda">
+              <PropertyRef Name="IR_PontoVendaID" />
+            </Principal>
+            <Dependent Role="PontoVendaXFormaPgto">
+              <PropertyRef Name="PontoVendaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PontoVendaXFormaPgto_PontoVendaFormaPgto">
+          <End Role="PontoVendaFormaPgto" Type="Self.PontoVendaFormaPgto" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PontoVendaXFormaPgto" Type="Self.PontoVendaXFormaPgto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PontoVendaFormaPgto">
+              <PropertyRef Name="IR_PontoVendaFormaPgtoID" />
+            </Principal>
+            <Dependent Role="PontoVendaXFormaPgto">
+              <PropertyRef Name="PontoVendaFormaPgtoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Preco_Apresentacao">
+          <End Role="Apresentacao" Type="Self.Apresentacao" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Preco" Type="Self.Preco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apresentacao">
+              <PropertyRef Name="IR_ApresentacaoID" />
+            </Principal>
+            <Dependent Role="Preco">
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrecoParceiroMidia_Apresentacao">
+          <End Role="Apresentacao" Type="Self.Apresentacao" Multiplicity="0..1" />
+          <End Role="PrecoParceiroMidia" Type="Self.PrecoParceiroMidia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apresentacao">
+              <PropertyRef Name="IR_ApresentacaoID" />
+            </Principal>
+            <Dependent Role="PrecoParceiroMidia">
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrecoParceiroMidia_Setor">
+          <End Role="Setor" Type="Self.Setor" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PrecoParceiroMidia" Type="Self.PrecoParceiroMidia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Setor">
+              <PropertyRef Name="IR_SetorID" />
+              <PropertyRef Name="ApresentacaoID" />
+            </Principal>
+            <Dependent Role="PrecoParceiroMidia">
+              <PropertyRef Name="SetorID" />
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Setor_Apresentacao">
+          <End Role="Apresentacao" Type="Self.Apresentacao" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="Setor" Type="Self.Setor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apresentacao">
+              <PropertyRef Name="IR_ApresentacaoID" />
+            </Principal>
+            <Dependent Role="Setor">
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ModelSiteStoreContainer">
+          <EntitySet Name="APIUsuario" EntityType="Self.APIUsuario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="APIUsuarioToken" EntityType="Self.APIUsuarioToken" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apresentacao" EntityType="Self.Apresentacao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Carrinho" EntityType="Self.Carrinho" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cidade" EntityType="Self.Cidade" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DestaqueConceitual" EntityType="Self.DestaqueConceitual" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DestaqueConceitualRegiao" EntityType="Self.DestaqueConceitualRegiao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DestaqueLinkRegiao" EntityType="Self.DestaqueLinkRegiao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DestaqueRegiao" EntityType="Self.DestaqueRegiao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DuvidasFrequentes" EntityType="Self.DuvidasFrequentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Estado" EntityType="Self.Estado" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Evento" EntityType="Self.Evento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EventoSubtipo" EntityType="Self.EventoSubtipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="FormaPagamento" EntityType="Self.FormaPagamento" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Local" EntityType="Self.Local" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewsAssinante" EntityType="Self.NewsAssinante" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NomenclaturaPacote" EntityType="Self.NomenclaturaPacote" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pacote" EntityType="Self.Pacote" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PacoteItem" EntityType="Self.PacoteItem" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PontoVenda" EntityType="Self.PontoVenda" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PontoVendaFormaPgto" EntityType="Self.PontoVendaFormaPgto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PontoVendaHorario" EntityType="Self.PontoVendaHorario" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PontoVendaXFormaPgto" EntityType="Self.PontoVendaXFormaPgto" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Preco" EntityType="Self.Preco" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PrecoParceiroMidia" EntityType="Self.PrecoParceiroMidia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Regiao" EntityType="Self.Regiao" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Setor" EntityType="Self.Setor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tipo" EntityType="Self.Tipo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Banner" EntityType="Self.Banner" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT
+    [Banner].[ID] AS [ID],
+    [Banner].[Nome] AS [Nome],
+    [Banner].[Img] AS [Img],
+    [Banner].[Alt] AS [Alt],
+    [Banner].[Url] AS [Url],
+    [Banner].[Target] AS [Target],
+    [Banner].[Localizacao] AS [Localizacao],
+    [Banner].[Posicao] AS [Posicao],
+    [Banner].[Descricao] AS [Descricao]
+    FROM [dbo].[Banner] AS [Banner]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="BanneriMais" EntityType="Self.BanneriMais" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT
+    [BanneriMais].[ID] AS [ID],
+    [BanneriMais].[Nome] AS [Nome],
+    [BanneriMais].[Img] AS [Img],
+    [BanneriMais].[Alt] AS [Alt],
+    [BanneriMais].[Url] AS [Url],
+    [BanneriMais].[Target] AS [Target],
+    [BanneriMais].[Localizacao] AS [Localizacao],
+    [BanneriMais].[Posicao] AS [Posicao],
+    [BanneriMais].[Descricao] AS [Descricao]
+    FROM [dbo].[BanneriMais] AS [BanneriMais]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FormaPagamentoCotaItem" EntityType="Self.FormaPagamentoCotaItem" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT
+    [FormaPagamentoCotaItem].[ID] AS [ID],
+    [FormaPagamentoCotaItem].[IR_FormaPagamentoCotaItemID] AS [IR_FormaPagamentoCotaItemID],
+    [FormaPagamentoCotaItem].[CotaItemID] AS [CotaItemID],
+    [FormaPagamentoCotaItem].[FormaPagamentoID] AS [FormaPagamentoID]
+    FROM [dbo].[FormaPagamentoCotaItem] AS [FormaPagamentoCotaItem]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FormaPagamentoEvento" EntityType="Self.FormaPagamentoEvento" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT
+    [FormaPagamentoEvento].[ID] AS [ID],
+    [FormaPagamentoEvento].[IR_FormaPagamentoEventoID] AS [IR_FormaPagamentoEventoID],
+    [FormaPagamentoEvento].[EventoID] AS [EventoID],
+    [FormaPagamentoEvento].[FormaPagamentoID] AS [FormaPagamentoID]
+    FROM [dbo].[FormaPagamentoEvento] AS [FormaPagamentoEvento]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="FormaPagamentoSerie" EntityType="Self.FormaPagamentoSerie" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT
+    [FormaPagamentoSerie].[ID] AS [ID],
+    [FormaPagamentoSerie].[IR_FormaPagamentoSerieID] AS [IR_FormaPagamentoSerieID],
+    [FormaPagamentoSerie].[SerieID] AS [SerieID],
+    [FormaPagamentoSerie].[FormaPagamentoID] AS [FormaPagamentoID]
+    FROM [dbo].[FormaPagamentoSerie] AS [FormaPagamentoSerie]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="vwPrecoCotaControle" EntityType="Self.vwPrecoCotaControle" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT
+    [vwPrecoCotaControle].[EventoID] AS [EventoID],
+    [vwPrecoCotaControle].[PrecoID] AS [PrecoID],
+    [vwPrecoCotaControle].[TemCota] AS [TemCota],
+    [vwPrecoCotaControle].[CotaLimiteQuantidadeTotal] AS [CotaLimiteQuantidadeTotal],
+    [vwPrecoCotaControle].[CotaLimiteQuantidadeTotalPorCliente] AS [CotaLimiteQuantidadeTotalPorCliente],
+    [vwPrecoCotaControle].[CotaLimiteQuantidade] AS [CotaLimiteQuantidade],
+    [vwPrecoCotaControle].[CotaLimiteQuantidadeCliente] AS [CotaLimiteQuantidadeCliente],
+    [vwPrecoCotaControle].[CotaLimiteQuantidadeCodigo] AS [CotaLimiteQuantidadeCodigo],
+    [vwPrecoCotaControle].[CotaParceiro] AS [CotaParceiro],
+    [vwPrecoCotaControle].[CotaCartao] AS [CotaCartao],
+    [vwPrecoCotaControle].[CotaCodigo] AS [CotaCodigo],
+    [vwPrecoCotaControle].[CotaTermo] AS [CotaTermo],
+    [vwPrecoCotaControle].[CotaNominal] AS [CotaNominal],
+    [vwPrecoCotaControle].[CotaObrigaNome] AS [CotaObrigaNome],
+    [vwPrecoCotaControle].[CotaObrigaRG] AS [CotaObrigaRG],
+    [vwPrecoCotaControle].[CotaObrigaCPF] AS [CotaObrigaCPF],
+    [vwPrecoCotaControle].[CotaObrigaTelefone] AS [CotaObrigaTelefone],
+    [vwPrecoCotaControle].[CotaObrigaDataNascimento] AS [CotaObrigaDataNascimento],
+    [vwPrecoCotaControle].[CotaObrigaEmail] AS [CotaObrigaEmail]
+    FROM [dbo].[vwPrecoCotaControle] AS [vwPrecoCotaControle]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Cidade__EstadoID__27F8EE98" Association="Self.FK__Cidade__EstadoID__27F8EE98">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Cidade" EntitySet="Cidade" />
+          </AssociationSet>
+          <AssociationSet Name="FK_APIUsuarioToken_APIUsuario" Association="Self.FK_APIUsuarioToken_APIUsuario">
+            <End Role="APIUsuario" EntitySet="APIUsuario" />
+            <End Role="APIUsuarioToken" EntitySet="APIUsuarioToken" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Apresentacao_Evento" Association="Self.FK_Apresentacao_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueConceitualRegiao_DestaqueConceitual" Association="Self.FK_DestaqueConceitualRegiao_DestaqueConceitual">
+            <End Role="DestaqueConceitual" EntitySet="DestaqueConceitual" />
+            <End Role="DestaqueConceitualRegiao" EntitySet="DestaqueConceitualRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueConceitualRegiao_Regiao" Association="Self.FK_DestaqueConceitualRegiao_Regiao">
+            <End Role="Regiao" EntitySet="Regiao" />
+            <End Role="DestaqueConceitualRegiao" EntitySet="DestaqueConceitualRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueLinkRegiao_Regiao" Association="Self.FK_DestaqueLinkRegiao_Regiao">
+            <End Role="Regiao" EntitySet="Regiao" />
+            <End Role="DestaqueLinkRegiao" EntitySet="DestaqueLinkRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueLinkRegiao_Tipo" Association="Self.FK_DestaqueLinkRegiao_Tipo">
+            <End Role="Tipo" EntitySet="Tipo" />
+            <End Role="DestaqueLinkRegiao" EntitySet="DestaqueLinkRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueRegiao_Evento" Association="Self.FK_DestaqueRegiao_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="DestaqueRegiao" EntitySet="DestaqueRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueRegiao_Regiao" Association="Self.FK_DestaqueRegiao_Regiao">
+            <End Role="Regiao" EntitySet="Regiao" />
+            <End Role="DestaqueRegiao" EntitySet="DestaqueRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PontoVendaHorario_PontoVenda" Association="Self.FK_PontoVendaHorario_PontoVenda">
+            <End Role="PontoVenda" EntitySet="PontoVenda" />
+            <End Role="PontoVendaHorario" EntitySet="PontoVendaHorario" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PontoVendaXFormaPgto_PontoVenda" Association="Self.FK_PontoVendaXFormaPgto_PontoVenda">
+            <End Role="PontoVenda" EntitySet="PontoVenda" />
+            <End Role="PontoVendaXFormaPgto" EntitySet="PontoVendaXFormaPgto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PontoVendaXFormaPgto_PontoVendaFormaPgto" Association="Self.FK_PontoVendaXFormaPgto_PontoVendaFormaPgto">
+            <End Role="PontoVendaFormaPgto" EntitySet="PontoVendaFormaPgto" />
+            <End Role="PontoVendaXFormaPgto" EntitySet="PontoVendaXFormaPgto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Preco_Apresentacao" Association="Self.FK_Preco_Apresentacao">
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+            <End Role="Preco" EntitySet="Preco" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrecoParceiroMidia_Apresentacao" Association="Self.FK_PrecoParceiroMidia_Apresentacao">
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+            <End Role="PrecoParceiroMidia" EntitySet="PrecoParceiroMidia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrecoParceiroMidia_Setor" Association="Self.FK_PrecoParceiroMidia_Setor">
+            <End Role="Setor" EntitySet="Setor" />
+            <End Role="PrecoParceiroMidia" EntitySet="PrecoParceiroMidia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Setor_Apresentacao" Association="Self.FK_Setor_Apresentacao">
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+            <End Role="Setor" EntitySet="Setor" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ModelSite" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="IRCoreEntitiesSite" annotation:LazyLoadingEnabled="true" >
+          <EntitySet Name="Apresentacao" EntityType="ModelSite.Apresentacao" />
+          <EntitySet Name="Cidade" EntityType="ModelSite.Cidade" />
+          <EntitySet Name="Estado" EntityType="ModelSite.Estado" />
+          <EntitySet Name="Evento" EntityType="ModelSite.Evento" />
+          <EntitySet Name="Setor" EntityType="ModelSite.Setor" />
+          <AssociationSet Name="FK_Apresentacao_Evento" Association="ModelSite.FK_Apresentacao_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Setor_Apresentacao" Association="ModelSite.FK_Setor_Apresentacao">
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+            <End Role="Setor" EntitySet="Setor" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Cidade__EstadoID__27F8EE98" Association="ModelSite.FK__Cidade__EstadoID__27F8EE98">
+            <End Role="Estado" EntitySet="Estado" />
+            <End Role="Cidade" EntitySet="Cidade" />
+          </AssociationSet>
+          <EntitySet Name="Local" EntityType="ModelSite.Local" />
+          <EntitySet Name="Carrinho" EntityType="ModelSite.Carrinho" />
+          <EntitySet Name="PontoVenda" EntityType="ModelSite.PontoVenda" />
+          <EntitySet Name="PontoVendaHorario" EntityType="ModelSite.PontoVendaHorario" />
+          <AssociationSet Name="FK_PontoVendaHorario_PontoVenda" Association="ModelSite.FK_PontoVendaHorario_PontoVenda">
+            <End Role="PontoVenda" EntitySet="PontoVenda" />
+            <End Role="PontoVendaHorario" EntitySet="PontoVendaHorario" />
+          </AssociationSet>
+          <EntitySet Name="Login" EntityType="ModelSite.Login" />
+          <EntitySet Name="DestaqueConceitual" EntityType="ModelSite.DestaqueConceitual" />
+          <EntitySet Name="DestaqueConceitualRegiao" EntityType="ModelSite.DestaqueConceitualRegiao" />
+          <EntitySet Name="DestaqueRegiao" EntityType="ModelSite.DestaqueRegiao" />
+          <EntitySet Name="Regiao" EntityType="ModelSite.Regiao" />
+          <AssociationSet Name="FK_DestaqueConceitualRegiao_DestaqueConceitual" Association="ModelSite.FK_DestaqueConceitualRegiao_DestaqueConceitual">
+            <End Role="DestaqueConceitual" EntitySet="DestaqueConceitual" />
+            <End Role="DestaqueConceitualRegiao" EntitySet="DestaqueConceitualRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueConceitualRegiao_Regiao" Association="ModelSite.FK_DestaqueConceitualRegiao_Regiao">
+            <End Role="Regiao" EntitySet="Regiao" />
+            <End Role="DestaqueConceitualRegiao" EntitySet="DestaqueConceitualRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueRegiao_Regiao" Association="ModelSite.FK_DestaqueRegiao_Regiao">
+            <End Role="Regiao" EntitySet="Regiao" />
+            <End Role="DestaqueRegiao" EntitySet="DestaqueRegiao" />
+          </AssociationSet>
+          <EntitySet Name="Tipo" EntityType="ModelSite.Tipo" />
+          <EntitySet Name="DuvidasFrequentes" EntityType="ModelSite.DuvidasFrequentes" />
+          <EntitySet Name="DestaqueLinkRegiao" EntityType="ModelSite.DestaqueLinkRegiao" />
+          <AssociationSet Name="FK_DestaqueLinkRegiao_Regiao" Association="ModelSite.FK_DestaqueLinkRegiao_Regiao">
+            <End Role="Regiao" EntitySet="Regiao" />
+            <End Role="DestaqueLinkRegiao" EntitySet="DestaqueLinkRegiao" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueLinkRegiao_Tipo" Association="ModelSite.FK_DestaqueLinkRegiao_Tipo">
+            <End Role="Tipo" EntitySet="Tipo" />
+            <End Role="DestaqueLinkRegiao" EntitySet="DestaqueLinkRegiao" />
+          </AssociationSet>
+          <EntitySet Name="EventoSubtipo" EntityType="ModelSite.EventoSubtipo" />
+          <EntitySet Name="PontoVendaFormaPgto" EntityType="ModelSite.PontoVendaFormaPgto" />
+          <EntitySet Name="PontoVendaXFormaPgto" EntityType="ModelSite.PontoVendaXFormaPgto" />
+          <AssociationSet Name="FK_PontoVendaXFormaPgto_PontoVenda" Association="ModelSite.FK_PontoVendaXFormaPgto_PontoVenda">
+            <End Role="PontoVenda" EntitySet="PontoVenda" />
+            <End Role="PontoVendaXFormaPgto" EntitySet="PontoVendaXFormaPgto" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PontoVendaXFormaPgto_PontoVendaFormaPgto" Association="ModelSite.FK_PontoVendaXFormaPgto_PontoVendaFormaPgto">
+            <End Role="PontoVendaFormaPgto" EntitySet="PontoVendaFormaPgto" />
+            <End Role="PontoVendaXFormaPgto" EntitySet="PontoVendaXFormaPgto" />
+          </AssociationSet>
+          <EntitySet Name="NewsAssinante" EntityType="ModelSite.NewsAssinante" />
+          <AssociationSet Name="FK_NewsAssinante_Evento" Association="ModelSite.FK_NewsAssinante_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="NewsAssinante" EntitySet="NewsAssinante" />
+          </AssociationSet>
+          <EntitySet Name="PrecoParceiroMidia" EntityType="ModelSite.PrecoParceiroMidia" />
+          <AssociationSet Name="FK_PrecoParceiroMidia_Apresentacao_" Association="ModelSite.FK_PrecoParceiroMidia_Apresentacao_">
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+            <End Role="PrecoParceiroMidia" EntitySet="PrecoParceiroMidia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PrecoParceiroMidia_ApresentacaoSetor" Association="ModelSite.FK_PrecoParceiroMidia_ApresentacaoSetor">
+            <End Role="Setor" EntitySet="Setor" />
+            <End Role="PrecoParceiroMidia" EntitySet="PrecoParceiroMidia" />
+          </AssociationSet>
+          <AssociationSet Name="FK_DestaqueRegiao_Evento" Association="ModelSite.FK_DestaqueRegiao_Evento">
+            <End Role="Evento" EntitySet="Evento" />
+            <End Role="DestaqueRegiao" EntitySet="DestaqueRegiao" />
+          </AssociationSet>
+          <EntitySet Name="Pacote" EntityType="ModelSite.Pacote" />
+          <EntitySet Name="PacoteItem" EntityType="ModelSite.PacoteItem" />
+          <EntitySet Name="Preco" EntityType="ModelSite.Preco" />
+          <AssociationSet Name="FK_Preco_Apresentacao" Association="ModelSite.FK_Preco_Apresentacao">
+            <End Role="Apresentacao" EntitySet="Apresentacao" />
+            <End Role="Preco" EntitySet="Preco" />
+          </AssociationSet>
+          <EntitySet Name="NomenclaturaPacote" EntityType="ModelSite.NomenclaturaPacote" />
+          <EntitySet Name="FormaPagamento" EntityType="ModelSite.FormaPagamento" />
+          <EntitySet Name="FormaPagamentoCotaItem" EntityType="ModelSite.FormaPagamentoCotaItem" />
+          <EntitySet Name="FormaPagamentoEvento" EntityType="ModelSite.FormaPagamentoEvento" />
+          <EntitySet Name="FormaPagamentoSerie" EntityType="ModelSite.FormaPagamentoSerie" />
+          <EntitySet Name="Banner" EntityType="ModelSite.Banner" />
+          <EntitySet Name="BanneriMais" EntityType="ModelSite.BanneriMais" />
+          <EntitySet Name="APIUsuarioToken" EntityType="ModelSite.APIUsuarioToken" />
+          <EntitySet Name="APIUsuario" EntityType="ModelSite.APIUsuario" />
+          <AssociationSet Name="FK_APIUsuarioToken_APIUsuario" Association="ModelSite.FK_APIUsuarioToken_APIUsuario">
+            <End Role="APIUsuario" EntitySet="APIUsuario" />
+            <End Role="APIUsuarioToken" EntitySet="APIUsuarioToken" />
+          </AssociationSet>
+          <EntitySet Name="vwPrecoCotaControle" EntityType="ModelSite.vwPrecoCotaControle" />
+        </EntityContainer>
+        <EntityType Name="Apresentacao">
+          <Key>
+            <PropertyRef Name="IR_ApresentacaoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_ApresentacaoID" Type="Int32" Nullable="false" />
+          <Property Name="Horario" Type="String" Nullable="false" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="EventoID" Type="Int32" Nullable="false" />
+          <Property Name="UsarEsquematico" Type="Boolean" Nullable="false" />
+          <Property Name="Programacao" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoProgramacao" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Evento" Relationship="ModelSite.FK_Apresentacao_Evento" FromRole="Apresentacao" ToRole="Evento" />
+          <NavigationProperty Name="Setor" Relationship="ModelSite.FK_Setor_Apresentacao" FromRole="Apresentacao" ToRole="Setor" />
+          <Property Name="CalcDiaDaSemana" Type="Int32" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CalcHorario" Type="DateTime" annotation:StoreGeneratedPattern="Computed" Precision="3" />
+          <NavigationProperty Name="PrecoParceiroMidia" Relationship="ModelSite.FK_PrecoParceiroMidia_Apresentacao_" FromRole="Apresentacao" ToRole="PrecoParceiroMidia" />
+          <NavigationProperty Name="Preco" Relationship="ModelSite.FK_Preco_Apresentacao" FromRole="Apresentacao" ToRole="Preco" />
+        </EntityType>
+        <EntityType Name="Cidade">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EstadoID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Estado" Relationship="ModelSite.FK__Cidade__EstadoID__27F8EE98" FromRole="Cidade" ToRole="Estado" />
+        </EntityType>
+        <EntityType Name="Estado">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Sigla" Type="String" Nullable="false" MaxLength="2" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Cidade" Relationship="ModelSite.FK__Cidade__EstadoID__27F8EE98" FromRole="Estado" ToRole="Cidade" />
+        </EntityType>
+        <EntityType Name="Evento">
+          <Key>
+            <PropertyRef Name="IR_EventoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_EventoID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LocalID" Type="Int32" Nullable="false" />
+          <Property Name="TipoID" Type="Int32" />
+          <Property Name="Release" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Obs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Imagem" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Destaque" Type="Boolean" />
+          <Property Name="Prioridade" Type="Int32" />
+          <Property Name="EntregaGratuita" Type="Boolean" />
+          <Property Name="RetiradaBilheteria" Type="Boolean" />
+          <Property Name="DisponivelAvulso" Type="Boolean" />
+          <Property Name="Parcelas" Type="Int32" />
+          <Property Name="PublicarSemVendaMotivo" Type="Int32" />
+          <Property Name="Publicar" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="SubtipoID" Type="Int32" />
+          <Property Name="DataAberturaVenda" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="LocalImagemMapaID" Type="Int32" />
+          <Property Name="LocalImagemNome" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="EscolherLugarMarcado" Type="Boolean" />
+          <Property Name="PalavraChave" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="ExibeQuantidade" Type="Boolean" />
+          <Property Name="BannersPadraoSite" Type="Boolean" />
+          <Property Name="MenorPeriodoEntrega" Type="Int32" />
+          <Property Name="FilmeID" Type="Int32" />
+          <Property Name="PermiteVendaPacote" Type="Boolean" />
+          <Property Name="PossuiTaxaProcessamento" Type="Boolean" Nullable="false" />
+          <Property Name="LimiteMaximoIngressosEvento" Type="Int32" Nullable="false" />
+          <Property Name="LimiteMaximoIngressosEstado" Type="Int32" Nullable="false" />
+          <Property Name="ImagemDestaque" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="EntradaFranca" Type="Boolean" Nullable="false" />
+          <Property Name="OcultarHoraApresentacao" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Apresentacao" Relationship="ModelSite.FK_Apresentacao_Evento" FromRole="Evento" ToRole="Apresentacao" />
+          <NavigationProperty Name="NewsAssinante" Relationship="ModelSite.FK_NewsAssinante_Evento" FromRole="Evento" ToRole="NewsAssinante" />
+          <NavigationProperty Name="DestaqueRegiao" Relationship="ModelSite.FK_DestaqueRegiao_Evento" FromRole="Evento" ToRole="DestaqueRegiao" />
+        </EntityType>
+        <EntityType Name="Setor">
+          <Key>
+            <PropertyRef Name="IR_SetorID" />
+            <PropertyRef Name="ApresentacaoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_SetorID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LugarMarcado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ApresentacaoID" Type="Int32" Nullable="false" />
+          <Property Name="QtdeDisponivel" Type="Int32" />
+          <Property Name="QuantidadeMapa" Type="Int32" />
+          <Property Name="Obs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AprovadoPublicacao" Type="Boolean" />
+          <Property Name="PrincipalPrecoID" Type="Int32" />
+          <Property Name="CodigoSala" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NVendeLugar" Type="Boolean" />
+          <NavigationProperty Name="Apresentacao" Relationship="ModelSite.FK_Setor_Apresentacao" FromRole="Setor" ToRole="Apresentacao" />
+          <NavigationProperty Name="PrecoParceiroMidia" Relationship="ModelSite.FK_PrecoParceiroMidia_ApresentacaoSetor" FromRole="Setor" ToRole="PrecoParceiroMidia" />
+        </EntityType>
+        <Association Name="FK_Apresentacao_Evento">
+          <End Type="ModelSite.Evento" Role="Evento" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.Apresentacao" Role="Apresentacao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IR_EventoID" />
+            </Principal>
+            <Dependent Role="Apresentacao">
+              <PropertyRef Name="EventoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Setor_Apresentacao">
+          <End Type="ModelSite.Apresentacao" Role="Apresentacao" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.Setor" Role="Setor" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apresentacao">
+              <PropertyRef Name="IR_ApresentacaoID" />
+            </Principal>
+            <Dependent Role="Setor">
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Cidade__EstadoID__27F8EE98">
+          <End Type="ModelSite.Estado" Role="Estado" Multiplicity="1" />
+          <End Type="ModelSite.Cidade" Role="Cidade" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Estado">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Cidade">
+              <PropertyRef Name="EstadoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Local">
+          <Key>
+            <PropertyRef Name="IR_LocalID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_LocalID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Cidade" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Obs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Endereco" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="CEP" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="DDDTelefone" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Telefone" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="ComoChegar" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+          <Property Name="TaxaMaximaEmpresa" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="BannersPadraoSite" Type="Boolean" />
+          <Property Name="EmpresaID" Type="Int32" />
+          <Property Name="Pais" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Imagem" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoPraca" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LatitudeAsDecimal" Type="Decimal" Precision="18" Scale="12" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="LongitudeAsDecimal" Type="Decimal" Precision="18" Scale="12" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Carrinho">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClienteID" Type="Int32" />
+          <Property Name="Codigo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="LugarID" Type="Int32" />
+          <Property Name="EventoID" Type="Int32" />
+          <Property Name="IngressoID" Type="Int32" />
+          <Property Name="TipoLugar" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ApresentacaoID" Type="Int32" />
+          <Property Name="SetorID" Type="Int32" />
+          <Property Name="PrecoID" Type="Int32" />
+          <Property Name="LocalID" Type="Int32" />
+          <Property Name="Local" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Evento" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ApresentacaoDataHora" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="Setor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PrecoNome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TimeStamp" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="PrecoValor" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="TaxaConveniencia" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="SessionID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TagOrigem" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="PacoteGrupo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="PacoteNome" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Grupo" Type="Int32" />
+          <Property Name="Classificacao" Type="Int32" />
+          <Property Name="PrecoExclusivoCodigoID" Type="Int32" />
+          <Property Name="LocalImagemNome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValeIngressoTipoID" Type="Int32" />
+          <Property Name="ValidadeData" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="ValeIngressoNome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ValidadeDiasImpressao" Type="Int32" />
+          <Property Name="Acumulativo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="ValeIngressoID" Type="Int32" />
+          <Property Name="VendaBilheteriaID" Type="Int32" />
+          <Property Name="CotaItemID" Type="Int32" />
+          <Property Name="CotaItemIDAPS" Type="Int32" />
+          <Property Name="IsSpecial" Type="Int32" />
+          <Property Name="EmpresaID" Type="Int32" />
+          <Property Name="SerieID" Type="Int32" />
+          <Property Name="DonoID" Type="Int32" />
+          <Property Name="DonoCPF" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="CodigoPromocional" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="CotaVerificada" Type="Boolean" />
+          <Property Name="ValorTaxaProcessamento" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="PacoteID" Type="Int32" />
+          <Property Name="GerenciamentoIngressosID" Type="Int32" />
+          <Property Name="VoucherID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PontoVenda">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PontoVendaID" Type="Int32" Nullable="false" />
+          <Property Name="Local" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Nome" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Endereco" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Numero" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Compl" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Cidade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="Bairro" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Obs" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Referencia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="CEP" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+          <Property Name="Latitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Longitude" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PontoVendaHorario" Relationship="ModelSite.FK_PontoVendaHorario_PontoVenda" FromRole="PontoVenda" ToRole="PontoVendaHorario" />
+          <NavigationProperty Name="PontoVendaXFormaPgto" Relationship="ModelSite.FK_PontoVendaXFormaPgto_PontoVenda" FromRole="PontoVenda" ToRole="PontoVendaXFormaPgto" />
+        </EntityType>
+        <EntityType Name="PontoVendaHorario">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaHorarioID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PontoVendaHorarioID" Type="Int32" Nullable="false" />
+          <Property Name="PontoVendaID" Type="Int32" Nullable="false" />
+          <Property Name="HorarioInicial" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="HorarioFinal" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="DiaSemana" Type="Int32" />
+          <NavigationProperty Name="PontoVenda" Relationship="ModelSite.FK_PontoVendaHorario_PontoVenda" FromRole="PontoVendaHorario" ToRole="PontoVenda" />
+        </EntityType>
+        <Association Name="FK_PontoVendaHorario_PontoVenda">
+          <End Type="ModelSite.PontoVenda" Role="PontoVenda" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.PontoVendaHorario" Role="PontoVendaHorario" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PontoVenda">
+              <PropertyRef Name="IR_PontoVendaID" />
+            </Principal>
+            <Dependent Role="PontoVendaHorario">
+              <PropertyRef Name="PontoVendaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClienteID" Type="Int32" Nullable="false" />
+          <Property Name="CPF" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Senha" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="DataCadastro" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="UltimoAcesso" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+          <Property Name="Ativo" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="StatusAtual" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="true" />
+          <Property Name="FaceBookUserID" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="FaceBookUserToken" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="FaceBookUserInfos" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="AccountKitId" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+		  <Property Name="SiteID" Type="Int32" Nullable="false" />
+		  <Property Name="SyncStatus" Type="Int32" />
+          <Property Name="SyncDate" Type="DateTime" Precision="3" />
+          <Property Name="BiletoUuid" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="CreatedAPIUsuarioId" Type="Int32" Nullable="true" />
+          <Property Name="LoginAPIUsuarioId" Type="Int32" Nullable="true" />
+        </EntityType>
+        <EntityType Name="DestaqueConceitual">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imagem" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fundo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Titulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Subtitulo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LinkURL" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="LinkLabel" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="LinkFundo" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DestaqueConceitualRegiao" Relationship="ModelSite.FK_DestaqueConceitualRegiao_DestaqueConceitual" FromRole="DestaqueConceitual" ToRole="DestaqueConceitualRegiao" />
+          <Property Name="Publicado" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DestaqueConceitualRegiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegiaoID" Type="Int32" Nullable="false" />
+          <Property Name="DestaqueConceitualID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="DestaqueConceitual" Relationship="ModelSite.FK_DestaqueConceitualRegiao_DestaqueConceitual" FromRole="DestaqueConceitualRegiao" ToRole="DestaqueConceitual" />
+          <NavigationProperty Name="Regiao" Relationship="ModelSite.FK_DestaqueConceitualRegiao_Regiao" FromRole="DestaqueConceitualRegiao" ToRole="Regiao" />
+          <Property Name="Ordem" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DestaqueRegiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventoID" Type="Int32" Nullable="false" />
+          <Property Name="RegiaoID" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Regiao" Relationship="ModelSite.FK_DestaqueRegiao_Regiao" FromRole="DestaqueRegiao" ToRole="Regiao" />
+          <NavigationProperty Name="Evento" Relationship="ModelSite.FK_DestaqueRegiao_Evento" FromRole="DestaqueRegiao" ToRole="Evento" />
+          <Property Name="Ordem" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Regiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DestaqueConceitualRegiao" Relationship="ModelSite.FK_DestaqueConceitualRegiao_Regiao" FromRole="Regiao" ToRole="DestaqueConceitualRegiao" />
+          <NavigationProperty Name="DestaqueRegiao" Relationship="ModelSite.FK_DestaqueRegiao_Regiao" FromRole="Regiao" ToRole="DestaqueRegiao" />
+          <Property Name="IsGeral" Type="Boolean" />
+          <NavigationProperty Name="DestaqueLinkRegiao" Relationship="ModelSite.FK_DestaqueLinkRegiao_Regiao" FromRole="Regiao" ToRole="DestaqueLinkRegiao" />
+        </EntityType>
+        <Association Name="FK_DestaqueConceitualRegiao_DestaqueConceitual">
+          <End Type="ModelSite.DestaqueConceitual" Role="DestaqueConceitual" Multiplicity="1" />
+          <End Type="ModelSite.DestaqueConceitualRegiao" Role="DestaqueConceitualRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DestaqueConceitual">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueConceitualRegiao">
+              <PropertyRef Name="DestaqueConceitualID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueConceitualRegiao_Regiao">
+          <End Type="ModelSite.Regiao" Role="Regiao" Multiplicity="1" />
+          <End Type="ModelSite.DestaqueConceitualRegiao" Role="DestaqueConceitualRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueConceitualRegiao">
+              <PropertyRef Name="RegiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueRegiao_Regiao">
+          <End Type="ModelSite.Regiao" Role="Regiao" Multiplicity="1" />
+          <End Type="ModelSite.DestaqueRegiao" Role="DestaqueRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueRegiao">
+              <PropertyRef Name="RegiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Tipo">
+          <Key>
+            <PropertyRef Name="IR_TipoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_TipoID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="Obs" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DestaqueLinkRegiao" Relationship="ModelSite.FK_DestaqueLinkRegiao_Tipo" FromRole="Tipo" ToRole="DestaqueLinkRegiao" />
+        </EntityType>
+        <EntityType Name="DuvidasFrequentes">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Pergunta" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Resposta" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DestaqueLinkRegiao">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RegiaoID" Type="Int32" Nullable="false" />
+          <Property Name="TipoID" Type="Int32" Nullable="false" />
+          <Property Name="Titulo" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Link" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Regiao" Relationship="ModelSite.FK_DestaqueLinkRegiao_Regiao" FromRole="DestaqueLinkRegiao" ToRole="Regiao" />
+          <NavigationProperty Name="Tipo" Relationship="ModelSite.FK_DestaqueLinkRegiao_Tipo" FromRole="DestaqueLinkRegiao" ToRole="Tipo" />
+        </EntityType>
+        <Association Name="FK_DestaqueLinkRegiao_Regiao">
+          <End Type="ModelSite.Regiao" Role="Regiao" Multiplicity="1" />
+          <End Type="ModelSite.DestaqueLinkRegiao" Role="DestaqueLinkRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Regiao">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="DestaqueLinkRegiao">
+              <PropertyRef Name="RegiaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueLinkRegiao_Tipo">
+          <End Type="ModelSite.Tipo" Role="Tipo" Multiplicity="1" />
+          <End Type="ModelSite.DestaqueLinkRegiao" Role="DestaqueLinkRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tipo">
+              <PropertyRef Name="IR_TipoID" />
+            </Principal>
+            <Dependent Role="DestaqueLinkRegiao">
+              <PropertyRef Name="TipoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="EventoSubtipo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_SubtipoID" Type="Int32" />
+          <Property Name="TipoID" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="PontoVendaFormaPgto">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaFormaPgtoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PontoVendaFormaPgtoID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="PontoVendaXFormaPgto" Relationship="ModelSite.FK_PontoVendaXFormaPgto_PontoVendaFormaPgto" FromRole="PontoVendaFormaPgto" ToRole="PontoVendaXFormaPgto" />
+        </EntityType>
+        <EntityType Name="PontoVendaXFormaPgto">
+          <Key>
+            <PropertyRef Name="IR_PontoVendaXFormaPgtoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PontoVendaXFormaPgtoID" Type="Int32" Nullable="false" />
+          <Property Name="PontoVendaFormaPgtoID" Type="Int32" />
+          <Property Name="PontoVendaID" Type="Int32" />
+          <NavigationProperty Name="PontoVenda" Relationship="ModelSite.FK_PontoVendaXFormaPgto_PontoVenda" FromRole="PontoVendaXFormaPgto" ToRole="PontoVenda" />
+          <NavigationProperty Name="PontoVendaFormaPgto" Relationship="ModelSite.FK_PontoVendaXFormaPgto_PontoVendaFormaPgto" FromRole="PontoVendaXFormaPgto" ToRole="PontoVendaFormaPgto" />
+        </EntityType>
+        <Association Name="FK_PontoVendaXFormaPgto_PontoVenda">
+          <End Type="ModelSite.PontoVenda" Role="PontoVenda" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.PontoVendaXFormaPgto" Role="PontoVendaXFormaPgto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PontoVenda">
+              <PropertyRef Name="IR_PontoVendaID" />
+            </Principal>
+            <Dependent Role="PontoVendaXFormaPgto">
+              <PropertyRef Name="PontoVendaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PontoVendaXFormaPgto_PontoVendaFormaPgto">
+          <End Type="ModelSite.PontoVendaFormaPgto" Role="PontoVendaFormaPgto" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.PontoVendaXFormaPgto" Role="PontoVendaXFormaPgto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PontoVendaFormaPgto">
+              <PropertyRef Name="IR_PontoVendaFormaPgtoID" />
+            </Principal>
+            <Dependent Role="PontoVendaXFormaPgto">
+              <PropertyRef Name="PontoVendaFormaPgtoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NewsAssinante">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventoID" Type="Int32" />
+          <Property Name="Nome" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="DataInscricao" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Status" Type="Int32" />
+          <NavigationProperty Name="Evento" Relationship="ModelSite.FK_NewsAssinante_Evento" FromRole="NewsAssinante" ToRole="Evento" />
+        </EntityType>
+        <Association Name="FK_NewsAssinante_Evento">
+          <End Type="ModelSite.Evento" Role="Evento" Multiplicity="0..1" />
+          <End Type="ModelSite.NewsAssinante" Role="NewsAssinante" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IR_EventoID" />
+            </Principal>
+            <Dependent Role="NewsAssinante">
+              <PropertyRef Name="EventoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="PrecoParceiroMidia">
+          <Key>
+            <PropertyRef Name="IR_PrecoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PrecoID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Valor" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="ApresentacaoID" Type="Int32" />
+          <Property Name="SetorID" Type="Int32" Nullable="false" />
+          <Property Name="QuantidadePorCliente" Type="Int32" />
+          <Property Name="Pacote" Type="Boolean" />
+          <Property Name="Serie" Type="Boolean" />
+          <Property Name="CodigoCinema" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ParceiroMidiaID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Apresentacao" Relationship="ModelSite.FK_PrecoParceiroMidia_Apresentacao_" FromRole="PrecoParceiroMidia" ToRole="Apresentacao" />
+          <NavigationProperty Name="Setor" Relationship="ModelSite.FK_PrecoParceiroMidia_ApresentacaoSetor" FromRole="PrecoParceiroMidia" ToRole="Setor" />
+        </EntityType>
+        <Association Name="FK_PrecoParceiroMidia_Apresentacao_">
+          <End Type="ModelSite.Apresentacao" Role="Apresentacao" Multiplicity="0..1" />
+          <End Type="ModelSite.PrecoParceiroMidia" Role="PrecoParceiroMidia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apresentacao">
+              <PropertyRef Name="IR_ApresentacaoID" />
+            </Principal>
+            <Dependent Role="PrecoParceiroMidia">
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PrecoParceiroMidia_ApresentacaoSetor">
+          <End Type="ModelSite.Setor" Role="Setor" Multiplicity="0..1" />
+          <End Type="ModelSite.PrecoParceiroMidia" Role="PrecoParceiroMidia" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Setor">
+              <PropertyRef Name="IR_SetorID" />
+              <PropertyRef Name="ApresentacaoID" />
+            </Principal>
+            <Dependent Role="PrecoParceiroMidia">
+              <PropertyRef Name="SetorID" />
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_DestaqueRegiao_Evento">
+          <End Type="ModelSite.Evento" Role="Evento" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.DestaqueRegiao" Role="DestaqueRegiao" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Evento">
+              <PropertyRef Name="IR_EventoID" />
+            </Principal>
+            <Dependent Role="DestaqueRegiao">
+              <PropertyRef Name="EventoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Pacote">
+          <Key>
+            <PropertyRef Name="IR_PacoteID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PacoteID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NomenclaturaPacoteID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PacoteItem">
+          <Key>
+            <PropertyRef Name="IR_PacoteItemID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PacoteItemID" Type="Int32" Nullable="false" />
+          <Property Name="PacoteID" Type="Int32" />
+          <Property Name="EventoID" Type="Int32" Nullable="false" />
+          <Property Name="PrecoID" Type="Int32" Nullable="false" />
+          <Property Name="Quantidade" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Preco">
+          <Key>
+            <PropertyRef Name="IR_PrecoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_PrecoID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Valor" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="ApresentacaoID" Type="Int32" />
+          <Property Name="SetorID" Type="Int32" Nullable="false" />
+          <Property Name="QuantidadePorCliente" Type="Int32" />
+          <Property Name="Pacote" Type="Boolean" />
+          <Property Name="Serie" Type="Boolean" />
+          <Property Name="CodigoCinema" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Apresentacao" Relationship="ModelSite.FK_Preco_Apresentacao" FromRole="Preco" ToRole="Apresentacao" />
+        </EntityType>
+        <Association Name="FK_Preco_Apresentacao">
+          <End Type="ModelSite.Apresentacao" Role="Apresentacao" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.Preco" Role="Preco" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apresentacao">
+              <PropertyRef Name="IR_ApresentacaoID" />
+            </Principal>
+            <Dependent Role="Preco">
+              <PropertyRef Name="ApresentacaoID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="NomenclaturaPacote">
+          <Key>
+            <PropertyRef Name="IR_NomenclaturaPacoteID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_NomenclaturaPacoteID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="FormaPagamento">
+          <Key>
+            <PropertyRef Name="IR_FormaPagamentoID" />
+            <PropertyRef Name="Nome" />
+            <PropertyRef Name="Parcelas" />
+          </Key>
+          <Property Name="IR_FormaPagamentoID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Parcelas" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormaPagamentoCotaItem">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IR_FormaPagamentoCotaItemID" />
+            <PropertyRef Name="CotaItemID" />
+            <PropertyRef Name="FormaPagamentoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_FormaPagamentoCotaItemID" Type="Int32" Nullable="false" />
+          <Property Name="CotaItemID" Type="Int32" Nullable="false" />
+          <Property Name="FormaPagamentoID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormaPagamentoEvento">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IR_FormaPagamentoEventoID" />
+            <PropertyRef Name="EventoID" />
+            <PropertyRef Name="FormaPagamentoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_FormaPagamentoEventoID" Type="Int32" Nullable="false" />
+          <Property Name="EventoID" Type="Int32" Nullable="false" />
+          <Property Name="FormaPagamentoID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="FormaPagamentoSerie">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="IR_FormaPagamentoSerieID" />
+            <PropertyRef Name="SerieID" />
+            <PropertyRef Name="FormaPagamentoID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IR_FormaPagamentoSerieID" Type="Int32" Nullable="false" />
+          <Property Name="SerieID" Type="Int32" Nullable="false" />
+          <Property Name="FormaPagamentoID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Banner">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Nome" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Alt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Target" Type="Int32" />
+          <Property Name="Localizacao" Type="Int32" />
+          <Property Name="Posicao" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BanneriMais">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Nome" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Nome" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Img" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Alt" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Url" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Target" Type="Int32" />
+          <Property Name="Localizacao" Type="Int32" />
+          <Property Name="Posicao" Type="Int32" />
+          <Property Name="Descricao" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="APIUsuarioToken">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="APIUsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="Token" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
+          <Property Name="DadosIndentificacao" Type="String" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="true" />
+          <Property Name="DadosSession" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="APIUsuario" Relationship="ModelSite.FK_APIUsuarioToken_APIUsuario" FromRole="APIUsuarioToken" ToRole="APIUsuario" />
+          <Property Name="DataExpiracao" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="APIUsuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Login" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Senha" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Ativo" Type="Boolean" Nullable="false" />
+          <Property Name="TipoAcesso" Type="Int32" Nullable="false" />
+          <Property Name="DominiosOrigem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IPOrigem" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="UsuarioID" Type="Int32" Nullable="false" />
+          <Property Name="LojaID" Type="Int32" Nullable="false" />
+          <Property Name="CanalID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="APIUsuarioToken" Relationship="ModelSite.FK_APIUsuarioToken_APIUsuario" FromRole="APIUsuario" ToRole="APIUsuarioToken" />
+          <Property Name="HorasExpiracaoToken" Type="Int32" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_APIUsuarioToken_APIUsuario">
+          <End Type="ModelSite.APIUsuario" Role="APIUsuario" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="ModelSite.APIUsuarioToken" Role="APIUsuarioToken" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="APIUsuario">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="APIUsuarioToken">
+              <PropertyRef Name="APIUsuarioID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="vwPrecoCotaControle">
+          <Key>
+            <PropertyRef Name="EventoID" />
+            <PropertyRef Name="PrecoID" />
+          </Key>
+          <Property Name="EventoID" Type="Int32" Nullable="false" />
+          <Property Name="PrecoID" Type="Int32" Nullable="false" />
+          <Property Name="TemCota" Type="Boolean" />
+          <Property Name="CotaLimiteQuantidadeTotal" Type="Boolean" />
+          <Property Name="CotaLimiteQuantidadeTotalPorCliente" Type="Boolean" />
+          <Property Name="CotaLimiteQuantidade" Type="Boolean" />
+          <Property Name="CotaLimiteQuantidadeCliente" Type="Boolean" />
+          <Property Name="CotaLimiteQuantidadeCodigo" Type="Boolean" />
+          <Property Name="CotaParceiro" Type="Boolean" />
+          <Property Name="CotaCartao" Type="Boolean" />
+          <Property Name="CotaCodigo" Type="Boolean" />
+          <Property Name="CotaTermo" Type="Boolean" />
+          <Property Name="CotaNominal" Type="Boolean" />
+          <Property Name="CotaObrigaNome" Type="Boolean" />
+          <Property Name="CotaObrigaRG" Type="Boolean" />
+          <Property Name="CotaObrigaCPF" Type="Boolean" />
+          <Property Name="CotaObrigaTelefone" Type="Boolean" />
+          <Property Name="CotaObrigaDataNascimento" Type="Boolean" />
+          <Property Name="CotaObrigaEmail" Type="Boolean" />
+        </EntityType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelSiteStoreContainer" CdmEntityContainer="IRCoreEntitiesSite" >
+          <EntitySetMapping Name="Apresentacao">
+            <EntityTypeMapping TypeName="ModelSite.Apresentacao">
+              <MappingFragment StoreEntitySet="Apresentacao">
+                <ScalarProperty Name="CalcHorario" ColumnName="CalcHorario" />
+                <ScalarProperty Name="CalcDiaDaSemana" ColumnName="CalcDiaDaSemana" />
+                <ScalarProperty Name="CodigoProgramacao" ColumnName="CodigoProgramacao" />
+                <ScalarProperty Name="Programacao" ColumnName="Programacao" />
+                <ScalarProperty Name="UsarEsquematico" ColumnName="UsarEsquematico" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="Horario" ColumnName="Horario" />
+                <ScalarProperty Name="IR_ApresentacaoID" ColumnName="IR_ApresentacaoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cidade">
+            <EntityTypeMapping TypeName="ModelSite.Cidade">
+              <MappingFragment StoreEntitySet="Cidade">
+                <ScalarProperty Name="EstadoID" ColumnName="EstadoID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Estado">
+            <EntityTypeMapping TypeName="ModelSite.Estado">
+              <MappingFragment StoreEntitySet="Estado">
+                <ScalarProperty Name="Sigla" ColumnName="Sigla" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Evento">
+            <EntityTypeMapping TypeName="ModelSite.Evento">
+              <MappingFragment StoreEntitySet="Evento">
+                <ScalarProperty Name="OcultarHoraApresentacao" ColumnName="OcultarHoraApresentacao"/>
+                <ScalarProperty Name="EntradaFranca" ColumnName="EntradaFranca" />
+                <ScalarProperty Name="ImagemDestaque" ColumnName="ImagemDestaque" />
+                <ScalarProperty Name="LimiteMaximoIngressosEstado" ColumnName="LimiteMaximoIngressosEstado" />
+                <ScalarProperty Name="LimiteMaximoIngressosEvento" ColumnName="LimiteMaximoIngressosEvento" />
+                <ScalarProperty Name="PossuiTaxaProcessamento" ColumnName="PossuiTaxaProcessamento" />
+                <ScalarProperty Name="PermiteVendaPacote" ColumnName="PermiteVendaPacote" />
+                <ScalarProperty Name="FilmeID" ColumnName="FilmeID" />
+                <ScalarProperty Name="MenorPeriodoEntrega" ColumnName="MenorPeriodoEntrega" />
+                <ScalarProperty Name="BannersPadraoSite" ColumnName="BannersPadraoSite" />
+                <ScalarProperty Name="ExibeQuantidade" ColumnName="ExibeQuantidade" />
+                <ScalarProperty Name="PalavraChave" ColumnName="PalavraChave" />
+                <ScalarProperty Name="EscolherLugarMarcado" ColumnName="EscolherLugarMarcado" />
+                <ScalarProperty Name="LocalImagemNome" ColumnName="LocalImagemNome" />
+                <ScalarProperty Name="LocalImagemMapaID" ColumnName="LocalImagemMapaID" />
+                <ScalarProperty Name="DataAberturaVenda" ColumnName="DataAberturaVenda" />
+                <ScalarProperty Name="SubtipoID" ColumnName="SubtipoID" />
+                <ScalarProperty Name="Publicar" ColumnName="Publicar" />
+                <ScalarProperty Name="PublicarSemVendaMotivo" ColumnName="PublicarSemVendaMotivo" />
+                <ScalarProperty Name="Parcelas" ColumnName="Parcelas" />
+                <ScalarProperty Name="DisponivelAvulso" ColumnName="DisponivelAvulso" />
+                <ScalarProperty Name="RetiradaBilheteria" ColumnName="RetiradaBilheteria" />
+                <ScalarProperty Name="EntregaGratuita" ColumnName="EntregaGratuita" />
+                <ScalarProperty Name="Prioridade" ColumnName="Prioridade" />
+                <ScalarProperty Name="Destaque" ColumnName="Destaque" />
+                <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="Release" ColumnName="Release" />
+                <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+                <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_EventoID" ColumnName="IR_EventoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Setor">
+            <EntityTypeMapping TypeName="ModelSite.Setor">
+              <MappingFragment StoreEntitySet="Setor">
+                <ScalarProperty Name="NVendeLugar" ColumnName="NVendeLugar" />
+                <ScalarProperty Name="CodigoSala" ColumnName="CodigoSala" />
+                <ScalarProperty Name="PrincipalPrecoID" ColumnName="PrincipalPrecoID" />
+                <ScalarProperty Name="AprovadoPublicacao" ColumnName="AprovadoPublicacao" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="QuantidadeMapa" ColumnName="QuantidadeMapa" />
+                <ScalarProperty Name="QtdeDisponivel" ColumnName="QtdeDisponivel" />
+                <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+                <ScalarProperty Name="LugarMarcado" ColumnName="LugarMarcado" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_SetorID" ColumnName="IR_SetorID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Local">
+            <EntityTypeMapping TypeName="ModelSite.Local">
+              <MappingFragment StoreEntitySet="Local">
+                <ScalarProperty Name="LongitudeAsDecimal" ColumnName="LongitudeAsDecimal" />
+                <ScalarProperty Name="LatitudeAsDecimal" ColumnName="LatitudeAsDecimal" />
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="CodigoPraca" ColumnName="CodigoPraca" />
+                <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+                <ScalarProperty Name="Pais" ColumnName="Pais" />
+                <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+                <ScalarProperty Name="BannersPadraoSite" ColumnName="BannersPadraoSite" />
+                <ScalarProperty Name="TaxaMaximaEmpresa" ColumnName="TaxaMaximaEmpresa" />
+                <ScalarProperty Name="ComoChegar" ColumnName="ComoChegar" />
+                <ScalarProperty Name="Telefone" ColumnName="Telefone" />
+                <ScalarProperty Name="DDDTelefone" ColumnName="DDDTelefone" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_LocalID" ColumnName="IR_LocalID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Carrinho">
+            <EntityTypeMapping TypeName="ModelSite.Carrinho">
+              <MappingFragment StoreEntitySet="Carrinho">
+                <ScalarProperty Name="VoucherID" ColumnName="VoucherID" />
+                <ScalarProperty Name="GerenciamentoIngressosID" ColumnName="GerenciamentoIngressosID" />
+                <ScalarProperty Name="PacoteID" ColumnName="PacoteID" />
+                <ScalarProperty Name="ValorTaxaProcessamento" ColumnName="ValorTaxaProcessamento" />
+                <ScalarProperty Name="CotaVerificada" ColumnName="CotaVerificada" />
+                <ScalarProperty Name="CodigoPromocional" ColumnName="CodigoPromocional" />
+                <ScalarProperty Name="DonoCPF" ColumnName="DonoCPF" />
+                <ScalarProperty Name="DonoID" ColumnName="DonoID" />
+                <ScalarProperty Name="SerieID" ColumnName="SerieID" />
+                <ScalarProperty Name="EmpresaID" ColumnName="EmpresaID" />
+                <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+                <ScalarProperty Name="CotaItemIDAPS" ColumnName="CotaItemIDAPS" />
+                <ScalarProperty Name="CotaItemID" ColumnName="CotaItemID" />
+                <ScalarProperty Name="VendaBilheteriaID" ColumnName="VendaBilheteriaID" />
+                <ScalarProperty Name="ValeIngressoID" ColumnName="ValeIngressoID" />
+                <ScalarProperty Name="Acumulativo" ColumnName="Acumulativo" />
+                <ScalarProperty Name="ValidadeDiasImpressao" ColumnName="ValidadeDiasImpressao" />
+                <ScalarProperty Name="ValeIngressoNome" ColumnName="ValeIngressoNome" />
+                <ScalarProperty Name="ValidadeData" ColumnName="ValidadeData" />
+                <ScalarProperty Name="ValeIngressoTipoID" ColumnName="ValeIngressoTipoID" />
+                <ScalarProperty Name="LocalImagemNome" ColumnName="LocalImagemNome" />
+                <ScalarProperty Name="PrecoExclusivoCodigoID" ColumnName="PrecoExclusivoCodigoID" />
+                <ScalarProperty Name="Classificacao" ColumnName="Classificacao" />
+                <ScalarProperty Name="Grupo" ColumnName="Grupo" />
+                <ScalarProperty Name="PacoteNome" ColumnName="PacoteNome" />
+                <ScalarProperty Name="PacoteGrupo" ColumnName="PacoteGrupo" />
+                <ScalarProperty Name="TagOrigem" ColumnName="TagOrigem" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="SessionID" ColumnName="SessionID" />
+                <ScalarProperty Name="TaxaConveniencia" ColumnName="TaxaConveniencia" />
+                <ScalarProperty Name="PrecoValor" ColumnName="PrecoValor" />
+                <ScalarProperty Name="TimeStamp" ColumnName="TimeStamp" />
+                <ScalarProperty Name="PrecoNome" ColumnName="PrecoNome" />
+                <ScalarProperty Name="Setor" ColumnName="Setor" />
+                <ScalarProperty Name="ApresentacaoDataHora" ColumnName="ApresentacaoDataHora" />
+                <ScalarProperty Name="Evento" ColumnName="Evento" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="LocalID" ColumnName="LocalID" />
+                <ScalarProperty Name="PrecoID" ColumnName="PrecoID" />
+                <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+                <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+                <ScalarProperty Name="TipoLugar" ColumnName="TipoLugar" />
+                <ScalarProperty Name="IngressoID" ColumnName="IngressoID" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="LugarID" ColumnName="LugarID" />
+                <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+                <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PontoVenda">
+            <EntityTypeMapping TypeName="ModelSite.PontoVenda">
+              <MappingFragment StoreEntitySet="PontoVenda">
+                <ScalarProperty Name="Longitude" ColumnName="Longitude" />
+                <ScalarProperty Name="Latitude" ColumnName="Latitude" />
+                <ScalarProperty Name="CEP" ColumnName="CEP" />
+                <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="Bairro" ColumnName="Bairro" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Cidade" ColumnName="Cidade" />
+                <ScalarProperty Name="Compl" ColumnName="Compl" />
+                <ScalarProperty Name="Numero" ColumnName="Numero" />
+                <ScalarProperty Name="Endereco" ColumnName="Endereco" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="Local" ColumnName="Local" />
+                <ScalarProperty Name="IR_PontoVendaID" ColumnName="IR_PontoVendaID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PontoVendaHorario">
+            <EntityTypeMapping TypeName="ModelSite.PontoVendaHorario">
+              <MappingFragment StoreEntitySet="PontoVendaHorario">
+                <ScalarProperty Name="DiaSemana" ColumnName="DiaSemana" />
+                <ScalarProperty Name="HorarioFinal" ColumnName="HorarioFinal" />
+                <ScalarProperty Name="HorarioInicial" ColumnName="HorarioInicial" />
+                <ScalarProperty Name="PontoVendaID" ColumnName="PontoVendaID" />
+                <ScalarProperty Name="IR_PontoVendaHorarioID" ColumnName="IR_PontoVendaHorarioID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Login">
+            <EntityTypeMapping TypeName="ModelSite.Login">
+              <MappingFragment StoreEntitySet="Login">
+				<ScalarProperty Name="BiletoUuid" ColumnName="BiletoUuid" />
+                <ScalarProperty Name="SyncDate" ColumnName="SyncDate" />
+                <ScalarProperty Name="SyncStatus" ColumnName="SyncStatus" />
+			    <ScalarProperty Name="SiteID" ColumnName="SiteID" />
+                <ScalarProperty Name="AccountKitId" ColumnName="AccountKitId" />
+                <ScalarProperty Name="FaceBookUserInfos" ColumnName="FaceBookUserInfos" />
+                <ScalarProperty Name="FaceBookUserToken" ColumnName="FaceBookUserToken" />
+                <ScalarProperty Name="FaceBookUserID" ColumnName="FaceBookUserID" />
+                <ScalarProperty Name="StatusAtual" ColumnName="StatusAtual" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="UltimoAcesso" ColumnName="UltimoAcesso" />
+                <ScalarProperty Name="DataCadastro" ColumnName="DataCadastro" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="CPF" ColumnName="CPF" />
+                <ScalarProperty Name="ClienteID" ColumnName="ClienteID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CreatedAPIUsuarioId" ColumnName="CreatedAPIUsuarioId" />
+                <ScalarProperty Name="LoginAPIUsuarioId" ColumnName="LoginAPIUsuarioId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DestaqueConceitual">
+            <EntityTypeMapping TypeName="ModelSite.DestaqueConceitual">
+              <MappingFragment StoreEntitySet="DestaqueConceitual">
+                <ScalarProperty Name="Publicado" ColumnName="Publicado" />
+                <ScalarProperty Name="LinkFundo" ColumnName="LinkFundo" />
+                <ScalarProperty Name="LinkLabel" ColumnName="LinkLabel" />
+                <ScalarProperty Name="LinkURL" ColumnName="LinkURL" />
+                <ScalarProperty Name="Subtitulo" ColumnName="Subtitulo" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="Fundo" ColumnName="Fundo" />
+                <ScalarProperty Name="Imagem" ColumnName="Imagem" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DestaqueConceitualRegiao">
+            <EntityTypeMapping TypeName="ModelSite.DestaqueConceitualRegiao">
+              <MappingFragment StoreEntitySet="DestaqueConceitualRegiao">
+                <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+                <ScalarProperty Name="DestaqueConceitualID" ColumnName="DestaqueConceitualID" />
+                <ScalarProperty Name="RegiaoID" ColumnName="RegiaoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DestaqueRegiao">
+            <EntityTypeMapping TypeName="ModelSite.DestaqueRegiao">
+              <MappingFragment StoreEntitySet="DestaqueRegiao">
+                <ScalarProperty Name="Ordem" ColumnName="Ordem" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="RegiaoID" ColumnName="RegiaoID" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Regiao">
+            <EntityTypeMapping TypeName="ModelSite.Regiao">
+              <MappingFragment StoreEntitySet="Regiao">
+                <ScalarProperty Name="IsGeral" ColumnName="IsGeral" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tipo">
+            <EntityTypeMapping TypeName="ModelSite.Tipo">
+              <MappingFragment StoreEntitySet="Tipo">
+                <ScalarProperty Name="Obs" ColumnName="Obs" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_TipoID" ColumnName="IR_TipoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DuvidasFrequentes">
+            <EntityTypeMapping TypeName="ModelSite.DuvidasFrequentes">
+              <MappingFragment StoreEntitySet="DuvidasFrequentes">
+                <ScalarProperty Name="Resposta" ColumnName="Resposta" />
+                <ScalarProperty Name="Pergunta" ColumnName="Pergunta" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DestaqueLinkRegiao">
+            <EntityTypeMapping TypeName="ModelSite.DestaqueLinkRegiao">
+              <MappingFragment StoreEntitySet="DestaqueLinkRegiao">
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+                <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+                <ScalarProperty Name="RegiaoID" ColumnName="RegiaoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EventoSubtipo">
+            <EntityTypeMapping TypeName="ModelSite.EventoSubtipo">
+              <MappingFragment StoreEntitySet="EventoSubtipo">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="TipoID" ColumnName="TipoID" />
+                <ScalarProperty Name="IR_SubtipoID" ColumnName="IR_SubtipoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PontoVendaFormaPgto">
+            <EntityTypeMapping TypeName="ModelSite.PontoVendaFormaPgto">
+              <MappingFragment StoreEntitySet="PontoVendaFormaPgto">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_PontoVendaFormaPgtoID" ColumnName="IR_PontoVendaFormaPgtoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PontoVendaXFormaPgto">
+            <EntityTypeMapping TypeName="ModelSite.PontoVendaXFormaPgto">
+              <MappingFragment StoreEntitySet="PontoVendaXFormaPgto">
+                <ScalarProperty Name="PontoVendaID" ColumnName="PontoVendaID" />
+                <ScalarProperty Name="PontoVendaFormaPgtoID" ColumnName="PontoVendaFormaPgtoID" />
+                <ScalarProperty Name="IR_PontoVendaXFormaPgtoID" ColumnName="IR_PontoVendaXFormaPgtoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NewsAssinante">
+            <EntityTypeMapping TypeName="ModelSite.NewsAssinante">
+              <MappingFragment StoreEntitySet="NewsAssinante">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="DataInscricao" ColumnName="DataInscricao" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PrecoParceiroMidia">
+            <EntityTypeMapping TypeName="ModelSite.PrecoParceiroMidia">
+              <MappingFragment StoreEntitySet="PrecoParceiroMidia">
+                <ScalarProperty Name="ParceiroMidiaID" ColumnName="ParceiroMidiaID" />
+                <ScalarProperty Name="CodigoCinema" ColumnName="CodigoCinema" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Pacote" ColumnName="Pacote" />
+                <ScalarProperty Name="QuantidadePorCliente" ColumnName="QuantidadePorCliente" />
+                <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+                <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_PrecoID" ColumnName="IR_PrecoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pacote">
+            <EntityTypeMapping TypeName="ModelSite.Pacote">
+              <MappingFragment StoreEntitySet="Pacote">
+                <ScalarProperty Name="NomenclaturaPacoteID" ColumnName="NomenclaturaPacoteID" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_PacoteID" ColumnName="IR_PacoteID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PacoteItem">
+            <EntityTypeMapping TypeName="ModelSite.PacoteItem">
+              <MappingFragment StoreEntitySet="PacoteItem">
+                <ScalarProperty Name="Quantidade" ColumnName="Quantidade" />
+                <ScalarProperty Name="PrecoID" ColumnName="PrecoID" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="PacoteID" ColumnName="PacoteID" />
+                <ScalarProperty Name="IR_PacoteItemID" ColumnName="IR_PacoteItemID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Preco">
+            <EntityTypeMapping TypeName="ModelSite.Preco">
+              <MappingFragment StoreEntitySet="Preco">
+                <ScalarProperty Name="CodigoCinema" ColumnName="CodigoCinema" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Pacote" ColumnName="Pacote" />
+                <ScalarProperty Name="QuantidadePorCliente" ColumnName="QuantidadePorCliente" />
+                <ScalarProperty Name="SetorID" ColumnName="SetorID" />
+                <ScalarProperty Name="ApresentacaoID" ColumnName="ApresentacaoID" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_PrecoID" ColumnName="IR_PrecoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NomenclaturaPacote">
+            <EntityTypeMapping TypeName="ModelSite.NomenclaturaPacote">
+              <MappingFragment StoreEntitySet="NomenclaturaPacote">
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_NomenclaturaPacoteID" ColumnName="IR_NomenclaturaPacoteID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormaPagamento">
+            <EntityTypeMapping TypeName="ModelSite.FormaPagamento">
+              <MappingFragment StoreEntitySet="FormaPagamento">
+                <ScalarProperty Name="Parcelas" ColumnName="Parcelas" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="IR_FormaPagamentoID" ColumnName="IR_FormaPagamentoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormaPagamentoCotaItem">
+            <EntityTypeMapping TypeName="ModelSite.FormaPagamentoCotaItem">
+              <MappingFragment StoreEntitySet="FormaPagamentoCotaItem">
+                <ScalarProperty Name="FormaPagamentoID" ColumnName="FormaPagamentoID" />
+                <ScalarProperty Name="CotaItemID" ColumnName="CotaItemID" />
+                <ScalarProperty Name="IR_FormaPagamentoCotaItemID" ColumnName="IR_FormaPagamentoCotaItemID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormaPagamentoEvento">
+            <EntityTypeMapping TypeName="ModelSite.FormaPagamentoEvento">
+              <MappingFragment StoreEntitySet="FormaPagamentoEvento">
+                <ScalarProperty Name="FormaPagamentoID" ColumnName="FormaPagamentoID" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+                <ScalarProperty Name="IR_FormaPagamentoEventoID" ColumnName="IR_FormaPagamentoEventoID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FormaPagamentoSerie">
+            <EntityTypeMapping TypeName="ModelSite.FormaPagamentoSerie">
+              <MappingFragment StoreEntitySet="FormaPagamentoSerie">
+                <ScalarProperty Name="FormaPagamentoID" ColumnName="FormaPagamentoID" />
+                <ScalarProperty Name="SerieID" ColumnName="SerieID" />
+                <ScalarProperty Name="IR_FormaPagamentoSerieID" ColumnName="IR_FormaPagamentoSerieID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Banner">
+            <EntityTypeMapping TypeName="ModelSite.Banner">
+              <MappingFragment StoreEntitySet="Banner">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Posicao" ColumnName="Posicao" />
+                <ScalarProperty Name="Localizacao" ColumnName="Localizacao" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Alt" ColumnName="Alt" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BanneriMais">
+            <EntityTypeMapping TypeName="ModelSite.BanneriMais">
+              <MappingFragment StoreEntitySet="BanneriMais">
+                <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+                <ScalarProperty Name="Posicao" ColumnName="Posicao" />
+                <ScalarProperty Name="Localizacao" ColumnName="Localizacao" />
+                <ScalarProperty Name="Target" ColumnName="Target" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Alt" ColumnName="Alt" />
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APIUsuarioToken">
+            <EntityTypeMapping TypeName="ModelSite.APIUsuarioToken">
+              <MappingFragment StoreEntitySet="APIUsuarioToken">
+                <ScalarProperty Name="DataExpiracao" ColumnName="DataExpiracao" />
+                <ScalarProperty Name="DadosSession" ColumnName="DadosSession" />
+                <ScalarProperty Name="DadosIndentificacao" ColumnName="DadosIndentificacao" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Token" ColumnName="Token" />
+                <ScalarProperty Name="APIUsuarioID" ColumnName="APIUsuarioID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="APIUsuario">
+            <EntityTypeMapping TypeName="ModelSite.APIUsuario">
+              <MappingFragment StoreEntitySet="APIUsuario">
+                <ScalarProperty Name="HorasExpiracaoToken" ColumnName="HorasExpiracaoToken" />
+                <ScalarProperty Name="CanalID" ColumnName="CanalID" />
+                <ScalarProperty Name="LojaID" ColumnName="LojaID" />
+                <ScalarProperty Name="UsuarioID" ColumnName="UsuarioID" />
+                <ScalarProperty Name="IPOrigem" ColumnName="IPOrigem" />
+                <ScalarProperty Name="DominiosOrigem" ColumnName="DominiosOrigem" />
+                <ScalarProperty Name="TipoAcesso" ColumnName="TipoAcesso" />
+                <ScalarProperty Name="Ativo" ColumnName="Ativo" />
+                <ScalarProperty Name="Senha" ColumnName="Senha" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vwPrecoCotaControle">
+            <EntityTypeMapping TypeName="ModelSite.vwPrecoCotaControle">
+              <MappingFragment StoreEntitySet="vwPrecoCotaControle">
+                <ScalarProperty Name="CotaObrigaEmail" ColumnName="CotaObrigaEmail" />
+                <ScalarProperty Name="CotaObrigaDataNascimento" ColumnName="CotaObrigaDataNascimento" />
+                <ScalarProperty Name="CotaObrigaTelefone" ColumnName="CotaObrigaTelefone" />
+                <ScalarProperty Name="CotaObrigaCPF" ColumnName="CotaObrigaCPF" />
+                <ScalarProperty Name="CotaObrigaRG" ColumnName="CotaObrigaRG" />
+                <ScalarProperty Name="CotaObrigaNome" ColumnName="CotaObrigaNome" />
+                <ScalarProperty Name="CotaNominal" ColumnName="CotaNominal" />
+                <ScalarProperty Name="CotaTermo" ColumnName="CotaTermo" />
+                <ScalarProperty Name="CotaCodigo" ColumnName="CotaCodigo" />
+                <ScalarProperty Name="CotaCartao" ColumnName="CotaCartao" />
+                <ScalarProperty Name="CotaParceiro" ColumnName="CotaParceiro" />
+                <ScalarProperty Name="CotaLimiteQuantidadeCodigo" ColumnName="CotaLimiteQuantidadeCodigo" />
+                <ScalarProperty Name="CotaLimiteQuantidadeCliente" ColumnName="CotaLimiteQuantidadeCliente" />
+                <ScalarProperty Name="CotaLimiteQuantidade" ColumnName="CotaLimiteQuantidade" />
+                <ScalarProperty Name="CotaLimiteQuantidadeTotalPorCliente" ColumnName="CotaLimiteQuantidadeTotalPorCliente" />
+                <ScalarProperty Name="CotaLimiteQuantidadeTotal" ColumnName="CotaLimiteQuantidadeTotal" />
+                <ScalarProperty Name="TemCota" ColumnName="TemCota" />
+                <ScalarProperty Name="PrecoID" ColumnName="PrecoID" />
+                <ScalarProperty Name="EventoID" ColumnName="EventoID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

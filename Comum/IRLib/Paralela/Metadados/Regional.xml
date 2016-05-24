@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Regional">
+  <Propriedades>
+    <Propriedade Nome="Nome"			Tipo="texto"	Tamanho="80"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="CNPJ"		Tipo="texto"	Tamanho="15"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="CEP"	Tipo="texto"	Tamanho="8"	Nulo="True"		Acesso="LE"/>      
+    <Propriedade Nome="Logradouro"		Tipo="texto"	Tamanho="80"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Numero"		Tipo="int"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Complemento"		Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Bairro"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Cidade"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Estados"			Tipo="texto"	Tamanho="100"		Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Pais"			Tipo="texto"	Tamanho="50"		Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="DDDTelefone"		Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Telefone"		Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="EmailAlertaRetirada"		Tipo="texto"	Tamanho="100"		Nulo="True"		Acesso="LE"/>
+    
+  </Propriedades>
+</Classe>

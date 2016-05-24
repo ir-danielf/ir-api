@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="RoboCanalEvento">
+  <Propriedades>
+    <Propriedade Nome="EventoID"  Tipo="int"  Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="CanalID" Tipo="int"  Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="IsFilme" Tipo="booleano" Nulo="True" Acesso="LE" />    
+    <Propriedade Nome="UsuarioID" Tipo="int"  Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Operacao"  Tipo="texto" Tamanho="1"  Nulo="True"	Acesso="LE" />
+  </Propriedades>
+</Classe>
+

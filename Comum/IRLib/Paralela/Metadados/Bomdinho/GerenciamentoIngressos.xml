@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="GerenciamentoIngressos">
+  <Propriedades>
+    <Propriedade Nome="ApresentacaoSetorID"					Tipo="int"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PrecoTipoID"				Tipo="int"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Disponivel"				Tipo="int"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Horario"			Tipo="texto"	Tamanho="4"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Label"			Tipo="texto"	Tamanho="20"	Nulo="True"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

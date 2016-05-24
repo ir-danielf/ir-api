@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Deposito">
+  <Propriedades>
+    <Propriedade Nome="RedeID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="VendaID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="CancelamentoID"	Tipo="int"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Valor"	Tipo="decimal"  Tamanho="12" Decimal="2"  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="ValorCompra"	Tipo="decimal"  Tamanho="12" Decimal="2"  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="NSU"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Autorizacao"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="ArquivoID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TimeStamp"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="DataHoraEnvio"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Status"  Tipo="tinyint"  Nulo="False" Acesso="LE" />
+    <Propriedade Nome="BancoID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Agencia"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Conta"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Nome"	Tipo="texto"	Tamanho="50"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="CPF"	Tipo="texto"	Tamanho="20"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="MotivoID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Observacao"	Tipo="texto"	Tamanho="50"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="ClienteID"	Tipo="int"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="DepositoContaCorrente" Tipo="booleano" Nulo="False" Acesso="LE"/>
+  </Propriedades>
+</Classe>

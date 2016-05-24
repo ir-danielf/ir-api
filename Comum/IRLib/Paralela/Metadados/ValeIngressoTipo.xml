@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="ValeIngressoTipo">
+  <Propriedades>
+    <Propriedade Nome="Nome"		                    Tamanho = "50"	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Valor"			      Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="ValidadeDiasImpressao"						                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ValidadeData"					                          Tipo="datahora"		Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ClienteTipo"		                  Tamanho = "1" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ProcedimentoTroca"		                  Tamanho = "500" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="SaudacaoPadrao"		                  Tamanho = "200" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="SaudacaoNominal"		                  Tamanho = "200" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="QuantidadeLimitada"			Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="EmpresaID"						                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoTrocaFixo"			Tamanho = "10" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Acumulativo"			Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagem"						                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemInternet"						                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ReleaseInternet"		                    Tamanho = "1000"	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PublicarInternet"		                Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="UltimoCodigoImpresso"						                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TrocaEntrega"				Tipo="bool"						Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="TrocaIngresso"				Tipo="bool"						Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="TrocaConveniencia"				Tipo="bool"						Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="ValorTipo"		                  Tamanho = "1" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ValorPagamento"			      Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

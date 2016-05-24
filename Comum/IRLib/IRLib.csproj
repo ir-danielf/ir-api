@@ -1,0 +1,2958 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6A046605-146B-4DC3-8270-8593FBA71EB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IRLib</RootNamespace>
+    <AssemblyName>IRLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Homolog\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Homolog\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|AnyCPU'">
+    <OutputPath>bin\Producao\</OutputPath>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|x86'">
+    <OutputPath>bin\x86\Producao\</OutputPath>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bokai.Barcodes, Version=3.0.1586.38650, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\Bokai.Barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\..\packages\EPPlus.4.0.4\lib\net20\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Api.Maps.Service, Version=0.9.2.30346, Culture=neutral, processorArchitecture=x86" />
+    <Reference Include="Interop.COMSITEFMKTLib">
+      <HintPath>..\..\packages\IRLibOld\Interop.COMSITEFMKTLib.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.4.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=1.2.3.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>DLLS\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WinSCPnet">
+      <HintPath>..\..\packages\WinSCP.5.7.4\lib\WinSCPnet.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Auttar.cs" />
+    <Compile Include="BilheteriaMediaPartner.cs" />
+    <Compile Include="ClientObjects\ApresentacaoManutencaoListagem.cs" />
+    <Compile Include="ClientObjects\Arvore\Empresa.cs" />
+    <Compile Include="ClientObjects\Arvore\EstruturaArvore.cs" />
+    <Compile Include="ClientObjects\Arvore\EstruturaArvoreItem.cs" />
+    <Compile Include="ClientObjects\Arvore\EstruturaFiltros.cs" />
+    <Compile Include="ClientObjects\Arvore\Local.cs" />
+    <Compile Include="ClientObjects\Assinaturas\EstruturaAssinaturaDesmembramento.cs" />
+    <Compile Include="ClientObjects\Assinaturas\Emails\EstruturaEmailAssinatura.cs" />
+    <Compile Include="ClientObjects\Assinaturas\EstruturaAssinaturaAcao.cs" />
+    <Compile Include="ClientObjects\Assinaturas\EstruturaAssinaturaPreco.cs" />
+    <Compile Include="ClientObjects\Assinaturas\EstruturaAssinaturaTipo.cs" />
+    <Compile Include="ClientObjects\Assinaturas\Filarmonica\EstruturaAssinaturaFilarmonica.cs" />
+    <Compile Include="ClientObjects\Assinaturas\Filarmonica\EstruturaEfetuarAcao.cs" />
+    <Compile Include="ClientObjects\Assinaturas\MusicaCabeca\EstruturaMusicaCabeca.cs" />
+    <Compile Include="ClientObjects\Banner.cs" />
+    <Compile Include="ClientObjects\ContratoFormaPagamentoListagem.cs" />
+    <Compile Include="ClientObjects\Despesa\EstruturaEventoBordero.cs" />
+    <Compile Include="ClientObjects\Despesa\EstruturaDespesas.cs" />
+    <Compile Include="ClientObjects\EstruturaBuscaCombinada.cs" />
+    <Compile Include="ClientObjects\EstruturaCaixaPos.cs" />
+    <Compile Include="ClientObjects\EstruturaCanaisEvento.cs" />
+    <Compile Include="ClientObjects\EstruturaCanalEventoRobo.cs" />
+    <Compile Include="ClientObjects\EstruturaCanalPrecoRobo.cs" />
+    <Compile Include="ClientObjects\EstruturaClienteCorreio.cs" />
+    <Compile Include="ClientObjects\EstruturaCotaTipo.cs" />
+    <Compile Include="ClientObjects\EstruturaEstadoCidadeSenhaPos.cs" />
+    <Compile Include="ClientObjects\EstruturaGerenciamentoIngressos.cs" />
+    <Compile Include="ClientObjects\EstruturaBoleto.cs" />
+    <Compile Include="ClientObjects\EstruturaCEP.cs" />
+    <Compile Include="ClientObjects\EstruturaChargeBack.cs" />
+    <Compile Include="ClientObjects\EstruturaPagamentoExterno.cs" />
+    <Compile Include="ClientObjects\EstruturaParcelamentoIR.cs" />
+    <Compile Include="ClientObjects\EstruturaPrecoApresentacaoEvento.cs" />
+    <Compile Include="ClientObjects\EstruturaPreVendaRetorno.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoObrigatoriedade.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoParcelamentoIR.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoValoresValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaVendaPos.cs" />
+    <Compile Include="ClientObjects\EstruturaVenderWeb.cs" />
+    <Compile Include="ClientObjects\GeradorXML\BlacklistRecord.cs" />
+    <Compile Include="ClientObjects\GeradorXML\EstruturaFonteNova.cs" />
+    <Compile Include="ClientObjects\GeradorXML\TSData.cs" />
+    <Compile Include="ClientObjects\GeradorXML\WhitelistRecord.cs" />
+    <Compile Include="ClientObjects\Lote\EstruturaLote.cs" />
+    <Compile Include="ClientObjects\Mobile\EstruturaDropDownList.cs" />
+    <Compile Include="ClientObjects\EstruturaEvento.cs" />
+    <Compile Include="ClientObjects\Mobile\EstruturaEventoDescricao.cs" />
+    <Compile Include="ClientObjects\Mobile\EstruturaEventoDestaque.cs" />
+    <Compile Include="ClientObjects\EstruturaInfoEventoMondial.cs" />
+    <Compile Include="ClientObjects\Mobile\EstruturaListaSetoreEmail.cs" />
+    <Compile Include="ClientObjects\EstruturaPagamento.cs" />
+    <Compile Include="ClientObjects\EstruturaParceiroPortoSeguro.cs" />
+    <Compile Include="ClientObjects\EstruturaPrecoTipo.cs" />
+    <Compile Include="ClientObjects\EmpresaFormaPagamentoListagem.cs" />
+    <Compile Include="ClientObjects\Entregas\EntregaAreaCep.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaClienteEndereco.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaDetalhe.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaDiaAgenda.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEntrega.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEntregaAgenda.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEntregaArea.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEntregaAreaExclusao.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEntregaControle.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEntregaPeriodo.cs" />
+    <Compile Include="ClientObjects\Entregas\EstruturaEventoEntregaControle.cs" />
+    <Compile Include="ClientObjects\EstrutraIntegrantesIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaApresentacao.cs" />
+    <Compile Include="ClientObjects\EstruturaApresentacaoRaioX.cs" />
+    <Compile Include="ClientObjects\EstruturaAreaCep.cs" />
+    <Compile Include="ClientObjects\EstruturaAssinaturaInfo.cs" />
+    <Compile Include="ClientObjects\EstruturaBackgroundSetor.cs" />
+    <Compile Include="ClientObjects\EstruturaBandeira.cs" />
+    <Compile Include="ClientObjects\EstruturaBlackList.cs" />
+    <Compile Include="ClientObjects\EstruturaBlackList2.cs" />
+    <Compile Include="ClientObjects\EstruturaBlackListCartao.cs" />
+    <Compile Include="ClientObjects\EstruturaBlackListCliente.cs" />
+    <Compile Include="ClientObjects\EstruturaCaixaResumo.cs" />
+    <Compile Include="ClientObjects\EstruturaCanaisPreco.cs" />
+    <Compile Include="ClientObjects\EstruturaCanalValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaCartoesPorCliente.cs" />
+    <Compile Include="ClientObjects\EstruturaCelular.cs" />
+    <Compile Include="ClientObjects\EstruturaCliente.cs" />
+    <Compile Include="ClientObjects\EstruturaClienteVendas.cs" />
+    <Compile Include="ClientObjects\EstruturaCodigoBarraValido.cs" />
+    <Compile Include="ClientObjects\EstruturaCodigoPromoValidacao.cs" />
+    <Compile Include="ClientObjects\EstruturaCompraTemporaria.cs" />
+    <Compile Include="ClientObjects\EstruturaConciliacaoBancaria.cs" />
+    <Compile Include="ClientObjects\EstruturaContrato.cs" />
+    <Compile Include="ClientObjects\EstruturaCota.cs" />
+    <Compile Include="ClientObjects\EstruturaCotaItem.cs" />
+    <Compile Include="ClientObjects\EstruturaCotaItemControle.cs" />
+    <Compile Include="ClientObjects\EstruturaCotaItemReserva.cs" />
+    <Compile Include="ClientObjects\EstruturaCotas.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasDistribuir.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasGeral.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasInfo.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasQuantidades.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasReserva.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasRetornoDistribuicao.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasSelecao.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasSetor.cs" />
+    <Compile Include="ClientObjects\EstruturaCotasValidacao.cs" />
+    <Compile Include="ClientObjects\EstruturaCotaValidacaoCliente.cs" />
+    <Compile Include="ClientObjects\EstruturaDistribuicaoCotaAntiga.cs" />
+    <Compile Include="ClientObjects\EstruturaDonoIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaEntregaCelular.cs" />
+    <Compile Include="ClientObjects\EstruturaEnvioSMS.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoApresentacao.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoInfo.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoLoja.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoNivelRisco.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoTaxa.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoTaxaEntrega.cs" />
+    <Compile Include="ClientObjects\EstruturaEventoTipos.cs" />
+    <Compile Include="ClientObjects\EstruturaFechamentoCaixa.cs" />
+    <Compile Include="ClientObjects\EstruturaFormaPagamento.cs" />
+    <Compile Include="ClientObjects\EstruturaFormaPagamentoCota.cs" />
+    <Compile Include="ClientObjects\EstruturaFormaPagamentoCotaItem.cs" />
+    <Compile Include="ClientObjects\EstruturaFormaPagamentoEvento.cs" />
+    <Compile Include="ClientObjects\EstruturaGeracaoIngressos.cs" />
+    <Compile Include="ClientObjects\EstruturaGoogleAnalytics.cs" />
+    <Compile Include="ClientObjects\EstruturaHistoricoDeAcaoDaVenda.cs" />
+    <Compile Include="ClientObjects\EstruturaIDNome.cs" />
+    <Compile Include="ClientObjects\EstruturaImpressao.cs" />
+    <Compile Include="ClientObjects\EstruturaImpressaoEtiqueta.cs" />
+    <Compile Include="ClientObjects\EstruturaImpressaoLoteValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaInconsistenciaIngressoLog.cs" />
+    <Compile Include="ClientObjects\EstruturaIngressoCotaItem.cs" />
+    <Compile Include="ClientObjects\EstruturaIngressoLog_BlackList.cs" />
+    <Compile Include="ClientObjects\EstruturaIngressoTipoImpressao.cs" />
+    <Compile Include="ClientObjects\EstruturaLeituraCodigo.cs" />
+    <Compile Include="ClientObjects\EstruturaLocalInfo.cs" />
+    <Compile Include="ClientObjects\EstruturaManutencaoApresentacaoPeriodo.cs" />
+    <Compile Include="ClientObjects\EstruturaMapaEsquematico.cs" />
+    <Compile Include="ClientObjects\EstruturaMapaEsquematicoSetor.cs" />
+    <Compile Include="ClientObjects\EstruturaMesaFechadaPreReservaSite.cs" />
+    <Compile Include="ClientObjects\EstruturaMotivo.cs" />
+    <Compile Include="ClientObjects\EstruturaNFSE.cs" />
+    <Compile Include="ClientObjects\EstruturaObrigatoriedade.cs" />
+    <Compile Include="ClientObjects\EstruturaPacote.cs" />
+    <Compile Include="ClientObjects\EstruturaParceiro.cs" />
+    <Compile Include="ClientObjects\EstruturaPerspectivaLugar.cs" />
+    <Compile Include="ClientObjects\EstruturaPontoDeVenda.cs" />
+    <Compile Include="ClientObjects\EstruturaPrecoIDValor.cs" />
+    <Compile Include="ClientObjects\EstruturaPrecoPreReservaSite.cs" />
+    <Compile Include="ClientObjects\EstruturaPrecoReservaSite.cs" />
+    <Compile Include="ClientObjects\EstruturaPreReservaSelecao.cs" />
+    <Compile Include="ClientObjects\EstruturaPreReservaSite.cs" />
+    <Compile Include="ClientObjects\EstruturaQuantidadeCodigosListaBranca.cs" />
+    <Compile Include="ClientObjects\EstruturaRegionalArea.cs" />
+    <Compile Include="ClientObjects\EstruturaRegionalEmail.cs" />
+    <Compile Include="ClientObjects\EstruturaRegionalEmpresaSelecionador.cs" />
+    <Compile Include="ClientObjects\EstruturaRegistroImpressaoVir.cs" />
+    <Compile Include="ClientObjects\EstruturaRepasseDebitos.cs" />
+    <Compile Include="ClientObjects\EstruturaReservaInternet.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoCep.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoProcSalvarCliente.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoRegistroImpressao.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoReservaValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoVenda.cs" />
+    <Compile Include="ClientObjects\EstruturaRetornoVendaValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaSalvarValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaSetores.cs" />
+    <Compile Include="ClientObjects\EstruturaTaxaEntrega.cs" />
+    <Compile Include="ClientObjects\EstruturaTaxaProcessamentoPacote.cs" />
+    <Compile Include="ClientObjects\EstruturaTaxasEventoPacotes.cs" />
+    <Compile Include="ClientObjects\EstruturaTela.cs" />
+    <Compile Include="ClientObjects\EstruturaTelaManual.cs" />
+    <Compile Include="ClientObjects\EstruturaTermo.cs" />
+    <Compile Include="ClientObjects\EstruturaTipoImpressao.cs" />
+    <Compile Include="ClientObjects\EstruturaTransacoesCliente.cs" />
+    <Compile Include="ClientObjects\EstruturaTransacoesDetalhes.cs" />
+    <Compile Include="ClientObjects\EstruturaTransacoesIngressosComprados.cs" />
+    <Compile Include="ClientObjects\EstruturaTransacoesResultado.cs" />
+    <Compile Include="ClientObjects\EstruturaTransacoesResultadoLista.cs" />
+    <Compile Include="ClientObjects\EstruturaTrocaValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaUsuario.cs" />
+    <Compile Include="ClientObjects\EstruturaValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaValeIngressoaFormaPagamento.cs" />
+    <Compile Include="ClientObjects\EstruturaValeIngressoGambi.cs" />
+    <Compile Include="ClientObjects\EstruturaValeIngressoTipo.cs" />
+    <Compile Include="ClientObjects\EstruturaValidacaoCodigoPromocional.cs" />
+    <Compile Include="ClientObjects\EstruturaVendaFormaPagamento.cs" />
+    <Compile Include="ClientObjects\EstruturaVendaValeIngresso.cs" />
+    <Compile Include="ClientObjects\EstruturaVirNomePresenteado.cs" />
+    <Compile Include="ClientObjects\EstruturaVIRPopuladoVenda.cs" />
+    <Compile Include="ClientObjects\EstruturaVoceSabia.cs" />
+    <Compile Include="ClientObjects\EstruturaVoucherCompra.cs" />
+    <Compile Include="ClientObjects\EstruturaWhiteList.cs" />
+    <Compile Include="ClientObjects\EventoSubtiposListagem.cs" />
+    <Compile Include="ClientObjects\Excel\EstruturaExportarExcel.cs" />
+    <Compile Include="ClientObjects\Faq\EstruturaFaq.cs" />
+    <Compile Include="ClientObjects\Faq\EstruturaFaqTipo.cs" />
+    <Compile Include="ClientObjects\Filme\EstruturaFilme.cs" />
+    <Compile Include="ClientObjects\IngressoImpressaoCancelar.cs" />
+    <Compile Include="ClientObjects\Lugar.cs" />
+    <Compile Include="ClientObjects\Mensagens\EstruturaMensagens.cs" />
+    <Compile Include="ClientObjects\ModuloLogistica\EstruturaRegistroEntrega.cs" />
+    <Compile Include="ClientObjects\NomenclaturaPacote\EstruturaNomenclaturaPacote.cs" />
+    <Compile Include="ClientObjects\Pontos de Venda do Evento\EstruturaEventoPontoDeVenda.cs" />
+    <Compile Include="ClientObjects\RelatoriosSangria\EstruturaRelatoriosSangria.cs" />
+    <Compile Include="ClientObjects\ResourceBase.cs" />
+    <Compile Include="ClientObjects\Sangria\EstruturaSangria.cs" />
+    <Compile Include="ClientObjects\Serie\EstruturaCanalSerieItem.cs" />
+    <Compile Include="ClientObjects\Serie\EstruturaExibicaoGrupos.cs" />
+    <Compile Include="ClientObjects\Serie\EstruturaSerie.cs" />
+    <Compile Include="ClientObjects\Serie\EstruturaSerieItem.cs" />
+    <Compile Include="ClientObjects\Serie\EstruturaValidacaoSerie.cs" />
+    <Compile Include="ClientObjects\Serie\EstruturaValidacaoSerieGrupo.cs" />
+    <Compile Include="ClientObjects\SiteNovo\EstruturaCadastroCliente.cs" />
+    <Compile Include="ClientObjects\SiteNovo\EstruturaPush.cs" />
+    <Compile Include="Codigo\Accertify\Accertify.cs" />
+    <Compile Include="Codigo\Accertify\GeradorPDFeTicket.cs" />
+    <Compile Include="Codigo\Accertify\ConfiguracaoAccertify.cs" />
+    <Compile Include="Codigo\Accertify\Email.cs" />
+    <Compile Include="Codigo\Accertify\IngressoGerenciadorAccertify.cs" />
+    <Compile Include="Codigo\Accertify\RetornoAccertify.cs" />
+    <Compile Include="Codigo\Adyen\Adyen.cs" />
+    <Compile Include="Codigo\Adyen\Configuracao.cs" />
+    <Compile Include="Codigo\Agregados.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaConfig.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaConfigDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaFase.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaFaseDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaTexto.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaTextoDB.cs" />
+    <Compile Include="Codigo\CancelamentoGerenciador.cs" />
+    <Compile Include="Codigo\Cancelamento\CancelamentoIngressos.cs" />
+    <Compile Include="Codigo\Cancelamento\CancelDevolucaoPendente.cs" />
+    <Compile Include="Codigo\Cancelamento\CancelDevolucaoPendenteIngresso.cs" />
+    <Compile Include="Codigo\Cancelamento\DB\CancelDevolucaoPendenteDB.cs" />
+    <Compile Include="Codigo\Cancelamento\DB\CancelDevolucaoPendenteIngressoDB.cs" />
+    <Compile Include="Codigo\Cancelamento\DB\EstornoDadosCartaoCreditoDB.cs" />
+    <Compile Include="Codigo\Cancelamento\DB\EstornoDadosDepositoBancarioDB.cs" />
+    <Compile Include="Codigo\Cancelamento\DB\EstornoDadosDinheiroDB.cs" />
+    <Compile Include="Codigo\Cancelamento\DB\ListaBancosDB.cs" />
+    <Compile Include="Codigo\Cancelamento\EstornoDadosCartaoCredito.cs" />
+    <Compile Include="Codigo\Cancelamento\EstornoDadosDepositoBancario.cs" />
+    <Compile Include="Codigo\Cancelamento\EstornoDadosDinheiro.cs" />
+    <Compile Include="Codigo\Cancelamento\EstruturaCancelamento.cs" />
+    <Compile Include="Codigo\Cancelamento\ListaBancos.cs" />
+    <Compile Include="Codigo\CotaTipo.cs" />
+    <Compile Include="Codigo\DB\CotaTipoDB.cs" />
+    <Compile Include="Codigo\DB\ElementoMapaDB.cs" />
+    <Compile Include="Codigo\DB\LoteDB.cs" />
+    <Compile Include="Codigo\DB\LocalPrecoBaseDB.cs" />
+    <Compile Include="Codigo\Lote.cs" />
+    <Compile Include="Codigo\DB\IRMensagemDB.cs" />
+    <Compile Include="Codigo\EstornoDadosPlanilhas\Operadoras\Amex.cs" />
+    <Compile Include="Codigo\EstornoDadosPlanilhas\Operadoras\Cielo.cs" />
+    <Compile Include="Codigo\EstornoDadosPlanilhas\Operadoras\Generator.cs" />
+    <Compile Include="Codigo\EstornoDadosPlanilhas\Operadoras\PlanilhasManuais.cs" />
+    <Compile Include="Codigo\EstornoDadosPlanilhas\Operadoras\Rede.cs" />
+    <Compile Include="Codigo\EstornoDadosPlanilhas\Operadoras\ValeCultura.cs" />
+    <Compile Include="Codigo\IRMensagem.cs" />
+    <Compile Include="Codigo\NetPromoterService\ConfiguracaoNetPromoterService.cs" />
+    <Compile Include="Codigo\NetPromoterService\NetPromoterService.cs" />
+    <Compile Include="Codigo\PayPal\CancelaPayPal.cs" />
+    <Compile Include="Codigo\PayPal\Enums\AbstractTypeSafeEnumeration.cs" />
+    <Compile Include="Codigo\PayPal\Enums\Ack.cs" />
+    <Compile Include="Codigo\PayPal\Enums\CurrencyCode.cs" />
+    <Compile Include="Codigo\PayPal\Enums\LocaleCode.cs" />
+    <Compile Include="Codigo\PayPal\Enums\RefundType.cs" />
+    <Compile Include="Codigo\PayPal\Exceptions\PayPalException.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\DoExpressCheckoutPaymentOperation.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\Enums\ChannelType.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\Enums\ItemCategory.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\Enums\LandingPage.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\Enums\SolutionType.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\ExpressCheckoutApi.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\GetExpressCheckoutDetailsOperation.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\PaymentAction.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\PaymentRequest.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\RefundTransaction.cs" />
+    <Compile Include="Codigo\PayPal\ExpressCheckout\SetExpressCheckoutOperation.cs" />
+    <Compile Include="Codigo\PayPal\Nvp\NVP.cs" />
+    <Compile Include="Codigo\PayPal\Nvp\RequestNVP.cs" />
+    <Compile Include="Codigo\PayPal\Nvp\ResponseNVP.cs" />
+    <Compile Include="Codigo\PayPal\PayPalApiFactory.cs" />
+    <Compile Include="Codigo\Sangria\ContaTipoMovimentacao.cs" />
+    <Compile Include="Codigo\Sangria\DB\SangriaContaProdutorDB.cs" />
+    <Compile Include="Codigo\Sangria\DB\SangriaContaTipoDB.cs" />
+    <Compile Include="Codigo\Sangria\DB\ContaTipoMovimentacaoDB.cs" />
+    <Compile Include="Codigo\Sangria\SangriaCaixa.cs" />
+    <Compile Include="Codigo\Sangria\DB\ContaLojaDB.cs" />
+    <Compile Include="Codigo\Sangria\DB\SangriaCaixaDB.cs" />
+    <Compile Include="Codigo\Sangria\DB\SangriaContaDB.cs" />
+    <Compile Include="Codigo\Sangria\ContaLoja.cs" />
+    <Compile Include="Codigo\Sangria\SangriaContaProdutor.cs" />
+    <Compile Include="Codigo\Sangria\SangriaContaTipo.cs" />
+    <Compile Include="Codigo\Sangria\SangriaConta.cs" />
+    <Compile Include="Codigo\LocalPrecoBase.cs" />
+    <Compile Include="Codigo\SetorElementoMapa.cs" />
+    <Compile Include="Codigo\ElementoMapa.cs" />
+    <Compile Include="Codigo\DB\AgregadosDB.cs" />
+    <Compile Include="Codigo\AlertaApresentacao\AlertaApresentacao.cs" />
+    <Compile Include="Codigo\AlertaApresentacao\EstruturaAlertaApresentacao.cs" />
+    <Compile Include="Codigo\AlertaVendaPendente.cs" />
+    <Compile Include="Codigo\AntiFraudeMotivo.cs" />
+    <Compile Include="Codigo\DB\AntiFraudeMotivoDB.cs" />
+    <Compile Include="Codigo\AntiFraudeMotivoTipo.cs" />
+    <Compile Include="Codigo\DB\AntiFraudeMotivoTipoDB.cs" />
+    <Compile Include="Codigo\ApoliceMondial.cs" />
+    <Compile Include="Codigo\DB\ApoliceMondialDB.cs" />
+    <Compile Include="Codigo\Apresentacao.cs" />
+    <Compile Include="Codigo\DB\ApresentacaoDB.cs" />
+    <Compile Include="Codigo\ApresentacaoDisponibilizarGerenciador.cs" />
+    <Compile Include="Codigo\ApresentacaoSetor.cs" />
+    <Compile Include="Codigo\DB\ApresentacaoSetorDB.cs" />
+    <Compile Include="Codigo\Assinatura\Assinatura.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAcaoProvisoria.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAcaoProvisoriaDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAjuda.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAjudaDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAno.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAnoCliente.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAnoClienteDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaAnoDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaCanal.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaCanalDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaCliente.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaClienteDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaDesmembramento.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaFormaPagamento.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaFormaPagamentoDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaHistorico.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaHistoricoDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaInfoSite.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaItem.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaItemDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaSetor.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaSetorDB.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaTipo.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaTipoDB.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngresso.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoComprovante.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoComprovanteDB.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoCredito.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoDB.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoHistorico.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoCreditoDB.cs" />
+    <Compile Include="Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoHistoricoDB.cs" />
+    <Compile Include="Codigo\Assinatura\Boleto.cs" />
+    <Compile Include="Codigo\Assinatura\AssinaturaDesmembramentoDB.cs" />
+    <Compile Include="Codigo\Assinatura\CulturaArtistica\Importacao.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\AssinaturaEmailEnviar.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\AssinaturaEmailEnviarDB.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\AssinaturaEmailModelo.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\AssinaturaEmailModeloDB.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\AssinaturaEmailRemetente.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\AssinaturaEmailRemetenteDB.cs" />
+    <Compile Include="Codigo\Assinatura\Emails\GerenciarEmailsAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Filarmonica\Gerenciador.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Aquisicoes.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Assinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Models\AssinaturaTipo.cs" />
+    <Compile Include="Codigo\Assinatura\Models\BancoIngressos\Calendario.cs" />
+    <Compile Include="Codigo\Assinatura\Models\BancoIngressos\CarrinhoResgate.cs" />
+    <Compile Include="Codigo\Assinatura\Models\BancoIngressos\Comprovante.cs" />
+    <Compile Include="Codigo\Assinatura\Models\BancoIngressos\Credito.cs" />
+    <Compile Include="Codigo\Assinatura\Models\BancoIngressos\IngressosDoacao.cs" />
+    <Compile Include="Codigo\Assinatura\Models\BancoIngressos\Programacao.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Boleto.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Cliente.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Comunicado.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Configuracao.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Confirmacao.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Consolidado.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Agregados.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Entrega.cs" />
+    <Compile Include="Codigo\Assinatura\Models\ModelEmpresa.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AcoesBancoIngresso.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AcompanhamentoPresencas.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AcompanhamentoVenda.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\Agregados.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AssinaturasDesmembradas.cs" />
+    <Compile Include="Codigo\Assinatura\Models\MusicaCabeca\MusicaCabecaComprovantes.cs" />
+    <Compile Include="Codigo\Assinatura\Models\MusicaCabeca\MusicaCabeca.cs" />
+    <Compile Include="Codigo\Assinatura\Models\MusicaCabeca\MusicaCabecaAgregado.cs" />
+    <Compile Include="Codigo\Assinatura\Models\MusicaCabeca\MusicaCabecaInscito.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AssinanteAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AssinantesSemManifestacao.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\BorderoResumo.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\CaixaResumoAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\AcompanhamentoRenovacao.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\ListagemBloqueios.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\TabelaPreco.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\HistoricoAcoesPorPeriodo.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\TotalAssinaturasSerie.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\EmissaoDeEmails.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\RecebimentoMesSerieFormaPagamento.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Relatorios\TotaisPorProcessoAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Pagamento.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Fase.cs" />
+    <Compile Include="Codigo\Assinatura\Models\FormaPagamento.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Historico.cs" />
+    <Compile Include="Codigo\Assinatura\Models\Lugar.cs" />
+    <Compile Include="Codigo\Assinatura\Models\NovasAquisicoes.cs" />
+    <Compile Include="Codigo\Assinatura\Models\TipoMenu.cs" />
+    <Compile Include="Codigo\Assinatura\MusicaCabeca\MusicaCabeca.cs" />
+    <Compile Include="Codigo\Assinatura\MusicaCabeca\MusicaCabecaAgregado.cs" />
+    <Compile Include="Codigo\Assinatura\MusicaCabeca\MusicaCabecaAgregadoDB.cs" />
+    <Compile Include="Codigo\Assinatura\MusicaCabeca\MusicaCabecaDB.cs" />
+    <Compile Include="Codigo\Assinatura\MusicaCabeca\MusicaCabecaInscrito.cs" />
+    <Compile Include="Codigo\Assinatura\MusicaCabeca\MusicaCabecaInscritoDB.cs" />
+    <Compile Include="Codigo\Assinatura\NovaTemporada.cs" />
+    <Compile Include="Codigo\Assinatura\OSESP\Importacao.cs" />
+    <Compile Include="Codigo\Assinatura\Partial\Assinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Partial\Assinatura_Mapa.cs" />
+    <Compile Include="Codigo\Assinatura\PrecoTipo.cs" />
+    <Compile Include="Codigo\Assinatura\PrecoTipoDB.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AcoesBancoIngresso.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AcompanhamentoVendas.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AcompanhamentoRenovacoes.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AgregadosPorAssinante.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AssinantesSemManifestacao.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\BorderoAvulso.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\CancelamentosEfetuados.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AssinantesPorAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AssinantesPagamentoAberto.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AssinantesEtiqueta.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\AssinaturasDesmembradas.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\BorderoResumo.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\CaixaResumoAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\ListagemBloqueios.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\CrieSuaSerie.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\TabelaPreco.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\EmissaoDeEmail.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\HistoricoAcoesPorPeriodo.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\RecebimentoMesSerieFormaPagamento.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\TotaisPorProcessoAssinatura.cs" />
+    <Compile Include="Codigo\Assinatura\Relatorios\TotalAssinaturasSerie.cs" />
+    <Compile Include="Codigo\Atualizador\AtualizadorSistema.cs" />
+    <Compile Include="Codigo\Bondinho\GerenciamentoIngressos.cs" />
+    <Compile Include="Codigo\Bondinho\GerenciamentoIngressosDB.cs" />
+    <Compile Include="Codigo\BufferSpecialEvent\BufferSpecialEventGerenciamento.cs" />
+    <Compile Include="Codigo\ChargeBack.cs" />
+    <Compile Include="Codigo\DB\ChargeBackDB.cs" />
+    <Compile Include="Codigo\Cinema\Configuracao.cs" />
+    <Compile Include="Codigo\Cinema\IntegracaoConsciencia.cs" />
+    <Compile Include="Codigo\Cinema\SincronizarCinemas.cs" />
+    <Compile Include="Codigo\ContatoSite.cs" />
+    <Compile Include="Codigo\DB\ContatoSiteDB.cs" />
+    <Compile Include="Codigo\Conciliacao.cs" />
+    <Compile Include="Codigo\DB\ConciliacaoDB.cs" />
+    <Compile Include="Codigo\BannerIMais.cs" />
+    <Compile Include="Codigo\DB\BannerIMaisDB.cs" />
+    <Compile Include="Codigo\CorreioCodigoRastreio.cs" />
+    <Compile Include="Codigo\DB\CorreioCodigoRastreioDB.cs" />
+    <Compile Include="Codigo\CorreioStatusEntrega.cs" />
+    <Compile Include="Codigo\DB\CorreioStatusEntregaDB.cs" />
+    <Compile Include="Codigo\DB\CotaItemFormaPagamentoDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaAreaBlackListDB.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EntregaAreaBlackList.cs" />
+    <Compile Include="Codigo\EventoTipoPagamento.cs" />
+    <Compile Include="Codigo\DB\EventoTipoPagamentoDB.cs" />
+    <Compile Include="Codigo\Facebook\ConfigurationFacebook.cs" />
+    <Compile Include="Codigo\Facebook\faceBookUser.cs" />
+    <Compile Include="Codigo\FonteNova\ServicoFonteNova.cs" />
+    <Compile Include="Codigo\DB\FormaPagamentoDB.cs" />
+    <Compile Include="Codigo\DB\FormaPagamentoEstabelecimentoDB.cs" />
+    <Compile Include="Codigo\ManutencaoEvento\Etapa1MantEventoModel.cs" />
+    <Compile Include="Codigo\NovoGerador\AcrescentarPrecoModel.cs" />
+    <Compile Include="Codigo\NovoGerador\AcrescentarApresentacaoModel.cs" />
+    <Compile Include="Codigo\NovoGerador\EventoNovo.cs" />
+    <Compile Include="Codigo\NovoGerador\GerarEventoEtapa1Fase1Model.cs" />
+    <Compile Include="Codigo\NovoGerador\GerarEventoEtapa1Fase2Model.cs" />
+    <Compile Include="Codigo\NovoGerador\GerarEventoEtapa2Fase1Model.cs" />
+    <Compile Include="Codigo\NovoGerador\GerarEventoEtapa1Fase3Model.cs" />
+    <Compile Include="Codigo\NovoGerador\GerarEventoEtapa3Fase1Model.cs" />
+    <Compile Include="Codigo\NovoGerador\GerarEventoEtapa3Fase2Model.cs" />
+    <Compile Include="Codigo\NovoGerador\IGridPrecoModel.cs" />
+    <Compile Include="Codigo\ProjetoSac\Arquivo.cs" />
+    <Compile Include="Codigo\ProjetoSac\ContaCorrenteIR.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\ArquivoDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\ContaCorreteIRDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\EscalonamentoDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\EstornoAprovacaoDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\EstornoAprovacaoItemDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\EstornoCartaoDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\EstornoDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\DB\EstornoDepositoDB.cs" />
+    <Compile Include="Codigo\ProjetoSac\Escalonamento.cs" />
+    <Compile Include="Codigo\ProjetoSac\Estorno.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Codigo\ProjetoSac\EstornoAprovacao.cs" />
+    <Compile Include="Codigo\ProjetoSac\EstornoAprovacaoItem.cs" />
+    <Compile Include="Codigo\ProjetoSac\EstornoCartao.cs" />
+    <Compile Include="Codigo\ProjetoSac\EstornoDeposito.cs" />
+    <Compile Include="Codigo\ResumoHardware.cs" />
+    <Compile Include="Codigo\DB\ResumoHardwareDB.cs" />
+    <Compile Include="Codigo\FormaPagamentoEstabelecimento.cs" />
+    <Compile Include="Codigo\RoboCanalEvento.cs" />
+    <Compile Include="Codigo\DB\RoboCanalEventoDB.cs" />
+    <Compile Include="Codigo\RoboCanalPreco.cs" />
+    <Compile Include="Codigo\DB\RoboCanalPrecoDB.cs" />
+    <Compile Include="Codigo\ServicePush\ServicePush.cs" />
+    <Compile Include="Codigo\ServicePush\ServicePushBD.cs" />
+    <Compile Include="Codigo\Sftp\GeraEnviaArquivo.cs" />
+    <Compile Include="Codigo\Sftp\RelatorioClientesCotaNet.cs" />
+    <Compile Include="Codigo\Sftp\Sftp.cs" />
+    <Compile Include="Codigo\Smiles\ConfiguracaoSmiles.cs" />
+    <Compile Include="Codigo\Smiles\SmilesIntegration.cs" />
+    <Compile Include="Codigo\TransporteModels\CancelamentosCompraModel.cs" />
+    <Compile Include="Codigo\TransporteModels\PerfilTransporteModel.cs" />
+    <Compile Include="Codigo\TransporteModels\ReembolsoModel.cs" />
+    <Compile Include="Codigo\Troca.cs" />
+    <Compile Include="Codigo\TrocaIngresso\EstruturaTrocaIngressoCredito.cs" />
+    <Compile Include="Codigo\TrocaIngresso\EstruturaTrocaIngressoPreco.cs" />
+    <Compile Include="Codigo\TrocaIngresso\EstruturaConfirmaTrocaIngresso.cs" />
+    <Compile Include="Codigo\TrocaIngresso\EstruturaTrocaIngressoCompra.cs" />
+    <Compile Include="Codigo\TrocaIngresso\EstruturaTrocaIngressoRetorno.cs" />
+    <Compile Include="Codigo\Util\EtapasFases.cs" />
+    <Compile Include="Codigo\Util\Validacoes.cs" />
+    <Compile Include="Codigo\VerificarPermissaoTrocaCancelamento.cs" />
+    <Compile Include="EnvioEmails\Log.cs" />
+    <Compile Include="ClientObjects\EstruturaCortesia.cs" />
+    <Compile Include="Paralela\BilheteriaMediaPartner.cs" />
+    <Compile Include="Paralela\ClientObjects\ApresentacaoManutencaoListagem.cs" />
+    <Compile Include="Paralela\ClientObjects\Arvore\Empresa.cs" />
+    <Compile Include="Paralela\ClientObjects\Arvore\EstruturaArvore.cs" />
+    <Compile Include="Paralela\ClientObjects\Arvore\EstruturaArvoreItem.cs" />
+    <Compile Include="Paralela\ClientObjects\Arvore\EstruturaFiltros.cs" />
+    <Compile Include="Paralela\ClientObjects\Arvore\Local.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\Emails\EstruturaEmailAssinatura.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\EstruturaAssinaturaAcao.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\EstruturaAssinaturaDesmembramento.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\EstruturaAssinaturaPreco.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\EstruturaAssinaturaTipo.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\Filarmonica\EstruturaAssinaturaFilarmonica.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\Filarmonica\EstruturaEfetuarAcao.cs" />
+    <Compile Include="Paralela\ClientObjects\Assinaturas\MusicaCabeca\EstruturaMusicaCabeca.cs" />
+    <Compile Include="Paralela\ClientObjects\Banner.cs" />
+    <Compile Include="Paralela\ClientObjects\ContratoFormaPagamentoListagem.cs" />
+    <Compile Include="Paralela\ClientObjects\Despesa\EstruturaDespesas.cs" />
+    <Compile Include="Paralela\ClientObjects\Despesa\EstruturaEventoBordero.cs" />
+    <Compile Include="Paralela\ClientObjects\EmpresaFormaPagamentoListagem.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EntregaAreaCep.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaClienteEndereco.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaDetalhe.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaDiaAgenda.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEntrega.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEntregaAgenda.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEntregaArea.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEntregaAreaExclusao.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEntregaControle.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEntregaPeriodo.cs" />
+    <Compile Include="Paralela\ClientObjects\Entregas\EstruturaEventoEntregaControle.cs" />
+    <Compile Include="Paralela\ClientObjects\EstrutraIntegrantesIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaApresentacao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaApresentacaoRaioX.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaAreaCep.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaAssinaturaInfo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBackgroundSetor.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBandeira.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBlackList.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBlackList2.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBlackListCartao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBlackListCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBoleto.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaBuscaCombinada.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCaixaPos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCaixaResumo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCanaisPreco.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCanalEventoRobo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCanalPrecoRobo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCanalValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCartoesPorCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCelular.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCEP.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaChargeBack.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaClienteCorreio.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaClienteVendas.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCodigoBarraValido.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCodigoPromoValidacao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCompraTemporaria.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaConciliacaoBancaria.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaContrato.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCota.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotaItem.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotaItemControle.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotaItemReserva.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotas.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasDistribuir.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasGeral.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasInfo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasQuantidades.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasReserva.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasRetornoDistribuicao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasSelecao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasSetor.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotasValidacao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaCotaValidacaoCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaDistribuicaoCotaAntiga.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaDonoIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEntregaCelular.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEnvioSMS.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEstadoCidadeSenhaPos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEvento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoApresentacao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoInfo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoLoja.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoNivelRisco.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoTaxa.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoTaxaEntrega.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaEventoTipos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaFechamentoCaixa.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaFormaPagamento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaFormaPagamentoCota.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaFormaPagamentoCotaItem.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaFormaPagamentoEvento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaGeracaoIngressos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaGerenciamentoIngressos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaGoogleAnalytics.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaHistoricoDeAcaoDaVenda.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaIDNome.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaImpressao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaImpressaoEtiqueta.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaImpressaoLoteValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaInconsistenciaIngressoLog.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaInfoEventoMondial.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaIngressoCotaItem.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaIngressoLog_BlackList.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaIngressoTipoImpressao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaLeituraCodigo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaLocalInfo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaManutencaoApresentacaoPeriodo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaMapaEsquematico.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaMapaEsquematicoSetor.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaMesaFechadaPreReservaSite.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaMotivo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaNFSE.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaObrigatoriedade.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPacote.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPagamento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaParceiro.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaParceiroPortoSeguro.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaParcelamentoIR.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPerspectivaLugar.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPontoDeVenda.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPrecoApresentacaoEvento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPrecoIDValor.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPrecoPreReservaSite.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPrecoReservaSite.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPrecoTipo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPreReservaSelecao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPreReservaSite.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaPreVendaRetorno.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaQuantidadeCodigosListaBranca.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRegionalArea.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRegionalEmail.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRegionalEmpresaSelecionador.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRegistroImpressaoVir.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRepasseDebitos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaReservaInternet.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoCep.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoObrigatoriedade.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoParcelamentoIR.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoProcSalvarCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoRegistroImpressao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoReservaValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoValoresValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoVenda.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaRetornoVendaValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaSalvarValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaSetores.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTaxaEntrega.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTaxaProcessamentoPacote.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTaxasEventoPacotes.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTela.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTelaManual.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTermo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTipoImpressao.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTransacoesCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTransacoesDetalhes.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTransacoesIngressosComprados.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTransacoesResultado.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTransacoesResultadoLista.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaTrocaValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaUsuario.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaValeIngressoaFormaPagamento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaValeIngressoGambi.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaValeIngressoTipo.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaValidacaoCodigoPromocional.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVendaFormaPagamento.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVendaPos.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVendaValeIngresso.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVenderWeb.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVirNomePresenteado.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVIRPopuladoVenda.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVoceSabia.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaVoucherCompra.cs" />
+    <Compile Include="Paralela\ClientObjects\EstruturaWhiteList.cs" />
+    <Compile Include="Paralela\ClientObjects\EventoSubtiposListagem.cs" />
+    <Compile Include="Paralela\ClientObjects\Excel\EstruturaExportarExcel.cs" />
+    <Compile Include="Paralela\ClientObjects\Faq\EstruturaFaq.cs" />
+    <Compile Include="Paralela\ClientObjects\Faq\EstruturaFaqTipo.cs" />
+    <Compile Include="Paralela\ClientObjects\Filme\EstruturaFilme.cs" />
+    <Compile Include="Paralela\ClientObjects\GeradorXML\BlacklistRecord.cs" />
+    <Compile Include="Paralela\ClientObjects\GeradorXML\EstruturaFonteNova.cs" />
+    <Compile Include="Paralela\ClientObjects\GeradorXML\TSData.cs" />
+    <Compile Include="Paralela\ClientObjects\GeradorXML\WhitelistRecord.cs" />
+    <Compile Include="Paralela\ClientObjects\IngressoImpressaoCancelar.cs" />
+    <Compile Include="Paralela\ClientObjects\Lugar.cs" />
+    <Compile Include="Paralela\ClientObjects\Mensagens\EstruturaMensagens.cs" />
+    <Compile Include="Paralela\ClientObjects\Mobile\EstruturaDropDownList.cs" />
+    <Compile Include="Paralela\ClientObjects\Mobile\EstruturaEventoDescricao.cs" />
+    <Compile Include="Paralela\ClientObjects\Mobile\EstruturaEventoDestaque.cs" />
+    <Compile Include="Paralela\ClientObjects\Mobile\EstruturaListaSetoreEmail.cs" />
+    <Compile Include="Paralela\ClientObjects\ModuloLogistica\EstruturaRegistroEntrega.cs" />
+    <Compile Include="Paralela\ClientObjects\NomenclaturaPacote\EstruturaNomenclaturaPacote.cs" />
+    <Compile Include="Paralela\ClientObjects\Pontos de Venda do Evento\EstruturaEventoPontoDeVenda.cs" />
+    <Compile Include="Paralela\ClientObjects\RelatoriosSangria\EstruturaRelatoriosSangria.cs" />
+    <Compile Include="Paralela\ClientObjects\ResourceBase.cs" />
+    <Compile Include="Paralela\ClientObjects\Sangria\EstruturaSangria.cs" />
+    <Compile Include="Paralela\ClientObjects\Serie\EstruturaCanalSerieItem.cs" />
+    <Compile Include="Paralela\ClientObjects\Serie\EstruturaExibicaoGrupos.cs" />
+    <Compile Include="Paralela\ClientObjects\Serie\EstruturaSerie.cs" />
+    <Compile Include="Paralela\ClientObjects\Serie\EstruturaSerieItem.cs" />
+    <Compile Include="Paralela\ClientObjects\Serie\EstruturaValidacaoSerie.cs" />
+    <Compile Include="Paralela\ClientObjects\Serie\EstruturaValidacaoSerieGrupo.cs" />
+    <Compile Include="Paralela\ClientObjects\SiteNovo\EstruturaCadastroCliente.cs" />
+    <Compile Include="Paralela\ClientObjects\SiteNovo\EstruturaPush.cs" />
+    <Compile Include="Paralela\Codigo\Accertify\Accertify.cs" />
+    <Compile Include="Paralela\Codigo\Accertify\ConfiguracaoAccertify.cs" />
+    <Compile Include="Paralela\Codigo\Accertify\Email.cs" />
+    <Compile Include="Paralela\Codigo\Accertify\GeradorPDFeTicket.cs" />
+    <Compile Include="Paralela\Codigo\Accertify\IngressoGerenciadorAccertify.cs" />
+    <Compile Include="Paralela\Codigo\Accertify\RetornoAccertify.cs" />
+    <Compile Include="Paralela\Codigo\Agregados.cs" />
+    <Compile Include="Paralela\Codigo\AgregadosDB.cs" />
+    <Compile Include="Paralela\Codigo\AlertaApresentacao\AlertaApresentacao.cs" />
+    <Compile Include="Paralela\Codigo\AlertaApresentacao\EstruturaAlertaApresentacao.cs" />
+    <Compile Include="Paralela\Codigo\AlertaVendaPendente.cs" />
+    <Compile Include="Paralela\Codigo\AntiFraudeMotivo.cs" />
+    <Compile Include="Paralela\Codigo\AntiFraudeMotivoDB.cs" />
+    <Compile Include="Paralela\Codigo\AntiFraudeMotivoTipo.cs" />
+    <Compile Include="Paralela\Codigo\AntiFraudeMotivoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\ApoliceMondial.cs" />
+    <Compile Include="Paralela\Codigo\ApoliceMondialDB.cs" />
+    <Compile Include="Paralela\Codigo\Apresentacao.cs" />
+    <Compile Include="Paralela\Codigo\ApresentacaoDB.cs" />
+    <Compile Include="Paralela\Codigo\ApresentacaoDisponibilizarGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\ApresentacaoSetor.cs" />
+    <Compile Include="Paralela\Codigo\ApresentacaoSetorDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Assinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAcaoProvisoria.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAcaoProvisoriaDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAjuda.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAjudaDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAno.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAnoCliente.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAnoClienteDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaAnoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaCanal.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaCanalDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaCliente.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaClienteDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaDesmembramento.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaDesmembramentoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaFormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaHistorico.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaHistoricoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaInfoSite.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaItem.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaItemDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaSetor.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaSetorDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaTipo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\AssinaturaTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngresso.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoComprovante.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoComprovanteDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoCredito.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoCreditoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoHistorico.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\BancoIngressos\AssinaturaBancoIngressoHistoricoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Boleto.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\CulturaArtistica\Importacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\AssinaturaEmailEnviar.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\AssinaturaEmailEnviarDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\AssinaturaEmailModelo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\AssinaturaEmailModeloDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\AssinaturaEmailRemetente.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\AssinaturaEmailRemetenteDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Emails\GerenciarEmailsAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Filarmonica\Gerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Agregados.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Aquisicoes.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Assinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\AssinaturaTipo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\BancoIngressos\Calendario.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\BancoIngressos\CarrinhoResgate.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\BancoIngressos\Comprovante.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\BancoIngressos\Credito.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\BancoIngressos\IngressosDoacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\BancoIngressos\Programacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Boleto.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Cliente.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Comunicado.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Configuracao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Confirmacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Consolidado.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Entrega.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Fase.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\FormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Historico.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Lugar.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\ModelEmpresa.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\MusicaCabeca\MusicaCabeca.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\MusicaCabeca\MusicaCabecaAgregado.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\MusicaCabeca\MusicaCabecaComprovantes.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\MusicaCabeca\MusicaCabecaInscito.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\NovasAquisicoes.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Pagamento.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AcoesBancoIngresso.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AcompanhamentoPresencas.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AcompanhamentoRenovacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AcompanhamentoVenda.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\Agregados.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AssinanteAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AssinantesSemManifestacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\AssinaturasDesmembradas.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\BorderoResumo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\CaixaResumoAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\EmissaoDeEmails.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\HistoricoAcoesPorPeriodo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\ListagemBloqueios.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\RecebimentoMesSerieFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\TabelaPreco.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\TotaisPorProcessoAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\Relatorios\TotalAssinaturasSerie.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Models\TipoMenu.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\MusicaCabeca\MusicaCabeca.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\MusicaCabeca\MusicaCabecaAgregado.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\MusicaCabeca\MusicaCabecaAgregadoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\MusicaCabeca\MusicaCabecaDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\MusicaCabeca\MusicaCabecaInscrito.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\MusicaCabeca\MusicaCabecaInscritoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\NovaTemporada.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\OSESP\Importacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Partial\Assinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Partial\Assinatura_Mapa.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\PrecoTipo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\PrecoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AcoesBancoIngresso.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AcompanhamentoRenovacoes.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AcompanhamentoVendas.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AgregadosPorAssinante.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AssinantesEtiqueta.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AssinantesPagamentoAberto.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AssinantesPorAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AssinantesSemManifestacao.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\AssinaturasDesmembradas.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\BorderoAvulso.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\BorderoResumo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\CaixaResumoAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\CancelamentosEfetuados.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\CrieSuaSerie.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\EmissaoDeEmail.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\HistoricoAcoesPorPeriodo.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\ListagemBloqueios.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\RecebimentoMesSerieFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\TabelaPreco.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\TotaisPorProcessoAssinatura.cs" />
+    <Compile Include="Paralela\Codigo\Assinatura\Relatorios\TotalAssinaturasSerie.cs" />
+    <Compile Include="Paralela\Codigo\Atualizador\AtualizadorSistema.cs" />
+    <Compile Include="Paralela\Codigo\AutoSelecionadorGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Banner.cs" />
+    <Compile Include="Paralela\Codigo\BannerDB.cs" />
+    <Compile Include="Paralela\Codigo\BannerIMais.cs" />
+    <Compile Include="Paralela\Codigo\BannerIMaisDB.cs" />
+    <Compile Include="Paralela\Codigo\Bilheteria.cs" />
+    <Compile Include="Paralela\Codigo\BlackList.cs" />
+    <Compile Include="Paralela\Codigo\BlackListDB.cs" />
+    <Compile Include="Paralela\Codigo\Bloqueio.cs" />
+    <Compile Include="Paralela\Codigo\BloqueioDB.cs" />
+    <Compile Include="Paralela\Codigo\Bondinho\GerenciamentoIngressos.cs" />
+    <Compile Include="Paralela\Codigo\Bondinho\GerenciamentoIngressosDB.cs" />
+    <Compile Include="Paralela\Codigo\Bordero.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\BuscaMenorEsforco.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\Enumeradores.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\Gerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\Nome.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\NomeLista.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\Porcentagens.cs" />
+    <Compile Include="Paralela\Codigo\Brainiac\Retorno.cs" />
+    <Compile Include="Paralela\Codigo\BufferInternet\aSync.cs" />
+    <Compile Include="Paralela\Codigo\BufferInternet\BufferInternet.cs" />
+    <Compile Include="Paralela\Codigo\BufferInternet\BufferInternetObjetos.cs" />
+    <Compile Include="Paralela\Codigo\BufferInternet\BufferList.cs" />
+    <Compile Include="Paralela\Codigo\BufferMapaEsquematico\BufferMapaEsquematico.cs" />
+    <Compile Include="Paralela\Codigo\BufferMapaEsquematico\MapaEsquematicoInfo.cs" />
+    <Compile Include="Paralela\Codigo\BufferMapaEsquematico\SetorInfo.cs" />
+    <Compile Include="Paralela\Codigo\BufferSpecialEvent\BufferSpecialEvent.cs" />
+    <Compile Include="Paralela\Codigo\BufferSpecialEvent\BufferSpecialEventGerenciamento.cs" />
+    <Compile Include="Paralela\Codigo\Caixa.cs" />
+    <Compile Include="Paralela\Codigo\CaixaDB.cs" />
+    <Compile Include="Paralela\Codigo\CaixaParaConferencia.cs" />
+    <Compile Include="Paralela\Codigo\CaixaRelatorios.cs" />
+    <Compile Include="Paralela\Codigo\CampingSwu.cs" />
+    <Compile Include="Paralela\Codigo\CampingSwuDB.cs" />
+    <Compile Include="Paralela\Codigo\Canal.cs" />
+    <Compile Include="Paralela\Codigo\CanalDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalEvento.cs" />
+    <Compile Include="Paralela\Codigo\CanalEventoDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\CanalFormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalPacote.cs" />
+    <Compile Include="Paralela\Codigo\CanalPacoteDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalPreco.cs" />
+    <Compile Include="Paralela\Codigo\CanalPrecoDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalProduto.cs" />
+    <Compile Include="Paralela\Codigo\CanalProdutoDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalTipo.cs" />
+    <Compile Include="Paralela\Codigo\CanalTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\CanalValeIngresso.cs" />
+    <Compile Include="Paralela\Codigo\CanalValeIngressoDB.cs" />
+    <Compile Include="Paralela\Codigo\CancelamentoGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Cartao.cs" />
+    <Compile Include="Paralela\Codigo\CartaoDB.cs" />
+    <Compile Include="Paralela\Codigo\CEP.cs" />
+    <Compile Include="Paralela\Codigo\CEPBD.cs" />
+    <Compile Include="Paralela\Codigo\ChargeBack.cs" />
+    <Compile Include="Paralela\Codigo\ChargeBackDB.cs" />
+    <Compile Include="Paralela\Codigo\Cidade.cs" />
+    <Compile Include="Paralela\Codigo\CidadeBD.cs" />
+    <Compile Include="Paralela\Codigo\Cinema\Configuracao.cs" />
+    <Compile Include="Paralela\Codigo\Cinema\IntegracaoConsciencia.cs" />
+    <Compile Include="Paralela\Codigo\Cinema\SincronizarCinemas.cs" />
+    <Compile Include="Paralela\Codigo\Cliente.cs" />
+    <Compile Include="Paralela\Codigo\ClienteDB.cs" />
+    <Compile Include="Paralela\Codigo\ClienteEndereco.cs" />
+    <Compile Include="Paralela\Codigo\ClienteEnderecoDB.cs" />
+    <Compile Include="Paralela\Codigo\ClienteResposta.cs" />
+    <Compile Include="Paralela\Codigo\ClienteRespostaDB.cs" />
+    <Compile Include="Paralela\Codigo\CodigoBarra.cs" />
+    <Compile Include="Paralela\Codigo\CodigoBarraDB.cs" />
+    <Compile Include="Paralela\Codigo\CodigoPromo.cs" />
+    <Compile Include="Paralela\Codigo\CodigoPromoDB.cs" />
+    <Compile Include="Paralela\Codigo\Codigos de Barra\CodigoBarraEvento.cs" />
+    <Compile Include="Paralela\Codigo\Codigos de Barra\CodigoBarraEventoDB.cs" />
+    <Compile Include="Paralela\Codigo\Codigos de Barra\ListaBrancaCompleta.cs" />
+    <Compile Include="Paralela\Codigo\Codigos de Barra\ListaBrancaCompletaDB.cs" />
+    <Compile Include="Paralela\Codigo\Comanda.cs" />
+    <Compile Include="Paralela\Codigo\ComandaDB.cs" />
+    <Compile Include="Paralela\Codigo\ComandaItem.cs" />
+    <Compile Include="Paralela\Codigo\ComandaItemDB.cs" />
+    <Compile Include="Paralela\Codigo\CompraTemporaria.cs" />
+    <Compile Include="Paralela\Codigo\CompraTemporariaDB.cs" />
+    <Compile Include="Paralela\Codigo\Conciliacao.cs" />
+    <Compile Include="Paralela\Codigo\ConciliacaoDB.cs" />
+    <Compile Include="Paralela\Codigo\ConfigGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Configuracao.cs" />
+    <Compile Include="Paralela\Codigo\ContatoSite.cs" />
+    <Compile Include="Paralela\Codigo\ContatoSiteDB.cs" />
+    <Compile Include="Paralela\Codigo\ContatoTipo.cs" />
+    <Compile Include="Paralela\Codigo\ContatoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Contrato.cs" />
+    <Compile Include="Paralela\Codigo\ContratoDB.cs" />
+    <Compile Include="Paralela\Codigo\ContratoFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\ContratoFormaPagamentoBD.cs" />
+    <Compile Include="Paralela\Codigo\ContratoPapel.cs" />
+    <Compile Include="Paralela\Codigo\ContratoPapelDB.cs" />
+    <Compile Include="Paralela\Codigo\Cor.cs" />
+    <Compile Include="Paralela\Codigo\CorDB.cs" />
+    <Compile Include="Paralela\Codigo\CorreioCodigoRastreio.cs" />
+    <Compile Include="Paralela\Codigo\CorreioCodigoRastreioDB.cs" />
+    <Compile Include="Paralela\Codigo\CorreioStatusEntrega.cs" />
+    <Compile Include="Paralela\Codigo\CorreioStatusEntregaDB.cs" />
+    <Compile Include="Paralela\Codigo\Cortesia.cs" />
+    <Compile Include="Paralela\Codigo\CortesiaDB.cs" />
+    <Compile Include="Paralela\Codigo\Cota.cs" />
+    <Compile Include="Paralela\Codigo\CotaDB.cs" />
+    <Compile Include="Paralela\Codigo\CotaFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\CotaFormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\CotaItem.cs" />
+    <Compile Include="Paralela\Codigo\CotaItemControle.cs" />
+    <Compile Include="Paralela\Codigo\CotaItemControleDB.cs" />
+    <Compile Include="Paralela\Codigo\CotaItemDB.cs" />
+    <Compile Include="Paralela\Codigo\CotaItemFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\CotaItemFormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\Criptografia\Configuracao.cs" />
+    <Compile Include="Paralela\Codigo\Criptografia\Crypto.cs" />
+    <Compile Include="Paralela\Codigo\CupomDesconto.cs" />
+    <Compile Include="Paralela\Codigo\CupomDescontoDB.cs" />
+    <Compile Include="Paralela\Codigo\CupomDescontoLog.cs" />
+    <Compile Include="Paralela\Codigo\CupomDescontoLogDB.cs" />
+    <Compile Include="Paralela\Codigo\Despesas\Despesas.cs" />
+    <Compile Include="Paralela\Codigo\Despesas\DespesasDB.cs" />
+    <Compile Include="Paralela\Codigo\DiasSemana.cs" />
+    <Compile Include="Paralela\Codigo\DiasSemanaDB.cs" />
+    <Compile Include="Paralela\Codigo\DistribuirArea.cs" />
+    <Compile Include="Paralela\Codigo\DistribuirAreaDB.cs" />
+    <Compile Include="Paralela\Codigo\DonoIngresso.cs" />
+    <Compile Include="Paralela\Codigo\DonoIngressoDB.cs" />
+    <Compile Include="Paralela\Codigo\Empresa.cs" />
+    <Compile Include="Paralela\Codigo\EmpresaConta.cs" />
+    <Compile Include="Paralela\Codigo\EmpresaContaDB.cs" />
+    <Compile Include="Paralela\Codigo\EmpresaDB.cs" />
+    <Compile Include="Paralela\Codigo\EmpresaFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\EmpresaFormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\EnderecoTipo.cs" />
+    <Compile Include="Paralela\Codigo\EnderecoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\EntregaCelular.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaAgendaDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaAreaBlackListDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaAreaCepDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaAreaDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaControleDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EntregaPeriodoDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\DB\EventoEntregaControleDB.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\Entrega.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EntregaAgenda.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EntregaArea.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EntregaAreaBlackList.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EntregaAreaCep.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EntregaControle.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EntregaPeriodo.cs" />
+    <Compile Include="Paralela\Codigo\Entrega\Modulo\EventoEntregaControle.cs" />
+    <Compile Include="Paralela\Codigo\EnviaoSMS.cs" />
+    <Compile Include="Paralela\Codigo\EnviarEmail.cs" />
+    <Compile Include="Paralela\Codigo\EnviaSMS.cs" />
+    <Compile Include="Paralela\Codigo\Estado.cs" />
+    <Compile Include="Paralela\Codigo\EstadoBD.cs" />
+    <Compile Include="Paralela\Codigo\Estoque.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueAjuste.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueAjusteDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueAjusteItem.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueAjusteItemDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueAjusteMotivo.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueAjusteMotivoDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueItem.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueItemDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoquePedido.cs" />
+    <Compile Include="Paralela\Codigo\EstoquePedidoDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoquePedidoItem.cs" />
+    <Compile Include="Paralela\Codigo\EstoquePedidoItemDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueTransferencia.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueTransferenciaDB.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueTransferenciaItem.cs" />
+    <Compile Include="Paralela\Codigo\EstoqueTransferenciaItemDB.cs" />
+    <Compile Include="Paralela\Codigo\Evento.cs" />
+    <Compile Include="Paralela\Codigo\EventoBilheteriaTipos.cs" />
+    <Compile Include="Paralela\Codigo\EventoBilheteriaTiposDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoBordero.cs" />
+    <Compile Include="Paralela\Codigo\EventoBorderoDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoDespesa.cs" />
+    <Compile Include="Paralela\Codigo\EventoDespesaDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoSubtipo.cs" />
+    <Compile Include="Paralela\Codigo\EventoSubtipoDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoTaxaEntrega.cs" />
+    <Compile Include="Paralela\Codigo\EventoTaxaEntregaDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipo.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipoDestaque.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipoDestaqueDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipoPagamento.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipoPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\EventoTipos.cs" />
+    <Compile Include="Paralela\Codigo\EventoTiposDB.cs" />
+    <Compile Include="Paralela\Codigo\ExportarExcel.cs" />
+    <Compile Include="Paralela\Codigo\Facebook\ConfigurationFacebook.cs" />
+    <Compile Include="Paralela\Codigo\Facebook\faceBookUser.cs" />
+    <Compile Include="Paralela\Codigo\Faq.cs" />
+    <Compile Include="Paralela\Codigo\FaqDB.cs" />
+    <Compile Include="Paralela\Codigo\FaqTipo.cs" />
+    <Compile Include="Paralela\Codigo\FaqTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Feedback\Feedback.cs" />
+    <Compile Include="Paralela\Codigo\Feriado.cs" />
+    <Compile Include="Paralela\Codigo\FeriadoDB.cs" />
+    <Compile Include="Paralela\Codigo\Filme.cs" />
+    <Compile Include="Paralela\Codigo\FilmeDB.cs" />
+    <Compile Include="Paralela\Codigo\FonteNova\ServicoFonteNova.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoEstabelecimento.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoEstabelecimentoDB.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoEvento.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoEventoDB.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoTipo.cs" />
+    <Compile Include="Paralela\Codigo\FormaPagamentoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Fornecedor.cs" />
+    <Compile Include="Paralela\Codigo\FornecedorDB.cs" />
+    <Compile Include="Paralela\Codigo\FornecedorProduto.cs" />
+    <Compile Include="Paralela\Codigo\FornecedorProdutoDB.cs" />
+    <Compile Include="Paralela\Codigo\Garcon.cs" />
+    <Compile Include="Paralela\Codigo\GarconDB.cs" />
+    <Compile Include="Paralela\Codigo\Genericos.cs" />
+    <Compile Include="Paralela\Codigo\GeradorXML\ConfigGerador.cs" />
+    <Compile Include="Paralela\Codigo\GeradorXML\GeradorXMLBlackList.cs" />
+    <Compile Include="Paralela\Codigo\GeradorXML\GeradorXMLWhitList.cs" />
+    <Compile Include="Paralela\Codigo\GeradorXML\Logs.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\ConfiguracaoHammerHead.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\Enumeradores.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\EstruturaVenda.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\Exceptions.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\HammerHead.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\ProcessamentoTEF.cs" />
+    <Compile Include="Paralela\Codigo\HammerHead\SalvarLog.cs" />
+    <Compile Include="Paralela\Codigo\ImagemAtualizador.cs" />
+    <Compile Include="Paralela\Codigo\ImagensDownload.cs" />
+    <Compile Include="Paralela\Codigo\ImagensPath.cs" />
+    <Compile Include="Paralela\Codigo\ImagensUpload.cs" />
+    <Compile Include="Paralela\Codigo\ImpressaoGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\ImpressoEmLoteGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\ImpressorDaruma.cs" />
+    <Compile Include="Paralela\Codigo\Ingresso.cs" />
+    <Compile Include="Paralela\Codigo\IngressoCliente.cs" />
+    <Compile Include="Paralela\Codigo\IngressoClienteDB.cs" />
+    <Compile Include="Paralela\Codigo\IngressoCodigoBarra.cs" />
+    <Compile Include="Paralela\Codigo\IngressoCodigoBarraBD.cs" />
+    <Compile Include="Paralela\Codigo\IngressoDB.cs" />
+    <Compile Include="Paralela\Codigo\IngressoHistoricoGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\IngressoLog.cs" />
+    <Compile Include="Paralela\Codigo\IngressoLogDB.cs" />
+    <Compile Include="Paralela\Codigo\Itau.cs" />
+    <Compile Include="Paralela\Codigo\Johnny\Temporizador.cs" />
+    <Compile Include="Paralela\Codigo\LeituraCodigo.cs" />
+    <Compile Include="Paralela\Codigo\LeituraCodigoDB.cs" />
+    <Compile Include="Paralela\Codigo\ListaSetoresEmail.cs" />
+    <Compile Include="Paralela\Codigo\ListaSetoresEmailDB.cs" />
+    <Compile Include="Paralela\Codigo\Local.cs" />
+    <Compile Include="Paralela\Codigo\LocalDB.cs" />
+    <Compile Include="Paralela\Codigo\LocalHorario.cs" />
+    <Compile Include="Paralela\Codigo\LocalHorarioDB.cs" />
+    <Compile Include="Paralela\Codigo\LocalImagemMapa.cs" />
+    <Compile Include="Paralela\Codigo\LocalImagemMapaDB.cs" />
+    <Compile Include="Paralela\Codigo\Loja.cs" />
+    <Compile Include="Paralela\Codigo\LojaDB.cs" />
+    <Compile Include="Paralela\Codigo\Lugar.cs" />
+    <Compile Include="Paralela\Codigo\LugarDB.cs" />
+    <Compile Include="Paralela\Codigo\MapaEsquematico.cs" />
+    <Compile Include="Paralela\Codigo\MapaEsquematicoDB.cs" />
+    <Compile Include="Paralela\Codigo\MapaEsquematicoSetor.cs" />
+    <Compile Include="Paralela\Codigo\MapaEsquematicoSetorDB.cs" />
+    <Compile Include="Paralela\Codigo\MDLRequestResult.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\BufferMensagens.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\Mensagem.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\MensagemCanalTipo.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\MensagemCanalTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\MensagemDB.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\MensagemRegional.cs" />
+    <Compile Include="Paralela\Codigo\Mensagens\MensagemRegionalDB.cs" />
+    <Compile Include="Paralela\Codigo\ModuloLogistica\Enumeradores.cs" />
+    <Compile Include="Paralela\Codigo\ModuloLogistica\EstruturaLogistica.cs" />
+    <Compile Include="Paralela\Codigo\Mondial\DownloadApolice.cs" />
+    <Compile Include="Paralela\Codigo\Motivo.cs" />
+    <Compile Include="Paralela\Codigo\MotivoDB.cs" />
+    <Compile Include="Paralela\Codigo\NFSE.cs" />
+    <Compile Include="Paralela\Codigo\NomenclaturaPacote.cs" />
+    <Compile Include="Paralela\Codigo\NomenclaturaPacoteDB.cs" />
+    <Compile Include="Paralela\Codigo\NovaEntregaGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Obrigatoriedade.cs" />
+    <Compile Include="Paralela\Codigo\ObrigatoriedadeDB.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\CanalSerie.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\CanalSerieDB.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\FormaPagamentoSerie.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\FormaPagamentoSerieDB.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\Serie.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\SerieDB.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\SerieItem.cs" />
+    <Compile Include="Paralela\Codigo\Pacote Aberto\SerieItemDB.cs" />
+    <Compile Include="Paralela\Codigo\Pacote.cs" />
+    <Compile Include="Paralela\Codigo\PacoteDB.cs" />
+    <Compile Include="Paralela\Codigo\PacoteItem.cs" />
+    <Compile Include="Paralela\Codigo\PacoteItemDB.cs" />
+    <Compile Include="Paralela\Codigo\Pais.cs" />
+    <Compile Include="Paralela\Codigo\PaisDB.cs" />
+    <Compile Include="Paralela\Codigo\Parceiro.cs" />
+    <Compile Include="Paralela\Codigo\ParceiroDB.cs" />
+    <Compile Include="Paralela\Codigo\Parceiro\IntegracaoParceiro.cs" />
+    <Compile Include="Paralela\Codigo\ParcelamentoIR.cs" />
+    <Compile Include="Paralela\Codigo\ParcelamentoIRDB.cs" />
+    <Compile Include="Paralela\Codigo\Parceria.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\CancelaPayPal.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Enums\AbstractTypeSafeEnumeration.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Enums\Ack.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Enums\CurrencyCode.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Enums\LocaleCode.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\DoExpressCheckoutPaymentOperation.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\Enums\ChannelType.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\Enums\ItemCategory.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\Enums\LandingPage.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\Enums\SolutionType.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\ExpressCheckoutApi.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\GetExpressCheckoutDetailsOperation.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\PaymentAction.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\PaymentRequest.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\RefundTransaction.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\ExpressCheckout\SetExpressCheckoutOperation.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Nvp\NVP.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Nvp\RequestNVP.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\Nvp\ResponseNVP.cs" />
+    <Compile Include="Paralela\Codigo\PayPal\PayPalApiFactory.cs" />
+    <Compile Include="Paralela\Codigo\Perfil.cs" />
+    <Compile Include="Paralela\Codigo\PerfilCanal.cs" />
+    <Compile Include="Paralela\Codigo\PerfilCanalDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilEmpresa.cs" />
+    <Compile Include="Paralela\Codigo\PerfilEmpresaDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilEspecial.cs" />
+    <Compile Include="Paralela\Codigo\PerfilEspecialDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilEvento.cs" />
+    <Compile Include="Paralela\Codigo\PerfilEventoDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilLocal.cs" />
+    <Compile Include="Paralela\Codigo\PerfilLocalDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilRegional.cs" />
+    <Compile Include="Paralela\Codigo\PerfilRegionalDB.cs" />
+    <Compile Include="Paralela\Codigo\PerfilTipo.cs" />
+    <Compile Include="Paralela\Codigo\PerfilTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\PerspectivaLugar.cs" />
+    <Compile Include="Paralela\Codigo\PerspectivaLugarDB.cs" />
+    <Compile Include="Paralela\Codigo\Pontos de Venda do Evento\EventoPontoDeVenda.cs" />
+    <Compile Include="Paralela\Codigo\Pontos de Venda do Evento\EventoPontoDeVendaDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVenda.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaFormaPgto.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaFormaPgtoDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaHorario.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaHorarioDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaHorario_IngressoMais.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaHorario_IngressoMaisDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaXFormaPgto.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaXFormaPgtoDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaXFormaPgto_IngressoMais.cs" />
+    <Compile Include="Paralela\Codigo\PontoVendaXFormaPgto_IngressoMaisDB.cs" />
+    <Compile Include="Paralela\Codigo\PontoVenda_IngressoMais.cs" />
+    <Compile Include="Paralela\Codigo\PontoVenda_IngressoMaisDB.cs" />
+    <Compile Include="Paralela\Codigo\Preco.cs" />
+    <Compile Include="Paralela\Codigo\PrecoDB.cs" />
+    <Compile Include="Paralela\Codigo\PrecoExclusivo.cs" />
+    <Compile Include="Paralela\Codigo\PrecoExclusivoCodigo.cs" />
+    <Compile Include="Paralela\Codigo\PrecoExclusivoCodigoDB.cs" />
+    <Compile Include="Paralela\Codigo\PrecoExclusivoDB.cs" />
+    <Compile Include="Paralela\Codigo\PrecoTrocaGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\PreImpressoGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Produto.cs" />
+    <Compile Include="Paralela\Codigo\ProdutoCategoria.cs" />
+    <Compile Include="Paralela\Codigo\ProdutoCategoriaDB.cs" />
+    <Compile Include="Paralela\Codigo\ProdutoDB.cs" />
+    <Compile Include="Paralela\Codigo\Regiao.cs" />
+    <Compile Include="Paralela\Codigo\RegiaoDB.cs" />
+    <Compile Include="Paralela\Codigo\Regional.cs" />
+    <Compile Include="Paralela\Codigo\RegionalArea\RegionalArea.cs" />
+    <Compile Include="Paralela\Codigo\RegionalArea\RegionalAreaDB.cs" />
+    <Compile Include="Paralela\Codigo\RegionalDB.cs" />
+    <Compile Include="Paralela\Codigo\RegistrarEntregaGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\ReimpressaoGerenciador.cs" />
+    <Compile Include="Paralela\Codigo\Relatorio.cs" />
+    <Compile Include="Paralela\Codigo\RelatoriosSangria\RelatoriosSangria.cs" />
+    <Compile Include="Paralela\Codigo\Repasse.cs" />
+    <Compile Include="Paralela\Codigo\RepasseBD.cs" />
+    <Compile Include="Paralela\Codigo\ResourceManipulador.cs" />
+    <Compile Include="Paralela\Codigo\ResumoHardware.cs" />
+    <Compile Include="Paralela\Codigo\ResumoHardwareDB.cs" />
+    <Compile Include="Paralela\Codigo\RoboCanalEvento.cs" />
+    <Compile Include="Paralela\Codigo\RoboCanalEventoDB.cs" />
+    <Compile Include="Paralela\Codigo\RoboCanalPreco.cs" />
+    <Compile Include="Paralela\Codigo\RoboCanalPrecoDB.cs" />
+    <Compile Include="Paralela\Codigo\Sangria.cs" />
+    <Compile Include="Paralela\Codigo\SangriaDB.cs" />
+    <Compile Include="Paralela\Codigo\ServicePush\ServicePush.cs" />
+    <Compile Include="Paralela\Codigo\ServicePush\ServicePushBD.cs" />
+    <Compile Include="Paralela\Codigo\Servidor.cs" />
+    <Compile Include="Paralela\Codigo\Setor.cs" />
+    <Compile Include="Paralela\Codigo\SetorDB.cs" />
+    <Compile Include="Paralela\Codigo\Sitef.cs" />
+    <Compile Include="Paralela\Codigo\SituacaoProfissional.cs" />
+    <Compile Include="Paralela\Codigo\SituacaoProfissionalDB.cs" />
+    <Compile Include="Paralela\Codigo\Smiles\ConfiguracaoSmiles.cs" />
+    <Compile Include="Paralela\Codigo\Smiles\SmilesIntegration.cs" />
+    <Compile Include="Paralela\Codigo\SMS\APIHuman.cs" />
+    <Compile Include="Paralela\Codigo\SMS\ConfiguracaoSMS.cs" />
+    <Compile Include="Paralela\Codigo\SMS\EnviaSMS.cs" />
+    <Compile Include="Paralela\Codigo\SpecialEvents\GerenciamentoObjetos.cs" />
+    <Compile Include="Paralela\Codigo\SpecialEvents\ISpecialEvent.cs" />
+    <Compile Include="Paralela\Codigo\SpecialEvents\QRXObjetos.cs" />
+    <Compile Include="Paralela\Codigo\SpecialEvents\SpecialEvent.cs" />
+    <Compile Include="Paralela\Codigo\Sponsor.cs" />
+    <Compile Include="Paralela\Codigo\SubtipoEvento.cs" />
+    <Compile Include="Paralela\Codigo\SubtipoEventoDB.cs" />
+    <Compile Include="Paralela\Codigo\TaxaEntrega.cs" />
+    <Compile Include="Paralela\Codigo\TaxaEntregaDB.cs" />
+    <Compile Include="Paralela\Codigo\TaxaEntregaEventoPadrao.cs" />
+    <Compile Include="Paralela\Codigo\TaxaEntregaEventoPadraoDB.cs" />
+    <Compile Include="Paralela\Codigo\TaxaProcessamento.cs" />
+    <Compile Include="Paralela\Codigo\TaxaProcessamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\TEF.cs" />
+    <Compile Include="Paralela\Codigo\TelaManual.cs" />
+    <Compile Include="Paralela\Codigo\TelaManualDB.cs" />
+    <Compile Include="Paralela\Codigo\Temp_Partial_Class\Bilheteria.cs" />
+    <Compile Include="Paralela\Codigo\Temp_Partial_Class\BilheteriaPartial.cs" />
+    <Compile Include="Paralela\Codigo\Temp_Partial_Class\Cliente.cs" />
+    <Compile Include="Paralela\Codigo\Temp_Partial_Class\Ingresso.cs" />
+    <Compile Include="Paralela\Codigo\Tipo de Impressao do Evento\EventoLoja.cs" />
+    <Compile Include="Paralela\Codigo\Tipo de Impressao do Evento\EventoLojaDB.cs" />
+    <Compile Include="Paralela\Codigo\TrustAllCertificatePolicy.cs" />
+    <Compile Include="Paralela\Codigo\Usuario.cs" />
+    <Compile Include="Paralela\Codigo\UsuarioDB.cs" />
+    <Compile Include="Paralela\Codigo\Utilitario.cs" />
+    <Compile Include="Paralela\Codigo\ValeIngresso.cs" />
+    <Compile Include="Paralela\Codigo\ValeIngressoDB.cs" />
+    <Compile Include="Paralela\Codigo\ValeIngressoLog.cs" />
+    <Compile Include="Paralela\Codigo\ValeIngressoLogDB.cs" />
+    <Compile Include="Paralela\Codigo\ValeIngressoTipo.cs" />
+    <Compile Include="Paralela\Codigo\ValeIngressoTipoDB.cs" />
+    <Compile Include="Paralela\Codigo\Venda.cs" />
+    <Compile Include="Paralela\Codigo\VendaAeB.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteria.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoBoleto.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoBoletoDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoItem.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoItemDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoTEF.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaFormaPagamentoTEFDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaItem.cs" />
+    <Compile Include="Paralela\Codigo\VendaBilheteriaItemDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaDB.cs" />
+    <Compile Include="Paralela\Codigo\VendaPagamento.cs" />
+    <Compile Include="Paralela\Codigo\VendaPagamentoDB.cs" />
+    <Compile Include="Paralela\Codigo\Versao.cs" />
+    <Compile Include="Paralela\Codigo\VersaoDB.cs" />
+    <Compile Include="Paralela\Codigo\VoceSabia.cs" />
+    <Compile Include="Paralela\Codigo\VoceSabiaDB.cs" />
+    <Compile Include="Paralela\Codigo\VoucherCompra.cs" />
+    <Compile Include="Paralela\Codigo\Willcall\Gerenciador.cs" />
+    <Compile Include="Paralela\EmailBase.cs" />
+    <Compile Include="Paralela\Enums\Enumerators.cs" />
+    <Compile Include="Paralela\EnvioEmails\Log.cs" />
+    <Compile Include="Paralela\Resources\SchemaBuffer.Designer.cs">
+      <DependentUpon>SchemaBuffer.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Paralela\ServicoEmail.cs" />
+    <Compile Include="Paralela\Template.Designer.cs" />
+    <Compile Include="Paralela\Utils\Enums.cs" />
+    <Compile Include="Paralela\Utils\ZIP.cs" />
+    <Compile Include="Service References\Emails\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IRConfigs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PartnerGateway\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceNetIntegracao\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicoDados\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServicoEmail.cs" />
+    <Compile Include="Codigo\EventoDespesa.cs" />
+    <Compile Include="Codigo\DB\EventoDespesaDB.cs" />
+    <Compile Include="Codigo\EventoBordero.cs" />
+    <Compile Include="Codigo\DB\EventoBorderoDB.cs" />
+    <Compile Include="Codigo\Despesas\Despesas.cs" />
+    <Compile Include="Codigo\Despesas\DespesasDB.cs" />
+    <Compile Include="Codigo\DB\DistribuirAreaDB.cs" />
+    <Compile Include="Codigo\DistribuirArea.cs" />
+    <Compile Include="Codigo\DonoIngresso.cs" />
+    <Compile Include="Codigo\DB\DonoIngressoDB.cs" />
+    <Compile Include="Codigo\EventoTipoDestaque.cs" />
+    <Compile Include="Codigo\DB\EventoTipoDestaqueDB.cs" />
+    <Compile Include="Codigo\Filme.cs" />
+    <Compile Include="Codigo\DB\FilmeDB.cs" />
+    <Compile Include="Codigo\GeradorXML\GeradorXMLWhitList.cs" />
+    <Compile Include="Codigo\GeradorXML\GeradorXMLBlackList.cs" />
+    <Compile Include="Codigo\GeradorXML\Logs.cs" />
+    <Compile Include="Codigo\ListaSetoresEmail.cs" />
+    <Compile Include="Codigo\DB\ListaSetoresEmailDB.cs" />
+    <Compile Include="Codigo\Mondial\DownloadApolice.cs" />
+    <Compile Include="Codigo\ParcelamentoIR.cs" />
+    <Compile Include="Codigo\DB\ParcelamentoIRDB.cs" />
+    <Compile Include="Codigo\PontoVendaHorario_IngressoMais.cs" />
+    <Compile Include="Codigo\DB\PontoVendaHorario_IngressoMaisDB.cs" />
+    <Compile Include="Codigo\PontoVendaXFormaPgto_IngressoMais.cs" />
+    <Compile Include="Codigo\DB\PontoVendaXFormaPgto_IngressoMaisDB.cs" />
+    <Compile Include="Codigo\PontoVenda_IngressoMais.cs" />
+    <Compile Include="Codigo\DB\PontoVenda_IngressoMaisDB.cs" />
+    <Compile Include="Codigo\RelatoriosSangria\RelatoriosSangria.cs" />
+    <Compile Include="Codigo\DB\SangriaDB.cs" />
+    <Compile Include="Codigo\Sangria.cs" />
+    <Compile Include="Codigo\NovaEntregaGerenciador.cs" />
+    <Compile Include="Codigo\Parceiro\IntegracaoParceiro.cs" />
+    <Compile Include="Codigo\SpecialEvents\GerenciamentoObjetos.cs" />
+    <Compile Include="Codigo\TaxaProcessamento.cs" />
+    <Compile Include="Codigo\DB\TaxaProcessamentoDB.cs" />
+    <Compile Include="Codigo\VendaBilheteriaFormaPagamentoBoleto.cs" />
+    <Compile Include="Codigo\AutoSelecionadorGerenciador.cs" />
+    <Compile Include="Codigo\Banner.cs" />
+    <Compile Include="Codigo\DB\BannerDB.cs" />
+    <Compile Include="Codigo\Bilheteria.cs" />
+    <Compile Include="Codigo\BlackList.cs" />
+    <Compile Include="Codigo\DB\BlackListDB.cs" />
+    <Compile Include="Codigo\Bloqueio.cs" />
+    <Compile Include="Codigo\DB\BloqueioDB.cs" />
+    <Compile Include="Codigo\Bordero.cs" />
+    <Compile Include="Codigo\Brainiac\BuscaMenorEsforco.cs" />
+    <Compile Include="Codigo\Brainiac\Enumeradores.cs" />
+    <Compile Include="Codigo\Brainiac\Gerenciador.cs" />
+    <Compile Include="Codigo\Brainiac\Nome.cs" />
+    <Compile Include="Codigo\Brainiac\NomeLista.cs" />
+    <Compile Include="Codigo\Brainiac\Porcentagens.cs" />
+    <Compile Include="Codigo\Brainiac\Retorno.cs" />
+    <Compile Include="Codigo\BufferInternet\aSync.cs" />
+    <Compile Include="Codigo\BufferInternet\BufferInternet.cs" />
+    <Compile Include="Codigo\BufferInternet\BufferInternetObjetos.cs" />
+    <Compile Include="Codigo\BufferInternet\BufferList.cs" />
+    <Compile Include="Codigo\BufferMapaEsquematico\BufferMapaEsquematico.cs" />
+    <Compile Include="Codigo\BufferMapaEsquematico\MapaEsquematicoInfo.cs" />
+    <Compile Include="Codigo\BufferMapaEsquematico\SetorInfo.cs" />
+    <Compile Include="Codigo\BufferSpecialEvent\BufferSpecialEvent.cs" />
+    <Compile Include="Codigo\Caixa.cs" />
+    <Compile Include="Codigo\DB\CaixaDB.cs" />
+    <Compile Include="Codigo\CaixaParaConferencia.cs" />
+    <Compile Include="Codigo\CaixaRelatorios.cs" />
+    <Compile Include="Codigo\CampingSwu.cs" />
+    <Compile Include="Codigo\DB\CampingSwuDB.cs" />
+    <Compile Include="Codigo\Canal.cs" />
+    <Compile Include="Codigo\DB\CanalDB.cs" />
+    <Compile Include="Codigo\CanalEvento.cs" />
+    <Compile Include="Codigo\DB\CanalEventoDB.cs" />
+    <Compile Include="Codigo\CanalFormaPagamento.cs" />
+    <Compile Include="Codigo\DB\CanalFormaPagamentoDB.cs" />
+    <Compile Include="Codigo\CanalPacote.cs" />
+    <Compile Include="Codigo\DB\CanalPacoteDB.cs" />
+    <Compile Include="Codigo\CanalPreco.cs" />
+    <Compile Include="Codigo\DB\CanalPrecoDB.cs" />
+    <Compile Include="Codigo\CanalProduto.cs" />
+    <Compile Include="Codigo\DB\CanalProdutoDB.cs" />
+    <Compile Include="Codigo\CanalTipo.cs" />
+    <Compile Include="Codigo\DB\CanalTipoDB.cs" />
+    <Compile Include="Codigo\CanalValeIngresso.cs" />
+    <Compile Include="Codigo\DB\CanalValeIngressoDB.cs" />
+    <Compile Include="Codigo\Cancelamento\CancelamentoGerenciador.cs" />
+    <Compile Include="Codigo\Cartao.cs" />
+    <Compile Include="Codigo\DB\CartaoDB.cs" />
+    <Compile Include="Codigo\CEP.cs" />
+    <Compile Include="Codigo\CEPBD.cs" />
+    <Compile Include="Codigo\Cidade.cs" />
+    <Compile Include="Codigo\CidadeBD.cs" />
+    <Compile Include="Codigo\Cliente.cs" />
+    <Compile Include="Codigo\DB\ClienteDB.cs" />
+    <Compile Include="Codigo\ClienteEndereco.cs" />
+    <Compile Include="Codigo\DB\ClienteEnderecoDB.cs" />
+    <Compile Include="Codigo\ClienteResposta.cs" />
+    <Compile Include="Codigo\DB\ClienteRespostaDB.cs" />
+    <Compile Include="Codigo\CodigoBarra.cs" />
+    <Compile Include="Codigo\DB\CodigoBarraDB.cs" />
+    <Compile Include="Codigo\CodigoPromo.cs" />
+    <Compile Include="Codigo\DB\CodigoPromoDB.cs" />
+    <Compile Include="Codigo\Codigos de Barra\CodigoBarraEvento.cs" />
+    <Compile Include="Codigo\Codigos de Barra\CodigoBarraEventoDB.cs" />
+    <Compile Include="Codigo\Codigos de Barra\ListaBrancaCompleta.cs" />
+    <Compile Include="Codigo\Codigos de Barra\ListaBrancaCompletaDB.cs" />
+    <Compile Include="Codigo\Comanda.cs" />
+    <Compile Include="Codigo\DB\ComandaDB.cs" />
+    <Compile Include="Codigo\ComandaItem.cs" />
+    <Compile Include="Codigo\DB\ComandaItemDB.cs" />
+    <Compile Include="Codigo\CompraTemporaria.cs" />
+    <Compile Include="Codigo\DB\CompraTemporariaDB.cs" />
+    <Compile Include="Codigo\ConfigGerenciador.cs" />
+    <Compile Include="Codigo\Configuracao.cs" />
+    <Compile Include="Codigo\ContatoTipo.cs" />
+    <Compile Include="Codigo\DB\ContatoTipoDB.cs" />
+    <Compile Include="Codigo\Contrato.cs" />
+    <Compile Include="Codigo\DB\ContratoDB.cs" />
+    <Compile Include="Codigo\ContratoFormaPagamento.cs" />
+    <Compile Include="Codigo\ContratoFormaPagamentoBD.cs" />
+    <Compile Include="Codigo\ContratoPapel.cs" />
+    <Compile Include="Codigo\DB\ContratoPapelDB.cs" />
+    <Compile Include="Codigo\Cor.cs" />
+    <Compile Include="Codigo\DB\CorDB.cs" />
+    <Compile Include="Codigo\Cortesia.cs" />
+    <Compile Include="Codigo\DB\CortesiaDB.cs" />
+    <Compile Include="Codigo\Cota.cs" />
+    <Compile Include="Codigo\DB\CotaDB.cs" />
+    <Compile Include="Codigo\CotaFormaPagamento.cs" />
+    <Compile Include="Codigo\DB\CotaFormaPagamentoDB.cs" />
+    <Compile Include="Codigo\CotaItem.cs" />
+    <Compile Include="Codigo\CotaItemControle.cs" />
+    <Compile Include="Codigo\DB\CotaItemControleDB.cs" />
+    <Compile Include="Codigo\DB\CotaItemDB.cs" />
+    <Compile Include="Codigo\CotaItemFormaPagamento.cs" />
+    <Compile Include="Codigo\DB\SetorElementoMapaDB.cs" />
+    <Compile Include="Codigo\Criptografia\Configuracao.cs" />
+    <Compile Include="Codigo\Criptografia\Crypto.cs" />
+    <Compile Include="Codigo\CupomDesconto.cs" />
+    <Compile Include="Codigo\DB\CupomDescontoDB.cs" />
+    <Compile Include="Codigo\CupomDescontoLog.cs" />
+    <Compile Include="Codigo\DB\CupomDescontoLogDB.cs" />
+    <Compile Include="Codigo\DarumaFramework_DLL.cs" />
+    <Compile Include="Codigo\DiasSemana.cs" />
+    <Compile Include="Codigo\DB\DiasSemanaDB.cs" />
+    <Compile Include="Codigo\Empresa.cs" />
+    <Compile Include="Codigo\EmpresaConta.cs" />
+    <Compile Include="Codigo\DB\EmpresaContaDB.cs" />
+    <Compile Include="Codigo\DB\EmpresaDB.cs" />
+    <Compile Include="Codigo\EmpresaFormaPagamento.cs" />
+    <Compile Include="Codigo\DB\EmpresaFormaPagamentoDB.cs" />
+    <Compile Include="Codigo\EnderecoTipo.cs" />
+    <Compile Include="Codigo\DB\EnderecoTipoDB.cs" />
+    <Compile Include="Codigo\EntregaCelular.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaAgendaDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaAreaCepDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaAreaDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaControleDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EntregaPeriodoDB.cs" />
+    <Compile Include="Codigo\Entrega\DB\EventoEntregaControleDB.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\Entrega.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EntregaAgenda.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EntregaArea.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EntregaAreaCep.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EntregaControle.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EntregaPeriodo.cs" />
+    <Compile Include="Codigo\Entrega\Modulo\EventoEntregaControle.cs" />
+    <Compile Include="Codigo\EnviaoSMS.cs" />
+    <Compile Include="Codigo\EnviarEmail.cs" />
+    <Compile Include="Codigo\EnviaSMS.cs" />
+    <Compile Include="Codigo\Estado.cs" />
+    <Compile Include="Codigo\EstadoBD.cs" />
+    <Compile Include="Codigo\Estoque.cs" />
+    <Compile Include="Codigo\EstoqueAjuste.cs" />
+    <Compile Include="Codigo\DB\EstoqueAjusteDB.cs" />
+    <Compile Include="Codigo\EstoqueAjusteItem.cs" />
+    <Compile Include="Codigo\DB\EstoqueAjusteItemDB.cs" />
+    <Compile Include="Codigo\EstoqueAjusteMotivo.cs" />
+    <Compile Include="Codigo\DB\EstoqueAjusteMotivoDB.cs" />
+    <Compile Include="Codigo\DB\EstoqueDB.cs" />
+    <Compile Include="Codigo\EstoqueItem.cs" />
+    <Compile Include="Codigo\DB\EstoqueItemDB.cs" />
+    <Compile Include="Codigo\EstoquePedido.cs" />
+    <Compile Include="Codigo\DB\EstoquePedidoDB.cs" />
+    <Compile Include="Codigo\EstoquePedidoItem.cs" />
+    <Compile Include="Codigo\DB\EstoquePedidoItemDB.cs" />
+    <Compile Include="Codigo\EstoqueTransferencia.cs" />
+    <Compile Include="Codigo\DB\EstoqueTransferenciaDB.cs" />
+    <Compile Include="Codigo\EstoqueTransferenciaItem.cs" />
+    <Compile Include="Codigo\DB\EstoqueTransferenciaItemDB.cs" />
+    <Compile Include="Codigo\Evento.cs" />
+    <Compile Include="Codigo\EventoBilheteriaTipos.cs" />
+    <Compile Include="Codigo\DB\EventoBilheteriaTiposDB.cs" />
+    <Compile Include="Codigo\DB\EventoDB.cs" />
+    <Compile Include="Codigo\EventoSubtipo.cs" />
+    <Compile Include="Codigo\DB\EventoSubtipoDB.cs" />
+    <Compile Include="Codigo\EventoTaxaEntrega.cs" />
+    <Compile Include="Codigo\DB\EventoTaxaEntregaDB.cs" />
+    <Compile Include="Codigo\EventoTipo.cs" />
+    <Compile Include="Codigo\DB\EventoTipoDB.cs" />
+    <Compile Include="Codigo\EventoTipos.cs" />
+    <Compile Include="Codigo\DB\EventoTiposDB.cs" />
+    <Compile Include="Codigo\ExportarExcel.cs" />
+    <Compile Include="Codigo\Faq.cs" />
+    <Compile Include="Codigo\DB\FaqDB.cs" />
+    <Compile Include="Codigo\FaqTipo.cs" />
+    <Compile Include="Codigo\DB\FaqTipoDB.cs" />
+    <Compile Include="Codigo\Feedback\Feedback.cs" />
+    <Compile Include="Codigo\Feriado.cs" />
+    <Compile Include="Codigo\DB\FeriadoDB.cs" />
+    <Compile Include="Codigo\FormaPagamento.cs" />
+    <Compile Include="Codigo\FormaPagamentoEvento.cs" />
+    <Compile Include="Codigo\DB\FormaPagamentoEventoDB.cs" />
+    <Compile Include="Codigo\FormaPagamentoTipo.cs" />
+    <Compile Include="Codigo\DB\FormaPagamentoTipoDB.cs" />
+    <Compile Include="Codigo\Fornecedor.cs" />
+    <Compile Include="Codigo\DB\FornecedorDB.cs" />
+    <Compile Include="Codigo\FornecedorProduto.cs" />
+    <Compile Include="Codigo\DB\FornecedorProdutoDB.cs" />
+    <Compile Include="Codigo\Garcon.cs" />
+    <Compile Include="Codigo\DB\GarconDB.cs" />
+    <Compile Include="Codigo\Genericos.cs" />
+    <Compile Include="Codigo\HammerHead\ConfiguracaoHammerHead.cs" />
+    <Compile Include="Codigo\HammerHead\Enumeradores.cs" />
+    <Compile Include="Codigo\HammerHead\EstruturaVenda.cs" />
+    <Compile Include="Codigo\HammerHead\Exceptions.cs" />
+    <Compile Include="Codigo\HammerHead\HammerHead.cs" />
+    <Compile Include="Codigo\HammerHead\ProcessamentoTEF.cs" />
+    <Compile Include="Codigo\HammerHead\SalvarLog.cs" />
+    <Compile Include="Codigo\ImagemAtualizador.cs" />
+    <Compile Include="Codigo\ImagensDownload.cs" />
+    <Compile Include="Codigo\ImagensPath.cs" />
+    <Compile Include="Codigo\ImagensUpload.cs" />
+    <Compile Include="Codigo\ImpressaoGerenciador.cs" />
+    <Compile Include="Codigo\ImpressoEmLoteGerenciador.cs" />
+    <Compile Include="Codigo\ImpressorDaruma.cs" />
+    <Compile Include="Codigo\Ingresso.cs" />
+    <Compile Include="Codigo\IngressoCliente.cs" />
+    <Compile Include="Codigo\DB\IngressoClienteDB.cs" />
+    <Compile Include="Codigo\IngressoCodigoBarra.cs" />
+    <Compile Include="Codigo\IngressoCodigoBarraBD.cs" />
+    <Compile Include="Codigo\DB\IngressoDB.cs" />
+    <Compile Include="Codigo\IngressoHistoricoGerenciador.cs" />
+    <Compile Include="Codigo\IngressoLog.cs" />
+    <Compile Include="Codigo\DB\IngressoLogDB.cs" />
+    <Compile Include="Codigo\Itau.cs" />
+    <Compile Include="Codigo\Johnny\Temporizador.cs" />
+    <Compile Include="Codigo\LeituraCodigo.cs" />
+    <Compile Include="Codigo\DB\LeituraCodigoDB.cs" />
+    <Compile Include="Codigo\Local.cs" />
+    <Compile Include="Codigo\DB\LocalDB.cs" />
+    <Compile Include="Codigo\LocalHorario.cs" />
+    <Compile Include="Codigo\DB\LocalHorarioDB.cs" />
+    <Compile Include="Codigo\LocalImagemMapa.cs" />
+    <Compile Include="Codigo\DB\LocalImagemMapaDB.cs" />
+    <Compile Include="Codigo\Loja.cs" />
+    <Compile Include="Codigo\DB\LojaDB.cs" />
+    <Compile Include="Codigo\Lugar.cs" />
+    <Compile Include="Codigo\DB\LugarDB.cs" />
+    <Compile Include="Codigo\MapaEsquematico.cs" />
+    <Compile Include="Codigo\DB\MapaEsquematicoDB.cs" />
+    <Compile Include="Codigo\MapaEsquematicoSetor.cs" />
+    <Compile Include="Codigo\DB\MapaEsquematicoSetorDB.cs" />
+    <Compile Include="Codigo\Mensagens\BufferMensagens.cs" />
+    <Compile Include="Codigo\Mensagens\Mensagem.cs" />
+    <Compile Include="Codigo\Mensagens\MensagemCanalTipo.cs" />
+    <Compile Include="Codigo\Mensagens\MensagemCanalTipoDB.cs" />
+    <Compile Include="Codigo\Mensagens\MensagemDB.cs" />
+    <Compile Include="Codigo\Mensagens\MensagemRegional.cs" />
+    <Compile Include="Codigo\Mensagens\MensagemRegionalDB.cs" />
+    <Compile Include="Codigo\ModuloLogistica\Enumeradores.cs" />
+    <Compile Include="Codigo\ModuloLogistica\EstruturaLogistica.cs" />
+    <Compile Include="Codigo\Motivo.cs" />
+    <Compile Include="Codigo\DB\MotivoDB.cs" />
+    <Compile Include="Codigo\NFSE.cs" />
+    <Compile Include="Codigo\NomenclaturaPacote.cs" />
+    <Compile Include="Codigo\DB\NomenclaturaPacoteDB.cs" />
+    <Compile Include="Codigo\Obrigatoriedade.cs" />
+    <Compile Include="Codigo\DB\ObrigatoriedadeDB.cs" />
+    <Compile Include="Codigo\Pacote Aberto\CanalSerie.cs" />
+    <Compile Include="Codigo\Pacote Aberto\CanalSerieDB.cs" />
+    <Compile Include="Codigo\Pacote Aberto\FormaPagamentoSerie.cs" />
+    <Compile Include="Codigo\Pacote Aberto\FormaPagamentoSerieDB.cs" />
+    <Compile Include="Codigo\Pacote Aberto\Serie.cs" />
+    <Compile Include="Codigo\Pacote Aberto\SerieDB.cs" />
+    <Compile Include="Codigo\Pacote Aberto\SerieItem.cs" />
+    <Compile Include="Codigo\Pacote Aberto\SerieItemDB.cs" />
+    <Compile Include="Codigo\Pacote.cs" />
+    <Compile Include="Codigo\DB\PacoteDB.cs" />
+    <Compile Include="Codigo\PacoteItem.cs" />
+    <Compile Include="Codigo\DB\PacoteItemDB.cs" />
+    <Compile Include="Codigo\Pais.cs" />
+    <Compile Include="Codigo\DB\PaisDB.cs" />
+    <Compile Include="Codigo\Parceiro.cs" />
+    <Compile Include="Codigo\DB\ParceiroDB.cs" />
+    <Compile Include="Codigo\Parceria.cs" />
+    <Compile Include="Codigo\Perfil.cs" />
+    <Compile Include="Codigo\PerfilCanal.cs" />
+    <Compile Include="Codigo\DB\PerfilCanalDB.cs" />
+    <Compile Include="Codigo\DB\PerfilDB.cs" />
+    <Compile Include="Codigo\PerfilEmpresa.cs" />
+    <Compile Include="Codigo\DB\PerfilEmpresaDB.cs" />
+    <Compile Include="Codigo\PerfilEspecial.cs" />
+    <Compile Include="Codigo\DB\PerfilEspecialDB.cs" />
+    <Compile Include="Codigo\PerfilEvento.cs" />
+    <Compile Include="Codigo\DB\PerfilEventoDB.cs" />
+    <Compile Include="Codigo\PerfilLocal.cs" />
+    <Compile Include="Codigo\DB\PerfilLocalDB.cs" />
+    <Compile Include="Codigo\PerfilRegional.cs" />
+    <Compile Include="Codigo\DB\PerfilRegionalDB.cs" />
+    <Compile Include="Codigo\PerfilTipo.cs" />
+    <Compile Include="Codigo\DB\PerfilTipoDB.cs" />
+    <Compile Include="Codigo\PerspectivaLugar.cs" />
+    <Compile Include="Codigo\DB\PerspectivaLugarDB.cs" />
+    <Compile Include="Codigo\Pontos de Venda do Evento\EventoPontoDeVenda.cs" />
+    <Compile Include="Codigo\Pontos de Venda do Evento\EventoPontoDeVendaDB.cs" />
+    <Compile Include="Codigo\PontoVenda.cs" />
+    <Compile Include="Codigo\DB\PontoVendaDB.cs" />
+    <Compile Include="Codigo\PontoVendaFormaPgto.cs" />
+    <Compile Include="Codigo\DB\PontoVendaFormaPgtoDB.cs" />
+    <Compile Include="Codigo\PontoVendaHorario.cs" />
+    <Compile Include="Codigo\DB\PontoVendaHorarioDB.cs" />
+    <Compile Include="Codigo\PontoVendaXFormaPgto.cs" />
+    <Compile Include="Codigo\DB\PontoVendaXFormaPgtoDB.cs" />
+    <Compile Include="Codigo\Preco.cs" />
+    <Compile Include="Codigo\DB\PrecoDB.cs" />
+    <Compile Include="Codigo\PrecoExclusivo.cs" />
+    <Compile Include="Codigo\PrecoExclusivoCodigo.cs" />
+    <Compile Include="Codigo\DB\PrecoExclusivoCodigoDB.cs" />
+    <Compile Include="Codigo\DB\PrecoExclusivoDB.cs" />
+    <Compile Include="Codigo\PrecoTrocaGerenciador.cs" />
+    <Compile Include="Codigo\PreImpressoGerenciador.cs" />
+    <Compile Include="Codigo\Produto.cs" />
+    <Compile Include="Codigo\ProdutoCategoria.cs" />
+    <Compile Include="Codigo\DB\ProdutoCategoriaDB.cs" />
+    <Compile Include="Codigo\DB\ProdutoDB.cs" />
+    <Compile Include="Codigo\Regiao.cs" />
+    <Compile Include="Codigo\DB\RegiaoDB.cs" />
+    <Compile Include="Codigo\Regional.cs" />
+    <Compile Include="Codigo\RegionalArea\RegionalArea.cs" />
+    <Compile Include="Codigo\RegionalArea\RegionalAreaDB.cs" />
+    <Compile Include="Codigo\DB\RegionalDB.cs" />
+    <Compile Include="Codigo\RegistrarEntregaGerenciador.cs" />
+    <Compile Include="Codigo\ReimpressaoGerenciador.cs" />
+    <Compile Include="Codigo\Relatorio.cs" />
+    <Compile Include="Codigo\Repasse.cs" />
+    <Compile Include="Codigo\RepasseBD.cs" />
+    <Compile Include="Codigo\ResourceManipulador.cs" />
+    <Compile Include="Codigo\Servidor.cs" />
+    <Compile Include="Codigo\Setor.cs" />
+    <Compile Include="Codigo\DB\SetorDB.cs" />
+    <Compile Include="Codigo\Sitef.cs" />
+    <Compile Include="Codigo\SituacaoProfissional.cs" />
+    <Compile Include="Codigo\DB\SituacaoProfissionalDB.cs" />
+    <Compile Include="Codigo\SMS\APIHuman.cs" />
+    <Compile Include="Codigo\SMS\ConfiguracaoSMS.cs" />
+    <Compile Include="Codigo\SMS\EnviaSMS.cs" />
+    <Compile Include="Codigo\SpecialEvents\ISpecialEvent.cs" />
+    <Compile Include="Codigo\SpecialEvents\QRXObjetos.cs" />
+    <Compile Include="Codigo\SpecialEvents\SpecialEvent.cs" />
+    <Compile Include="Codigo\Sponsor.cs" />
+    <Compile Include="Codigo\SubtipoEvento.cs" />
+    <Compile Include="Codigo\DB\SubtipoEventoDB.cs" />
+    <Compile Include="Codigo\TaxaEntrega.cs" />
+    <Compile Include="Codigo\DB\TaxaEntregaDB.cs" />
+    <Compile Include="Codigo\TaxaEntregaEventoPadrao.cs" />
+    <Compile Include="Codigo\DB\TaxaEntregaEventoPadraoDB.cs" />
+    <Compile Include="Codigo\TEF.cs" />
+    <Compile Include="Codigo\TelaManual.cs" />
+    <Compile Include="Codigo\DB\TelaManualDB.cs" />
+    <Compile Include="Codigo\Temp_Partial_Class\Bilheteria.cs" />
+    <Compile Include="Codigo\Temp_Partial_Class\BilheteriaPartial.cs" />
+    <Compile Include="Codigo\Temp_Partial_Class\Cliente.cs" />
+    <Compile Include="Codigo\Temp_Partial_Class\Ingresso.cs" />
+    <Compile Include="Codigo\Tipo de Impressao do Evento\EventoLoja.cs" />
+    <Compile Include="Codigo\Tipo de Impressao do Evento\EventoLojaDB.cs" />
+    <Compile Include="Codigo\TrustAllCertificatePolicy.cs" />
+    <Compile Include="Codigo\Usuario.cs" />
+    <Compile Include="Codigo\DB\UsuarioDB.cs" />
+    <Compile Include="Codigo\Utilitario.cs" />
+    <Compile Include="Codigo\ValeIngresso.cs" />
+    <Compile Include="Codigo\DB\ValeIngressoDB.cs" />
+    <Compile Include="Codigo\ValeIngressoLog.cs" />
+    <Compile Include="Codigo\DB\ValeIngressoLogDB.cs" />
+    <Compile Include="Codigo\ValeIngressoTipo.cs" />
+    <Compile Include="Codigo\DB\ValeIngressoTipoDB.cs" />
+    <Compile Include="Codigo\Venda.cs" />
+    <Compile Include="Codigo\VendaAeB.cs" />
+    <Compile Include="Codigo\VendaBilheteria.cs" />
+    <Compile Include="Codigo\DB\VendaBilheteriaDB.cs" />
+    <Compile Include="Codigo\VendaBilheteriaFormaPagamento.cs" />
+    <Compile Include="Codigo\DB\VendaBilheteriaFormaPagamentoBoletoDB.cs" />
+    <Compile Include="Codigo\DB\VendaBilheteriaFormaPagamentoDB.cs" />
+    <Compile Include="Codigo\VendaBilheteriaFormaPagamentoItem.cs" />
+    <Compile Include="Codigo\DB\VendaBilheteriaFormaPagamentoItemDB.cs" />
+    <Compile Include="Codigo\VendaBilheteriaItem.cs" />
+    <Compile Include="Codigo\DB\VendaBilheteriaItemDB.cs" />
+    <Compile Include="Codigo\DB\VendaDB.cs" />
+    <Compile Include="Codigo\VendaPagamento.cs" />
+    <Compile Include="Codigo\DB\VendaPagamentoDB.cs" />
+    <Compile Include="Codigo\Versao.cs" />
+    <Compile Include="Codigo\DB\VersaoDB.cs" />
+    <Compile Include="Codigo\VoceSabia.cs" />
+    <Compile Include="Codigo\DB\VoceSabiaDB.cs" />
+    <Compile Include="Codigo\VoucherCompra.cs" />
+    <Compile Include="Codigo\Willcall\Gerenciador.cs" />
+    <Compile Include="Codigo\GeradorXML\ConfigGerador.cs" />
+    <Compile Include="EmailBase.cs" />
+    <Compile Include="Enums\Enumerators.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Arquivos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Arquivos.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\SchemaBuffer.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchemaBuffer.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Template.Designer.cs" />
+    <Compile Include="Utils\Enums.cs" />
+    <Compile Include="Utils\Extensions.cs" />
+    <Compile Include="Utils\FormatNumber.cs" />
+    <Compile Include="Utils\Querystring\Cryptography.cs" />
+    <Compile Include="Utils\Querystring\Extensions\ByteArray.cs" />
+    <Compile Include="Utils\Querystring\Extensions\Cryptography.cs" />
+    <Compile Include="Utils\Querystring\QueryString.cs" />
+    <Compile Include="Utils\SiteHelper.cs" />
+    <Compile Include="Utils\ZIP.cs" />
+    <Compile Include="Web References\FonteNovaService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\Mondial\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsAdyenSandbox\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsAdyen\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsCEP\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsCinema\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsPhones\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\wsTicket\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CodeSmith\XML2ModuloDBSemAuditoriaIdentity.cst" />
+    <None Include="CodeSmith\XML2Modulo.cst" />
+    <None Include="CodeSmith\XML2ModuloDB.cst" />
+    <None Include="CodeSmith\XML2ModuloDBSemAuditoria.cst" />
+    <None Include="CodeSmith\XML2ModuloWinForm.cst" />
+    <None Include="CodeSmith\XML2SQL.cst" />
+    <None Include="Metadados\_Regras.xml.dtd" />
+    <None Include="packages.config" />
+    <None Include="Paralela\CodeSmith\XML2Modulo.cst" />
+    <None Include="Paralela\CodeSmith\XML2ModuloDB.cst" />
+    <None Include="Paralela\CodeSmith\XML2ModuloDBSemAuditoria.cst" />
+    <None Include="Paralela\CodeSmith\XML2ModuloDBSemAuditoriaIdentity.cst" />
+    <None Include="Paralela\CodeSmith\XML2ModuloWinForm.cst" />
+    <None Include="Paralela\CodeSmith\XML2SQL.cst" />
+    <None Include="Paralela\Metadados\_Regras.xml.dtd" />
+    <None Include="Paralela\Resources\SchemaBuffer.xsc">
+      <DependentUpon>SchemaBuffer.xsd</DependentUpon>
+    </None>
+    <None Include="Paralela\Resources\SchemaBuffer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaBuffer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Paralela\Resources\SchemaBuffer.xss">
+      <DependentUpon>SchemaBuffer.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\DataSources\EstruturaCancelamento.EstruturaDevolucaoEstornoCC.datasource" />
+    <None Include="Properties\DataSources\EstruturaEstornoCartao.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\SchemaBuffer.xsc">
+      <DependentUpon>SchemaBuffer.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\SchemaBuffer.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SchemaBuffer.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\SchemaBuffer.xss">
+      <DependentUpon>SchemaBuffer.xsd</DependentUpon>
+    </None>
+    <None Include="Service References\Emails\IRLib.Emails.Retorno.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\Emails\MailService13.wsdl" />
+    <None Include="Service References\IRConfigs\ConfigService11.wsdl" />
+    <None Include="Service References\IRConfigs\IRLib.IRConfigs.ConfigObject.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PartnerGateway\Gol.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PartnerGateway\IRLib.PartnerGateway.Member.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PartnerGateway\IRLib.PartnerGateway.PaymentReceipt.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PartnerGateway\IRLib.PartnerGateway.ReceiptItemDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PartnerGateway\PartnerSmilesGatewayService.wsdl" />
+    <None Include="Service References\PartnerGateway\schemas.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\PartnerGateway\schemas1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceNetIntegracao\IngressoRapidoWSImplPort.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceNetIntegracao\IngressoRapidoWSImplService.wsdl" />
+    <None Include="Service References\ServicoDados\IRLib.ServicoDados.CarregarDadosVendaBilheteriaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicoDados\IRLib.ServicoDados.CarregarDadosVendaBilheteriaSemCacheResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ServicoDados\ServicoDados.wsdl" />
+    <None Include="Web References\FonteNovaService\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\FonteNovaService\ws.wsdl" />
+    <None Include="Web References\Mondial\MDLRequestResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mondial\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\Mondial\TicketProtector.wsdl" />
+    <None Include="Web References\wsAdyenSandbox\BalanceCheckResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyenSandbox\DirectDebitResponse1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyenSandbox\FundTransferResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyenSandbox\ModificationResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyenSandbox\Payment.wsdl" />
+    <None Include="Web References\wsAdyenSandbox\PaymentResult1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyenSandbox\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsAdyen\BalanceCheckResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyen\DirectDebitResponse.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyen\FundTransferResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyen\ModificationResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyen\Payment.wsdl" />
+    <None Include="Web References\wsAdyen\PaymentResult.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsAdyen\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsCEP\buscacep.wsdl" />
+    <None Include="Web References\wsCEP\EstruturaCEP.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCEP\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsCinema\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfGet_Cinema_Filmes.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfGet_Cinema_LugarProg.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfGet_Cinema_OnLine.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfGet_Cinema_Programacao.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfGet_Cinema_Salas.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfGet_Cinema_VagasProg.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfSet_Cinema_CancelaVenda.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfSet_Cinema_RealizaVenda.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\ReturnOfSet_Cinema_ReservaLugares.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsCinema\WSCinema.wsdl" />
+    <None Include="Web References\wsPhones\phoneModel1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsPhones\PhoneModelServiceImplService.wsdl" />
+    <None Include="Web References\wsPhones\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsTicket\Event.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsTicket\EventInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsTicket\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\wsTicket\TicketInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\wsTicket\TicketSendSystemServiceImplService.wsdl" />
+    <None Include="Web References\wsTicket\validationInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DLLS\AForge.dll" />
+    <Content Include="DLLS\AForge.Imaging.dll" />
+    <Content Include="DLLS\AForge.Math.dll" />
+    <Content Include="DLLS\AjaxControlToolkit.dll" />
+    <Content Include="DLLS\aspsnippets.facebookapi.dll" />
+    <Content Include="DLLS\Bokai.Barcodes.dll" />
+    <Content Include="DLLS\CTComponentes.dll" />
+    <Content Include="DLLS\CTLib.dll" />
+    <Content Include="DLLS\CTRelatorios.dll" />
+    <Content Include="DLLS\ExcelPackage.dll" />
+    <Content Include="DLLS\ExcelPackageXmlDocumentationFile.xml" />
+    <Content Include="DLLS\Google.Api.Maps.Service.dll" />
+    <Content Include="DLLS\Ionic.Zip.dll" />
+    <Content Include="DLLS\IRComponentes.dll" />
+    <Content Include="DLLS\IRFormFilho.dll" />
+    <Content Include="DLLS\itaucripto.dll" />
+    <Content Include="DLLS\itextsharp.dll" />
+    <Content Include="DLLS\Newtonsoft.Json.dll" />
+    <Content Include="DLLS\NPOI.dll" />
+    <Content Include="DLLS\nunit.framework.dll" />
+    <Content Include="DLLS\obout_AJAXPage.dll" />
+    <Content Include="DLLS\obout_ASPTreeView_2_NET.dll" />
+    <Content Include="DLLS\obout_Calendar2_Net.dll" />
+    <Content Include="DLLS\obout_ColorPicker.dll" />
+    <Content Include="DLLS\obout_Combobox_NET.dll" />
+    <Content Include="DLLS\obout_EasyMenu_Pro.dll" />
+    <Content Include="DLLS\obout_Editor.dll" />
+    <Content Include="DLLS\obout_FileUpload.dll" />
+    <Content Include="DLLS\obout_Flyout2_NET.dll" />
+    <Content Include="DLLS\obout_Grid_NET.dll" />
+    <Content Include="DLLS\obout_ImageZoom_NET.dll" />
+    <Content Include="DLLS\obout_Interface.dll" />
+    <Content Include="DLLS\obout_Scheduler_NET.dll" />
+    <Content Include="DLLS\obout_Show_Net.dll" />
+    <Content Include="DLLS\obout_SlideMenu3_Pro_NET.dll" />
+    <Content Include="DLLS\obout_Splitter2_Net.dll" />
+    <Content Include="DLLS\obout_SuperButton.dll" />
+    <Content Include="DLLS\obout_TextMenu.dll" />
+    <Content Include="DLLS\obout_Tree_DB_Net.dll" />
+    <Content Include="DLLS\obout_Window_NET.dll" />
+    <Content Include="DLLS\System.Net.Json.dll" />
+    <Content Include="DLLS\ThoughtWorks.QRCode.dll" />
+    <Content Include="DLLS\Twitterizer2.dll" />
+    <Content Include="DLLS\WebControlCaptcha.dll" />
+    <Content Include="DLLS\WebControlCaptcha.xml" />
+    <Content Include="Metadados\Agregados.xml" />
+    <Content Include="Metadados\AntiFraudeMotivo.xml" />
+    <Content Include="Metadados\AntiFraudeMotivoTipo.xml" />
+    <Content Include="Metadados\ApoliceMondial.xml" />
+    <Content Include="Metadados\Apresentacao.xml" />
+    <Content Include="Metadados\ApresentacaoSetor.xml" />
+    <Content Include="Metadados\Bomdinho\GerenciamentoIngressos.xml" />
+    <Content Include="Metadados\ChargeBack.xml" />
+    <Content Include="Metadados\ContatoSite.xml" />
+    <Content Include="Metadados\Conciliacao.xml" />
+    <Content Include="Metadados\ProjetoSac\EstornoAprovacaoItem.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\ProjetoSac\EstornoAprovacao.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\ProjetoSac\Arquivo.xml" />
+    <Content Include="Metadados\ProjetoSac\Escalonamento.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\ProjetoSac\ContaCorrenteIR.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\ProjetoSac\Deposito.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\ProjetoSac\Estorno.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\RoboCanalPreco.xml" />
+    <Content Include="Metadados\RoboCanalEvento.xml" />
+    <Content Include="Metadados\EventoTipoPagamento.xml" />
+    <Content Include="Metadados\CorreioCodigoRastreio.xml" />
+    <Content Include="Metadados\Correios\CorreioStatusEntrega.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\EntregaAreaBlackList.xml" />
+    <Content Include="Metadados\EventoBordero.xml" />
+    <Content Include="Metadados\Despesas.xml" />
+    <Content Include="Metadados\DistribuirArea.xml" />
+    <Content Include="Metadados\DonoIngresso.xml" />
+    <Content Include="Metadados\EventoTipoDestaque.xml" />
+    <Content Include="Metadados\Filme.xml" />
+    <Content Include="Metadados\FormaPagamentoEstabelecimento.xml" />
+    <Content Include="Metadados\ListaSetoresEmail.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\ResumoHardware.xml" />
+    <Content Include="Metadados\Sangria.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaAnoCliente.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaTipo.xml" />
+    <Content Include="Metadados\Assinatura\Assinatura.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaFormaPagamento.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaCanal.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaCliente.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaHistorico.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaAno.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaItem.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaAcaoProvisoria.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaAjuda.xml" />
+    <Content Include="Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngresso.xml" />
+    <Content Include="Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngressoComprovante.xml" />
+    <Content Include="Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngressoHistorico.xml" />
+    <Content Include="Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngressoCredito.xml" />
+    <Content Include="Metadados\Assinatura\AssinaturaDesmembramento.xml" />
+    <Content Include="Metadados\Assinatura\Emails\AssinaturaEmailEnviar.xml" />
+    <Content Include="Metadados\Assinatura\Emails\AssinaturaEmailModelo.xml" />
+    <Content Include="Metadados\Assinatura\Emails\AssinaturaEmailRemetente.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\Assinatura\MusicaCabeca\MusicaCabeca.xml" />
+    <Content Include="Metadados\Assinatura\MusicaCabeca\MusicaCabecaAgregado.xml" />
+    <Content Include="Metadados\Assinatura\MusicaCabeca\MusicaCabecaInscrito.xml" />
+    <Content Include="Metadados\Assinatura\PrecoTipo.xml" />
+    <Content Include="Metadados\Banner.xml" />
+    <Content Include="Metadados\BilheteriaDados.xml" />
+    <Content Include="Metadados\Bloqueio.xml" />
+    <Content Include="Metadados\Caixa.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\CampingSwu.xml" />
+    <Content Include="Metadados\Canal.xml" />
+    <Content Include="Metadados\CanalEvento.xml" />
+    <Content Include="Metadados\CanalFormaPagamento.xml" />
+    <Content Include="Metadados\CanalPacote.xml" />
+    <Content Include="Metadados\CanalPreco.xml" />
+    <Content Include="Metadados\CanalProduto.xml" />
+    <Content Include="Metadados\CanalSerie.xml" />
+    <Content Include="Metadados\CanalTipo.xml" />
+    <Content Include="Metadados\CanalValeIngresso.xml" />
+    <Content Include="Metadados\Cartao.xml" />
+    <Content Include="Metadados\CEP.xml" />
+    <Content Include="Metadados\Cidade.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\Cliente.xml" />
+    <Content Include="Metadados\ClienteEndereco.xml" />
+    <Content Include="Metadados\ClienteResposta.xml" />
+    <Content Include="Metadados\CodigoBarra.xml" />
+    <Content Include="Metadados\CodigoBarraEvento.xml" />
+    <Content Include="Metadados\CodigoPromo.xml" />
+    <Content Include="Metadados\Comanda.xml" />
+    <Content Include="Metadados\ComandaItem.xml" />
+    <Content Include="Metadados\CompraTemporaria.xml" />
+    <Content Include="Metadados\ContatoTipo.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\Contrato.xml" />
+    <Content Include="Metadados\ContratoFormaPagamento.xml" />
+    <Content Include="Metadados\ContratoPapel.xml" />
+    <Content Include="Metadados\ServicePush.xml" />
+    <Content Include="Metadados\TaxaProcessamento.xml" />
+    <Content Include="Metadados\VendaBilheteriaFormaPagamentoBoleto.xml" />
+    <Content Include="Metadados\ListaBrancaCompleta.xml" />
+    <Content Include="Metadados\EventoLoja.xml" />
+    <Content Include="Metadados\Cor.xml" />
+    <Content Include="Metadados\Cortesia.xml" />
+    <Content Include="Metadados\Cota.xml" />
+    <Content Include="Metadados\CotaFormaPagamento.xml" />
+    <Content Include="Metadados\CotaItem.xml" />
+    <Content Include="Metadados\CotaItemControle.xml" />
+    <Content Include="Metadados\CotaItemFormaPagamento.xml" />
+    <Content Include="Metadados\CupomDesconto.xml" />
+    <Content Include="Metadados\CupomDescontoLog.xml" />
+    <Content Include="Metadados\DiasSemana.xml" />
+    <Content Include="Metadados\Empresa.xml" />
+    <Content Include="Metadados\EmpresaConta.xml" />
+    <Content Include="Metadados\EmpresaFormaPagamento.xml" />
+    <Content Include="Metadados\EnderecoTipo.xml" />
+    <Content Include="Metadados\Entrega.xml" />
+    <Content Include="Metadados\EntregaAgenda.xml" />
+    <Content Include="Metadados\EntregaArea.xml" />
+    <Content Include="Metadados\EntregaAreaCep.xml" />
+    <Content Include="Metadados\EntregaCelular.xml" />
+    <Content Include="Metadados\EntregaControle.xml" />
+    <Content Include="Metadados\EntregaPeriodo.xml" />
+    <Content Include="Metadados\Estado.xml" />
+    <Content Include="Metadados\Estoque.xml" />
+    <Content Include="Metadados\EstoqueAjuste.xml" />
+    <Content Include="Metadados\EstoqueAjusteItem.xml" />
+    <Content Include="Metadados\EstoqueAjusteMotivo.xml" />
+    <Content Include="Metadados\EstoqueItem.xml" />
+    <Content Include="Metadados\EstoquePedido.xml" />
+    <Content Include="Metadados\EstoquePedidoItem.xml" />
+    <Content Include="Metadados\EstoqueTransferencia.xml" />
+    <Content Include="Metadados\EstoqueTransferenciaItem.xml" />
+    <Content Include="Metadados\Evento.xml" />
+    <Content Include="Metadados\EventoBilheteriaTipos.xml" />
+    <Content Include="Metadados\EventoDespesa.xml" />
+    <Content Include="Metadados\EventoEntregaControle.xml" />
+    <Content Include="Metadados\EventoPontoDeVenda.xml" />
+    <Content Include="Metadados\EventoSubtipo.xml" />
+    <Content Include="Metadados\EventoSubtipos.xml" />
+    <Content Include="Metadados\EventoTaxaEntrega.xml" />
+    <Content Include="Metadados\EventoTipo.xml" />
+    <Content Include="Metadados\EventoTipos.xml" />
+    <Content Include="Metadados\Faq.xml" />
+    <Content Include="Metadados\FaqTipo.xml" />
+    <Content Include="Metadados\Feriado.xml" />
+    <Content Include="Metadados\FormaPagamento.xml" />
+    <Content Include="Metadados\FormaPagamentoEvento.xml" />
+    <Content Include="Metadados\FormaPagamentoSerie.xml" />
+    <Content Include="Metadados\FormaPagamentoTipo.xml" />
+    <Content Include="Metadados\Fornecedor.xml" />
+    <Content Include="Metadados\FornecedorProduto.xml" />
+    <Content Include="Metadados\Garcon.xml" />
+    <Content Include="Metadados\Ingresso.xml" />
+    <Content Include="Metadados\IngressoCliente.xml" />
+    <Content Include="Metadados\IngressoCodigoBarra.xml" />
+    <Content Include="Metadados\IngressoLog.xml" />
+    <Content Include="Metadados\LeituraCodigo.xml" />
+    <Content Include="Metadados\Local.xml" />
+    <Content Include="Metadados\LocalHorario.xml" />
+    <Content Include="Metadados\LocalImagemMapa.xml" />
+    <Content Include="Metadados\Loja.xml" />
+    <Content Include="Metadados\Lugar.xml" />
+    <Content Include="Metadados\MapaEsquematico.xml" />
+    <Content Include="Metadados\MapaEsquematicoSetor.xml" />
+    <Content Include="Metadados\Mensagem.xml" />
+    <Content Include="Metadados\MensagemCanalTipo.xml" />
+    <Content Include="Metadados\MensagemRegional.xml" />
+    <Content Include="Metadados\Motivo.xml" />
+    <Content Include="Metadados\NomenclaturaPacote.xml" />
+    <Content Include="Metadados\Obrigatoriedade.xml" />
+    <Content Include="Metadados\Pacote.xml" />
+    <Content Include="Metadados\PacoteItem.xml" />
+    <Content Include="Metadados\Pais.xml" />
+    <Content Include="Metadados\Parceiro.xml" />
+    <Content Include="Metadados\Perfil.xml" />
+    <Content Include="Metadados\PerfilCanal.xml" />
+    <Content Include="Metadados\PerfilEmpresa.xml" />
+    <Content Include="Metadados\PerfilEspecial.xml" />
+    <Content Include="Metadados\PerfilEvento.xml" />
+    <Content Include="Metadados\PerfilLocal.xml" />
+    <Content Include="Metadados\PerfilRegional.xml" />
+    <Content Include="Metadados\PerfilTipo.xml" />
+    <Content Include="Metadados\PerspectivaLugar.xml" />
+    <Content Include="Metadados\PontoVenda.xml" />
+    <Content Include="Metadados\Preco.xml" />
+    <Content Include="Metadados\PrecoExclusivo.xml" />
+    <Content Include="Metadados\PrecoExclusivoCodigo.xml" />
+    <Content Include="Metadados\Produto.xml" />
+    <Content Include="Metadados\ProdutoCategoria.xml" />
+    <Content Include="Metadados\Regiao.xml" />
+    <Content Include="Metadados\Regional.xml" />
+    <Content Include="Metadados\RegionalArea.xml" />
+    <Content Include="Metadados\Repasse.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\Serie.xml" />
+    <Content Include="Metadados\SerieItem.xml" />
+    <Content Include="Metadados\Setor.xml" />
+    <Content Include="Metadados\SituacaoProfissional.xml" />
+    <Content Include="Metadados\TaxaEntrega.xml" />
+    <Content Include="Metadados\TaxaEntregaEventoPadrao.xml" />
+    <Content Include="Metadados\TelaManual.xml" />
+    <Content Include="Metadados\ValeIngresso.xml" />
+    <Content Include="Metadados\ValeIngressoLog.xml" />
+    <Content Include="Metadados\ValeIngressoTipo.xml" />
+    <Content Include="Metadados\Venda.xml" />
+    <Content Include="Metadados\VendaBilheteria.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Metadados\VendaBilheteriaFormaPagamento.xml" />
+    <Content Include="Metadados\VendaBilheteriaFormaPagamentoItem.xml" />
+    <Content Include="Metadados\VendaBilheteriaFormaPagamentoTEF.xml" />
+    <Content Include="Metadados\VendaBilheteriaItem.xml" />
+    <Content Include="Metadados\VendaPagamento.xml" />
+    <Content Include="Metadados\Versao.xml" />
+    <Content Include="Metadados\VoceSabia.xml" />
+    <Content Include="Metadados\_Modelo.xml" />
+    <Content Include="Paralela\Metadados\Agregados.xml" />
+    <Content Include="Paralela\Metadados\AntiFraudeMotivo.xml" />
+    <Content Include="Paralela\Metadados\AntiFraudeMotivoTipo.xml" />
+    <Content Include="Paralela\Metadados\ApoliceMondial.xml" />
+    <Content Include="Paralela\Metadados\Apresentacao.xml" />
+    <Content Include="Paralela\Metadados\ApresentacaoSetor.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\Assinatura.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaAcaoProvisoria.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaAjuda.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaAno.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaAnoCliente.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaCanal.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaCliente.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaDesmembramento.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaHistorico.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaItem.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\AssinaturaTipo.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngresso.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngressoComprovante.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngressoCredito.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\BancoIngresso\AssinaturaBancoIngressoHistorico.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\Emails\AssinaturaEmailEnviar.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\Emails\AssinaturaEmailModelo.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\Emails\AssinaturaEmailRemetente.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paralela\Metadados\Assinatura\MusicaCabeca\MusicaCabeca.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\MusicaCabeca\MusicaCabecaAgregado.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\MusicaCabeca\MusicaCabecaInscrito.xml" />
+    <Content Include="Paralela\Metadados\Assinatura\PrecoTipo.xml" />
+    <Content Include="Paralela\Metadados\Banner.xml" />
+    <Content Include="Paralela\Metadados\BilheteriaDados.xml" />
+    <Content Include="Paralela\Metadados\Bloqueio.xml" />
+    <Content Include="Paralela\Metadados\Bomdinho\GerenciamentoIngressos.xml" />
+    <Content Include="Paralela\Metadados\Caixa.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paralela\Metadados\CampingSwu.xml" />
+    <Content Include="Paralela\Metadados\Canal.xml" />
+    <Content Include="Paralela\Metadados\CanalEvento.xml" />
+    <Content Include="Paralela\Metadados\CanalFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\CanalPacote.xml" />
+    <Content Include="Paralela\Metadados\CanalPreco.xml" />
+    <Content Include="Paralela\Metadados\CanalProduto.xml" />
+    <Content Include="Paralela\Metadados\CanalSerie.xml" />
+    <Content Include="Paralela\Metadados\CanalTipo.xml" />
+    <Content Include="Paralela\Metadados\CanalValeIngresso.xml" />
+    <Content Include="Paralela\Metadados\Cartao.xml" />
+    <Content Include="Paralela\Metadados\CEP.xml" />
+    <Content Include="Paralela\Metadados\ChargeBack.xml" />
+    <Content Include="Paralela\Metadados\Cidade.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paralela\Metadados\Cliente.xml" />
+    <Content Include="Paralela\Metadados\ClienteEndereco.xml" />
+    <Content Include="Paralela\Metadados\ClienteResposta.xml" />
+    <Content Include="Paralela\Metadados\CodigoBarra.xml" />
+    <Content Include="Paralela\Metadados\CodigoBarraEvento.xml" />
+    <Content Include="Paralela\Metadados\CodigoPromo.xml" />
+    <Content Include="Paralela\Metadados\Comanda.xml" />
+    <Content Include="Paralela\Metadados\ComandaItem.xml" />
+    <Content Include="Paralela\Metadados\CompraTemporaria.xml" />
+    <Content Include="Paralela\Metadados\Conciliacao.xml" />
+    <Content Include="Paralela\Metadados\ContatoSite.xml" />
+    <Content Include="Paralela\Metadados\ContatoTipo.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paralela\Metadados\Contrato.xml" />
+    <Content Include="Paralela\Metadados\ContratoFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\ContratoPapel.xml" />
+    <Content Include="Paralela\Metadados\Cor.xml" />
+    <Content Include="Paralela\Metadados\CorreioCodigoRastreio.xml" />
+    <Content Include="Paralela\Metadados\Correios\CorreioStatusEntrega.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paralela\Metadados\Cortesia.xml" />
+    <Content Include="Paralela\Metadados\Cota.xml" />
+    <Content Include="Paralela\Metadados\CotaFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\CotaItem.xml" />
+    <Content Include="Paralela\Metadados\CotaItemControle.xml" />
+    <Content Include="Paralela\Metadados\CotaItemFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\CupomDesconto.xml" />
+    <Content Include="Paralela\Metadados\CupomDescontoLog.xml" />
+    <Content Include="Paralela\Metadados\Despesas.xml" />
+    <Content Include="Paralela\Metadados\DiasSemana.xml" />
+    <Content Include="Paralela\Metadados\DistribuirArea.xml" />
+    <Content Include="Paralela\Metadados\DonoIngresso.xml" />
+    <Content Include="Paralela\Metadados\Empresa.xml" />
+    <Content Include="Paralela\Metadados\EmpresaConta.xml" />
+    <Content Include="Paralela\Metadados\EmpresaFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\EnderecoTipo.xml" />
+    <Content Include="Paralela\Metadados\Entrega.xml" />
+    <Content Include="Paralela\Metadados\EntregaAgenda.xml" />
+    <Content Include="Paralela\Metadados\EntregaArea.xml" />
+    <Content Include="Paralela\Metadados\EntregaAreaBlackList.xml" />
+    <Content Include="Paralela\Metadados\EntregaAreaCep.xml" />
+    <Content Include="Paralela\Metadados\EntregaCelular.xml" />
+    <Content Include="Paralela\Metadados\EntregaControle.xml" />
+    <Content Include="Paralela\Metadados\EntregaPeriodo.xml" />
+    <Content Include="Paralela\Metadados\Estado.xml" />
+    <Content Include="Paralela\Metadados\Estoque.xml" />
+    <Content Include="Paralela\Metadados\EstoqueAjuste.xml" />
+    <Content Include="Paralela\Metadados\EstoqueAjusteItem.xml" />
+    <Content Include="Paralela\Metadados\EstoqueAjusteMotivo.xml" />
+    <Content Include="Paralela\Metadados\EstoqueItem.xml" />
+    <Content Include="Paralela\Metadados\EstoquePedido.xml" />
+    <Content Include="Paralela\Metadados\EstoquePedidoItem.xml" />
+    <Content Include="Paralela\Metadados\EstoqueTransferencia.xml" />
+    <Content Include="Paralela\Metadados\EstoqueTransferenciaItem.xml" />
+    <Content Include="Paralela\Metadados\Evento.xml" />
+    <Content Include="Paralela\Metadados\EventoBilheteriaTipos.xml" />
+    <Content Include="Paralela\Metadados\EventoBordero.xml" />
+    <Content Include="Paralela\Metadados\EventoDespesa.xml" />
+    <Content Include="Paralela\Metadados\EventoEntregaControle.xml" />
+    <Content Include="Paralela\Metadados\EventoLoja.xml" />
+    <Content Include="Paralela\Metadados\EventoPontoDeVenda.xml" />
+    <Content Include="Paralela\Metadados\EventoSubtipo.xml" />
+    <Content Include="Paralela\Metadados\EventoSubtipos.xml" />
+    <Content Include="Paralela\Metadados\EventoTaxaEntrega.xml" />
+    <Content Include="Paralela\Metadados\EventoTipo.xml" />
+    <Content Include="Paralela\Metadados\EventoTipoDestaque.xml" />
+    <Content Include="Paralela\Metadados\EventoTipoPagamento.xml" />
+    <Content Include="Paralela\Metadados\EventoTipos.xml" />
+    <Content Include="Paralela\Metadados\Faq.xml" />
+    <Content Include="Paralela\Metadados\FaqTipo.xml" />
+    <Content Include="Paralela\Metadados\Feriado.xml" />
+    <Content Include="Paralela\Metadados\Filme.xml" />
+    <Content Include="Paralela\Metadados\FormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\FormaPagamentoEstabelecimento.xml" />
+    <Content Include="Paralela\Metadados\FormaPagamentoEvento.xml" />
+    <Content Include="Paralela\Metadados\FormaPagamentoSerie.xml" />
+    <Content Include="Paralela\Metadados\FormaPagamentoTipo.xml" />
+    <Content Include="Paralela\Metadados\Fornecedor.xml" />
+    <Content Include="Paralela\Metadados\FornecedorProduto.xml" />
+    <Content Include="Paralela\Metadados\Garcon.xml" />
+    <Content Include="Paralela\Metadados\Ingresso.xml" />
+    <Content Include="Paralela\Metadados\IngressoCliente.xml" />
+    <Content Include="Paralela\Metadados\IngressoCodigoBarra.xml" />
+    <Content Include="Paralela\Metadados\IngressoLog.xml" />
+    <Content Include="Paralela\Metadados\LeituraCodigo.xml" />
+    <Content Include="Paralela\Metadados\ListaBrancaCompleta.xml" />
+    <Content Include="Paralela\Metadados\ListaSetoresEmail.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Paralela\Metadados\Local.xml" />
+    <Content Include="Paralela\Metadados\LocalHorario.xml" />
+    <Content Include="Paralela\Metadados\LocalImagemMapa.xml" />
+    <Content Include="Paralela\Metadados\Loja.xml" />
+    <Content Include="Paralela\Metadados\Lugar.xml" />
+    <Content Include="Paralela\Metadados\MapaEsquematico.xml" />
+    <Content Include="Paralela\Metadados\MapaEsquematicoSetor.xml" />
+    <Content Include="Paralela\Metadados\Mensagem.xml" />
+    <Content Include="Paralela\Metadados\MensagemCanalTipo.xml" />
+    <Content Include="Paralela\Metadados\MensagemRegional.xml" />
+    <Content Include="Paralela\Metadados\Motivo.xml" />
+    <Content Include="Paralela\Metadados\NomenclaturaPacote.xml" />
+    <Content Include="Paralela\Metadados\Obrigatoriedade.xml" />
+    <Content Include="Paralela\Metadados\Pacote.xml" />
+    <Content Include="Paralela\Metadados\PacoteItem.xml" />
+    <Content Include="Paralela\Metadados\Pais.xml" />
+    <Content Include="Paralela\Metadados\Parceiro.xml" />
+    <Content Include="Paralela\Metadados\Perfil.xml" />
+    <Content Include="Paralela\Metadados\PerfilCanal.xml" />
+    <Content Include="Paralela\Metadados\PerfilEmpresa.xml" />
+    <Content Include="Paralela\Metadados\PerfilEspecial.xml" />
+    <Content Include="Paralela\Metadados\PerfilEvento.xml" />
+    <Content Include="Paralela\Metadados\PerfilLocal.xml" />
+    <Content Include="Paralela\Metadados\PerfilRegional.xml" />
+    <Content Include="Paralela\Metadados\PerfilTipo.xml" />
+    <Content Include="Paralela\Metadados\PerspectivaLugar.xml" />
+    <Content Include="Paralela\Metadados\PontoVenda.xml" />
+    <Content Include="Paralela\Metadados\Preco.xml" />
+    <Content Include="Paralela\Metadados\PrecoExclusivo.xml" />
+    <Content Include="Paralela\Metadados\PrecoExclusivoCodigo.xml" />
+    <Content Include="Paralela\Metadados\Produto.xml" />
+    <Content Include="Paralela\Metadados\ProdutoCategoria.xml" />
+    <Content Include="Paralela\Metadados\Regiao.xml" />
+    <Content Include="Paralela\Metadados\Regional.xml" />
+    <Content Include="Paralela\Metadados\RegionalArea.xml" />
+    <Content Include="Paralela\Metadados\Repasse.xml" />
+    <Content Include="Paralela\Metadados\ResumoHardware.xml" />
+    <Content Include="Paralela\Metadados\RoboCanalEvento.xml" />
+    <Content Include="Paralela\Metadados\RoboCanalPreco.xml" />
+    <Content Include="Paralela\Metadados\Sangria.xml" />
+    <Content Include="Paralela\Metadados\Serie.xml" />
+    <Content Include="Paralela\Metadados\SerieItem.xml" />
+    <Content Include="Paralela\Metadados\ServicePush.xml" />
+    <Content Include="Paralela\Metadados\Setor.xml" />
+    <Content Include="Paralela\Metadados\SituacaoProfissional.xml" />
+    <Content Include="Paralela\Metadados\TaxaEntrega.xml" />
+    <Content Include="Paralela\Metadados\TaxaEntregaEventoPadrao.xml" />
+    <Content Include="Paralela\Metadados\TaxaProcessamento.xml" />
+    <Content Include="Paralela\Metadados\TelaManual.xml" />
+    <Content Include="Paralela\Metadados\ValeIngresso.xml" />
+    <Content Include="Paralela\Metadados\ValeIngressoLog.xml" />
+    <Content Include="Paralela\Metadados\ValeIngressoTipo.xml" />
+    <Content Include="Paralela\Metadados\Venda.xml" />
+    <Content Include="Paralela\Metadados\VendaBilheteria.xml" />
+    <Content Include="Paralela\Metadados\VendaBilheteriaFormaPagamento.xml" />
+    <Content Include="Paralela\Metadados\VendaBilheteriaFormaPagamentoBoleto.xml" />
+    <Content Include="Paralela\Metadados\VendaBilheteriaFormaPagamentoItem.xml" />
+    <Content Include="Paralela\Metadados\VendaBilheteriaFormaPagamentoTEF.xml" />
+    <Content Include="Paralela\Metadados\VendaBilheteriaItem.xml" />
+    <Content Include="Paralela\Metadados\VendaPagamento.xml" />
+    <Content Include="Paralela\Metadados\Versao.xml" />
+    <Content Include="Paralela\Metadados\VoceSabia.xml" />
+    <Content Include="Paralela\Metadados\_Modelo.xml" />
+    <Content Include="Paralela\Resources\Acompanhamento.htm" />
+    <Content Include="Paralela\Resources\ArquivosBaixarTEF.htm" />
+    <Content Include="Paralela\Resources\ArquivosBaixarTEF.txt" />
+    <Content Include="Paralela\Resources\AtivaCadastro.htm" />
+    <Content Include="Paralela\Resources\CancelamentoMotivo1.htm" />
+    <Content Include="Paralela\Resources\EmailConfirmacaoDeCompra.htm" />
+    <Content Include="Paralela\Resources\EmailConfirmacaoDeCompraVir.htm" />
+    <Content Include="Paralela\Resources\EnviaSenha.htm" />
+    <Content Include="Paralela\Resources\EnvioCancelamento.htm" />
+    <Content Include="Paralela\Resources\ErroCaptura.htm" />
+    <Content Include="Paralela\Resources\ErroReserva.htm" />
+    <Content Include="Paralela\Resources\ExcelExportFile.htm" />
+    <Content Include="Paralela\Resources\Feedback.htm" />
+    <Content Include="Paralela\Resources\FormContato.htm" />
+    <Content Include="Paralela\Resources\Inconsistencia.htm" />
+    <Content Include="Paralela\Resources\InconsistenciaCancelamento.htm" />
+    <Content Include="Paralela\Resources\Indicacao.htm" />
+    <Content Include="Paralela\Resources\novoVendaAprovada.html" />
+    <Content Include="Paralela\Resources\PedidoAprovado.htm" />
+    <Content Include="Paralela\Resources\PedidoCancelamento.htm" />
+    <Content Include="Paralela\Resources\PedidoCancelamento_cliente.htm" />
+    <Content Include="Paralela\Resources\PedidoCancelamento_documentacao.htm" />
+    <Content Include="Paralela\Resources\PedidoCancelamento_produtor.htm" />
+    <Content Include="Paralela\Resources\PedidoImpressoRetirada.htm" />
+    <Content Include="Paralela\Resources\PedidoImpressoTransito.htm" />
+    <Content Include="Paralela\Resources\Registration.htm" />
+    <Content Include="Paralela\Resources\Schema.txt" />
+    <Content Include="Paralela\Resources\SolicitacaoCancelamento.htm" />
+    <Content Include="Paralela\Resources\VendaAprovada.htm" />
+    <Content Include="Paralela\Resources\VendaAprovadaRisco.htm" />
+    <Content Include="Paralela\Resources\VendaAprovadaRiscoSistema.htm" />
+    <Content Include="Paralela\Resources\VendaAprovadaSistema.htm" />
+    <Content Include="Paralela\Resources\VendaCancelada.htm" />
+    <Content Include="Paralela\Resources\VendaProcessando.htm" />
+    <Content Include="Paralela\Resources\VendaVirAprovadaRiscoSistema.htm" />
+    <Content Include="Paralela\Resources\VendaVirAprovadaSistema.htm" />
+    <Content Include="Resources\Acompanhamento.htm" />
+    <Content Include="Resources\ArquivosBaixarTEF.htm" />
+    <Content Include="Resources\ArquivosBaixarTEF.txt" />
+    <Content Include="Resources\AtivaCadastro.htm" />
+    <Content Include="Resources\CancelamentoMotivo1.htm" />
+    <Content Include="Resources\EmailConfirmacaoDeCompra.htm" />
+    <Content Include="Resources\EmailConfirmacaoDeCompraVir.htm" />
+    <Content Include="Resources\EnviaSenha.htm" />
+    <Content Include="Resources\EnvioCancelamento.htm" />
+    <Content Include="Resources\ErroCaptura.htm" />
+    <Content Include="Resources\ErroReserva.htm" />
+    <Content Include="Resources\ExcelExportFile.htm" />
+    <Content Include="Resources\Feedback.htm" />
+    <Content Include="Resources\FormContato.htm" />
+    <Content Include="Resources\Inconsistencia.htm" />
+    <Content Include="Resources\InconsistenciaCancelamento.htm" />
+    <Content Include="Resources\Indicacao.htm" />
+    <Content Include="Resources\novoVendaAprovada.html" />
+    <Content Include="Resources\PedidoAprovado.htm" />
+    <Content Include="Resources\PedidoCancelamento.htm" />
+    <Content Include="Resources\PedidoCancelamento_cliente.htm" />
+    <Content Include="Resources\PedidoCancelamento_documentacao.htm" />
+    <Content Include="Resources\PedidoCancelamento_produtor.htm" />
+    <Content Include="Resources\PedidoImpressoRetirada.htm" />
+    <Content Include="Resources\PedidoImpressoTransito.htm" />
+    <Content Include="Resources\Registration.htm" />
+    <Content Include="Resources\Schema.txt" />
+    <Content Include="Resources\SolicitacaoCancelamento.htm" />
+    <Content Include="Resources\VendaAprovada.htm" />
+    <Content Include="Resources\VendaAprovadaRisco.htm" />
+    <Content Include="Resources\VendaAprovadaRiscoSistema.htm" />
+    <Content Include="Resources\VendaAprovadaSistema.htm" />
+    <Content Include="Resources\VendaCancelada.htm" />
+    <Content Include="Resources\VendaProcessando.htm" />
+    <Content Include="Resources\VendaVirAprovadaRiscoSistema.htm" />
+    <Content Include="Resources\VendaVirAprovadaSistema.htm" />
+    <None Include="Service References\IRConfigs\ConfigService1.disco" />
+    <Content Include="WinSCP.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Service References\IRConfigs\ConfigService1.disco" />
+    <None Include="Service References\Emails\MailService1.disco" />
+    <None Include="Service References\Emails\MailService1.disco" />
+    <None Include="Service References\Emails\MailService1.disco" />
+    <None Include="Service References\ServicoDados\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServicoDados\configuration.svcinfo" />
+    <None Include="Service References\ServicoDados\configuration91.svcinfo" />
+    <None Include="Service References\ServiceNetIntegracao\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceNetIntegracao\configuration.svcinfo" />
+    <None Include="Service References\ServiceNetIntegracao\configuration91.svcinfo" />
+    <None Include="Service References\IRConfigs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\IRConfigs\configuration.svcinfo" />
+    <None Include="Service References\IRConfigs\configuration91.svcinfo" />
+    <None Include="Service References\IRConfigs\ConfigService.disco" />
+    <None Include="Service References\Emails\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\Emails\configuration.svcinfo" />
+    <None Include="Service References\Emails\configuration91.svcinfo" />
+    <None Include="Service References\PartnerGateway\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PartnerGateway\configuration.svcinfo" />
+    <None Include="Service References\PartnerGateway\configuration91.svcinfo" />
+    <None Include="Web References\Mondial\ReturnCancelObject1.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\Mondial\TicketProtector.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.72.6.8/Circus/ws.php%3fclass=WSBase&amp;wsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\FonteNovaService\</RelPath>
+      <UpdateFromURL>http://10.72.6.8/Circus/ws.php%3fclass=WSBase&amp;wsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_FonteNovaService_WSBase</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://187.84.229.3:7003/WSCinema.ws%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsCinema\</RelPath>
+      <UpdateFromURL>http://187.84.229.3:7003/WSCinema.ws%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_wsCinema_WSCinema</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://edeploy.mpocket.com.br:8080/TicketSendSystem/Services/TicketSendSystemService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsTicket\</RelPath>
+      <UpdateFromURL>http://edeploy.mpocket.com.br:8080/TicketSendSystem/Services/TicketSendSystemService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_wsTicket_TicketSendSystemServiceImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://mpocket.com.br:8080/TicketSender/Services/PhoneModelService%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsPhones\</RelPath>
+      <UpdateFromURL>http://mpocket.com.br:8080/TicketSender/Services/PhoneModelService%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_wsPhones1_PhoneModelServiceImplService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://pal-live.adyen.com/pal/servlet/soap/Payment%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsAdyen\</RelPath>
+      <UpdateFromURL>https://pal-live.adyen.com/pal/servlet/soap/Payment%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_wsAdyen_Payment</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.ingressorapido.com.br/wscep/buscacep.asmx%3fWSDL">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsCEP\</RelPath>
+      <UpdateFromURL>https://www.ingressorapido.com.br/wscep/buscacep.asmx%3fWSDL</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_wsCEP_BuscaCEP</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://www.mondialticket.com.br/ticketprotectorwebservice/TicketProtector.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\Mondial\</RelPath>
+      <UpdateFromURL>https://www.mondialticket.com.br/ticketprotectorwebservice/TicketProtector.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_Mondial_TicketProtectorWebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="https://pal-test.adyen.com/pal/servlet/soap/Payment%3fwsdl">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\wsAdyenSandbox\</RelPath>
+      <UpdateFromURL>https://pal-test.adyen.com/pal/servlet/soap/Payment%3fwsdl</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>IRLib_wsAdyenSandBox_Payment</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Arquivos.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Arquivos.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Template.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\Emails\" />
+    <WCFMetadataStorage Include="Service References\IRConfigs\" />
+    <WCFMetadataStorage Include="Service References\PartnerGateway\" />
+    <WCFMetadataStorage Include="Service References\ServiceNetIntegracao\" />
+    <WCFMetadataStorage Include="Service References\ServicoDados\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\IRAPI.SDK\IRAPI.SDK.csproj">
+      <Project>{a8abd319-d271-470a-8ee4-e3d8ca5f79b3}</Project>
+      <Name>IRAPI.SDK</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IRCore.Util\IRCore.Util.csproj">
+      <Project>{98388fcf-f690-4576-b6cb-e054f4a72097}</Project>
+      <Name>IRCore.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CTLib\CTLib.csproj">
+      <Project>{d6c8573f-35c1-4d4f-b361-e917c52b361d}</Project>
+      <Name>CTLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

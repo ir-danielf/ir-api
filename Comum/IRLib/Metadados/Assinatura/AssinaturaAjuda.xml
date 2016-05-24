@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaAjuda">
+  <Propriedades>
+    <Propriedade Nome="NomePagina"	 Tipo="texto"	  Tamanho="50" Nulo="false"	Acesso="LE" />
+    <Propriedade Nome="Conteudo"      Tipo="texto"	 Tamanho="2000" Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaTipoID"      Tipo="int"	  Nulo="false"	Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EstornoAprovacao">
+  <Propriedades>
+    <Propriedade Nome="Entrega"  Tipo="decimal"  Nulo="False" Acesso="LE" />
+    <Propriedade Nome="EstornoID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

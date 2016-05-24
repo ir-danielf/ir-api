@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Estoque">
+    <Propriedades>
+        <Propriedade	Nome="LocalID"		Tipo="int"					Nulo="True"		Acesso="LE"/>
+        <Propriedade	Nome="Nome"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade	Nome="Descricao"	Tipo="memo"						Nulo="True"		Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Itens"	Tipo="DataTable"><!-- Fabio -->
+			Obter itens deste estoque
+    	</Metodo>
+        <Metodo Nome="Produtos"	Tipo="DataTable"><!-- Fabio -->
+			Obter produtos deste estoque
+    	</Metodo>    	
+    </Metodos>
+</Classe>

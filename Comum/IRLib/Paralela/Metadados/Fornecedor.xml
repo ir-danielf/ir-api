@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Fornecedor">
+    <Propriedades>
+        <Propriedade Nome="EmpresaID"		Tipo="int"					Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Nome"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="ContatoNome"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="ContatoCargo"	Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Endereco"		Tipo="texto"	Tamanho="70"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Cidade"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Estado"			Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="CEP"				Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="DDDTelefone"		Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Telefone"		Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="DDDFax"			Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Fax"				Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Email"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Website"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Obs"				Tipo="memo"						Nulo="True"		Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Produtos"	Tipo="DataTable"><!-- Fabio -->
+    		Obter os produtos desse fornecedor
+    	</Metodo>
+    </Metodos>
+</Classe>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://webservice.ticketsender.edeploy/" name="PhoneModelServiceImplService" targetNamespace="http://webservice.ticketsender.edeploy/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://webservice.ticketsender.edeploy/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="getExceptionModels" type="tns:getExceptionModels" />
+      <xs:element name="getExceptionModelsResponse" type="tns:getExceptionModelsResponse" />
+      <xs:element name="getExceptionModelsWithPicture" type="tns:getExceptionModelsWithPicture" />
+      <xs:element name="getExceptionModelsWithPictureResponse" type="tns:getExceptionModelsWithPictureResponse" />
+      <xs:element name="getModels" type="tns:getModels" />
+      <xs:element name="getModelsResponse" type="tns:getModelsResponse" />
+      <xs:element name="getModelsWithPicture" type="tns:getModelsWithPicture" />
+      <xs:element name="getModelsWithPictureResponse" type="tns:getModelsWithPictureResponse" />
+      <xs:element name="getVendors" type="tns:getVendors" />
+      <xs:element name="getVendorsResponse" type="tns:getVendorsResponse" />
+      <xs:complexType name="getExceptionModels">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:modelsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="modelsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="companyId" type="xs:int" />
+          <xs:element minOccurs="0" name="username" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+          <xs:element minOccurs="0" name="vendorName" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getExceptionModelsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="response" type="tns:phoneModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="phoneModel">
+        <xs:sequence>
+          <xs:element name="id" type="xs:int" />
+          <xs:element minOccurs="0" name="imageURL" type="xs:string" />
+          <xs:element minOccurs="0" name="name" type="xs:string" />
+          <xs:element minOccurs="0" name="thumbURL" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getModels">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:modelsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getModelsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="response" type="tns:phoneModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getModelsWithPicture">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:modelsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getModelsWithPictureResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="response" type="tns:phoneModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getVendors">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:vendorsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="vendorsRequest">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="companyId" type="xs:int" />
+          <xs:element minOccurs="0" name="username" type="xs:string" />
+          <xs:element minOccurs="0" name="password" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getVendorsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="response" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getExceptionModelsWithPicture">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="request" type="tns:modelsRequest" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getExceptionModelsWithPictureResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="response" type="tns:phoneModel" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="AdminUserException" type="tns:AdminUserException" />
+      <xs:complexType name="AdminUserException">
+        <xs:sequence>
+          <xs:element name="transactionId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="InternalErrorException" type="tns:InternalErrorException" />
+      <xs:complexType name="InternalErrorException">
+        <xs:sequence>
+          <xs:element name="transactionId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="WrongRequestException" type="tns:WrongRequestException" />
+      <xs:complexType name="WrongRequestException">
+        <xs:sequence>
+          <xs:element name="transactionId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getExceptionModelsWithPicture">
+    <wsdl:part name="parameters" element="tns:getExceptionModelsWithPicture" />
+  </wsdl:message>
+  <wsdl:message name="getExceptionModelsResponse">
+    <wsdl:part name="parameters" element="tns:getExceptionModelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getModels">
+    <wsdl:part name="parameters" element="tns:getModels" />
+  </wsdl:message>
+  <wsdl:message name="InternalErrorException">
+    <wsdl:part name="InternalErrorException" element="tns:InternalErrorException" />
+  </wsdl:message>
+  <wsdl:message name="getModelsResponse">
+    <wsdl:part name="parameters" element="tns:getModelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getExceptionModels">
+    <wsdl:part name="parameters" element="tns:getExceptionModels" />
+  </wsdl:message>
+  <wsdl:message name="AdminUserException">
+    <wsdl:part name="AdminUserException" element="tns:AdminUserException" />
+  </wsdl:message>
+  <wsdl:message name="WrongRequestException">
+    <wsdl:part name="WrongRequestException" element="tns:WrongRequestException" />
+  </wsdl:message>
+  <wsdl:message name="getModelsWithPictureResponse">
+    <wsdl:part name="parameters" element="tns:getModelsWithPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getModelsWithPicture">
+    <wsdl:part name="parameters" element="tns:getModelsWithPicture" />
+  </wsdl:message>
+  <wsdl:message name="getVendorsResponse">
+    <wsdl:part name="parameters" element="tns:getVendorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getExceptionModelsWithPictureResponse">
+    <wsdl:part name="parameters" element="tns:getExceptionModelsWithPictureResponse" />
+  </wsdl:message>
+  <wsdl:message name="getVendors">
+    <wsdl:part name="parameters" element="tns:getVendors" />
+  </wsdl:message>
+  <wsdl:portType name="PhoneModelService">
+    <wsdl:operation name="getExceptionModels">
+      <wsdl:input name="getExceptionModels" message="tns:getExceptionModels" />
+      <wsdl:output name="getExceptionModelsResponse" message="tns:getExceptionModelsResponse" />
+      <wsdl:fault name="WrongRequestException" message="tns:WrongRequestException" />
+      <wsdl:fault name="AdminUserException" message="tns:AdminUserException" />
+      <wsdl:fault name="InternalErrorException" message="tns:InternalErrorException" />
+    </wsdl:operation>
+    <wsdl:operation name="getModels">
+      <wsdl:input name="getModels" message="tns:getModels" />
+      <wsdl:output name="getModelsResponse" message="tns:getModelsResponse" />
+      <wsdl:fault name="WrongRequestException" message="tns:WrongRequestException" />
+      <wsdl:fault name="AdminUserException" message="tns:AdminUserException" />
+      <wsdl:fault name="InternalErrorException" message="tns:InternalErrorException" />
+    </wsdl:operation>
+    <wsdl:operation name="getModelsWithPicture">
+      <wsdl:input name="getModelsWithPicture" message="tns:getModelsWithPicture" />
+      <wsdl:output name="getModelsWithPictureResponse" message="tns:getModelsWithPictureResponse" />
+      <wsdl:fault name="WrongRequestException" message="tns:WrongRequestException" />
+      <wsdl:fault name="AdminUserException" message="tns:AdminUserException" />
+      <wsdl:fault name="InternalErrorException" message="tns:InternalErrorException" />
+    </wsdl:operation>
+    <wsdl:operation name="getVendors">
+      <wsdl:input name="getVendors" message="tns:getVendors" />
+      <wsdl:output name="getVendorsResponse" message="tns:getVendorsResponse" />
+      <wsdl:fault name="WrongRequestException" message="tns:WrongRequestException" />
+      <wsdl:fault name="AdminUserException" message="tns:AdminUserException" />
+      <wsdl:fault name="InternalErrorException" message="tns:InternalErrorException" />
+    </wsdl:operation>
+    <wsdl:operation name="getExceptionModelsWithPicture">
+      <wsdl:input name="getExceptionModelsWithPicture" message="tns:getExceptionModelsWithPicture" />
+      <wsdl:output name="getExceptionModelsWithPictureResponse" message="tns:getExceptionModelsWithPictureResponse" />
+      <wsdl:fault name="WrongRequestException" message="tns:WrongRequestException" />
+      <wsdl:fault name="AdminUserException" message="tns:AdminUserException" />
+      <wsdl:fault name="InternalErrorException" message="tns:InternalErrorException" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PhoneModelServiceImplServiceSoapBinding" type="tns:PhoneModelService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getExceptionModels">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getExceptionModels">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getExceptionModelsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WrongRequestException">
+        <soap:fault use="literal" name="WrongRequestException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AdminUserException">
+        <soap:fault use="literal" name="AdminUserException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InternalErrorException">
+        <soap:fault use="literal" name="InternalErrorException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getModels">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getModels">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getModelsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WrongRequestException">
+        <soap:fault use="literal" name="WrongRequestException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AdminUserException">
+        <soap:fault use="literal" name="AdminUserException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InternalErrorException">
+        <soap:fault use="literal" name="InternalErrorException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getModelsWithPicture">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getModelsWithPicture">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getModelsWithPictureResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WrongRequestException">
+        <soap:fault use="literal" name="WrongRequestException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AdminUserException">
+        <soap:fault use="literal" name="AdminUserException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InternalErrorException">
+        <soap:fault use="literal" name="InternalErrorException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getVendors">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getVendors">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getVendorsResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WrongRequestException">
+        <soap:fault use="literal" name="WrongRequestException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AdminUserException">
+        <soap:fault use="literal" name="AdminUserException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InternalErrorException">
+        <soap:fault use="literal" name="InternalErrorException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getExceptionModelsWithPicture">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getExceptionModelsWithPicture">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getExceptionModelsWithPictureResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="WrongRequestException">
+        <soap:fault use="literal" name="WrongRequestException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AdminUserException">
+        <soap:fault use="literal" name="AdminUserException" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="InternalErrorException">
+        <soap:fault use="literal" name="InternalErrorException" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PhoneModelServiceImplService">
+    <wsdl:port name="PhoneModelServiceImplPort" binding="tns:PhoneModelServiceImplServiceSoapBinding">
+      <soap:address location="http://mpocket.com.br:8080/TicketSender/Services/PhoneModelService" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

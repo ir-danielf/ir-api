@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Motivo">
+  <Propriedades>
+    <Propriedade Nome="Tipo"		Tipo="texto"	Tamanho="1"	Nulo="false"	Acesso="LE"/>
+    <Propriedade Nome="Motivo"		Tipo="texto"	Tamanho="250"	Nulo="false"	Acesso="LE"/>
+  </Propriedades>
+</Classe>
+

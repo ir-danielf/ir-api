@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="VendaBilheteriaFormaPagamentoItem">
+  <Propriedades>
+    <Propriedade Nome="VendaBilheteriaFormaPagamentoID"		Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Parcela"		Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataDeposito"		      Tipo="data"	Tamanho="9"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="ValorBruto"					Tipo="decimal"	Tamanho="12"	Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="EmpresaID"		Tipo="int"						Nulo="True" Acesso="LE" />
+    
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

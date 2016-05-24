@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="FormaPagamentoEvento">
+	<Propriedades>
+		<Propriedade Nome="EventoID"			Tipo="int"	 		Nulo="false" Acesso="LE" />
+    <Propriedade Nome="FormaPagamentoID"			Tipo="int"	 		Nulo="false" Acesso="LE" />
+	</Propriedades>
+	<Metodos>
+	</Metodos>
+</Classe>
+

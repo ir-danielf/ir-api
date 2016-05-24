@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="VendaBilheteriaItem">
+  <Propriedades>
+    <Propriedade Nome="VendaBilheteriaID" Tipo="int" />
+    <Propriedade Nome="PacoteID" Tipo="int" />
+    <Propriedade Nome="Acao" Tipo="texto" Tamanho="1" />
+    <Propriedade Nome="TaxaConveniencia" Tipo="int" />
+    <Propriedade Nome="TaxaConvenienciaValor" Tipo="decimal" Tamanho="12" Decimal="2" />
+    <Propriedade Nome="TaxaComissao" Tipo="int" />
+    <Propriedade Nome="ComissaoValor" Tipo="decimal" Tamanho="12" Decimal="2" />
+    <Propriedade Nome="PacoteGrupo" Tipo="int" null="true" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="UltimaAcaoIgualCancelar" Tipo="bool">
+      Verifica se a Ultima acao do Ingresso Log é Cancelar
+    </Metodo>
+    <Metodo Nome="ChecarIngressoStatusCancelar" Tipo="bool">
+      Checa os ingressos de um item de venda
+    </Metodo>
+    <Metodo Nome="IngressoIDPorItem" Tipo="string">
+      Obtem os ingressos de um item de venda (pacote pode ter mais de um)
+    </Metodo>
+    <Metodo Nome="EventoApresentacaoSetorPreco" Tipo="DataTable">
+      Obtém Evento, Apresentacao, Setor e Preco de cada item
+      Em função do Status do Ingresso
+      <Parametros>
+        <Parametro Nome="ItensID" Tipo="string">
+          Os itens de venda que precisa obter EventoApresentacaoSetorPreco
+        </Parametro>
+        <Parametro Nome="status" Tipo="string">
+          Em função do Status do Ingresso
+        </Parametro>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="PrimeiroIngressoID" Tipo="int">
+      Primeiro Ingresso do Item (tem vários quando é pacote)
+    </Metodo>
+    <Metodo Nome="ValorIngresso" Tipo="decimal">
+      Obter o valor de ingresso do item de venda, um item pode ser um ingresso ou um pacote
+    </Metodo>
+    <Metodo Nome="ValorEntrega" Tipo="decimal">
+      Obter o valor da entrega do item de venda, é obtido pelo valor da Venda
+    </Metodo>
+  </Metodos>
+</Classe>

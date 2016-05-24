@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="DonoIngresso">
+  <Propriedades>
+    <Propriedade Nome="Nome"				          Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="RG"					          Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="CPF"					          Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="Email"				          Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="Telefone"			        Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="DataNascimento"		    Tipo="data"		Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="NomeResponsavel"        Tipo="texto" Tamanho="50"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CPFResponsavel"        Tipo="texto" Tamanho="30"  Nulo="True" Acesso="LE" />
+  </Propriedades>
+
+</Classe>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PerfilEspecial">
+    <Propriedades>
+        <Propriedade Nome="PerfilID"	Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="True"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Logins"	Tipo="DataTable"><!-- Fabio -->
+    		Devolve uma tabela de logins dos usuarios do perfil passado como parametro.
+    		<Parametros>
+    			<Parametro Nome="perfilID" Tipo="int"/>
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

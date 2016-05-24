@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ApresentacaoSetor">
+  <Propriedades>
+    <Propriedade Nome="SetorID"					Tipo="int"					Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="ApresentacaoID"			Tipo="int"				Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="VersaoImagemIngresso"	Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale2"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale3"		Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="IngressosGerados"			Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CotaID"                Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Quantidade"            Tipo="int"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="QuantidadePorCliente"  Tipo="int"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PrincipalPrecoID"      Tipo="int"  Nulo="Tue"  Acesso="LE"/>
+    <Propriedade Nome="NVendeLugar" Tipo="booleano" Nulo="True" Acesso="LE" />
+    
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="ApresentacaoSetorID" Tipo="int">
+      <!-- Fabio -->
+      Retorna o ID da ApresentacaoSetor dada uma apresentacao e um setor
+      <Parametros>
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="setorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Mapa" Tipo="string">
+      <!-- Fabio -->
+      Retorna um 'stringao' com os lugares dessa ApresentacaoSetor
+    </Metodo>
+    <Metodo Nome="StatusLugares" Tipo="string">
+      <!-- Fabio -->
+      Retorna um 'stringao' com os lugares dessa ApresentacaoSetor
+    </Metodo>
+    <Metodo Nome="Setores" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter setores de uma apresentacao especifica
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="SetoresMarcados" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter setores de lugares marcados de uma apresentacao especifica
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="SetoresNaoMarcados" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter setores de lugares nao marcados de uma apresentacao especifica
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Apresentacoes" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter apresentacoes de um setor especifico
+      <Parametros>
+        <Parametro Nome="SetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Precos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter preços dessa ApresentacaoSetor
+    </Metodo>
+    <Metodo Nome="Precos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter preços dessa ApresentacaoSetor
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+        <Parametro Nome="SetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="PrecosPorCanal" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter preços (que o Canal pode vender) da Apresentacao e Setor passados como parametro
+      <Parametros>
+        <Parametro Nome="CanalID" Tipo="int" />
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+        <Parametro Nome="SetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ExcluirCascata"	Tipo="bool">
+      E chama Cascata do Preco e Ingresso
+      Exclui este apresentacao setor
+    </Metodo>
+    <Metodo Nome="VendaItem" Tipo="DataTable">
+      Obtém os ingressos em função do Item de venda por ApresenatcaoSetor
+      Leva em conta o Pacote por isso não repete os ingressos de um Item de pacote
+      <Parametros>
+        <Parametro Nome="apresentacaoSetorIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="PorcentagemIngressosStatus"	Tipo="DataTable">
+      Obter porcentagem de ingressos (separado por status)
+      Em função do Setor e Apresentacao (inclui o campo CortesiaID)
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosStatus"	Tipo="DataTable">
+      Obter Quantidade de ingressos (separado por status)
+      Em função do Setor e Apresentacao (inclui o campo CortesiaID)
+    </Metodo>
+    <Metodo Nome="TotalIngressos"	Tipo="int">
+      Total de ingressos por Setor e Apresentacao
+    </Metodo>
+  </Metodos>
+</Classe>
+

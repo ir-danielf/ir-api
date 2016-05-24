@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ContaCorrenteIR">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TimeStamp"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Valor"	Tipo="decimal"  Tamanho="12" Decimal="2"  Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Descricao"	Tipo="texto"	Tamanho="100"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="CancelamentoID"	Tipo="int"	Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

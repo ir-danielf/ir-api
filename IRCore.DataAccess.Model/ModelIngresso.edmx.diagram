@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="088db2f4ae174dc2be3535adefa1ec13" Name="Diagram1" ZoomLevel="93" >
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidia" Width="1.5" PointX="8.25" PointY="0.75" />
+        <EntityTypeShape EntityType="ModelIngresso.tIngresso" Width="1.5" PointX="10.5" PointY="20.25" />
+        <AssociationConnector Association="ModelIngresso.FK_Ingresso_ParceiroMidia" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tLoja" />
+        <EntityTypeShape EntityType="ModelIngresso.tMapaEsquematico" Width="1.5" PointX="3" PointY="10.375" />
+        <EntityTypeShape EntityType="ModelIngresso.tMapaEsquematicoSetor" Width="1.5" PointX="5.25" PointY="13.375" />
+        <AssociationConnector Association="ModelIngresso.FK_tMapaEsquematicoSetor_tMapa" />
+        <EntityTypeShape EntityType="ModelIngresso.tCaixa" Width="1.5" PointX="6" PointY="54.625" />
+        <EntityTypeShape EntityType="ModelIngresso.tClienteEndereco" Width="1.5" PointX="0.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tUsuario" Width="1.5" PointX="3.75" PointY="50.125" />
+        <EntityTypeShape EntityType="ModelIngresso.tVendaBilheteria" Width="1.5" PointX="8.25" PointY="55.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tVendaBilheteriaItem" Width="1.5" PointX="5.25" PointY="36.125" />
+        <AssociationConnector Association="ModelIngresso.FK_tCaixa_tUsuario" />
+        <AssociationConnector Association="ModelIngresso.FK_tVendaBilheteria_tCaixa" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tVendaBilheteria" />
+        <AssociationConnector Association="ModelIngresso.FK_tVendaBilheteriaItem_tVendaBilheteria" />
+        <EntityTypeShape EntityType="ModelIngresso.tIngressoCliente" Width="1.5" PointX="10.75" PointY="5.5" />
+        <EntityTypeShape EntityType="ModelIngresso.Pais" Width="1.5" PointX="10.75" PointY="9.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tSetor" Width="1.5" PointX="3" PointY="13.125" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tSetor" />
+        <AssociationConnector Association="ModelIngresso.FK_tMapaEsquematicoSetor_tSetor" />
+        <EntityTypeShape EntityType="ModelIngresso.tApresentacaoSetor" Width="1.5" PointX="7.5" PointY="33.625" />
+        <AssociationConnector Association="ModelIngresso.FK_tApresentacaoSetor_tSetor" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tApresentacaoSetor" />
+        <EntityTypeShape EntityType="ModelIngresso.tApresentacao" Width="1.5" PointX="5.25" PointY="40.375" />
+        <AssociationConnector Association="ModelIngresso.FK_tApresentacaoSetor_tApresentacao" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tApresentacao" />
+        <EntityTypeShape EntityType="ModelIngresso.tCliente" Width="1.5" PointX="6" PointY="63.25" />
+        <EntityTypeShape EntityType="ModelIngresso.tEvento" Width="1.5" PointX="3" PointY="19.25" />
+        <AssociationConnector Association="ModelIngresso.FK_tVendaBilheteria_tCliente" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tEvento" />
+        <EntityTypeShape EntityType="ModelIngresso.tCompraTemporaria" Width="1.5" PointX="7.75" PointY="12.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tPreco" Width="1.5" PointX="9.75" PointY="35.375" />
+        <AssociationConnector Association="ModelIngresso.FK_tPreco_tApresentacaoSetor" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tPreco" />
+        <EntityTypeShape EntityType="ModelIngresso.tContatoTipo" Width="1.5" PointX="9.75" PointY="12.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEmpresa" Width="1.5" PointX="3.75" PointY="0.75" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tEmpresa" />
+        <AssociationConnector Association="ModelIngresso.FK_tUsuario_tEmpresa" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidia_Empresa" />
+        <EntityTypeShape EntityType="ModelIngresso.tEntrega" Width="1.5" PointX="11.75" PointY="12.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEntregaArea" Width="1.5" PointX="12.75" PointY="5.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEntregaAreaBlackList" Width="1.5" PointX="12.75" PointY="8.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEntregaAreaCep" Width="1.5" PointX="13.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEntregaControle" Width="1.5" PointX="13.75" PointY="11.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tCEP" Width="1.5" PointX="13.75" PointY="15.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEventoEntregaControle" Width="1.5" PointX="14.75" PointY="5.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tCanal" Width="1.5" PointX="1.5" PointY="54.625" />
+        <EntityTypeShape EntityType="ModelIngresso.tLoja" Width="1.5" PointX="3.75" PointY="56" />
+        <AssociationConnector Association="ModelIngresso.FK_tCaixa_tLoja" />
+        <AssociationConnector Association="ModelIngresso.FK_tCanal_tEmpresa" />
+        <AssociationConnector Association="ModelIngresso.FK_tLoja_tCanal" />
+        <EntityTypeShape EntityType="ModelIngresso.xCaixa" Width="1.5" PointX="15.75" PointY="8.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xUsuario" Width="1.5" PointX="15.75" PointY="12.5" />
+        <EntityTypeShape EntityType="ModelIngresso.cCaixa" Width="1.5" PointX="15.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.cUsuario" Width="1.5" PointX="15.75" PointY="17.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tLugar" Width="1.5" PointX="5.25" PointY="25.625" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tLugar" />
+        <AssociationConnector Association="ModelIngresso.FK_tLugar_tSetor" />
+        <EntityTypeShape EntityType="ModelIngresso.cEmpresa" Width="1.5" PointX="16.75" PointY="5.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xEmpresa" Width="1.5" PointX="7.75" PointY="18.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tRegiao" Width="1.5" PointX="17.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tRegional" Width="1.5" PointX="17.75" PointY="8.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tRegionalArea" Width="1.5" PointX="17.75" PointY="13.5" />
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidiaClasse" Width="1.5" PointX="10.5" PointY="19.5" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaClasse_ParceiroMidia" />
+        <AssociationConnector Association="ModelIngresso.FK_tPreco_ParceiroMidia" />
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidiaPraca" Width="1.5" PointX="8.25" PointY="8.875" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaPraca_ParceiroMidia" />
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidiaClasseSetor" Width="1.5" PointX="7.5" PointY="29.625" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaClasseSetor_ParceiroMidiaClasse" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaClasseSetor_Apresentacao" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaClasseSetor_Setor" />
+        <AssociationConnector Association="ModelIngresso.FK_tApresentacao_tEvento" />
+        <EntityTypeShape EntityType="ModelIngresso.EventoMidia" Width="1.5" PointX="5.25" PointY="22.125" />
+        <EntityTypeShape EntityType="ModelIngresso.EventoTipoMidia" Width="1.5" PointX="3" PointY="7.25" />
+        <AssociationConnector Association="ModelIngresso.FK_EventoMidia_EventoTipoMidia1" />
+        <AssociationConnector Association="ModelIngresso.FK_EventoMidia_tEvento1" />
+        <EntityTypeShape EntityType="ModelIngresso.tLocal" Width="1.5" PointX="0.75" PointY="21.625" />
+        <AssociationConnector Association="ModelIngresso.FK_tEvento_tLocal" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tLocal" />
+        <AssociationConnector Association="ModelIngresso.FK_tMapaEsquematico_tLocal" />
+        <AssociationConnector Association="ModelIngresso.FK_tSetor_tLocal" />
+        <EntityTypeShape EntityType="ModelIngresso.tCanalPreco" Width="1.5" PointX="12" PointY="36.5" />
+        <AssociationConnector Association="ModelIngresso.FK_tCanalPreco_tCanal" />
+        <AssociationConnector Association="ModelIngresso.FK_tCanalPreco_tPreco" />
+        <EntityTypeShape EntityType="ModelIngresso.cCanalPreco" Width="1.5" PointX="12.75" PointY="19.5" />
+        <EntityTypeShape EntityType="ModelIngresso.cEvento" Width="1.5" PointX="17.75" PointY="16.5" />
+        <EntityTypeShape EntityType="ModelIngresso.cPreco" Width="1.5" PointX="17.75" PointY="19.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xCanalPreco" Width="1.5" PointX="14.75" PointY="20.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xEvento" Width="1.5" PointX="19.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xPreco" Width="1.5" PointX="19.75" PointY="18.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tValeIngresso" Width="1.5" PointX="16.75" PointY="22.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tValeIngressoTipo" Width="1.5" PointX="21.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tEventoSubtipo" Width="1.5" PointX="11" PointY="2.625" />
+        <EntityTypeShape EntityType="ModelIngresso.tEventoTipo" Width="1.5" PointX="11" PointY="0.625" />
+        <AssociationConnector Association="ModelIngresso.tEventoTipo_FK" />
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidiaArea" Width="1.5" PointX="8.25" PointY="6.75" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaArea_ParceiroMidia" />
+        <EntityTypeShape EntityType="ModelIngresso.tFormaPagamentoEvento" Width="1.5" PointX="21.75" PointY="9.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tPacote" Width="1.5" PointX="3" PointY="36.25" />
+        <EntityTypeShape EntityType="ModelIngresso.tPacoteItem" Width="1.5" PointX="13" PointY="31" />
+        <EntityTypeShape EntityType="ModelIngresso.tParceiro" Width="1.5" PointX="21.75" PointY="12.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tParcelamento" Width="1.5" PointX="21.75" PointY="15.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tPacoteTemporario" Width="1.5" PointX="21.75" PointY="18.5" />
+        <AssociationConnector Association="ModelIngresso.FK_tPacoteItem_tApresentacao" />
+        <AssociationConnector Association="ModelIngresso.FK_tPacoteItem_tEvento" />
+        <AssociationConnector Association="ModelIngresso.FK_tPacote_tLocal" />
+        <AssociationConnector Association="ModelIngresso.FK_tPacoteItem_tPacote" />
+        <AssociationConnector Association="ModelIngresso.FK_tVendaBilheteriaItem_tPacote" />
+        <AssociationConnector Association="ModelIngresso.FK_tPacoteItem_tPreco" />
+        <AssociationConnector Association="ModelIngresso.FK_tPacoteItem_tSetor" />
+        <EntityTypeShape EntityType="ModelIngresso.tFeriado" Width="1.5" PointX="18.75" PointY="23.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tBandeira" Width="1.5" PointX="21.75" PointY="22.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tBloqueio" Width="1.5" PointX="3" PointY="40.125" />
+        <AssociationConnector Association="ModelIngresso.FK_tBloqueio_tLocal" />
+        <AssociationConnector Association="ModelIngresso.FK_tIngresso_tBloqueio" />
+        <AssociationConnector Association="ModelIngresso.FK_tLugar_tBloqueio" />
+        <EntityTypeShape EntityType="ModelIngresso.cClienteEndereco" Width="1.5" PointX="12.75" PointY="24.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xClienteEndereco" Width="1.5" PointX="23.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.cCliente" Width="1.5" PointX="23.75" PointY="7.5" />
+        <EntityTypeShape EntityType="ModelIngresso.xCliente" Width="1.5" PointX="23.75" PointY="10.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tCota" Width="1.5" PointX="20.75" PointY="25.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tCotaItem" Width="1.5" PointX="22.75" PointY="26.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tDonoIngresso" Width="1.5" PointX="24.75" PointY="26.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tObrigatoriedade" Width="1.5" PointX="25.75" PointY="2.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tVendaBilheteriaFormaPagamento" Width="1.5" PointX="13.5" PointY="60" />
+        <AssociationConnector Association="ModelIngresso.FK_tVendaBilheteriaFormaPagamento_tVendaBilheteria" />
+        <EntityTypeShape EntityType="ModelIngresso.tFormaPagamento" Width="1.5" PointX="11.25" PointY="52.125" />
+        <AssociationConnector Association="ModelIngresso.FK_tVendaBilheteriaFormaPagamento_tFormaPagamento" />
+        <EntityTypeShape EntityType="ModelIngresso.tCartao" Width="1.5" PointX="25.75" PointY="10.5" />
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidiaControleIngresso" Width="1.5" PointX="12.75" PointY="27.375" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaControleIngresso_ParceiroMidia" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaControleIngresso_ParceiroMidiaClasse" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaControleIngresso_Ingresso" />
+        <EntityTypeShape EntityType="ModelIngresso.ParceiroMidiaEvento" Width="1.5" PointX="8.25" PointY="26.125" />
+        <EntityTypeShape EntityType="ModelIngresso.Voucher" Width="1.5" PointX="14.75" PointY="36" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaEvento_ParceiroMidia" />
+        <AssociationConnector Association="ModelIngresso.FK_Voucher_ParceiroMidia" />
+        <AssociationConnector Association="ModelIngresso.FK_Voucher_ParceiroMidiaArea" />
+        <AssociationConnector Association="ModelIngresso.FK_Voucher_ParceiroMidiaClasse" />
+        <AssociationConnector Association="ModelIngresso.FK_ParceiroMidiaEvento_tEvento" />
+        <AssociationConnector Association="ModelIngresso.FK_Voucher_Cliente" />
+        <AssociationConnector Association="ModelIngresso.FK_Voucher_VendaBilheteria" />
+        <AssociationConnector Association="ModelIngresso.ParceiroMidiaPracaVoucher" />
+        <EntityTypeShape EntityType="ModelIngresso.EstornoDadosCartaoCredito" Width="1.5" PointX="10.5" PointY="60.75" />
+        <EntityTypeShape EntityType="ModelIngresso.EstornoDadosDepositoBancario" Width="1.5" PointX="10.5" PointY="65.375" />
+        <EntityTypeShape EntityType="ModelIngresso.EstornoHistoricoPlanilhas" Width="1.5" PointX="25.75" PointY="14.5" />
+        <EntityTypeShape EntityType="ModelIngresso.tCancelDevolucaoPendente" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ModelIngresso.tVendaBilheteriaEntrega" Width="1.5" PointX="14.75" PointY="27.5" />
+        <AssociationConnector Association="ModelIngresso.FK__tVendaBil__Venda__4E697B9A" />
+        <EntityTypeShape EntityType="ModelIngresso.EstornoDadosDinheiro" Width="1.5" PointX="10.5" PointY="57.125" />
+        <AssociationConnector Association="ModelIngresso.FK_EstornoDadosCartaoCredito_tVendaBilheteria" />
+        <AssociationConnector Association="ModelIngresso.FK_EstornoDadosCartaoCredito_tVendaBilheteria1" />
+        <AssociationConnector Association="ModelIngresso.FK_EstornoDadosDepositoBancario_EstornoDadosDepositoBancario" />
+        <AssociationConnector Association="ModelIngresso.FK_EstornoDadosDepositoBancario_tVendaBilheteria" />
+        <AssociationConnector Association="ModelIngresso.FK_EstornoDadosDinheiro_tVendaBilheteriaCancel" />
+        <AssociationConnector Association="ModelIngresso.FK_EstornoDadosDinheiro_tVendaBilheteriaVenda" />
+        <AssociationConnector Association="ModelIngresso.FK__tVendaBil__Venda__4E697B9A" />
+        <AssociationConnector Association="ModelIngresso.FK__tVendaBil__Venda__4E697B9A" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Escalonamento">
+  <Propriedades>
+    <Propriedade Nome="VendaID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="NroChamado"	Tipo="texto"	Tamanho="30"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TimeStamp"	Tipo="datahora"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="MotivoID"	Tipo="int"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="Tipo"	Tipo="texto"	Tamanho="1"	Nulo="False"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

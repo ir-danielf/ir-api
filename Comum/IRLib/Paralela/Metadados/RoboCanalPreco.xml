@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="RoboCanalPreco">
+  <Propriedades>
+    <Propriedade Nome="PrecoID" Tipo="int"  Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="CanalID" Tipo="int"  Nulo="False"  Acesso="LE" />    
+    <Propriedade Nome="DataInicio"  Tipo="texto"  Tamanho="20"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataFim" Tipo="texto"  Tamanho="20"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Quantidade"  Tipo="int"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Operacao"  Tipo="texto"  Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>

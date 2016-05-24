@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CupomDescontoLog">
+  <Propriedades>
+    <Propriedade Nome="CupomID"			Tipo="int"			Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="ApresentacaoID"		Tipo="int"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="VendaBilheteriaID"		Tipo="int"			Nulo="True"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

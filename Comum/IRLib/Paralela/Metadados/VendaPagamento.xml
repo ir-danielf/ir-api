@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="VendaPagamento">
+	<Propriedades>
+		<Propriedade Nome="VendaID"				Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="FormaPagamentoID"	Tipo="int"		Nulo="True" Acesso="LE" />		
+		<Propriedade Nome="Valor"				Tipo="decimal"	Nulo="True" Acesso="LE" Tamanho="12" Decimal="2"/>		
+	</Propriedades>
+</Classe>

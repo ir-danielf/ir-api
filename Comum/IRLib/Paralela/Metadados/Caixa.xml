@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Caixa">
+    <Propriedades>
+        <Propriedade Nome="UsuarioID"		Tipo="int"			Nulo="True"	Acesso="LE"/>
+		<Propriedade Nome="LojaID"			Tipo="int"			Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="ApresentacaoID"	Tipo="int"			Nulo="True"	Acesso="LE"/>        
+		<Propriedade Nome="SaldoInicial"	Tipo="decimal"		Nulo="True" Acesso="LE" Tamanho="12" Decimal="2"/>
+        <Propriedade Nome="DataAbertura"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="DataFechamento"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="Comissao" Tipo="int" Nulo="True" Acesso="LE"/>
+      <Propriedade Nome="ConciliacaoID" Tipo="int" Nulo="True" Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Aberto" Tipo="bool"><!-- Fabio -->
+			Retorna true se tem caixa em aberto, retorna false caso contrario.
+    		<Parametros>
+    			<Parametro Nome="UsuarioID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Aberto" Tipo="bool"><!-- Fabio -->
+			Retorna true se tem caixa em aberto, retorna false caso contrario.
+    		<Parametros>
+    			<Parametro Nome="UsuarioID" Tipo="int" />
+    			<Parametro Nome="LojaID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    	<Metodo Nome="Abrir" Tipo="bool"><!-- Fabio -->
+    		Abrir Caixa
+    		<Parametros>
+    			<Parametro Nome="UsuarioID" Tipo="int" />
+    			<Parametro Nome="LojaID" Tipo="int" />
+    			<Parametro Nome="ApresentacaoID" Tipo="int" />
+          <Parametro Nome="SaldoInicial" Tipo="decimal" />          
+    		</Parametros>      		
+    	</Metodo>
+    	<Metodo Nome="QuantidadeIngressos" Tipo="int">
+    		Quantidade de Ingressos por Caixa e por Status
+    		<Parametros>
+    			<Parametro Nome="status" Tipo="string" />
+    		</Parametros>      		
+    	</Metodo>
+        <Metodo Nome="IngressoLogIDsPorPeriodoCaixaSQL" Tipo="string">
+			IngressoLogID por período do Caixa (servirá pra venda)
+			E ação do log, etc
+    		<Parametros>
+    			<Parametro Nome="dataInicial" Tipo="string" />
+    			<Parametro Nome="dataFinal" Tipo="string" />    			
+    			<Parametro Nome="status" Tipo="string" /> 
+    			<Parametro Nome="comCortesia" Tipo="bool" /> 
+    			<Parametro Nome="apresentacaoID" Tipo="int" /> 
+    			<Parametro Nome="eventoID" Tipo="int" /> 
+    			<Parametro Nome="localID" Tipo="int" /> 
+    			<Parametro Nome="empresaID" Tipo="int" /> 
+    			<Parametro Nome="usuarioID" Tipo="int" /> 
+    			<Parametro Nome="lojaID" Tipo="int" /> 
+    			<Parametro Nome="canalID" Tipo="int" /> 
+    			<Parametro Nome="tipoLinha" Tipo="string" />       	
+    			<Parametro Nome="disponivel" Tipo="bool" />       	
+    			<Parametro Nome="vendasCanal" Tipo="bool" />       	
+    			<Parametro Nome="empresaVendeIngressos" Tipo="bool" />       	
+    			<Parametro Nome="empresaPromoveEventos" Tipo="bool" />       	
+    		</Parametros>      		
+    	</Metodo>
+        <Metodo Nome="VendaSenhaPorPeriodoCaixaSQL" Tipo="string">
+			VendaSenha por período do Caixa (servirá pra venda)
+			E ação do log, etc
+    		<Parametros>
+    			<Parametro Nome="dataInicial" Tipo="string" />
+    			<Parametro Nome="dataFinal" Tipo="string" />    			
+    			<Parametro Nome="status" Tipo="string" /> 
+    			<Parametro Nome="comCortesia" Tipo="bool" /> 
+    			<Parametro Nome="apresentacaoID" Tipo="int" /> 
+    			<Parametro Nome="eventoID" Tipo="int" /> 
+    			<Parametro Nome="localID" Tipo="int" /> 
+    			<Parametro Nome="empresaID" Tipo="int" /> 
+    			<Parametro Nome="usuarioID" Tipo="int" /> 
+    			<Parametro Nome="lojaID" Tipo="int" /> 
+    			<Parametro Nome="canalID" Tipo="int" /> 
+    		</Parametros>      		
+    	</Metodo>
+
+        <Metodo Nome="LinhasVendasGerenciaisDias" Tipo="DataTable">
+			Dias (data da abertura) por período do Caixa e situacao dos ingressos
+    		<Parametros>
+    			<Parametro Nome="ingressoLogIDs" Tipo="string" />   		
+    		</Parametros>      		
+    	</Metodo>
+        <Metodo Nome="VendasGerenciaisDias" Tipo="DataTable">
+			Vendas Gerenciais por dias (caixa) com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+			Com porcentagem
+    		<Parametros>
+    			<Parametro Nome="dataInicial" Tipo="string" />
+    			<Parametro Nome="dataFinal" Tipo="string" />
+    			<Parametro Nome="comCortesia" Tipo="bool" />
+    			<Parametro Nome="apresentacaoID" Tipo="int" /> 
+    			<Parametro Nome="eventoID" Tipo="int" /> 
+    			<Parametro Nome="localID" Tipo="int" /> 
+    			<Parametro Nome="empresaID" Tipo="int" />   
+    			<Parametro Nome="vendasCanal" Tipo="bool" />   
+    			<Parametro Nome="tipoLinha" Tipo="string" />   
+    			<Parametro Nome="disponivel" Tipo="bool" />       	
+    			<Parametro Nome="empresaVendeIngressos" Tipo="bool" />       	
+    			<Parametro Nome="empresaPromoveEventos" Tipo="bool" />       	    			
+    		</Parametros>
+    	</Metodo>    	
+        <Metodo Nome="QuantidadeIngressosPorDia" Tipo="int">
+			Obter quantidade de ingressos em função do IngressoIDs
+    		<Parametros>
+    			<Parametro Nome="ingressoLogIDs" Tipo="string" />
+    			<Parametro Nome="dia" Tipo="string" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="ValorIngressosPorDia" Tipo="decimal">
+			Obter valores de ingressos em função do IngressoIDs
+    		<Parametros>
+    			<Parametro Nome="ingressoLogIDs" Tipo="string" />
+    			<Parametro Nome="dia" Tipo="string" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="VendasDetalhe" Tipo="DataTable">
+			Usado no relatório de Vendas Detalhe
+    	</Metodo>
+        <Metodo Nome="Reimpressos" Tipo="DataTable">
+			Usado no relatório de Vendas Resumo (Obtém os reimpressos de um caixa)
+    	</Metodo>
+    	
+    </Metodos>
+</Classe>
+
+

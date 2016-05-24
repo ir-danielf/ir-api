@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="LocalImagemMapa">
+    <Propriedades>
+        <Propriedade Nome="LocalID"			Tipo="int"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Nome"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="VersaoImagem"	Tipo="int"		Nulo="True"		Acesso="LE"/>        
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Todos" Tipo="DataTable"><!-- Evandro -->
+    		Obter todas as imagens de mapas 
+    		<Parametros>
+    			<Parametro Nome="localID"		Tipo="int" />
+    			<Parametro Nome="registroZero"	Tipo="string" />
+    		</Parametros>    		
+    	</Metodo>
+        
+    </Metodos>
+    
+</Classe>

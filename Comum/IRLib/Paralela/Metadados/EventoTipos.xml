@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoTipos">
+  <!-- AO RECRIAR, COLOCAR OS 3 Campos COMO PK COMPOSTA!!-->
+  <Propriedades>
+    <Propriedade Nome="EventoID"	    			        Tipo="int"  	      Nulo="false"        	          	Acesso="LE" />
+    <Propriedade Nome="EventoTipoID"                Tipo="int"          Nulo="false"                      Acesso="LE" />
+    <Propriedade Nome="EventoSubtipoID"             Tipo="int"          Nulo="false"                      Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Caio -->
+      Obter todos os tipos
+    </Metodo>
+  </Metodos>
+</Classe>

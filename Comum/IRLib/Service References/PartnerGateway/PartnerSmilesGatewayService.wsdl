@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://schemas.voegol.com.br/Services/SmilesGateway" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PartnerSmilesGatewayService" targetNamespace="http://schemas.voegol.com.br/Services/SmilesGateway" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://schemas.voegol.com.br/Services/SmilesGateway/Imports">
+      <xsd:import schemaLocation="schemas.voegol.com.br.Services.SmilesGateway.xsd" namespace="http://schemas.voegol.com.br/Services/SmilesGateway" />
+      <xsd:import schemaLocation="schemas.microsoft.com.2003.10.Serialization.xsd" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="Gol.SmilesGateway.Partner.Entities.xsd" namespace="http://schemas.datacontract.org/2004/07/Gol.SmilesGateway.Partner.Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:PayOrderWithMiles" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PayOrderWithMilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_EmptyPartnerOrderFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:EmptyPartnerOrderFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_AuthenticationTokenTamperedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:AuthenticationTokenTamperedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_AuthenticationTokenExpiredFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:AuthenticationTokenExpiredFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_BackendBusinessRuleFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendBusinessRuleFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_BackendInfrastructureFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendInfrastructureFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_NotEnoughFundsFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:NotEnoughFundsFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_PayOrderWithMiles_UnexpectedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:UnexpectedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByOrderId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailsByOrderId" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByOrderId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailsByOrderIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByOrderId_UnexpectedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:UnexpectedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByOrderId_BackendInfrastructureFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendInfrastructureFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByOrderId_BackendBusinessRuleFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendBusinessRuleFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByTransactionId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailsByTransactionId" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByTransactionId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentDetailsByTransactionIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByTransactionId_UnexpectedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:UnexpectedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByTransactionId_BackendBusinessRuleFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendBusinessRuleFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetPaymentDetailsByTransactionId_BackendInfrastructureFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendInfrastructureFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_CancelItemPayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:CancelItemPayment" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_CancelItemPayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CancelItemPaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_CancelItemPayment_UnexpectedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:UnexpectedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_CancelItemPayment_BackendBusinessRuleFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendBusinessRuleFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_CancelItemPayment_BackendInfrastructureFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendInfrastructureFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberBalance" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMemberBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_UnexpectedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:UnexpectedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_BackendInfrastructureFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendInfrastructureFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_AuthenticationTokenTamperedFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:AuthenticationTokenTamperedFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_AuthenticationTokenExpiredFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:AuthenticationTokenExpiredFailure" />
+  </wsdl:message>
+  <wsdl:message name="IPartnerRedemption_GetMemberBalance_BackendBusinessRuleFailureFault_FaultMessage">
+    <wsdl:part name="detail" element="tns:BackendBusinessRuleFailure" />
+  </wsdl:message>
+  <wsdl:portType name="IPartnerRedemption">
+    <wsdl:operation name="PayOrderWithMiles">
+      <wsdl:input wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMiles" message="tns:IPartnerRedemption_PayOrderWithMiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesResponse" message="tns:IPartnerRedemption_PayOrderWithMiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesEmptyPartnerOrderFailureFault" name="EmptyPartnerOrderFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_EmptyPartnerOrderFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesAuthenticationTokenTamperedFailureFault" name="AuthenticationTokenTamperedFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_AuthenticationTokenTamperedFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesAuthenticationTokenExpiredFailureFault" name="AuthenticationTokenExpiredFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_AuthenticationTokenExpiredFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesBackendBusinessRuleFailureFault" name="BackendBusinessRuleFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_BackendBusinessRuleFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesBackendInfrastructureFailureFault" name="BackendInfrastructureFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_BackendInfrastructureFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesNotEnoughFundsFailureFault" name="NotEnoughFundsFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_NotEnoughFundsFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMilesUnexpectedFailureFault" name="UnexpectedFailureFault" message="tns:IPartnerRedemption_PayOrderWithMiles_UnexpectedFailureFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailsByOrderId">
+      <wsdl:input wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByOrderId" message="tns:IPartnerRedemption_GetPaymentDetailsByOrderId_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByOrderIdResponse" message="tns:IPartnerRedemption_GetPaymentDetailsByOrderId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByOrderIdUnexpectedFailureFault" name="UnexpectedFailureFault" message="tns:IPartnerRedemption_GetPaymentDetailsByOrderId_UnexpectedFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByOrderIdBackendInfrastructureFailureFault" name="BackendInfrastructureFailureFault" message="tns:IPartnerRedemption_GetPaymentDetailsByOrderId_BackendInfrastructureFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByOrderIdBackendBusinessRuleFailureFault" name="BackendBusinessRuleFailureFault" message="tns:IPartnerRedemption_GetPaymentDetailsByOrderId_BackendBusinessRuleFailureFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailsByTransactionId">
+      <wsdl:input wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByTransactionId" message="tns:IPartnerRedemption_GetPaymentDetailsByTransactionId_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByTransactionIdResponse" message="tns:IPartnerRedemption_GetPaymentDetailsByTransactionId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByTransactionIdUnexpectedFailureFault" name="UnexpectedFailureFault" message="tns:IPartnerRedemption_GetPaymentDetailsByTransactionId_UnexpectedFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByTransactionIdBackendBusinessRuleFailureFault" name="BackendBusinessRuleFailureFault" message="tns:IPartnerRedemption_GetPaymentDetailsByTransactionId_BackendBusinessRuleFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByTransactionIdBackendInfrastructureFailureFault" name="BackendInfrastructureFailureFault" message="tns:IPartnerRedemption_GetPaymentDetailsByTransactionId_BackendInfrastructureFailureFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelItemPayment">
+      <wsdl:input wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/CancelItemPayment" message="tns:IPartnerRedemption_CancelItemPayment_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/CancelItemPaymentResponse" message="tns:IPartnerRedemption_CancelItemPayment_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/CancelItemPaymentUnexpectedFailureFault" name="UnexpectedFailureFault" message="tns:IPartnerRedemption_CancelItemPayment_UnexpectedFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/CancelItemPaymentBackendBusinessRuleFailureFault" name="BackendBusinessRuleFailureFault" message="tns:IPartnerRedemption_CancelItemPayment_BackendBusinessRuleFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/CancelItemPaymentBackendInfrastructureFailureFault" name="BackendInfrastructureFailureFault" message="tns:IPartnerRedemption_CancelItemPayment_BackendInfrastructureFailureFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberBalance">
+      <wsdl:input wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalance" message="tns:IPartnerRedemption_GetMemberBalance_InputMessage" />
+      <wsdl:output wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalanceResponse" message="tns:IPartnerRedemption_GetMemberBalance_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalanceUnexpectedFailureFault" name="UnexpectedFailureFault" message="tns:IPartnerRedemption_GetMemberBalance_UnexpectedFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalanceBackendInfrastructureFailureFault" name="BackendInfrastructureFailureFault" message="tns:IPartnerRedemption_GetMemberBalance_BackendInfrastructureFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalanceAuthenticationTokenTamperedFailureFault" name="AuthenticationTokenTamperedFailureFault" message="tns:IPartnerRedemption_GetMemberBalance_AuthenticationTokenTamperedFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalanceAuthenticationTokenExpiredFailureFault" name="AuthenticationTokenExpiredFailureFault" message="tns:IPartnerRedemption_GetMemberBalance_AuthenticationTokenExpiredFailureFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalanceBackendBusinessRuleFailureFault" name="BackendBusinessRuleFailureFault" message="tns:IPartnerRedemption_GetMemberBalance_BackendBusinessRuleFailureFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPartnerRedemption" type="tns:IPartnerRedemption">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="PayOrderWithMiles">
+      <soap:operation soapAction="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/PayOrderWithMiles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="EmptyPartnerOrderFailureFault">
+        <soap:fault use="literal" name="EmptyPartnerOrderFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationTokenTamperedFailureFault">
+        <soap:fault use="literal" name="AuthenticationTokenTamperedFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationTokenExpiredFailureFault">
+        <soap:fault use="literal" name="AuthenticationTokenExpiredFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendBusinessRuleFailureFault">
+        <soap:fault use="literal" name="BackendBusinessRuleFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendInfrastructureFailureFault">
+        <soap:fault use="literal" name="BackendInfrastructureFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="NotEnoughFundsFailureFault">
+        <soap:fault use="literal" name="NotEnoughFundsFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="UnexpectedFailureFault">
+        <soap:fault use="literal" name="UnexpectedFailureFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailsByOrderId">
+      <soap:operation soapAction="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByOrderId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnexpectedFailureFault">
+        <soap:fault use="literal" name="UnexpectedFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendInfrastructureFailureFault">
+        <soap:fault use="literal" name="BackendInfrastructureFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendBusinessRuleFailureFault">
+        <soap:fault use="literal" name="BackendBusinessRuleFailureFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentDetailsByTransactionId">
+      <soap:operation soapAction="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetPaymentDetailsByTransactionId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnexpectedFailureFault">
+        <soap:fault use="literal" name="UnexpectedFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendBusinessRuleFailureFault">
+        <soap:fault use="literal" name="BackendBusinessRuleFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendInfrastructureFailureFault">
+        <soap:fault use="literal" name="BackendInfrastructureFailureFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CancelItemPayment">
+      <soap:operation soapAction="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/CancelItemPayment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnexpectedFailureFault">
+        <soap:fault use="literal" name="UnexpectedFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendBusinessRuleFailureFault">
+        <soap:fault use="literal" name="BackendBusinessRuleFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendInfrastructureFailureFault">
+        <soap:fault use="literal" name="BackendInfrastructureFailureFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetMemberBalance">
+      <soap:operation soapAction="http://schemas.voegol.com.br/Services/SmilesGateway/IPartnerRedemption/GetMemberBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="UnexpectedFailureFault">
+        <soap:fault use="literal" name="UnexpectedFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendInfrastructureFailureFault">
+        <soap:fault use="literal" name="BackendInfrastructureFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationTokenTamperedFailureFault">
+        <soap:fault use="literal" name="AuthenticationTokenTamperedFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="AuthenticationTokenExpiredFailureFault">
+        <soap:fault use="literal" name="AuthenticationTokenExpiredFailureFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="BackendBusinessRuleFailureFault">
+        <soap:fault use="literal" name="BackendBusinessRuleFailureFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PartnerSmilesGatewayService">
+    <wsdl:port name="BasicHttpBinding_IPartnerRedemption" binding="tns:BasicHttpBinding_IPartnerRedemption">
+      <soap:address location="http://smilesgatewayparceiros.golnaweb.com.br/v1.0/PartnerSmilesGateway.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

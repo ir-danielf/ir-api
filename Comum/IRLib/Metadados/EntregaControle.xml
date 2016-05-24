@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EntregaControle">
+  <Propriedades>
+    <Propriedade Nome="EntregaID" Tipo="int" Nulo="False" />
+    <Propriedade Nome="EntregaAreaID" Tipo="int" Nulo="False" />
+    <Propriedade Nome="PeriodoID" Tipo="int" Nulo="False" />
+    <Propriedade Nome="QuantidadeEntregas" Tipo="int" Nulo="False" />
+    <Propriedade Nome="Valor" Tipo="decimal" Nulo="False" />
+    <Propriedade Nome="DiasTriagem" Tipo="int" Nulo="False" />
+    <Propriedade Nome="ProcedimentoEntrega"  Tipo="texto"  Tamanho="2000" />
+  </Propriedades>
+</Classe>

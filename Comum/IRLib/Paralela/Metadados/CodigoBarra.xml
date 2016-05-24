@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CodigoBarra">
+    <Propriedades>
+        <Propriedade Nome="EventoID"			Tipo="int"			Nulo="True"	Acesso="LE" />
+        <Propriedade Nome="EventoCodigo"		Tipo="texto"		Nulo="True"	Acesso="LE"		Tamanho="3" />
+        <Propriedade Nome="ApresentacaoID"		Tipo="int"			Nulo="True"	Acesso="LE" />
+        <Propriedade Nome="ApresentacaoCodigo"	Tipo="texto"		Nulo="True"	Acesso="LE"		Tamanho="3" />
+        <Propriedade Nome="SetorID"				Tipo="int"			Nulo="True"	Acesso="LE" />
+        <Propriedade Nome="SetorCodigo"			Tipo="texto"		Nulo="True"	Acesso="LE"		Tamanho="1" />
+        <Propriedade Nome="PrecoID"				Tipo="int"			Nulo="True"	Acesso="LE" />
+        <Propriedade Nome="PrecoCodigo"			Tipo="texto"		Nulo="True"	Acesso="LE"		Tamanho="2" />
+		<Propriedade Nome="Ativo"				Tipo="booleano"		Nulo="True" Acesso="LE" />
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="CodigoPorPreco" Tipo="string">
+			Obter estrutura do código através do PrecoID
+    		<Parametros>
+    			<Parametro Nome="precoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>
+

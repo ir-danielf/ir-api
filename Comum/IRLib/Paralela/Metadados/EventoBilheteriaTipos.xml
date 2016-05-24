@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoBilheteriaTipos">
+  <Propriedades>
+    <Propriedade Nome="EventoID"	    			        Tipo="int"  	              	          	Acesso="LE" />
+    <Propriedade Nome="EventoTipoID"                Tipo="int"	                              Acesso="LE" />
+    <Propriedade Nome="EventoSubtipoID"             Tipo="int"                                Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todos os tipos
+    </Metodo>
+    <Metodo Nome="Eventos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter eventos desse tipo
+    </Metodo>
+  </Metodos>
+</Classe>

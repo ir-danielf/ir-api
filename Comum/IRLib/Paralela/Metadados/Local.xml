@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Local">
+  <Propriedades>
+    <Propriedade Nome="EmpresaID"	Tipo="int"					Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="ContratoID"	Tipo="int"					Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Nome"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Contato"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Logradouro"	Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Cidade"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Estado"		Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="CEP"			Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="DDDTelefone"	Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Telefone"	Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Bairro"  Tipo="texto" Tamanho="70" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Numero"  Tipo="int" Tamanho="5" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Estacionamento"  Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="EstacionamentoObs"  Tipo="texto" Tamanho="400" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AcessoNecessidadeEspecial"  Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AcessoNecessidadeEspecialObs"  Tipo="texto" Tamanho="100" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ArCondicionado" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ComoChegar"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Complemento"  Tipo="texto" Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ComoChegarInternet"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="HorariosBilheteria"  Tipo="texto" Tamanho="1000" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="RetiradaBilheteria"  Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PaisID"  Tipo="int" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="ImagemInternet"  Tipo="texto"  Tamanho="30" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="CodigoPraca" Tipo="texto" Tamanho="20"  Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="Latitude"   Tipo="texto"  Tamanho="50" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Longitude"   Tipo="texto"  Tamanho="50" Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="Alvara"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AVCB"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="DataEmissaoAlvara"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataValidadeAlvara"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+
+    <Propriedade Nome="DataEmissaoAvcb"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataValidadeAvcb"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Lotacao"		Tipo="int"				Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="FonteImposto"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PorcentagemImposto"	Tipo="decimal"	Tamanho="3"	Decimal="2"	Nulo="True"	Acesso="LE"	/>
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todos os locais
+    </Metodo>
+    <Metodo Nome="SetoresLugarMarcado"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obter somente os setores com lugar marcado desse local
+    </Metodo>
+    <Metodo Nome="Setores"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obter setores desse local
+    </Metodo>
+    <Metodo Nome="Eventos"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obter eventos desse local
+    </Metodo>
+    <Metodo Nome="Estoques"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obter estoques desse local
+    </Metodo>
+    <Metodo Nome="Bloqueios" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter bloqueios desse local
+    </Metodo>
+    <Metodo Nome="Pacotes" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter pacotes desse local
+    </Metodo>
+    <Metodo Nome="Cortesias" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter cortesias dessa local
+    </Metodo>
+    <Metodo Nome="Lojas" Tipo="DataTable">
+      Obter lojas desse local
+      <Parametros>
+        <Parametro Nome="registroZero" Tipo="string" />
+      </Parametros>
+    </Metodo>
+  </Metodos>
+
+</Classe>

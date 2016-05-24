@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaFormaPagamento">
+  <Propriedades>
+    <Propriedade Nome="FormaPagamentoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

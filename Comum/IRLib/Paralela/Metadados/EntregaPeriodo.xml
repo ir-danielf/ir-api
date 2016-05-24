@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EntregaPeriodo">
+  <Propriedades>
+    <Propriedade Nome="Nome"		      Tipo="texto"	Tamanho="100"	Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="HoraInicial"   Tipo="texto" Tamanho="14"	Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="HoraFinal"     Tipo="texto" Tamanho="14"	Nulo="False"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

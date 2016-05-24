@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CanalTipo">
+    <Propriedades>
+        <Propriedade Nome="Nome"		Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Todos" Tipo="DataTable"><!-- Fabio -->
+    		Obter todos os tipos de canais
+    	</Metodo>
+    </Metodos>
+</Classe>

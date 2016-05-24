@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EntregaAreaBlackList">
+  <Propriedades>
+    <Propriedade Nome="CepInicial" Tipo="texto"	Tamanho="8" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="CepFinal" Tipo="texto"	Tamanho="8" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Motivo"			Tipo="texto"	Tamanho="100"	Nulo="False"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

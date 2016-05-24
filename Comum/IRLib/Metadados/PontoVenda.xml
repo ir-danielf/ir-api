@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PontoVenda">
+  <Propriedades>
+    <Propriedade Nome="Local" Tipo="texto" Tamanho="50" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Nome" Tipo="texto" Tamanho="150" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Endereco" Tipo="texto" Tamanho="200" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Numero" Tipo="texto" Tamanho="15" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Compl" Tipo="texto" Tamanho="20"  Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Cidade" Tipo="texto" Tamanho="50" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Estado" Tipo="texto" Tamanho="2" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Bairro" Tipo="texto" Tamanho="100" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Obs" Tipo="texto" Tamanho="300" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Referencia" Tipo="texto" Tamanho="100" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="CEP" Tipo="texto" Tamanho="9" Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PermiteRetirada" Tipo="booleano" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="IR"    Tipo="booleano" Nulo="True" />
+  </Propriedades>
+</Classe>

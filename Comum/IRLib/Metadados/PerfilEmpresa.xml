@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PerfilEmpresa">
+    <Propriedades>
+        <Propriedade Nome="PerfilID"	Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="EmpresaID"	Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="True"/>
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="Logins"	Tipo="DataTable"><!-- Fabio -->
+    		Devolve uma lista de logins dos usuarios do empresa e do perfil passado como parametro.
+    		<Parametros>
+    			<Parametro Nome="perfilID" Tipo="int"/>
+    			<Parametro Nome="empresaID" Tipo="int"/>
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>

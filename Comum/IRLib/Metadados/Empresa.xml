@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Empresa">
+    <Propriedades>
+        <Propriedade Nome="RegionalID"			Tipo="int"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Nome"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="ContatoNome"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="ContatoCargo"	Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Endereco"		Tipo="texto"	Tamanho="70"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Cidade"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Estado"			Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="CEP"				Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="DDDTelefone"		Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Telefone"		Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="DDDFax"			Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Fax"				Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="EmpresaPromove"	Tipo="booleano"					Nulo="True"		Acesso="LE" />
+        <Propriedade Nome="EmpresaVende"	Tipo="booleano"					Nulo="True"		Acesso="LE" />
+        <Propriedade Nome="Email"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Website"			Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="Obs"				Tipo="memo"						Nulo="True"		Acesso="LE"/>
+		<Propriedade Nome="TaxaMaximaEmpresa" Tamanho="12"  Tipo="decimal"	Nulo="True"		Acesso="LE" Decimal="2" />
+		<Propriedade Nome="BannerPadraoSite"	Tipo="booleano"				Nulo="True"		Acesso="LE" />
+    </Propriedades>
+    <Metodos>
+    	<Metodo Nome="PedidosEstoque" Tipo="DataTable"><!-- Fabio -->
+    		Obter os pedidos de estoque dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Fornecedores" Tipo="DataTable"><!-- Fabio -->
+    		Obter os fornecedores dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Transferencias" Tipo="DataTable">
+    		Obter as transferencias de estoque dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Ajustes" Tipo="DataTable">
+    		Obter ajustes de estoque dessa empresa
+    	</Metodo>
+    	<Metodo Nome="AjusteMotivos" Tipo="DataTable"><!-- Fabio -->
+    		Obter motivos de ajustes de estoque dessa empresa
+    	</Metodo>
+        <Metodo Nome="Apresentacoes" Tipo="DataTable">
+			Obter as apresentacoes de todos os locais dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Categorias" Tipo="DataTable"><!-- Fabio -->
+    		Obter categorias de produtos dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Produtos" Tipo="DataTable"><!-- Fabio -->
+    		Obter produtos dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Produtos" Tipo="DataTable"><!-- Fabio -->
+    		Obter produtos dessa empresa dada uma categoria
+    		<Parametros>
+    			<Parametro Nome="CategoriaID" 	Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    	<Metodo Nome="Locais" Tipo="DataTable"><!-- Fabio -->
+    		Obter locais dessa empresa
+    	</Metodo>
+        <Metodo Nome="Todas" Tipo="DataTable"><!-- Fabio -->
+			Obter todas as empresas
+    	</Metodo>   	
+        <Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais dessa empresa
+    	</Metodo>
+    	<Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais dessa empresa por tipo do canal
+    		<Parametros>
+    			<Parametro Nome="Tipo" 	Tipo="char" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Logins" Tipo="DataTable"><!-- Fabio -->
+			Obter logins dos usuarios dessa empresa
+    	</Metodo>
+        <Metodo Nome="Usuarios" Tipo="DataTable"><!-- Fabio -->
+			Obter usuarios dessa empresa
+    	</Metodo>
+        <Metodo Nome="Garcons" Tipo="DataTable"><!-- Fabio -->
+			Obter garcons dessa empresa
+    		<Parametros>
+    			<Parametro Nome="comRegistroZero" Tipo="bool" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Garcons" Tipo="DataTable"><!-- Fabio -->
+			Obter garcons dessa empresa
+    	</Metodo>
+        <Metodo Nome="Eventos" Tipo="DataTable"><!-- Fabio -->
+			Obter eventos dessa empresa
+    	</Metodo>
+        <Metodo Nome="Pacotes" Tipo="DataTable"><!-- Fabio -->
+			Obter pacotes dessa empresa
+    	</Metodo>
+        <Metodo Nome="Precos" Tipo="DataTable"><!-- Fabio -->
+			Obter precos dessa empresa
+    	</Metodo>
+        <Metodo Nome="Lojas" Tipo="DataTable"><!-- Fabio -->
+			Obter canais dessa empresa
+    	</Metodo>
+        <Metodo Nome="Estoques" Tipo="DataTable"><!-- Fabio -->
+			Obter os estoques de todos os locais dessa empresa
+    	</Metodo>
+        <Metodo Nome="CanaisQueVendem" Tipo="DataTable">
+			Obter canais que vendem shows desta empresa 
+    		<Parametros>
+    			<Parametro Nome="registroZero" Tipo="string" />
+    		</Parametros>			
+    	</Metodo>
+        <Metodo Nome="EventosQueVendem" Tipo="DataTable">
+			Obter eventos que são vendidos por esta empresa (pdv)
+    		<Parametros>
+    			<Parametro Nome="registroZero" Tipo="string" />
+    		</Parametros>			
+    	</Metodo>
+    	
+    	
+    </Metodos>
+</Classe>

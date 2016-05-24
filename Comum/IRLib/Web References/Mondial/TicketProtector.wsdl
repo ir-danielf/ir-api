@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="UpdatePolicyRequestStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prePolicyID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="policyRequestStatus" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdatePolicyRequestStatusResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CancelPolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="policyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="userID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelPolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CancelPolicyResult" type="tns:ReturnCancelObject" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnCancelObject">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Canceled" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Message" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UpdateEventRequestStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eventID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateEventRequestStatusResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreatePolicy">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mdlPolicyRequest" type="tns:MDLPolicyRequest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MDLPolicyRequest">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RateOfDelivery" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="RateOfConvenience" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthenticationCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCollection" type="tns:ArrayOfMDLCustomer" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardExpMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardExpYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardHolderName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CreditCardSecurityCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalCost" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerDocumentID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddress" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddressNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerAddresCompliment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerZipCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerDistrict" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerCity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerState" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerPhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerMobilePhone" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="CustomerBirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="CustomerEmail" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceOrderCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimaryPolicyID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PaymentTypeID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestOriginID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequestStatus" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMDLCustomer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MDLCustomer" nillable="true" type="tns:MDLCustomer" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MDLCustomer">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ClientTicketNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ProductID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IndividualCost" type="s:decimal" />
+          <s:element minOccurs="1" maxOccurs="1" name="InsuredID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuredName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuredDocumentID" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="InsuredBirthDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventClave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventLocal" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Events" type="tns:ArrayOfMDLEvent" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SectorName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SectorCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMDLEvent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MDLEvent" nillable="true" type="tns:MDLEvent" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MDLEvent">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EventName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Local" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sectors" type="tns:ArrayOfMDLSector" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMDLSector">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MDLSector" nillable="true" type="tns:MDLSector" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MDLSector">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SectorID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="EventID" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CompanyID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SectorCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="SectorPrice" type="s:decimal" />
+          <s:element minOccurs="0" maxOccurs="1" name="SectorName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Quantity" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreatePolicyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePolicyResult" type="tns:ArrayOfMDLRequestResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMDLRequestResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MDLRequestResult" nillable="true" type="tns:MDLRequestResult" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MDLRequestResult">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PolicyID" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProductCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productID" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="eventValue" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="rateOfConvenience" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="rateOfDelivery" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductCostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetProductCostResult" type="s:decimal" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralConditions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetGeneralConditionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetGeneralConditionsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductCoverage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="productID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProductCoverageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProductCoverageResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPoliciesToImport">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPoliciesToImportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPoliciesToImportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsToImport">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetEventsToImportResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsToImportResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEvents">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="companyIDEvent" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eventDescription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEventsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEventsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyWithParams">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="companyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="authenticationCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="InitialDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="EndDate" nillable="true" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="policyID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="referenceOrderCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPolicyWithParamsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPolicyWithParamsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdatePolicyRequestStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdatePolicyRequestStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdatePolicyRequestStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdatePolicyRequestStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CancelPolicySoapIn">
+    <wsdl:part name="parameters" element="tns:CancelPolicy" />
+  </wsdl:message>
+  <wsdl:message name="CancelPolicySoapOut">
+    <wsdl:part name="parameters" element="tns:CancelPolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEventRequestStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateEventRequestStatus" />
+  </wsdl:message>
+  <wsdl:message name="UpdateEventRequestStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateEventRequestStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicySoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePolicy" />
+  </wsdl:message>
+  <wsdl:message name="CreatePolicySoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePolicyResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCostSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductCost" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCostSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConditionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetGeneralConditions" />
+  </wsdl:message>
+  <wsdl:message name="GetGeneralConditionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetGeneralConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCoverageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProductCoverage" />
+  </wsdl:message>
+  <wsdl:message name="GetProductCoverageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProductCoverageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPoliciesToImportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPoliciesToImport" />
+  </wsdl:message>
+  <wsdl:message name="GetPoliciesToImportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPoliciesToImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsToImportSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEventsToImport" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsToImportSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsToImportResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEvents" />
+  </wsdl:message>
+  <wsdl:message name="GetEventsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyWithParamsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPolicyWithParams" />
+  </wsdl:message>
+  <wsdl:message name="GetPolicyWithParamsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPolicyWithParamsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TicketProtectorWebServiceSoap">
+    <wsdl:operation name="UpdatePolicyRequestStatus">
+      <wsdl:input message="tns:UpdatePolicyRequestStatusSoapIn" />
+      <wsdl:output message="tns:UpdatePolicyRequestStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicy">
+      <wsdl:input message="tns:CancelPolicySoapIn" />
+      <wsdl:output message="tns:CancelPolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEventRequestStatus">
+      <wsdl:input message="tns:UpdateEventRequestStatusSoapIn" />
+      <wsdl:output message="tns:UpdateEventRequestStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <wsdl:input message="tns:CreatePolicySoapIn" />
+      <wsdl:output message="tns:CreatePolicySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCost">
+      <wsdl:input message="tns:GetProductCostSoapIn" />
+      <wsdl:output message="tns:GetProductCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConditions">
+      <wsdl:input message="tns:GetGeneralConditionsSoapIn" />
+      <wsdl:output message="tns:GetGeneralConditionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCoverage">
+      <wsdl:input message="tns:GetProductCoverageSoapIn" />
+      <wsdl:output message="tns:GetProductCoverageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPoliciesToImport">
+      <wsdl:input message="tns:GetPoliciesToImportSoapIn" />
+      <wsdl:output message="tns:GetPoliciesToImportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsToImport">
+      <wsdl:input message="tns:GetEventsToImportSoapIn" />
+      <wsdl:output message="tns:GetEventsToImportSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <wsdl:input message="tns:GetEventsSoapIn" />
+      <wsdl:output message="tns:GetEventsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyWithParams">
+      <wsdl:input message="tns:GetPolicyWithParamsSoapIn" />
+      <wsdl:output message="tns:GetPolicyWithParamsSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TicketProtectorWebServiceSoap" type="tns:TicketProtectorWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdatePolicyRequestStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdatePolicyRequestStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicy">
+      <soap:operation soapAction="http://tempuri.org/CancelPolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEventRequestStatus">
+      <soap:operation soapAction="http://tempuri.org/UpdateEventRequestStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <soap:operation soapAction="http://tempuri.org/CreatePolicy" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCost">
+      <soap:operation soapAction="http://tempuri.org/GetProductCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConditions">
+      <soap:operation soapAction="http://tempuri.org/GetGeneralConditions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCoverage">
+      <soap:operation soapAction="http://tempuri.org/GetProductCoverage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoliciesToImport">
+      <soap:operation soapAction="http://tempuri.org/GetPoliciesToImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsToImport">
+      <soap:operation soapAction="http://tempuri.org/GetEventsToImport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <soap:operation soapAction="http://tempuri.org/GetEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyWithParams">
+      <soap:operation soapAction="http://tempuri.org/GetPolicyWithParams" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TicketProtectorWebServiceSoap12" type="tns:TicketProtectorWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="UpdatePolicyRequestStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdatePolicyRequestStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelPolicy">
+      <soap12:operation soapAction="http://tempuri.org/CancelPolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEventRequestStatus">
+      <soap12:operation soapAction="http://tempuri.org/UpdateEventRequestStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePolicy">
+      <soap12:operation soapAction="http://tempuri.org/CreatePolicy" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCost">
+      <soap12:operation soapAction="http://tempuri.org/GetProductCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGeneralConditions">
+      <soap12:operation soapAction="http://tempuri.org/GetGeneralConditions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCoverage">
+      <soap12:operation soapAction="http://tempuri.org/GetProductCoverage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPoliciesToImport">
+      <soap12:operation soapAction="http://tempuri.org/GetPoliciesToImport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEventsToImport">
+      <soap12:operation soapAction="http://tempuri.org/GetEventsToImport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEvents">
+      <soap12:operation soapAction="http://tempuri.org/GetEvents" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPolicyWithParams">
+      <soap12:operation soapAction="http://tempuri.org/GetPolicyWithParams" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TicketProtectorWebService">
+    <wsdl:port name="TicketProtectorWebServiceSoap" binding="tns:TicketProtectorWebServiceSoap">
+      <soap:address location="https://www.mondialticket.com.br/ticketprotectorwebservice/TicketProtector.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TicketProtectorWebServiceSoap12" binding="tns:TicketProtectorWebServiceSoap12">
+      <soap12:address location="https://www.mondialticket.com.br/ticketprotectorwebservice/TicketProtector.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

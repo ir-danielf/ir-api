@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaTipo">
+  <Propriedades>
+
+    <Propriedade Nome="Nome" 	                  Tipo="texto"    Nulo="True"	 Acesso="LE" Tamanho="30"/>
+    <Propriedade Nome="RenovacaoInicio"         Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="RenovacaoFim"            Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="TrocaPrioritariaInicio"  Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="TrocaPrioritariaFim"     Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="TrocaInicio"             Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="TrocaFim"                Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="NovaAquisicaoInicio"     Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="NovaAquisicaoFim"        Tipo="datahora" Nulo="false" Acesso="LE" />
+    <Propriedade Nome="LocalID"                 Tipo="int"      Nulo="false" Acesso="LE" />
+    <Propriedade Nome="PermiteAgregados"        Tipo="booleano" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Layout"                  Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="200"/>
+    <Propriedade Nome="Logo"                    Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="200"/>
+    <Propriedade Nome="Programacao"             Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="200"/>
+    <Propriedade Nome="Precos"                  Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="200"/>
+    <Propriedade Nome="Termos"                  Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="4000"/>
+    <Propriedade Nome="PaginaPrincipal"         Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="4000"/>
+    <Propriedade Nome="PaginaLogin"             Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="4000"/>
+    <Propriedade Nome="PaginaRodape"            Tipo="texto"    Nulo="false" Acesso="LE" Tamanho="4000"/>
+    <Propriedade Nome="RetiradaBilheteria"      Tipo="booleano" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="ValorEntregaFixo"		    Tipo="decimal"	Tamanho="18" Decimal="2"/>
+
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CampingSwu">
+	<Propriedades>
+		<Propriedade Nome="VendaBilheteriaID"	Tipo="int"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="IngressoID"	Tipo="int"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="Nome"	Tipo="texto"	Tamanho="100"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="CPF"	Tipo="texto"	Tamanho="30"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="Pais"	Tipo="texto"	Tamanho="50" Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="Email"	Tipo="texto"	Tamanho="100"	Nulo="false"	Acesso="LE" />
+		<Propriedade Nome="Sexo"	Tipo="texto"	Tamanho="1"		Nulo="false"	Acesso="LE" />
+	</Propriedades>
+	<Metodos>
+	</Metodos>
+</Classe>

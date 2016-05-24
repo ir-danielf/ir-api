@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Assinatura">
+  <Propriedades>
+    <Propriedade Nome="Nome"		    			     Tipo="texto"	  Tamanho="50" Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TipoCancelamento"      Tipo="texto"	  Tamanho="1" Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaTipoID"      Tipo="int"      Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="LocalID"      Tipo="int"      Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="Ativo"                 Tipo="booleano"     Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="BloqueioID" Tipo="int" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="DesistenciaBloqueioID" Tipo="int"   Nulo="False" Acesso="LE" />
+    <Propriedade Nome="ExtintoBloqueioID" Tipo="int"   Nulo="False" Acesso="LE" />
+    <Propriedade Nome="AlertaAssinante"		    			     Tipo="texto"	  Tamanho="400" Nulo="True"	Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

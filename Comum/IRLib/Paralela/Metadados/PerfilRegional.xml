@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PerfilRegional">
+    <Propriedades>
+        <Propriedade Nome="PerfilID"	Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="RegionalID"		Tipo="int"	Nulo="True"/>
+        <Propriedade Nome="UsuarioID"	Tipo="int"	Nulo="True"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="Logins"	Tipo="DataTable"><!-- Fabiano -->
+            Devolve uma lista de logins dos usuarios da Regional e do perfil passado como parametro.
+            <Parametros>
+                <Parametro Nome="perfilID" Tipo="int"/>
+                <Parametro Nome="regionalID" Tipo="int"/>
+            </Parametros>
+      </Metodo>
+    </Metodos>
+</Classe>

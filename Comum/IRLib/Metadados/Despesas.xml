@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Despesas">
+  <Propriedades>
+    <Propriedade Nome="LocalID"			          Tipo="int"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="EventoID"		          Tipo="int"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ApresentacaoID"			  Tipo="int"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TipoPagamentoID"			  Tipo="int"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Nome"			            Tipo="texto"	        Tamanho="50"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="PorPorcentagem"		    Tipo="bool"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Valor"		              Tipo="decimal"				Nulo="True"	Acesso="LE"		Tamanho="5" Decimal="2"	/>
+    <Propriedade Nome="ValorMinimo"		        Tipo="decimal"				Nulo="True"	Acesso="LE"		Tamanho="12" Decimal="2" />
+    <Propriedade Nome="Obs"				            Tipo="texto"	        Tamanho="50"	Nulo="True"	Acesso="LE" />
+    <!--<Propriedade Nome="ValorLiquido"		      Tipo="bool"						Nulo="True"	Acesso="LE" />-->    
+    <Propriedade Nome="TipoDespesa"					  Tipo="char"					/>
+    <Propriedade Nome="TipoFormaPagamento"		Tipo="bool"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ValorIngresso"         Tipo="bool"           Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

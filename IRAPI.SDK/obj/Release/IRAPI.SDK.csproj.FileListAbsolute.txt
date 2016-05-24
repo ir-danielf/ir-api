@@ -1,0 +1,11 @@
+C:\Git\Code\IRAPI.SDK\bin\Release\IRAPI.SDK.dll
+C:\Git\Code\IRAPI.SDK\bin\Release\IRAPI.SDK.pdb
+C:\Git\Code\IRAPI.SDK\bin\Release\Newtonsoft.Json.dll
+C:\Git\Code\IRAPI.SDK\bin\Release\RestSharp.dll
+C:\Git\Code\IRAPI.SDK\bin\Release\System.Net.Http.Formatting.dll
+C:\Git\Code\IRAPI.SDK\bin\Release\Newtonsoft.Json.xml
+C:\Git\Code\IRAPI.SDK\bin\Release\RestSharp.xml
+C:\Git\Code\IRAPI.SDK\bin\Release\System.Net.Http.Formatting.xml
+C:\Git\Code\IRAPI.SDK\obj\Release\IRAPI.SDK.csprojResolveAssemblyReference.cache
+C:\Git\Code\IRAPI.SDK\obj\Release\IRAPI.SDK.dll
+C:\Git\Code\IRAPI.SDK\obj\Release\IRAPI.SDK.pdb

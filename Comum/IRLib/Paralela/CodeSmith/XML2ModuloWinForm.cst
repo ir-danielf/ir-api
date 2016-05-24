@@ -1,0 +1,740 @@
+<%@ CodeTemplate Debug="False" Language="C#" TargetLanguage="C#" Description="Lê um arquivo XML para gerar as classes C# do arquivo <modulo>DB.cs." %>
+<%@ Property Name="Modulo" Type="String" Category="Context"
+	Description="Nome do arquivo XML e das CLASSES que serao criadas pelo script." %>
+<%@ Property Name="Local" Type="String" Category="Context"
+	Description="Diretohrio onde se encontra o arquivo XML." %>
+/******************************************************
+* Arquivo <%= Modulo %>.cs
+* Gerado em: <%= DateTime.Now.ToString("dd/MM/yyyy") %>
+* Autor: Celeritas Ltda
+*******************************************************/
+<% //Debugger.Break(); %>
+<%
+string modulo, local, arquivo, nome; %>
+<% local = Local; %>
+<% local.Replace("/","\\"); %>
+<%	if (local != "")
+		arquivo = local + "\\" + Modulo + ".xml";
+	else
+		arquivo = Modulo + ".xml";
+	arquivo = arquivo.Replace(".xml.xml", ".xml");					
+%>
+<% System.Xml.XmlDocument doc = new System.Xml.XmlDocument(); %>
+<% doc.Load(arquivo); %>
+<% System.Xml.XmlElement root  = doc.DocumentElement; %>
+<% // System.Xml.XmlElement rootp = doc.DocumentElement.SelectSingleNode("/Parametros/Parametro"); %>
+<% modulo = root.Attributes.GetNamedItem("Nome").Value; %>
+
+using System;
+using System.Drawing;
+using System.Collections;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Diagnostics;
+using IRLib;
+
+namespace IRBilheteria{
+
+	public class Frm<%= modulo %> : IRFormFilho.FormFilho{
+	
+	<% System.Collections.ArrayList lCampos = new System.Collections.ArrayList();
+	bool soInt;
+	string textoProcurado;
+	string primeira, segunda;
+
+	System.Xml.XmlNodeList xmlPropriedades = root.SelectNodes("descendant::Propriedades/Propriedade");%>
+ 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+			<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+				string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+			 	nome = propriedade.Attributes.GetNamedItem("Nome").Value;
+			switch (sTipo){
+				case "date":
+				case "data":
+				case "datetime":
+				case "datahora":%>
+		private System.Windows.Forms.DateTimePicker dtp<%= nome %>;
+		private System.Windows.Forms.Label lbl<%= nome %>;
+					<%break;
+				case "bool":
+				case "booleano":%>
+		private System.Windows.Forms.CheckBox chk<%= nome %>;
+		private System.Windows.Forms.Label lbl<%= nome %>;
+					<%break;
+				case "int":
+				case "inteiro":
+					textoProcurado = nome;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+		private System.Windows.Forms.ComboBox cbo<%= nome %>;
+		private System.Windows.Forms.Label lbl<%= nome %>;
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+		private System.Windows.Forms.TextBox txt<%= nome %>;
+		private System.Windows.Forms.Label lbl<%= nome %>;
+					<%}
+					break;
+				case "decimal":
+				case "numero":
+				case "string":
+				case "texto":
+				case "memo":%>
+		private System.Windows.Forms.TextBox txt<%= nome %>;
+		private System.Windows.Forms.Label lbl<%= nome %>;
+					<%break;
+				default:
+					break;
+				} // fim de switch
+			} // fim de if
+		} // fim de for
+	%>
+		private System.Windows.Forms.Panel panel<%= modulo %>;
+		private CTComponentes.DataNavigator dtn<%= modulo %>;
+		private System.ComponentModel.IContainer components = null;
+		#region PROPRIEDADES 
+		<%= modulo %>Lista <%= modulo.ToLower() %>Lista;
+ 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+			<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+				string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+			 	string nomeC = propriedade.Attributes.GetNamedItem("Nome").Value;
+			switch (sTipo){
+				case "int":
+				case "inteiro":
+					textoProcurado = nomeC;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+		// Usado no ComboBox do <%= nomeC %>
+		<%= nomeC %> <%= nomeC.ToLower()%>;
+		System.Data.DataTable <%= nomeC.ToLower()%>Tabela;
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+					<%}
+					break;
+				default:
+					break;
+				} // fim de switch
+			} // fim de if
+		} // fim de for%>
+		// Coloque outras propriedades aqui
+		#endregion
+
+
+		#region MÉTODOS
+		/// <summary>
+		/// Construtor
+		/// </summary>
+		public f<%= modulo %>(){
+			InitializeComponent();
+		}
+		/// <summary>
+		/// Destrutor
+		/// </summary>
+		protected override void Dispose( bool disposing ){
+			if( disposing ){
+				if(components != null){
+					components.Dispose();
+				}
+			}
+			base.Dispose( disposing );
+		}
+		
+		#region Windows Form Designer generated code
+		private void InitializeComponent(){
+ 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+			<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+				string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+			 	string nomeC = propriedade.Attributes.GetNamedItem("Nome").Value;
+			switch (sTipo){
+				case "date":
+				case "data":
+				case "datetime":
+				case "datahora":%>
+			this.dtp<%= nomeC %> =  new System.Windows.Forms.DateTimePicker();
+			this.lbl<%= nomeC %> = new System.Windows.Forms.Label();			
+					<%break;
+				case "bool":
+				case "booleano":%>
+			this.chk<%= nomeC %> =  new System.Windows.Forms.CheckBox();
+			this.lbl<%= nomeC %> = new System.Windows.Forms.Label();			
+					<%break;
+				case "int":
+				case "inteiro":
+					textoProcurado = nomeC;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+			this.cbo<%= nomeC %> =  new System.Windows.Forms.ComboBox();
+			this.lbl<%= nomeC %> = new System.Windows.Forms.Label();			
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+			this.txt<%= nomeC %> = new System.Windows.Forms.TextBox();
+			this.lbl<%= nomeC %> = new System.Windows.Forms.Label();
+					<%}
+					break;
+				case "decimal":
+				case "numero":
+				case "string":
+				case "texto":
+				case "memo":%>
+			this.txt<%= nomeC %> = new System.Windows.Forms.TextBox();
+			this.lbl<%= nomeC %> = new System.Windows.Forms.Label();
+					<%break;
+				default:
+					break;
+				} // fim de switch
+			} // fim de if
+		} // fim de for%>
+			this.panel<%= modulo %> = new System.Windows.Forms.Panel();
+			this.dtn<%= modulo %> = new CTComponentes.DataNavigator();
+			this.panel<%= modulo %>.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// lblTitulo
+			// 
+			this.lblTitulo.Location = new System.Drawing.Point(0, 4);
+			this.lblTitulo.Name = "lblTitulo";
+			this.lblTitulo.Size = new System.Drawing.Size(552, 36);
+			this.lblTitulo.Text = "Cadastro de <%= modulo %>";
+			this.lblTitulo.TabIndex = 2;
+		<%
+		int cY=16;
+		int cTab=0;
+ 		foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+			<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+				string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+			 	string nomeC = propriedade.Attributes.GetNamedItem("Nome").Value;
+			switch (sTipo){
+				case "date":
+				case "data":
+				case "datetime":
+				case "datahora":%>
+			// 
+			// lbl<%= nomeC %>
+			// 
+			this.lbl<%= nomeC %>.AutoSize = true;
+			this.lbl<%= nomeC %>.Location = new System.Drawing.Point(16, <%= cY %>);
+			this.lbl<%= nomeC %>.Name = "lbl<%= nomeC %>";
+			this.lbl<%= nomeC %>.Size = new System.Drawing.Size(70, 21);
+			this.lbl<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			<%if (nomeC=="Obs") {%>
+				this.lbl<%= nomeC %>.Text = "Observacao :";
+			<%} else {%>
+				this.lbl<%= nomeC %>.Text = "<%= nomeC %>:";
+			<%}%>
+			// 
+			// dtp<%= nomeC %>
+			//
+			this.dtp<%= nomeC %>.Location = new System.Drawing.Point(128, <%= cY %>);
+			this.dtp<%= nomeC %>.Name = "dtp<%= nomeC %>";
+			this.dtp<%= nomeC %>.Size = new System.Drawing.Size(314, 25);
+			this.dtp<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.dtp<%= nomeC %>.Text = "";
+					<%break;
+				case "bool":
+				case "booleano":%>
+			// 
+			// lbl<%= nomeC %>
+			// 
+			this.lbl<%= nomeC %>.AutoSize = true;
+			this.lbl<%= nomeC %>.Location = new System.Drawing.Point(16, <%= cY %>);
+			this.lbl<%= nomeC %>.Name = "lbl<%= nomeC %>";
+			this.lbl<%= nomeC %>.Size = new System.Drawing.Size(70, 21);
+			this.lbl<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.lbl<%= nomeC %>.Text = "<%= nomeC %>:";
+			// 
+			// chk<%= nomeC %>
+			//
+			this.chk<%= nomeC %>.Location = new System.Drawing.Point(128, <%= cY %>);
+			this.chk<%= nomeC %>.Name = "chk<%= nomeC %>";
+			this.chk<%= nomeC %>.Size = new System.Drawing.Size(30, 25);
+			this.chk<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.chk<%= nomeC %>.Text = "";
+					<%break;
+				case "int":
+				case "inteiro":
+					textoProcurado = nomeC;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+			// 
+			// lbl<%= nomeC %>
+			// 
+			this.lbl<%= nomeC %>.AutoSize = true;
+			this.lbl<%= nomeC %>.Location = new System.Drawing.Point(16, <%= cY %>);
+			this.lbl<%= nomeC %>.Name = "lbl<%= nomeC %>";
+			this.lbl<%= nomeC %>.Size = new System.Drawing.Size(70, 21);
+			this.lbl<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.lbl<%= nomeC %>.Text = "<%= nomeC %>:";
+			// 
+			// cbo<%= nomeC %>
+			//
+			this.cbo<%= nomeC %>.Location = new System.Drawing.Point(128, <%= cY %>);
+			this.cbo<%= nomeC %>.Name = "cbo<%= nomeC %>";
+			this.cbo<%= nomeC %>.Size = new System.Drawing.Size(314, 25);
+			this.cbo<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.cbo<%= nomeC %>.Text = "";
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+			// 
+			// lbl<%= nomeC %>
+			// 
+			this.lbl<%= nomeC %>.AutoSize = true;
+			this.lbl<%= nomeC %>.Location = new System.Drawing.Point(16, <%= cY %>);
+			this.lbl<%= nomeC %>.Name = "lbl<%= nomeC %>";
+			this.lbl<%= nomeC %>.Size = new System.Drawing.Size(70, 21);
+			this.lbl<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.lbl<%= nomeC %>.Text = "<%= nomeC %>:";
+			// 
+			// txt<%= nomeC %>
+			//
+			this.txt<%= nomeC %>.Location = new System.Drawing.Point(128, <%= cY %>);
+			this.txt<%= nomeC %>.Name = "txt<%= nomeC %>";
+			this.txt<%= nomeC %>.Size = new System.Drawing.Size(314, 25);
+			this.txt<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.txt<%= nomeC %>.Text = "";
+					<%}
+					break;			
+				case "decimal":
+				case "numero":
+				case "string":
+				case "texto":%>
+			// 
+			// lbl<%= nomeC %>
+			// 
+			this.lbl<%= nomeC %>.AutoSize = true;
+			this.lbl<%= nomeC %>.Location = new System.Drawing.Point(16, <%= cY %>);
+			this.lbl<%= nomeC %>.Name = "lbl<%= nomeC %>";
+			this.lbl<%= nomeC %>.Size = new System.Drawing.Size(70, 21);
+			this.lbl<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.lbl<%= nomeC %>.Text = "<%= nomeC %>:";
+			// 
+			// txt<%= nomeC %>
+			//
+			this.txt<%= nomeC %>.Location = new System.Drawing.Point(128, <%= cY %>);
+			this.txt<%= nomeC %>.Name = "txt<%= nomeC %>";
+			this.txt<%= nomeC %>.Size = new System.Drawing.Size(314, 25);
+			this.txt<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.txt<%= nomeC %>.Text = "";
+					<%break;
+				case "memo":%>
+			// 
+			// lbl<%= nomeC %>
+			// 
+			this.lbl<%= nomeC %>.AutoSize = true;
+			this.lbl<%= nomeC %>.Location = new System.Drawing.Point(16, <%= cY %>);
+			this.lbl<%= nomeC %>.Name = "lbl<%= nomeC %>";
+			this.lbl<%= nomeC %>.Size = new System.Drawing.Size(70, 21);
+			this.lbl<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.lbl<%= nomeC %>.Text = "<%= nomeC %>:";
+			// 
+			// txt<%= nomeC %>
+			//
+			this.txt<%= nomeC %>.Location = new System.Drawing.Point(128, <%= cY %>);
+			this.txt<%= nomeC %>.Name = "txt<%= nomeC %>";
+			this.txt<%= nomeC %>.Size = new System.Drawing.Size(314, 75);
+			this.txt<%= nomeC %>.TabIndex = <%= ++cTab %>;
+			this.txt<%= nomeC %>.Text = "";
+			this.txt<%= nomeC %>.Multiline = true;
+			this.txt<%= nomeC %>.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+	 			<%break;
+				default:
+					break;
+				} // fim de switch
+			} // fim de if
+			cY += 40; 
+		} // fim de for%>
+			// 
+			// panel<%= modulo %>
+			// 
+			this.panel<%= modulo %>.Anchor = System.Windows.Forms.AnchorStyles.None;
+ 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+			<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+				string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+			 	string nomeC = propriedade.Attributes.GetNamedItem("Nome").Value;
+			switch (sTipo){
+				case "date":
+				case "data":
+				case "datetime":
+				case "datahora":%>
+			this.panel<%= modulo %>.Controls.Add(this.dtp<%= nomeC %>);
+			this.panel<%= modulo %>.Controls.Add(this.lbl<%= nomeC %>);
+					<%break;
+				case "bool":
+				case "booleano":%>
+			this.panel<%= modulo %>.Controls.Add(this.chk<%= nomeC %>);
+			this.panel<%= modulo %>.Controls.Add(this.lbl<%= nomeC %>);
+					<%break;
+				case "int":
+				case "inteiro":
+					textoProcurado = nomeC;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+			this.panel<%= modulo %>.Controls.Add(this.cbo<%= nomeC %>);
+			this.panel<%= modulo %>.Controls.Add(this.lbl<%= nomeC %>);
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+			this.panel<%= modulo %>.Controls.Add(this.txt<%= nomeC %>);
+			this.panel<%= modulo %>.Controls.Add(this.lbl<%= nomeC %>);
+					<%}
+					break;
+				case "decimal":
+				case "numero":
+				case "string":
+				case "texto":
+				case "memo":%>
+			this.panel<%= modulo %>.Controls.Add(this.txt<%= nomeC %>);
+			this.panel<%= modulo %>.Controls.Add(this.lbl<%= nomeC %>);
+					<%break;
+				default:
+					break;
+				} // fim de switch
+			} // fim de if
+		} // fim de for%>
+			this.panel<%= modulo %>.Location = new System.Drawing.Point(32, 116);
+			this.panel<%= modulo %>.Name = "panel<%= modulo %>";
+			this.panel<%= modulo %>.Size = new System.Drawing.Size(464, <%= (cY+200) %>);
+			this.panel<%= modulo %>.TabIndex = 0;
+			// 
+			// dtn<%= modulo %>
+			// 
+			this.dtn<%= modulo %>.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dtn<%= modulo %>.DataLista = null;
+			this.dtn<%= modulo %>.DataSource = null;
+			this.dtn<%= modulo %>.Filtro = "";
+			this.dtn<%= modulo %>.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((System.Byte)(0)));
+			this.dtn<%= modulo %>.Location = new System.Drawing.Point(16, 56);
+			this.dtn<%= modulo %>.Name = "dtn<%= modulo %>";
+			this.dtn<%= modulo %>.Size = new System.Drawing.Size(536, 34);
+			this.dtn<%= modulo %>.TabIndex = 1;
+			this.dtn<%= modulo %>.DisableControl += new CTComponentes.DisableControlEventHandler(this.dtn<%= modulo %>_DisableControl);
+			this.dtn<%= modulo %>.UpdateObj += new CTComponentes.UpdateObjEventHandler(this.dtn<%= modulo %>_UpdateObj);
+			this.dtn<%= modulo %>.UpdateForm += new CTComponentes.UpdateFormEventHandler(this.dtn<%= modulo %>_UpdateForm);
+			this.dtn<%= modulo %>.SetLabel += new CTComponentes.SetLabelEventHandler(this.dtn<%= modulo %>_SetLabel);
+			// 
+			// <%= modulo %>
+			// 
+			this.AutoScaleBaseSize = new System.Drawing.Size(7, 18);
+			this.ClientSize = new System.Drawing.Size(552, 672);
+			this.Controls.Add(this.dtn<%= modulo %>);
+			this.Controls.Add(this.panel<%= modulo %>);
+			this.Name = "f<%= modulo %>";
+			this.Text = "<%= modulo %>";
+			this.Titulo = "<%= modulo %>";
+			this.Load += new System.EventHandler(this.f<%= modulo %>_Load);
+			this.Controls.SetChildIndex(this.panel<%= modulo %>, 0);
+			this.Controls.SetChildIndex(this.dtn<%= modulo %>, 0);
+			this.Controls.SetChildIndex(this.lblTitulo, 0);
+			this.panel<%= modulo %>.ResumeLayout(false);
+			this.ResumeLayout(false);
+		}
+		#endregion		
+		
+		/// <summary>
+		/// Mehtodo que refresca objeto na tela
+		/// </summary>
+		private void dtn<%= modulo %>_UpdateForm(){
+			try{
+		 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+					<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+						string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+					 	string nomeF = propriedade.Attributes.GetNamedItem("Nome").Value;
+					switch (sTipo){
+						case "decimal":
+						case "numero":%>
+				txt<%= nomeF %>.Text = <%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeF %>.Valor.ToString();
+							<%break;
+						case "int":
+						case "inteiro":
+					textoProcurado = nomeF;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+				cbo<%= nomeF %>.SelectedValue = Convert.ToInt32(<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeF %>.Valor);
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+				txt<%= nomeF %>.Text = <%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeF %>.Valor;
+					<%}
+					break;
+						case "date":
+						case "data":
+						case "datetime":
+						case "datahora":%>
+				dtp<%= nomeF %>.Value = <%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeF %>.Valor;
+							<%break;
+						case "bool":
+						case "booleano":%>
+				chk<%= nomeF %>.Checked = <%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeF %>.Valor;							
+							<%break;
+						case "string":
+						case "texto":
+						case "memo":%>
+				txt<%= nomeF %>.Text = <%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeF %>.Valor;
+							<%break;
+						default:
+							break;
+						} // fim de switch
+					} // fim de if
+				} // fim de for%>
+			}catch(Exception ex){
+				MessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		} // fim do mehtodo UpdateForm
+		/// <summary>
+		/// Mehtodo que atualiza da tela para objeto
+		/// </summary>
+		private void dtn<%= modulo %>_UpdateObj(){
+			try{
+		 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+					<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+						string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+					 	string nomeO = propriedade.Attributes.GetNamedItem("Nome").Value;
+						switch (sTipo){
+						case "decimal":
+						case "numero":%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = Convert.ToDecimal(txt<%= nomeO %>.Text);
+							<%break;
+						case "int":
+						case "inteiro":
+					textoProcurado = nomeO;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = Referencia.Usuario.EmpresaID.Valor;							
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = Convert.ToInt32(cbo<%= nomeO %>.SelectedValue);
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = txt<%= nomeO %>.Text;
+					<%}
+							break;
+						case "date":
+						case "data":
+						case "datetime":
+						case "datahora":%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = dtp<%= nomeO %>.Value;
+							<%break;
+						case "bool":
+						case "booleano":%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = chk<%= nomeO %>.Checked;
+							<%break;
+						case "string":
+						case "texto":
+						case "memo":%>
+				<%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeO %>.Valor = txt<%= nomeO %>.Text;
+							<%break;
+						default:
+							break;
+						} // fim de switch
+					} // fim de if
+				} // fim de for%>
+			}catch(Exception ex){
+				MessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		} // fim do mehtodo UpdateObj
+		/// <summary>
+		/// Mehtodo que Desabilita objetos ao Inserir ou Alterar
+		/// </summary>
+		private void dtn<%= modulo %>_DisableControl(bool Flag){
+			try{
+		 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+					<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+						string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+					 	string nomeD = propriedade.Attributes.GetNamedItem("Nome").Value;
+						switch (sTipo){
+						case "int":
+						case "inteiro":
+					textoProcurado = nomeD;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {
+									soInt = false;%>
+								<%} else { // Chave estrangeira
+									soInt = false;%>
+				cbo<%= nomeD %>.Enabled = !Flag;
+								<%}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+				txt<%= nomeD %>.ReadOnly = Flag;
+					<%}
+							break;
+						case "date":
+						case "data":
+						case "datetime":
+						case "datahora":%>
+				dtp<%= nomeD %>.Enabled = !Flag;
+							<%break;
+						case "bool":
+						case "booleano":%>
+				chk<%= nomeD %>.Enabled = !Flag;
+							<%break;
+						case "string":
+						case "texto":
+						case "memo":
+						case "decimal":
+						case "numero":%>
+				txt<%= nomeD %>.ReadOnly = Flag;
+							<%break;
+						default:
+							break;
+						} // fim de switch
+					} // fim de if
+				} // fim de for%>
+			}catch(Exception ex){
+				MessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		} // fim de mehtodo DisableControl
+		/// <summary>
+		/// Mehtodo que define tamanho maximo das caixas de texto
+		/// </summary>
+		private void dtn<%= modulo %>_SetLabel(){
+			try{
+		 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+					<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+						string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+					 	string nomeL = propriedade.Attributes.GetNamedItem("Nome").Value;
+						switch (sTipo){
+						case "string":
+						case "texto":
+						case "memo":%>
+				txt<%= nomeL %>.MaxLength = <%= modulo.ToLower() %>Lista.<%= modulo %>.<%= nomeL %>.Tamanho;
+							<%break;
+						default:
+							break;
+						} // fim de switch
+					} // fim de if
+				} // fim de for%>
+			}catch(Exception ex){
+				MessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		} // fim do mehtodo SetLabel
+		/// <summary>
+		/// Mehtodo executado ao carregar formulario
+		/// </summary>
+		private void f<%= modulo %>_Load(object sender, System.EventArgs e){
+			this.Titulo = "Cadastro de <%= modulo %>";
+			this.Text = this.Titulo; 
+			<%= modulo.ToLower() %>Lista = new <%= modulo %>Lista(Referencia.Usuario.Control.ID);
+			try{
+				// Inicializando Objeto
+				<%= modulo.ToLower() %>Lista.OrdemSQL = "Nome";
+				<%= modulo.ToLower() %>Lista.Carregar();
+		 		<%foreach (System.Xml.XmlNode propriedade in xmlPropriedades){ %>
+					<%if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+						string sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+					 	string nomeD = propriedade.Attributes.GetNamedItem("Nome").Value;
+						switch (sTipo){
+						case "int":
+						case "inteiro":
+					textoProcurado = nomeD;
+					soInt = true; 
+					for (int contaLetra=0; contaLetra< textoProcurado.Length; contaLetra++) {
+						primeira = textoProcurado.Substring(contaLetra, 1);
+						if (primeira=="I") {
+							segunda = textoProcurado.Substring(contaLetra+1, 1);
+							if (segunda=="D") 
+								if (textoProcurado=="EmpresaID") {%>
+				<%= modulo.ToLower() %>Lista.FiltroSQL = "EmpresaID=" + Referencia.Usuario.EmpresaID.Valor;				
+									<%soInt = false;
+								} else { // Chave estrangeira %>
+				// Instanciando objetos usados <%= nomeD.ToLower() %>
+				<%= nomeD.ToLower() %> = new <%= nomeD %>();
+				<%= nomeD.ToLower() %>Tabela = new System.Data.DataTable();
+				// Inicializando dados de <%= nomeD.ToLower()%> no combo
+				<%= nomeD.ToLower()%>Tabela = <%= nomeD.ToLower()%>.Todos();
+				cbo<%= nomeD%>.DataSource = <%= nomeD.ToLower()%>Tabela;
+				cbo<%= nomeD%>.DisplayMember = "Nome"; 
+				cbo<%= nomeD%>.ValueMember = "ID";
+									<%soInt = false;
+								}
+						} // fim de if do ID
+					} // fim do for do estar contido
+					if (soInt) {%>
+					<%}
+							break;
+						default:
+							break;
+						} // fim de switch
+					} // fim de if
+				} // fim de for%>
+				// DataNavigator
+				dtn<%= modulo %>.Filtro = "Nome like '%@%'";
+				dtn<%= modulo %>.DataLista = (CTLib.IBaseLista)<%= modulo.ToLower() %>Lista;
+				dtn<%= modulo %>.DataSource = (CTLib.IBaseBD)<%= modulo.ToLower() %>Lista.<%= modulo %>;
+				dtn<%= modulo %>.Iniciar();
+			}catch(Exception ex){
+				MessageBox.Show(this, ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			}
+		} // fim do metodo Load
+		#endregion
+	}
+
+}

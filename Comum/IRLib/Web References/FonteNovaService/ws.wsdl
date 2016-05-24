@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://imply.com" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://imply.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://imply.com" />
+  </wsdl:types>
+  <wsdl:message name="bloquearRequest">
+    <wsdl:part name="AChave" type="xsd:string" />
+    <wsdl:part name="aIdEvento" type="xsd:string" />
+    <wsdl:part name="aCodigo" type="xsd:string" />
+    <wsdl:part name="aMsgDisplay1Linha1" type="xsd:string" />
+    <wsdl:part name="aMsgDisplay1Linha2" type="xsd:string" />
+    <wsdl:part name="aMsgDisplay2Linha1" type="xsd:string" />
+    <wsdl:part name="aMsgDisplay2Linha2" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="bloquearResponse">
+    <wsdl:part name="bloquearReturn" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="efetuarLoginRequest">
+    <wsdl:part name="AUsuario" type="xsd:string" />
+    <wsdl:part name="ASenha" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="efetuarLoginResponse">
+    <wsdl:part name="efetuarLoginReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="efetuarLogoutRequest">
+    <wsdl:part name="AChave" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="efetuarLogoutResponse">
+    <wsdl:part name="efetuarLogoutReturn" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="inserirRequest">
+    <wsdl:part name="AChave" type="xsd:string" />
+    <wsdl:part name="ACodigoAcessoTipo" type="xsd:string" />
+    <wsdl:part name="ACodigoAcesso" type="xsd:string" />
+    <wsdl:part name="AExtra" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="inserirResponse">
+    <wsdl:part name="inserirReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="liberarRequest">
+    <wsdl:part name="AChave" type="xsd:string" />
+    <wsdl:part name="aIdEvento" type="xsd:string" />
+    <wsdl:part name="aCodigo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="liberarResponse">
+    <wsdl:part name="liberarReturn" type="xsd:boolean" />
+  </wsdl:message>
+  <wsdl:message name="listarTiposRequest">
+    <wsdl:part name="AChave" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="listarTiposResponse">
+    <wsdl:part name="listarTiposReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="verificarCodigoAcessouRequest">
+    <wsdl:part name="AChave" type="xsd:string" />
+    <wsdl:part name="aCodigo" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:message name="verificarCodigoAcessouResponse">
+    <wsdl:part name="verificarCodigoAcessouReturn" type="xsd:string" />
+  </wsdl:message>
+  <wsdl:portType name="WSBasePortType">
+    <wsdl:operation name="bloquear">
+      <wsdl:input message="tns:bloquearRequest" />
+      <wsdl:output message="tns:bloquearResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="efetuarLogin">
+      <wsdl:input message="tns:efetuarLoginRequest" />
+      <wsdl:output message="tns:efetuarLoginResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="efetuarLogout">
+      <wsdl:input message="tns:efetuarLogoutRequest" />
+      <wsdl:output message="tns:efetuarLogoutResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="inserir">
+      <wsdl:input message="tns:inserirRequest" />
+      <wsdl:output message="tns:inserirResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="liberar">
+      <wsdl:input message="tns:liberarRequest" />
+      <wsdl:output message="tns:liberarResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="listarTipos">
+      <wsdl:input message="tns:listarTiposRequest" />
+      <wsdl:output message="tns:listarTiposResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="verificarCodigoAcessou">
+      <wsdl:input message="tns:verificarCodigoAcessouRequest" />
+      <wsdl:output message="tns:verificarCodigoAcessouResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSBaseBinding" type="tns:WSBasePortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc" />
+    <wsdl:operation name="bloquear">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=bloquear" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="efetuarLogin">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=efetuarLogin" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="efetuarLogout">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=efetuarLogout" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="inserir">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=inserir" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="liberar">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=liberar" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listarTipos">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=listarTipos" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="verificarCodigoAcessou">
+      <soap:operation soapAction="http://10.72.6.8/Circus/ws.php?class=WSBase&amp;method=verificarCodigoAcessou" style="rpc" />
+      <wsdl:input>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="encoded" namespace="http://imply.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSBase">
+    <wsdl:port name="WSBasePort" binding="tns:WSBaseBinding">
+      <soap:address location="http://10.72.6.8/Circus/ws.php?class=WSBase" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

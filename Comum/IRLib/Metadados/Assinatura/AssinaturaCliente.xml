@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaCliente">
+  <Propriedades>
+    <Propriedade Nome="ClienteID" Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="SetorID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="PrecoTipoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="LugarID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaAnoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Status" 	            Tipo="texto" Tamanho="1"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Acao" 	        Tipo="texto" Tamanho="1"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="AssinaturaClienteID" Tipo="int" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TimeStamp"     Tipo="datahora"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="UsuarioID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Desmembrada"          Tipo="booleano"   Nulo="False" Acesso="LE" />
+    <Propriedade Nome="AgregadoID" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

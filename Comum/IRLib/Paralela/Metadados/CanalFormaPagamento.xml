@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="CanalFormaPagamento">
+    <Propriedades>
+        <Propriedade Nome="CanalID"			 Tipo="int"						Nulo="True"	Acesso="LE"/>
+        <Propriedade Nome="FormaPagamentoID" Tipo="int"						Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+    <Metodos>
+        <Metodo Nome="FormasPagamento" Tipo="DataTable"><!-- Fabio -->
+			Obter formas de pagamento de um canal especifico
+    		<Parametros>
+    			<Parametro Nome="CanalID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+        <Metodo Nome="Canais" Tipo="DataTable"><!-- Fabio -->
+			Obter canais de uma forma de pagamento especifico
+    		<Parametros>
+    			<Parametro Nome="FormaPagamentoID" Tipo="int" />
+    		</Parametros>
+    	</Metodo>
+    </Metodos>
+</Classe>
+

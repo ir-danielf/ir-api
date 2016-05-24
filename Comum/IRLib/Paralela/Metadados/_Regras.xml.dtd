@@ -1,0 +1,24 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT Classe (Propriedades)+>
+<!ELEMENT Propriedades (Propriedade+)>
+<!ELEMENT Propriedade EMPTY>
+<!ATTLIST Propriedade
+	Nome CDATA #REQUIRED
+	Tipo (decimal|numero|long|int|inteiro|string|text|texto|date|data|time|hora|datetime|datahora|bool|boolean|memo) #REQUIRED
+	Tamanho CDATA #IMPLIED
+	Nulo (True|False) "True"
+	Acesso (LE|EL|L|E) "LE"
+	Decimal CDATA #IMPLIED>
+<!ELEMENT Metodos (Metodo+)*>
+<!ELEMENT Metodo (Parametros*)>
+<!ELEMENT Metodo (#PCDATA)>
+<!ATTLIST Metodo
+	Nome CDATA #REQUIRED
+	Tipo CDATA #REQUIRED
+	ComentarioSaida CDATA #IMPLIED
+	Comportamento (valor|ref|referencia|out|retorno) #IMPLIED>
+<!ELEMENT Parametros (Parametro+)>
+<!ELEMENT Parametro (#PCDATA)>
+<!ATTLIST Parametro
+	Nome CDATA #REQUIRED
+	Tipo CDATA #REQUIRED>

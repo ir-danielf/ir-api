@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="CotaItem">
+
+  <Propriedades>
+    <Propriedade Nome="CotaID"                Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="PrecoIniciaCom"        Tipo="texto"  Nulo="False"	Tamanho="30" Acesso="LE"/>
+    <Propriedade Nome="Quantidade"            Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="QuantidadePorCliente"  Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="ParceiroID"            Tipo="int"    Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="ValidaBin"             Tipo="booleano"   Nulo="False"   Acesso="LE"/>
+    <Propriedade Nome="TextoValidacao"        Tipo="texto"  Nulo="False"  Tamanho="100" Acesso="LE"/>
+    <Propriedade Nome="ObrigatoriedadeID"     Tipo="int"    Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="CPFResponsavel"        Tipo="booleano" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Termo"                 Tipo="texto"  Nulo="True"  Tamanho="2000" Acesso="LE" />
+    <Propriedade Nome="TermoSite"                 Tipo="texto"  Nulo="True"  Tamanho="3000" Acesso="LE" />
+    <Propriedade Nome="Nominal"               Tipo="booleano" Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="QuantidadePorCodigo"   Tipo="int"    Nulo="False"  Acesso="LE" />
+  </Propriedades>
+</Classe>

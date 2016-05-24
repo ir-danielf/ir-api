@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="TaxaProcessamento">
+  <Propriedades>
+    <Propriedade Nome="EstadoID"  Tipo="int"                             Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="ValorTaxa" Tipo="decimal" Decimal="2" Tamanho="5" Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="LimiteMaximoIngressosEstado" Tipo="int"                 Nulo="False" Acesso="LE"/>
+  </Propriedades>
+</Classe>

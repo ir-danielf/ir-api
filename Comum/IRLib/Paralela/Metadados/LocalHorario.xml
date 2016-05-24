@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="LocalHorario">
+  <Propriedades>
+    <Propriedade Nome="LocalID"	Tipo="int"					Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="DiaSemana"		Tipo="int"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="HoraInicio"		Tipo="datahora"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="HoraFim"	Tipo="datahora"	Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+</Classe>
+

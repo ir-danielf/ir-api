@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="NomenclaturaPacote">
+  <Propriedades>
+    <Propriedade Nome="Nome"		      Tipo="texto"	Tamanho="100"	Nulo="False"	Acesso="LE"/>
+ </Propriedades>
+</Classe>

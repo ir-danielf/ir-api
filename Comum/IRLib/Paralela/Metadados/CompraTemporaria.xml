@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="CompraTemporaria">
+  <Propriedades>
+    <!-- COLUNA ID É IDENTITY -->
+    <Propriedade Nome="ClienteID"		                      Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="FormaPagamentoID"  		            Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="EnderecoID"	                      Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="PDVSelecionado"	                  Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="EntregaControleIDSelecionado"	    Tipo="int"						      Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="DataSelecionada"	  			          Tipo="texto" Tamanho="20"   Nulo="True"		Acesso="LE"	/>
+    <Propriedade Nome="EntregaValor"                      Tipo="decimal"              Nulo="True"   Acesso="LE" Decimal="2" />
+    <Propriedade Nome="Parcelas"         					        Tipo="int"     	            Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="ValorTotal"				                Tipo="decimal"              Nulo="True"		Acesso="LE"	Decimal="2"/>
+    <Propriedade Nome="Bandeira"	  			                Tipo="texto" Tamanho="20"   Nulo="True"		Acesso="LE"	/>
+    <Propriedade Nome="SessionID"	  			                Tipo="texto" Tamanho="150"  Nulo="True"		Acesso="LE"	/>
+    <Propriedade Nome="BIN"				                        Tipo="int"                  Nulo="True"		Acesso="LE"	/>
+    <Propriedade Nome="CodigoTrocaFixo"                   Tipo="texto" Tamanho="18"   Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="SomenteVir"                        Tipo="bool"                 Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="SomenteCortesias"                  Tipo="bool"                 Nulo="True"   Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

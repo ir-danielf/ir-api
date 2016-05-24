@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CotaItemFormaPagamento">
+  <Propriedades>
+    <Propriedade Nome="CotaItemID"		        Tipo="int"	Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="FormaPagamentoID"	Tipo="int"	Nulo="False" Acesso="LE"/>
+  </Propriedades>
+</Classe>

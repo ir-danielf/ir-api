@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PrecoExclusivo">
+    <Propriedades>
+        <Propriedade Nome="EventoID"	          Tipo="int"							      Nulo="True"	  Acesso="LE"/>    
+        <Propriedade Nome="Nome"		            Tipo="texto"	  Tamanho="50"	Nulo="True"	  Acesso="LE"/>
+        <Propriedade Nome="PrecoIniciaCom"		        Tipo="texto"	  Tamanho="20"	Nulo="True"		Acesso="LE"/>
+        <Propriedade Nome="QuantidadeMaxima"				Tipo="int"						/>        
+	<Propriedade Nome="Ativo"	Tipo="booleano"					Nulo="True"		Acesso="LE" />
+    </Propriedades>    
+    <Metodos>
+        <Metodo Nome="Todos" Tipo="DataTable"><!-- Lucio -->
+			Obter todos os Precos Exclusivos
+    	</Metodo>   
+        <Metodo Nome="ListagemPorPrecoExclusivo" Tipo="DataTable"><!-- Lucio -->
+			Obter todos os Precos Exclusivos
+    		<Parametros>
+    			<Parametro Nome="PrecoExclusivoID" Tipo="int"/>
+    		</Parametros>
+    	</Metodo>   
+        <Metodo Nome="ListagemPorEventoID" Tipo="DataTable"><!-- Lucio -->
+			Obter todos os Precos Exclusivos
+    		<Parametros>
+    			<Parametro Nome="EventoID" Tipo="int"/>
+    		</Parametros>
+    	</Metodo>   
+    </Metodos>
+</Classe>

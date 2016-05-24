@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="ServicePush">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"      Tipo="int"  Tamanhp="50"  Nulo="False"  Acesso="LE"/>
+    <Propriedade Nome="Latitude"				Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Longitude"				Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Plataforma"    Tipo="texto"    Tamanho="50"  Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Token"				Tipo="texto"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Ativo"         Tipo="booleano"			Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>

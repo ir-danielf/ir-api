@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="IngressoCliente">
+  <Propriedades>
+    <!-- ESTA TABELA UTILIZA IDENITITY (1,1) -->
+    <Propriedade Nome="IngressoID"	              Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="CotaItemID"	                    Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ApresentacaoID"	              Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ApresentacaoSetorID"				    Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DonoID"	                    Tipo="int"				Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="CodigoPromocional"       Tipo="texto"      Tamanho="50"  Nulo="True" Acesso="LE"></Propriedade>
+    <Propriedade Nome="CPF"     Tipo="texto"  Tamanho="30"  Nulo="True" Acesso="LE"/>
+  </Propriedades>
+</Classe>

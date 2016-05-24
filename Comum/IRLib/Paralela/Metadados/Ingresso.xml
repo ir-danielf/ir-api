@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Classe Nome="Ingresso">
+  <Propriedades>
+    <Propriedade Nome="ApresentacaoSetorID"		Tipo="int"					/>
+    <Propriedade Nome="PrecoID"					Tipo="int"					/>
+    <Propriedade Nome="LugarID"					Tipo="int"					/>
+    <Propriedade Nome="UsuarioID"				Tipo="int"					/>
+    <Propriedade Nome="CortesiaID"				Tipo="int"					/>
+    <Propriedade Nome="BloqueioID"				Tipo="int"					/>
+    <Propriedade Nome="Codigo"					Tipo="texto" Tamanho="20"	/>
+    <Propriedade Nome="CodigoBarra"				Tipo="texto" Tamanho="30"	/>
+    <Propriedade Nome="CodigoBarraCliente"		Tipo="texto" Tamanho="30"	/>
+    <Propriedade Nome="Status"					Tipo="char"					/>
+    <Propriedade Nome="SetorID"					Tipo="int"					/>
+    <Propriedade Nome="ApresentacaoID"			Tipo="int"					/>
+    <Propriedade Nome="EventoID"				Tipo="int"					/>
+    <Propriedade Nome="LocalID"					Tipo="int"					/>
+    <Propriedade Nome="EmpresaID"				Tipo="int"					/>
+    <Propriedade Nome="LojaID"					Tipo="int"					/>
+    <Propriedade Nome="VendaBilheteriaID"		Tipo="int"					/>
+    <Propriedade Nome="ClienteID"				Tipo="int"	Nulo="true"		/>
+    <Propriedade Nome="PacoteID"				Tipo="int"	Nulo="true"		/>
+    <Propriedade Nome="PacoteGrupo"				Tipo="texto"	Nulo="true"	Tamanho="6"	/>
+    <Propriedade Nome="Classificacao"			Tipo="int"	Nulo="true"		/>
+    <Propriedade Nome="Grupo"					Tipo="int"	Nulo="true"		/>
+    <Propriedade Nome="SessionID"				Tipo="texto" Tamanho="255"	Nulo="true"		/>
+    <Propriedade Nome="TimeStampReserva"		Tipo="datahora" Nulo="true"		/>
+    <Propriedade Nome="CodigoSequencial"					Tipo="int"	Nulo="true"		/>
+    <Propriedade Nome="CodigoImpressao"				Tipo="int"					/>
+    <Propriedade Nome="AssinaturaClienteID"				Tipo="int"		Nulo="true"				/>
+
+    <Propriedade Nome="SerieID"				Tipo="int"		Nulo="true"				/>
+    <Propriedade Nome="CompraGUID"				Tipo="texto"  Tamanho="120"		Nulo="true"				/>
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="InfoVendido" Tipo="DataRow">
+      <!-- Fabio -->
+      Obtem informações (evento,apresentacao,setor...) desse ingresso vendido
+    </Metodo>
+    <Metodo Nome="InfoReservado" Tipo="DataRow">
+      <!-- Fabio -->
+      Obtem informações (evento,apresentacao,setor...) desse ingresso reservado
+    </Metodo>
+    <Metodo Nome="Historico" Tipo="DataTable">
+      Obtendo um DataTable dos Logs dos Ingressos e dos Itens
+    </Metodo>
+    <Metodo Nome="TotalPorCanalEvento" Tipo="int">
+      Obter total de ingressos por Canal e Evento
+      <Parametros>
+        <Parametro Nome="canalID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadePorBloqueio" Tipo="int">
+      Obter total de ingressos por ApresentacaoSetor e Bloqueio
+      <Parametros>
+        <Parametro Nome="apresentacaoSetorID" Tipo="int" />
+        <Parametro Nome="bloqueioID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="SenhaVenda" Tipo="string">
+      Obter a senha deste Ingresso a partir do codigo do Ingresso e Apresentacao e Setor
+      <Parametros>
+        <Parametro Nome="Codigo" Tipo="string" />
+        <Parametro Nome="ApresentacaoSetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ChecarStatusCancelar" Tipo="bool">
+      Checa status do ingresso de acordo com Cancelar
+      É necessario checar antes de inserir registro de Venda e item
+    </Metodo>
+    <Metodo Nome="Entregar" Tipo="bool">
+      Marca um ingresso como Entregue pelo Codigo, passa de I para E
+      <Parametros>
+        <Parametro Nome="UsuarioID" Tipo="int" />
+        <Parametro Nome="CaixaID" Tipo="int" />
+        <Parametro Nome="CanalID" Tipo="int" />
+        <Parametro Nome="LojaID" Tipo="int" />
+        <Parametro Nome="EmpresaID" Tipo="int" />
+        <Parametro Nome="Obs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="CancelarPacote" Tipo="void">
+      <!-- Fabio -->
+      Cancela um pacote de ingressos reservados ou em reserva (resultado eh 'disponivel')
+    </Metodo>
+    <Metodo Nome="EmpacotarReserva" Tipo="bool">
+      <!-- Fabio -->
+      Inicia a reserva de um pacote de ingressos (resultado eh 'em reserva')
+      <Parametros>
+        <Parametro Nome="ingressosIDs" Tipo="int[]" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ReservarPacote" Tipo="bool">
+      <!-- Fabio -->
+      Finaliza a reserva de um pacote de ingressos (resultado eh 'reservado')
+      <Parametros>
+        <Parametro Nome="ingressosIDs" Tipo="int[]" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="CancelarReserva" Tipo="bool">
+      <!-- Fabio -->
+      Cancelar reserva desse ingresso
+      <Parametros>
+        <Parametro Nome="UsuarioID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="CancelarReserva" Tipo="bool">
+      <!-- Fabio -->
+      Cancelar reserva desse ingresso
+    </Metodo>
+    <Metodo Nome="CancelarReservas" Tipo="bool">
+      <!-- Fabio -->
+      Cancelar reserva de todos os ingressos do usuario
+      <Parametros>
+        <Parametro Nome="UsuarioID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="CancelarReservas" Tipo="bool">
+      <!-- Fabio -->
+      Cancelar reserva
+      <Parametros>
+        <Parametro Nome="ingressosIDs" Tipo="int[]" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ReImprimir" Tipo="bool">
+      Mudar o status de 'impresso' para 'reimpresso'
+      <Parametros>
+        <Parametro Nome="motivo" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="PreImprimir" Tipo="bool">
+      <!-- Fabio -->
+      Mudar o status de 'reservado' para 'pre-impresso'
+      <Parametros>
+        <Parametro Nome="CaixaID" Tipo="int" />
+        <Parametro Nome="LojaID" Tipo="int" />
+        <Parametro Nome="CanalID" Tipo="int" />
+        <Parametro Nome="EmpresaID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="TransferirPreImpresso" Tipo="bool">
+      <!-- Fabio -->
+      Nao muda o status, apenas registra a trasnferencia
+      <Parametros>
+        <Parametro Nome="CaixaID" Tipo="int" />
+        <Parametro Nome="LojaID" Tipo="int" />
+        <Parametro Nome="CanalID" Tipo="int" />
+        <Parametro Nome="EmpresaID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Desbloquear" Tipo="bool">
+      <!-- Fabio -->
+      Desbloquear ingresso
+      <Parametros>
+        <Parametro Nome="UsuarioID" Tipo="int" />
+        <Parametro Nome="EmpresaID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Bloquear" Tipo="bool">
+      <!-- Fabio -->
+      Bloquear ingresso
+      <Parametros>
+        <Parametro Nome="BloqueioID" Tipo="int" />
+        <Parametro Nome="UsuarioID" Tipo="int" />
+        <Parametro Nome="EmpresaID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Reservar" Tipo="bool">
+      <!-- Fabio -->
+      Reserva esse ingresso individual
+    </Metodo>
+    <Metodo Nome="Identifica" Tipo="void">
+      Identifica ID do Ingresso pelos campos que realmente a identifica
+      Apresentacao, Setor e Codigo
+      <Parametros>
+        <Parametro Nome="ApresentacaoID" Tipo="int" />
+        <Parametro Nome="SetorID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ExcluirCascata" Tipo="bool">
+      Exclui os logs deste ingresso e este ingresso
+    </Metodo>
+    <Metodo Nome="EventoApresentacaoSetor" Tipo="DataTable">
+      Fornece Evento, Apresentacao e Setor por Ingresso ID
+    </Metodo>
+    <!--<Metodo Nome="TaxaConveniencia" Tipo="int">
+			Obtém Taxa de Conveniencia do CanalEvento por ingresso ID
+    	</Metodo>-->
+    <Metodo Nome="VendidoUmaVez" Tipo="bool">
+      Verifica se o ingresso já foi vendido beseado nos logs
+    </Metodo>
+    <!--<Metodo Nome="Valor" Tipo="decimal">
+			Obtém o valor do Ingresso
+    	</Metodo>-->
+    <Metodo Nome="VendaBilheteriaItemID" Tipo="int">
+      Obtém o item do Ingresso
+    </Metodo>
+
+    <Metodo Tipo="DataTable" Nome="InfoReservados">
+      <Parametros>
+        <Parametro Tipo="int[]" Nome="ingressosids" />
+        <Parametro Tipo="CTLib.BD" Nome="database" />
+        <Parametro Nome="lojaID"  Tipo="int" />
+      </Parametros>
+
+    </Metodo>
+
+    <Metodo Tipo="bool" Nome="NovoNaoMarcado">
+      <Parametros>
+        <Parametro Tipo="int" Nome="apresentacaosetorid" />
+        <Parametro Tipo="int" Nome="eventoid" />
+        <Parametro Tipo="int" Nome="apresentacaoid" />
+        <Parametro Tipo="int" Nome="setorid" />
+        <Parametro Tipo="int" Nome="empresaid" />
+        <Parametro Tipo="int" Nome="localid" />
+        <Parametro Tipo="int" Nome="bloqueioid" />
+        <Parametro Tipo="int" Nome="codigo" />
+        <Parametro Tipo="BD" Nome="database" />
+        <Parametro Tipo="int" Nome="codigosequencial" />
+        <Parametro Tipo="string" Nome="codigoBarra" />
+      </Parametros>
+    </Metodo>
+
+    <Metodo Tipo="bool" Nome="NovoMarcado">
+      <Parametros>
+        <Parametro Tipo="int" Nome="apresentacaosetorid" />
+        <Parametro Tipo="int" Nome="eventoid" />
+        <Parametro Tipo="int" Nome="apresentacaoid" />
+        <Parametro Tipo="int" Nome="setorid" />
+        <Parametro Tipo="int" Nome="empresaid" />
+        <Parametro Tipo="int" Nome="localid" />
+        <Parametro Tipo="int" Nome="bloqueioid" />
+        <Parametro Tipo="int" Nome="lugarid" />
+        <Parametro Tipo="int" Nome="qtdelugar" />
+        <Parametro Tipo="int" Nome="qtdeBloqueada" />
+        <Parametro Tipo="string" Nome="codigo" />
+        <Parametro Tipo="int" Nome="grupo" />
+        <Parametro Tipo="int" Nome="classificacao" />
+        <Parametro Tipo="string" Nome="tipoSetor" />
+        <Parametro Tipo="BD" Nome="database" />
+        <Parametro Tipo="int" Nome="codigosequencial" />
+        <Parametro Tipo="string[]" Nome="codigosDeBarra" />
+      </Parametros>
+    </Metodo>
+
+    <Metodo Tipo="DataTable" Nome="InfoVendidos">
+      <Parametros>
+        <Parametro Tipo="int[]" Nome="ingressosids" />
+      </Parametros>
+    </Metodo>
+
+    <Metodo Tipo="int" Nome="VerificaCodigoPrecoExclusivo">
+      <Parametros>
+        <Parametro Tipo="int" Nome="codigo" />
+      </Parametros>
+    </Metodo>
+
+    <Metodo Tipo="bool" Nome="AtualizaCodigoPrecoExclusivo">
+      <Parametros>
+        <Parametro Tipo="int" Nome="ingressosid" />
+        <Parametro Tipo="int" Nome="codigo" />
+      </Parametros>
+    </Metodo>
+
+    <Metodo Tipo="bool" Nome="zerarCodigoPrecoExclusivo">
+      <Parametros>
+        <Parametro Tipo="int" Nome="clienteID" />
+        <Parametro Tipo="string" Nome="sessionID" />
+      </Parametros>
+    </Metodo>
+
+  </Metodos>
+</Classe>

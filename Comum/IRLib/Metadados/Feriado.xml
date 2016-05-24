@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="Feriado">
+  <Propriedades>
+    <Propriedade Nome="Data"		      Tipo="datahora"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="Descricao"		Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

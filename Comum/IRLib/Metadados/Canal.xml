@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Canal">
+  <Propriedades>
+    <Propriedade Nome="EmpresaID"	            	Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="CanalTipoID"				    Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Nome"		    			Tipo="texto"	  Tamanho="50" Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TaxaConveniencia"	    	Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TaxaComissao"	        	Tipo="int"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TaxaMinima"	          		Tipo="decimal"						    Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="TaxaMaxima"	          		Tipo="decimal"						    Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ComissaoMinima"	      		Tipo="decimal"						    Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ComissaoMaxima"	      		Tipo="decimal"						    Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ComprovanteQuantidade"		Tipo="int"					      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TipoVenda"       			Tipo="texto"	 Tamanho="1"				      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="OpcaoImprimirSemPreco"		Tipo="booleano"					      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Cartao"	              		Tipo="texto"    Tamanho="1" 	Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NaoCartao"	            	Tipo="texto"    Tamanho="1"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ObrigaCadastroCliente"       Tipo="texto"    Tamanho="1"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Obs"					        Tipo="memo"						        Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Comissao"                    Tipo="int"                    Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PoliticaTroca"               Tipo="texto"					  Tamanho="2000"    Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ConfirmacaoPorEmail"         Tipo="booleano"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ObrigatoriedadeID"           Tipo="int"                    Nulo="True" />
+    <Propriedade Nome="EnviaSms"   			        Tipo="booleano"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TEFF"			                Tipo="texto"	   Tamanho="1"	Nulo="True"		Acesso="LE"/>
+    <Propriedade Nome="NroEstabelecimento"              Tipo="texto"	   Tamanho="8"	Nulo="True"		Acesso="LE"/>
+
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todos os canais
+    </Metodo>
+    <Metodo Nome="Categorias"	Tipo="DataTable">
+      <!-- Fabio -->
+      Obter categorias de um canal especifico
+    </Metodo>
+    <Metodo Nome="Lojas"	Tipo="DataTable">
+      <!-- Fabio -->
+      Lojas deste canal
+    </Metodo>
+    <Metodo Nome="Eventos"	Tipo="DataTable">
+      <!-- Fabio -->
+      Eventos à venda por este canal
+    </Metodo>
+    <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+      Vendas Gerenciais por canais com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+      Com porcentagem
+      <Parametros>
+        <Parametro Nome="dataInicial" Tipo="string" />
+        <Parametro Nome="dataFinal" Tipo="string" />
+        <Parametro Nome="comCortesia" Tipo="bool" />
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+        <Parametro Nome="localID" Tipo="int" />
+        <Parametro Nome="empresaID" Tipo="int" />
+        <Parametro Nome="vendasCanal" Tipo="bool" />
+        <Parametro Nome="tipoLinha" Tipo="string" />
+        <Parametro Nome="disponivel" Tipo="bool" />
+        <Parametro Nome="empresaVendeIngressos" Tipo="bool" />
+        <Parametro Nome="empresaPromoveEventos" Tipo="bool" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+      Canais definidos pelos IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosPorCanal" Tipo="int">
+      Obter quantidade de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorIngressosPorCanal" Tipo="decimal">
+      Obter valores de ingressos em função do IngressoLogIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Caixas" Tipo="DataTable">
+      Os caixas deste canal
+      <Parametros>
+        <Parametro Nome="registroZero" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Caixas" Tipo="DataTable">
+      Os caixas deste canal em função do Usuário
+      <Parametros>
+        <Parametro Nome="registroZero" Tipo="string" />
+        <Parametro Nome="usuarioID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+
+  </Metodos>
+</Classe>

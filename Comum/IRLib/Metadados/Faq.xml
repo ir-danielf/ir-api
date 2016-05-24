@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Faq">
+  <Propriedades>
+    <Propriedade Nome="Pergunta"		      Tipo="texto"	Tamanho="300"	Nulo="false"	Acesso="LE"/>
+    <Propriedade Nome="Resposta"		      Tipo="texto"	Tamanho="2000"	Nulo="false"	Acesso="LE"/>
+    <Propriedade Nome="FaqTipoID"		      Tipo="int"	Nulo="false"	Acesso="LE"/>
+    <Propriedade Nome="Tags"				  Tipo="texto"	Tamanho="300"	Nulo="True"		Acesso="LE"/>
+	<Propriedade Nome="Exibicao"		      Tipo="texto"	Tamanho="1"		Nulo="True"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

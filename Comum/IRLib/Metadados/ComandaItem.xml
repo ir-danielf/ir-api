@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="ComandaItem">
+	<Propriedades>
+		<Propriedade Nome="ComandaID"		Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="ProdutoID"		Tipo="int"		Nulo="True" Acesso="LE" />
+		<Propriedade Nome="PrecoVenda"		Tipo="decimal"	Nulo="True" Acesso="LE" Tamanho="12" Decimal="2"/>
+		<Propriedade Nome="Quantidade"		Tipo="int"		Nulo="True"	Acesso="LE"	/>
+	</Propriedades>
+</Classe>
+

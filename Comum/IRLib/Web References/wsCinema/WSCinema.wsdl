@@ -1,0 +1,996 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Get_Cinema_Salas">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="GETSALAS" type="tns:CINE_GETSALAS" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CINE_AUTENTICA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="USUARIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SENHA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_GETSALAS">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODPRACA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSALA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_SalasResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Cinema_SalasResult" type="tns:ReturnOfGet_Cinema_Salas" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfGet_Cinema_Salas">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="SALAS" type="tns:ArrayOfCINE_SALA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_ERRO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_ERRO" nillable="true" type="tns:CINE_ERRO" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_ERRO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERRO_COD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ERRO_DESC" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_SALA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_SALA" nillable="true" type="tns:CINE_SALA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_SALA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODSALA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRRESU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODPRACA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODPRACA_DESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CAPACIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NIECODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODIGOINT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NVENDLUGA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LINHA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COLUNA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIGITAL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUGARES" type="tns:ArrayOfCINE_LUGAR" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_LUGAR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_LUGAR" nillable="true" type="tns:CINE_LUGAR" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_LUGAR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDLUGAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODLUGAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSALA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COLUNA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LINHA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Set_Cinema_CancelaVenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="CANCVENDA" type="tns:CINE_CANCVENDA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CINE_CANCVENDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDMOVIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOV_VALOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_CODBAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOTIVO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Set_Cinema_CancelaVendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_Cinema_CancelaVendaResult" type="tns:ReturnOfSet_Cinema_CancelaVenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfSet_Cinema_CancelaVenda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="RETCANCVENDA" type="tns:CINE_RETCANCVENDA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_RETCANCVENDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDMOVIME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_VagasProg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="GETVAGASPROG" type="tns:ArrayOfCINE_GETVAGASPROG" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCINE_GETVAGASPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_GETVAGASPROG" nillable="true" type="tns:CINE_GETVAGASPROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_GETVAGASPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_VagasProgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Cinema_VagasProgResult" type="tns:ReturnOfGet_Cinema_VagasProg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfGet_Cinema_VagasProg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAGASPROGS" type="tns:ArrayOfCINE_VAGASPROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_VAGASPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_VAGASPROG" nillable="true" type="tns:CINE_VAGASPROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_VAGASPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CAPACIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DISPONIVEL" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Set_Cinema_RealizaVenda">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="VENDA" type="tns:CINE_VENDA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CINE_VENDA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDMOVIME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOMOVIM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INFOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODFORMA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOV_VALOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOV_DESCONTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MOV_ACRESCIMO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_ASSID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_ASSNOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_ASSCPF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_ASSDOC2" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_CODBAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_TRANSAC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_AUTORIZ" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_ID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_STNOME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SIMULAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITENS" type="tns:ArrayOfCINE_VENDAITEM" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAGAMENTOS" type="tns:ArrayOfCINE_VENDAPAGA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_VENDAITEM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_VENDAITEM" nillable="true" type="tns:CINE_VENDAITEM" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_VENDAITEM">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DESCRICAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITEM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIPOITEM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PRODUTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODBARRA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="QTD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALORUN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DESCONTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACRESCIMO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INFOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG_DATASESSAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG_CODSALA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG_IDFILME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODINGRESS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODLUGAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROMOCAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROMO_COD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_CODBAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_DESCR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NT_STNOME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_VENDAPAGA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_VENDAPAGA" nillable="true" type="tns:CINE_VENDAPAGA" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_VENDAPAGA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TIPODOC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VENCIMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PARCELA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PARCTOT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INFOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NET_VALIDADE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Set_Cinema_RealizaVendaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_Cinema_RealizaVendaResult" type="tns:ReturnOfSet_Cinema_RealizaVenda" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfSet_Cinema_RealizaVenda">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="RETVENDA" type="tns:CINE_VENDA" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_Filmes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="GETFILMES" type="tns:CINE_GETFILMES" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CINE_GETFILMES">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="DATAINI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAFIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDFILME" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_FilmesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Cinema_FilmesResult" type="tns:ReturnOfGet_Cinema_Filmes" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfGet_Cinema_Filmes">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="FILMES" type="tns:ArrayOfCINE_FILME" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_FILME">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_FILME" nillable="true" type="tns:CINE_FILME" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_FILME">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDFILME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITULO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TITULORESU" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATACAD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DURACAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTILO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTILO_DESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDADEJUSTI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SINOPSE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DUBLADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NIERELCODE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IMDB" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Set_Cinema_ReservaLugares">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="SETRESERVALUGARES" type="tns:ArrayOfCINE_SETRESERVALUGAR" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCINE_SETRESERVALUGAR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_SETRESERVALUGAR" nillable="true" type="tns:CINE_SETRESERVALUGAR" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_SETRESERVALUGAR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDCOMPRA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODLUGAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ACAO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Set_Cinema_ReservaLugaresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Set_Cinema_ReservaLugaresResult" type="tns:ReturnOfSet_Cinema_ReservaLugares" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfSet_Cinema_ReservaLugares">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_LugarProg">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="GETLUGARPROG" type="tns:CINE_GETLUGARPROG" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CINE_GETLUGARPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODLUGAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDCOMPRA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_LugarProgResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Cinema_LugarProgResult" type="tns:ReturnOfGet_Cinema_LugarProg" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfGet_Cinema_LugarProg">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="LUGARPROGS" type="tns:ArrayOfCINE_LUGARPROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_LUGARPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_LUGARPROG" nillable="true" type="tns:CINE_LUGARPROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_LUGARPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODLUGAR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="STATUS" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_OnLine">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Get_Cinema_OnLineResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Cinema_OnLineResult" type="tns:ReturnOfGet_Cinema_OnLine" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfGet_Cinema_OnLine">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="ONLINE" type="tns:CINE_ONLINE" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_ONLINE">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="PRACA_COD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATA_HORA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_Programacao">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AUTENTICACAO" type="tns:CINE_AUTENTICA" />
+            <s:element minOccurs="0" maxOccurs="1" name="GETPROG" type="tns:CINE_GETPROG" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="CINE_GETPROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAINI" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATAFIN" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSALA" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Get_Cinema_ProgramacaoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Get_Cinema_ProgramacaoResult" type="tns:ReturnOfGet_Cinema_Programacao" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ReturnOfGet_Cinema_Programacao">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ERROS" type="tns:ArrayOfCINE_ERRO" />
+          <s:element minOccurs="0" maxOccurs="1" name="PROGS" type="tns:ArrayOfCINE_PROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_PROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_PROG" nillable="true" type="tns:CINE_PROG" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_PROG">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="IDPROG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSALA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSALA_DESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DATASESSAO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDFILME" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IDFILME_DESC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TEMPO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CODSISPRE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NVENDLUGA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NLIBFIDELIDADE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FERIADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CPOC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VENDE_NUMERADA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="INGRESSOS" type="tns:ArrayOfCINE_PROG_INGR" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCINE_PROG_INGR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CINE_PROG_INGR" nillable="true" type="tns:CINE_PROG_INGR" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CINE_PROG_INGR">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CODINGRESS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VALOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ORDEM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EXIBFID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NEXIBFID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TAXAAUX" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Get_Cinema_SalasSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_Salas" />
+  </wsdl:message>
+  <wsdl:message name="Set_Cinema_CancelaVendaSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_Cinema_CancelaVenda" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_VagasProgSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_VagasProg" />
+  </wsdl:message>
+  <wsdl:message name="Set_Cinema_RealizaVendaSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_Cinema_RealizaVenda" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_FilmesSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_Filmes" />
+  </wsdl:message>
+  <wsdl:message name="Set_Cinema_ReservaLugaresSoapIn">
+    <wsdl:part name="parameters" element="tns:Set_Cinema_ReservaLugares" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_LugarProgSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_LugarProg" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_OnLineSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_OnLine" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_ProgramacaoSoapIn">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_Programacao" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_SalasSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_SalasResponse" />
+  </wsdl:message>
+  <wsdl:message name="Set_Cinema_CancelaVendaSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_Cinema_CancelaVendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_VagasProgSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_VagasProgResponse" />
+  </wsdl:message>
+  <wsdl:message name="Set_Cinema_RealizaVendaSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_Cinema_RealizaVendaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_FilmesSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_FilmesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Set_Cinema_ReservaLugaresSoapOut">
+    <wsdl:part name="parameters" element="tns:Set_Cinema_ReservaLugaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_LugarProgSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_LugarProgResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_OnLineSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_OnLineResponse" />
+  </wsdl:message>
+  <wsdl:message name="Get_Cinema_ProgramacaoSoapOut">
+    <wsdl:part name="parameters" element="tns:Get_Cinema_ProgramacaoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSCinemaSoap">
+    <wsdl:operation name="Get_Cinema_Salas">
+      <wsdl:input message="tns:Get_Cinema_SalasSoapIn" />
+      <wsdl:output message="tns:Get_Cinema_SalasSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <wsdl:input message="tns:Set_Cinema_CancelaVendaSoapIn" />
+      <wsdl:output message="tns:Set_Cinema_CancelaVendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <wsdl:input message="tns:Get_Cinema_VagasProgSoapIn" />
+      <wsdl:output message="tns:Get_Cinema_VagasProgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <wsdl:input message="tns:Set_Cinema_RealizaVendaSoapIn" />
+      <wsdl:output message="tns:Set_Cinema_RealizaVendaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <wsdl:input message="tns:Get_Cinema_FilmesSoapIn" />
+      <wsdl:output message="tns:Get_Cinema_FilmesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <wsdl:input message="tns:Set_Cinema_ReservaLugaresSoapIn" />
+      <wsdl:output message="tns:Set_Cinema_ReservaLugaresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <wsdl:input message="tns:Get_Cinema_LugarProgSoapIn" />
+      <wsdl:output message="tns:Get_Cinema_LugarProgSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <wsdl:input message="tns:Get_Cinema_OnLineSoapIn" />
+      <wsdl:output message="tns:Get_Cinema_OnLineSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <wsdl:input message="tns:Get_Cinema_ProgramacaoSoapIn" />
+      <wsdl:output message="tns:Get_Cinema_ProgramacaoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSCinemaHttpGet">
+    <wsdl:operation name="Get_Cinema_Salas">
+      <wsdl:input message="tns:Get_Cinema_SalasHttpGetIn" />
+      <wsdl:output message="tns:Get_Cinema_SalasHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <wsdl:input message="tns:Set_Cinema_CancelaVendaHttpGetIn" />
+      <wsdl:output message="tns:Set_Cinema_CancelaVendaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <wsdl:input message="tns:Get_Cinema_VagasProgHttpGetIn" />
+      <wsdl:output message="tns:Get_Cinema_VagasProgHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <wsdl:input message="tns:Set_Cinema_RealizaVendaHttpGetIn" />
+      <wsdl:output message="tns:Set_Cinema_RealizaVendaHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <wsdl:input message="tns:Get_Cinema_FilmesHttpGetIn" />
+      <wsdl:output message="tns:Get_Cinema_FilmesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <wsdl:input message="tns:Set_Cinema_ReservaLugaresHttpGetIn" />
+      <wsdl:output message="tns:Set_Cinema_ReservaLugaresHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <wsdl:input message="tns:Get_Cinema_LugarProgHttpGetIn" />
+      <wsdl:output message="tns:Get_Cinema_LugarProgHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <wsdl:input message="tns:Get_Cinema_OnLineHttpGetIn" />
+      <wsdl:output message="tns:Get_Cinema_OnLineHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <wsdl:input message="tns:Get_Cinema_ProgramacaoHttpGetIn" />
+      <wsdl:output message="tns:Get_Cinema_ProgramacaoHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WSCinemaHttpPost">
+    <wsdl:operation name="Get_Cinema_Salas">
+      <wsdl:input message="tns:Get_Cinema_SalasHttpPostIn" />
+      <wsdl:output message="tns:Get_Cinema_SalasHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <wsdl:input message="tns:Set_Cinema_CancelaVendaHttpPostIn" />
+      <wsdl:output message="tns:Set_Cinema_CancelaVendaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <wsdl:input message="tns:Get_Cinema_VagasProgHttpPostIn" />
+      <wsdl:output message="tns:Get_Cinema_VagasProgHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <wsdl:input message="tns:Set_Cinema_RealizaVendaHttpPostIn" />
+      <wsdl:output message="tns:Set_Cinema_RealizaVendaHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <wsdl:input message="tns:Get_Cinema_FilmesHttpPostIn" />
+      <wsdl:output message="tns:Get_Cinema_FilmesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <wsdl:input message="tns:Set_Cinema_ReservaLugaresHttpPostIn" />
+      <wsdl:output message="tns:Set_Cinema_ReservaLugaresHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <wsdl:input message="tns:Get_Cinema_LugarProgHttpPostIn" />
+      <wsdl:output message="tns:Get_Cinema_LugarProgHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <wsdl:input message="tns:Get_Cinema_OnLineHttpPostIn" />
+      <wsdl:output message="tns:Get_Cinema_OnLineHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <wsdl:input message="tns:Get_Cinema_ProgramacaoHttpPostIn" />
+      <wsdl:output message="tns:Get_Cinema_ProgramacaoHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSCinemaSoap" type="tns:WSCinemaSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Cinema_Salas">
+      <soap:operation soapAction="http://tempuri.org/Get_Cinema_Salas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <soap:operation soapAction="http://tempuri.org/Set_Cinema_CancelaVenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <soap:operation soapAction="http://tempuri.org/Get_Cinema_VagasProg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <soap:operation soapAction="http://tempuri.org/Set_Cinema_RealizaVenda" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <soap:operation soapAction="http://tempuri.org/Get_Cinema_Filmes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <soap:operation soapAction="http://tempuri.org/Set_Cinema_ReservaLugares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <soap:operation soapAction="http://tempuri.org/Get_Cinema_LugarProg" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <soap:operation soapAction="http://tempuri.org/Get_Cinema_OnLine" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <soap:operation soapAction="http://tempuri.org/Get_Cinema_Programacao" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSCinemaSoap12" type="tns:WSCinemaSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Get_Cinema_Salas">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cinema_Salas" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <soap12:operation soapAction="http://tempuri.org/Set_Cinema_CancelaVenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cinema_VagasProg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <soap12:operation soapAction="http://tempuri.org/Set_Cinema_RealizaVenda" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cinema_Filmes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <soap12:operation soapAction="http://tempuri.org/Set_Cinema_ReservaLugares" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cinema_LugarProg" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cinema_OnLine" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <soap12:operation soapAction="http://tempuri.org/Get_Cinema_Programacao" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSCinemaHttpGet" type="tns:WSCinemaHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="Get_Cinema_Salas">
+      <http:operation location="/Get_Cinema_Salas" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <http:operation location="/Set_Cinema_CancelaVenda" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <http:operation location="/Get_Cinema_VagasProg" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <http:operation location="/Set_Cinema_RealizaVenda" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <http:operation location="/Get_Cinema_Filmes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <http:operation location="/Set_Cinema_ReservaLugares" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <http:operation location="/Get_Cinema_LugarProg" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <http:operation location="/Get_Cinema_OnLine" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <http:operation location="/Get_Cinema_Programacao" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSCinemaHttpPost" type="tns:WSCinemaHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="Get_Cinema_Salas">
+      <http:operation location="/Get_Cinema_Salas" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_CancelaVenda">
+      <http:operation location="/Set_Cinema_CancelaVenda" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_VagasProg">
+      <http:operation location="/Get_Cinema_VagasProg" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_RealizaVenda">
+      <http:operation location="/Set_Cinema_RealizaVenda" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Filmes">
+      <http:operation location="/Get_Cinema_Filmes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Set_Cinema_ReservaLugares">
+      <http:operation location="/Set_Cinema_ReservaLugares" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_LugarProg">
+      <http:operation location="/Get_Cinema_LugarProg" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_OnLine">
+      <http:operation location="/Get_Cinema_OnLine" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Get_Cinema_Programacao">
+      <http:operation location="/Get_Cinema_Programacao" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSCinema">
+    <wsdl:port name="WSCinemaSoap" binding="tns:WSCinemaSoap">
+      <soap:address location="http://187.84.229.3:7003/WSCinema.ws" />
+    </wsdl:port>
+    <wsdl:port name="WSCinemaSoap12" binding="tns:WSCinemaSoap12">
+      <soap12:address location="http://187.84.229.3:7003/WSCinema.ws" />
+    </wsdl:port>
+    <wsdl:port name="WSCinemaHttpGet" binding="tns:WSCinemaHttpGet">
+      <http:address location="http://187.84.229.3:7003/WSCinema.ws" />
+    </wsdl:port>
+    <wsdl:port name="WSCinemaHttpPost" binding="tns:WSCinemaHttpPost">
+      <http:address location="http://187.84.229.3:7003/WSCinema.ws" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.ingressorapido.com.br/BuscaCEP" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.ingressorapido.com.br/BuscaCEP" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.ingressorapido.com.br/BuscaCEP">
+      <s:element name="BuscarEndereco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BuscarEnderecoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BuscarEnderecoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEndereco">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnderecoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEnderecoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnderecoEstruturado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="senha" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cep" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEnderecoEstruturadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEnderecoEstruturadoResult" type="tns:EstruturaCEP" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="EstruturaCEP">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Rua" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Bairro" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cidade" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="BuscarEnderecoSoapIn">
+    <wsdl:part name="parameters" element="tns:BuscarEndereco" />
+  </wsdl:message>
+  <wsdl:message name="BuscarEnderecoSoapOut">
+    <wsdl:part name="parameters" element="tns:BuscarEnderecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnderecoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEndereco" />
+  </wsdl:message>
+  <wsdl:message name="GetEnderecoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEnderecoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEnderecoEstruturadoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEnderecoEstruturado" />
+  </wsdl:message>
+  <wsdl:message name="GetEnderecoEstruturadoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEnderecoEstruturadoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="BuscaCEPSoap">
+    <wsdl:operation name="BuscarEndereco">
+      <wsdl:input message="tns:BuscarEnderecoSoapIn" />
+      <wsdl:output message="tns:BuscarEnderecoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEndereco">
+      <wsdl:input message="tns:GetEnderecoSoapIn" />
+      <wsdl:output message="tns:GetEnderecoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEnderecoEstruturado">
+      <wsdl:input message="tns:GetEnderecoEstruturadoSoapIn" />
+      <wsdl:output message="tns:GetEnderecoEstruturadoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BuscaCEPSoap" type="tns:BuscaCEPSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarEndereco">
+      <soap:operation soapAction="http://www.ingressorapido.com.br/BuscaCEP/BuscarEndereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndereco">
+      <soap:operation soapAction="http://www.ingressorapido.com.br/BuscaCEP/GetEndereco" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnderecoEstruturado">
+      <soap:operation soapAction="http://www.ingressorapido.com.br/BuscaCEP/GetEnderecoEstruturado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BuscaCEPSoap12" type="tns:BuscaCEPSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BuscarEndereco">
+      <soap12:operation soapAction="http://www.ingressorapido.com.br/BuscaCEP/BuscarEndereco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEndereco">
+      <soap12:operation soapAction="http://www.ingressorapido.com.br/BuscaCEP/GetEndereco" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEnderecoEstruturado">
+      <soap12:operation soapAction="http://www.ingressorapido.com.br/BuscaCEP/GetEnderecoEstruturado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BuscaCEP">
+    <wsdl:port name="BuscaCEPSoap" binding="tns:BuscaCEPSoap">
+      <soap:address location="http://www.ingressorapido.com.br/wscep/buscacep.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BuscaCEPSoap12" binding="tns:BuscaCEPSoap12">
+      <soap12:address location="http://www.ingressorapido.com.br/wscep/buscacep.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

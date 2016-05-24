@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaEmailModelo">
+  <Propriedades>
+    <Propriedade Nome="Nome"                        Tipo="texto"   Tamanho="100" Acesso="LE" />
+    <Propriedade Nome="AssinaturaTipoID"            Tipo="int"    Nulo="False"  Acesso="LE" />
+    <Propriedade Nome="AssinautraEmailRemetenteID"  Tipo="int"    Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Assunto"                     Tipo="texto"  Tamanho="100" Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Corpo"                       Tipo="memo"   Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Salvo"                       Tipo="booleano" Nulo="False"  Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="AssinaturaEmailEnviar">
+  <Propriedades>
+    <Propriedade Nome="ClienteID"               Tipo="int"  Nulo="False" Acesso="LE" />
+    <Propriedade Nome="AssinaturaEmailModeloID" Tipo="int"  Nulo="False" Acesso="LE" />
+    <Propriedade Nome="Enviado"                 Tipo="booleano"  Nulo="False" Acesso="LE" />
+    <Propriedade Nome="DataEnvio"               Tipo="datahora"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Erro"                    Tipo="texto"  Tamanho="200" Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

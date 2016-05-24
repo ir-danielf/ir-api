@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Gol.SmilesGateway.Partner.Entities" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Gol.SmilesGateway.Partner.Entities" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="FraudPreventionStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="OK" />
+      <xs:enumeration value="NOK" />
+      <xs:enumeration value="Error" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FraudPreventionStatus" nillable="true" type="tns:FraudPreventionStatus" />
+</xs:schema>

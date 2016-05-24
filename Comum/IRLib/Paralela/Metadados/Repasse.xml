@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Repasse">
+    <Propriedades>
+      <Propriedade Nome="Tipo"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ContratoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="VendaBilheteriaID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="DataAberturaCaixa"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="DataFechamentoCaixa"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="EmpresaIDCaixa"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="CanalID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="LojaID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="UsuarioID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="CaixaID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="EmpresaIDEvento"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="LocalID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="EventoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ApresentacaoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="SetorID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="PrecoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="PrecoValor"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="TaxaConveniencia"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="TaxaConvenienciaValor"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="ReterComissao"				Tipo="booleano"		Nulo="True"/>
+      <Propriedade Nome="Comissao"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ComissaoValor"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="TaxaEntregaID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="TaxaEntregaValor"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="ValorTotal"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="TimeStamp"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="BandeiraID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="FormaPagamentoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="PctFormaPagamento"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ValorFormaPagamento"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="Parcelas"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ParcelaAtual"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="PrazoDias"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ValorParcela"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="DataTransacao"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="DataRecebimento"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="DiasRepasse"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="DataCompetencia"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="DataRegimeCaixa"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="Observacao"		Tipo="texto"	Tamanho="500"	Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="TaxaADM"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="IR"				Tipo="booleano"		Nulo="True"/>
+      <Propriedade Nome="ValorParcelaRecebimento"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="QuantidadePapel"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ValorPapelUnitario"					Tipo="decimal"	Tamanho="12" Decimal="2"/>
+      <Propriedade Nome="TipoImpressao"		Tipo="tinyint"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="TipoIngresso"		Tipo="tinyint"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="TipoCobrancaPapel" Tipo="tinyint"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="TipoCanal"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+      <Propriedade Nome="ContaID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+    </Propriedades>
+</Classe>
+

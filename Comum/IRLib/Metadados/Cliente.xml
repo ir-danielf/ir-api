@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Cliente">
+	<Propriedades>
+		<Propriedade Nome="Nome"				          Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="RG"					          Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CPF"					          Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CarteiraEstudante"	    Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="Sexo"				          Tipo="texto"	Tamanho="1"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="DDDTelefone"			      Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="Telefone"			        Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="DDDTelefoneComercial"  Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="TelefoneComercial"	    Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="DDDCelular"			      Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="Celular"				        Tipo="texto"	Tamanho="9"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="DataNascimento"		    Tipo="data"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="Email"				          Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="RecebeEmail"			Tipo="bool"										Acesso="LE" />
+		<Propriedade Nome="CEPEntrega"					Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="EnderecoEntrega"			Tipo="texto"	Tamanho="60"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="NumeroEntrega"				Tipo="texto"	Tamanho="10"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="ComplementoEntrega"			Tipo="texto"	Tamanho="20"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="BairroEntrega"				Tipo="texto"	Tamanho="40"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CidadeEntrega"				Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="EstadoEntrega"				Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CEPCliente"			Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="EnderecoCliente"	Tipo="texto"	Tamanho="60"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="NumeroCliente"		Tipo="texto"	Tamanho="10"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="ComplementoCliente"	Tipo="texto"	Tamanho="20"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="BairroCliente"		Tipo="texto"	Tamanho="40"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CidadeCliente"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="LoginOsesp"		Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="EstadoCliente"		Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="ClienteIndicacaoID"	Tipo="int"													/>
+		<Propriedade Nome="Obs"					Tipo="memo"						Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="Senha"				Tipo="texto"    Tamanho="60"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="Ativo"				Tipo="bool"						Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="StatusAtual"				Tipo="texto"						Nulo="False"		Acesso="LE" />
+		<Propriedade Nome="NomeEntrega"		Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CPFEntrega"		Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="RGEntrega"		Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="CPFConsultado"		Tipo="texto"	Tamanho="11"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="NomeConsultado"		Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="StatusConsulta" Tipo="int" Nulo="true" />
+		<Propriedade Nome="CPFConsultadoEntrega"		Tipo="texto"	Tamanho="11"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="NomeConsultadoEntrega"		Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="StatusConsultaEntrega" Tipo="int" Nulo="true" />
+		<Propriedade Nome="Pais" Tipo="texto" Tamanho="100" Nulo="True" Acesso="LE"/>
+		<Propriedade Nome="CPFResponsavel" Tipo="texto" Tamanho="30"  Nulo="True" Acesso="LE" />
+		<Propriedade Nome="ContatoTipoID" Tipo="int" Nulo="true" />
+		<Propriedade Nome="NivelCliente" Tipo="int" Nulo="true" />
+		<Propriedade Nome="CNPJ"					          Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="NomeFantasia"					          Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="RazaoSocial"					          Tipo="texto"	Tamanho="100"	Nulo="True"		Acesso="LE" />
+		<Propriedade Nome="InscricaoEstadual"					          Tipo="texto"	Tamanho="30"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="TipoCadastro"					          Tipo="texto"	Tamanho="1"	Nulo="True"		Acesso="LE" />
+
+    <Propriedade Nome="SituacaoProfissionalID" Tipo="int" Nulo="true" />
+    <Propriedade Nome="Profissao"  Tipo="texto"	Tamanho="50"	Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="DDDTelefoneComercial2" Tipo="texto"	Tamanho="2"		Nulo="True"		Acesso="LE" />
+    <Propriedade Nome="TelefoneComercial2"  Tipo="texto"	Tamanho="8"		Nulo="True"		Acesso="LE" />
+
+	</Propriedades>
+	<Metodos>
+		<!-- Esses metodos a seguir podem ser usados tambem para retornar a tabela com dados dos ingressos -->
+		<Metodo Nome="QtdeIngressoCompradoPorApresentacaoSetor" Tipo="int">
+			<!-- Fabio -->
+			Obter a qtde de ingressos comprados por esse cliente numa apresentacaoSetor especifico
+			<Parametros>
+				<Parametro Nome="ApresentacaoSetorID" Tipo="int" />
+			</Parametros>
+		</Metodo>
+		<Metodo Nome="QtdeIngressoCompradoPorApresentacao" Tipo="int">
+			<!-- Fabio -->
+			Obter a qtde de ingressos comprados por esse cliente numa apresentacao especifica
+			<Parametros>
+				<Parametro Nome="ApresentacaoID" Tipo="int" />
+			</Parametros>
+		</Metodo>
+		<Metodo Nome="QtdeIngressoCompradoPorPreco" Tipo="int">
+			<!-- Fabio -->
+			Obter a qtde de ingressos comprados por esse cliente num preco especifico
+			<Parametros>
+				<Parametro Nome="PrecoID" Tipo="int" />
+			</Parametros>
+		</Metodo>
+		<Metodo Nome="QtdeIngressoCompradoPorPacote" Tipo="int">
+			<!-- Fabio -->
+			Obter a qtde de ingressos comprados por esse cliente num pacote especifico
+			<Parametros>
+				<Parametro Nome="PacoteID" Tipo="int" />
+			</Parametros>
+		</Metodo>
+		<Metodo Nome="Homonimos" Tipo="DataTable">
+			Obtendo um DataTable dos Homônimos
+			<Parametros>
+				<Parametro Nome="registroZero" Tipo="string">Um string que vai conter a descricao do registro zero</Parametro>
+			</Parametros>
+		</Metodo>
+	</Metodos>
+</Classe>

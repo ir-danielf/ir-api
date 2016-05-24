@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="MapaEsquematico">
+  <Propriedades>
+    <Propriedade Nome="LocalID"				Tipo="int"		Null="false"			/>
+    <Propriedade Nome="Nome"        Tipo="texto" Tamanho="100" />
+  </Propriedades>
+</Classe>

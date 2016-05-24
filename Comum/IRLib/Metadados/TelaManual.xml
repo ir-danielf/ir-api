@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="TelaManual">
+  
+  <Propriedades>
+    <Propriedade Nome="IDTela"        Tipo="texto"  Nulo="False"  Tamanho="100" Acesso="LE"/>
+    <Propriedade Nome="Manual"     Tipo="texto"    Nulo="True"  Tamanho="100" Acesso="LE" />
+    <Propriedade Nome="Arquivo"     Tipo="texto"    Nulo="True"  Tamanho="100" Acesso="LE" />
+  </Propriedades>
+</Classe>
+

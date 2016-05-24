@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="CorreioCodigoRastreio">
+  <Propriedades>
+
+    <Propriedade Nome="CodigoRastreio"		                                Tamanho = "30"	  Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataImportacao"					                          Tipo="datahora"		Nulo="True"	      Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaEntregaID"					                Tipo="int"				Nulo="True"       Acesso="LE" />
+    <Propriedade Nome="VendaBilheteriaID"					                        Tipo="int"				Nulo="True"       Acesso="LE" />
+    <Propriedade Nome="CodigoServico"		                                  Tipo="int"			Nulo="True" Acesso="LE" />
+    
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

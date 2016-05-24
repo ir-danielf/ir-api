@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoLoja">
+  <Propriedades>
+    <Propriedade Nome="EventoID"	Tipo="inteiro"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="LojaID"	Tipo="inteiro"	Nulo="False"		Acesso="LE"/>
+    <Propriedade Nome="TipoImpressao"	Tipo="texto" Tamanho="1"	Nulo="False"		Acesso="LE"/>
+  </Propriedades>
+</Classe>

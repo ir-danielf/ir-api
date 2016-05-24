@@ -1,0 +1,280 @@
+<%@ CodeTemplate Debug="False" Language="C#" TargetLanguage="T-SQL" Description="Lê um arquivo XML para gerar tabelas SQL." %>
+
+<%@ Property Name="Modulo" Type="String" Category="Context"
+	Description="Nome do arquivo XML e das tabelas que serao criadas pelo script." %>
+	
+<%@ Property Name="Local" Type="String" Category="Context"
+	Description="Diretohrio onde se encontra o arquivo XML." %>
+	
+-----------------------------------------------------------------------
+-- Script Gerador de Banco de Dados + CodeSmith
+-- Criado em: <%= DateTime.Now.ToString("dd/MM/yyyy") %>
+-- Direitos Autorais: Celeritas Ltda
+-----------------------------------------------------------------------
+
+<% // Debugger.Break(); %>
+<% string sModulo, sLocal, sArquivo; %>
+<% sModulo = Modulo; %>
+<% sLocal = Local; %>
+<% sLocal.Replace("/","\\"); %>
+<%	if (sLocal != "")
+		sArquivo = sLocal + "\\" + sModulo + ".xml";
+	else
+		sArquivo = sModulo + ".xml";
+	sArquivo = sArquivo.Replace(".xml.xml", ".xml");	
+%>
+<% System.Xml.XmlDocument doc = new System.Xml.XmlDocument(); %>
+<% doc.Load(sArquivo); %>
+<% System.Xml.XmlElement root = doc.DocumentElement; %>
+<% sModulo = root.Attributes.GetNamedItem("Nome").Value; %>
+<% string
+		tTable = "t" + sModulo,
+		xTable = "x" + sModulo,
+		cTable = "c" + sModulo;
+%>
+
+--! Verifica se as tabelas <%= tTable %>, <%= xTable %> e <%= cTable %> ja existem.
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[<%= tTable %>]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop Table [dbo].[<%= tTable %>]
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[<%= xTable %>]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop Table [dbo].[<%= xTable %>]
+GO
+if exists (select * from dbo.sysobjects where id = object_id(N'[dbo].[<%= cTable %>]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+drop Table [dbo].[<%= cTable %>]
+GO
+
+<% // Debugger.Break(); %>
+<% string
+	sNome = "",
+	sTipo = "",
+	sTamanho = "",
+	sDecimal = "",
+	sNulo = "";
+%>
+--! Cria a tabela <%= tTable %>
+CREATE TABLE [dbo].[<%= tTable %>] (
+	[ID] [int] NOT NULL ,
+<% System.Xml.XmlNodeList tPropriedades = root.SelectNodes("descendant::Propriedades/Propriedade"); %>
+<% foreach (System.Xml.XmlNode propriedade in tPropriedades) %>
+<%  { %>
+<% // NOME %>
+<% 	if (propriedade.Attributes.GetNamedItem("Nome").Value != null) %>
+<% 		sNome = propriedade.Attributes.GetNamedItem("Nome").Value; %>
+<% // TIPO %>
+<%	if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null){
+		sTipo = propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+		switch (sTipo){
+			case "decimal":
+			case "numero":
+				sTipo = "decimal";
+				break;
+			case "int":
+			case "inteiro":
+				sTipo = "int";
+				break;
+			case "string":
+			case "texto":
+				sTipo = "nvarchar";
+				break;
+			case "char":
+				sTipo = "char";
+				sTamanho	= "1";
+				break;
+			case "date":
+			case "data":
+				sTipo		= "char";
+				sTamanho	= "8";
+				break;
+			case "time":
+			case "hora":
+				sTipo		= "char";
+				sTamanho	= "6";
+				break;
+			case "datetime":
+			case "datahora":
+				sTipo		= "char";
+				sTamanho	= "14";
+				break;
+			case "bool":
+			case "boolean":
+			case "booleano":
+				sTipo		= "char";
+				sTamanho	= "1";
+				break;
+			case "memo":
+				sTipo = "ntext";
+				break;
+			default:
+				break;
+		}
+	}
+%>
+<% // TAMANHO %>
+<% 		if (propriedade.Attributes.GetNamedItem("Tamanho") != null)
+			sTamanho = propriedade.Attributes.GetNamedItem("Tamanho").Value;
+		else if (sTipo != "char")
+			sTamanho = "";
+%>
+<% // DECIMAL %>
+<% 		if (propriedade.Attributes.GetNamedItem("Decimal") != null)
+			sTamanho += ","  + propriedade.Attributes.GetNamedItem("Decimal").Value;
+%>
+<% // NULO %>
+<% 		if (propriedade.Attributes.GetNamedItem("Nulo") != null)
+			sNulo = propriedade.Attributes.GetNamedItem("Nulo").Value;
+		else
+			sNulo = "True";
+
+		if (sNulo == "True")
+			sNulo = "NULL";
+		else
+			sNulo = "NOT NULL";
+%>
+	[<%= sNome %>] [<%= sTipo %>] <%if (sTamanho !="") {%><%= "(" + sTamanho + ")" %><%}%><% if (sTipo == "char" || sTipo == "nvarchar") { %> COLLATE SQL_Latin1_General_CP1_CI_AS<%}%><% if (sDecimal != "") {%><%= sDecimal %><%}%> <%= sNulo %> ,
+<%  } // end foreach%>
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[<%= tTable %>] WITH NOCHECK ADD
+	CONSTRAINT [<%= tTable %>_PK] PRIMARY KEY  NONCLUSTERED
+	(
+		[ID]
+	)  ON [PRIMARY]
+GO
+
+--! Cria indices em <%= tTable %>
+<%
+	sNome.Remove(0,sNome.Length-1);
+	string sCampos = "";
+%>
+<% System.Xml.XmlNodeList tIndices = root.SelectNodes("descendant::Indices/Indice"); %>
+<% foreach (System.Xml.XmlNode indice in tIndices) %>
+<%  { %>
+<% 		if (indice.Attributes.GetNamedItem("Nome").Value != null) sNome	= indice.Attributes.GetNamedItem("Nome").Value; %>
+<% 		if (indice.Attributes.GetNamedItem("Campos").Value != null) sCampos = indice.Attributes.GetNamedItem("Campos").Value; %>
+IF exists (SELECT * FROM dbo.sysobjects WHERE ID = object_id(N'[dbo].[<%= tTable %>].[<%= sNome %>]') and OBJECTPROPERTY(id, N'IsUserTable') = 1)
+DROP INDEX [dbo].[<%= tTable %>].[<%= sNome %>]
+GO
+CREATE INDEX [<%= sNome %>]
+ON [<%= tTable %>](<%= sCampos %>)
+GO
+
+<%  } %>
+<%	sNome = "";
+	sTipo = "";
+	sTamanho = "";
+	sDecimal = "";
+	sNulo = "";
+ %>
+--! Cria a tabela <%= xTable %>.
+CREATE TABLE [dbo].[<%= xTable %>] (
+	[ID] [int] NOT NULL ,
+	[Versao] [int] NOT NULL ,
+<% // MSB: Criar um mehtodo genehrico para percorrer os campos. %>
+<% System.Xml.XmlNodeList xPropriedades = root.SelectNodes("descendant::Propriedades/Propriedade"); %>
+<% foreach (System.Xml.XmlNode propriedade in xPropriedades) %>
+<%  { %>
+<% // NOME %>
+<% 	if (propriedade.Attributes.GetNamedItem("Nome").Value != null) %>
+<% 		sNome = propriedade.Attributes.GetNamedItem("Nome").Value; %>
+<% // TIPO %>
+<%	if (propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower() != null)
+	{
+		sTipo		= propriedade.Attributes.GetNamedItem("Tipo").Value.ToLower();
+		switch (sTipo){
+			case "decimal":
+			case "numero":
+				sTipo = "decimal";
+				break;
+			case "int":
+			case "inteiro":
+				sTipo = "int";
+				break;
+			case "string":
+			case "texto":
+				sTipo = "nvarchar";
+				break;
+			case "char":
+				sTipo = "char";
+				sTamanho	= "1";
+				break;
+			case "date":
+			case "data":
+				sTipo		= "char";
+				sTamanho	= "8";
+				break;
+			case "time":
+			case "hora":
+				sTipo		= "char";
+				sTamanho	= "6";
+				break;
+			case "datetime":
+			case "datahora":
+				sTipo		= "char";
+				sTamanho	= "14";
+				break;
+			case "bool":
+			case "boolean":
+			case "booleano":
+				sTipo		= "char";
+				sTamanho	= "1";
+				break;
+			case "memo":
+				sTipo = "ntext";
+				break;
+			default:
+				break;
+		}
+	}
+%>
+<% // TAMANHO %>
+<% 		if (propriedade.Attributes.GetNamedItem("Tamanho") != null)
+			sTamanho = propriedade.Attributes.GetNamedItem("Tamanho").Value;
+		else if (sTipo != "char")
+			sTamanho = "";
+%>
+<% // DECIMAL %>
+<% 		if (propriedade.Attributes.GetNamedItem("Decimal") != null)
+			sTamanho += "," + propriedade.Attributes.GetNamedItem("Decimal").Value;
+%>
+<% // NULO %>
+<% 		if (propriedade.Attributes.GetNamedItem("Nulo") != null)
+			sNulo = propriedade.Attributes.GetNamedItem("Nulo").Value;
+		else
+			sNulo = "True";
+
+		if (sNulo == "True")
+			sNulo = "NULL";
+		else
+			sNulo = "NOT NULL";
+%>
+	[<%= sNome %>] [<%= sTipo %>] <% if (sTamanho !="") {%><%= "(" + sTamanho +")" %><%}%><% if (sTipo == "char" || sTipo == "nvarchar") { %> COLLATE SQL_Latin1_General_CP1_CI_AS<%}%><% if (sDecimal != "") {%><%= sDecimal %><%}%> <%= sNulo %> ,
+<%  } // end foreach%>
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[<%= xTable %>] WITH NOCHECK ADD
+	CONSTRAINT [<%= xTable %>_PK] PRIMARY KEY  NONCLUSTERED
+	(
+		[ID] ,
+		[Versao]
+	)  ON [PRIMARY]
+GO
+
+CREATE TABLE [dbo].[<%= cTable %>] (
+	[ID] [int] NOT NULL ,
+	[Versao] [int] NOT NULL ,
+	[Acao] [char] (1) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	[TimeStamp] [nvarchar] (25) COLLATE SQL_Latin1_General_CP1_CI_AS NULL ,
+	[UsuarioID] [int] NULL ,
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[<%= cTable %>] WITH NOCHECK ADD 
+	CONSTRAINT [<%= cTable %>_PK] PRIMARY KEY  NONCLUSTERED 
+	(
+		[ID] ,
+        [Versao]
+	)  ON [PRIMARY]
+GO

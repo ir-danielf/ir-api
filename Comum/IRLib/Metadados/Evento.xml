@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Evento">
+  <Propriedades>
+    <Propriedade Nome="LocalID"					Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Nome"					Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="VendaDistribuida"		Tipo="booleano"					Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="VersaoImagemIngresso"	Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale"		Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale2"		Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VersaoImagemVale3"		Tipo="int"						Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ImpressaoCodigoBarra"	Tipo="booleano"					Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="ObrigaCadastroCliente"	Tipo="texto"    Tamanho="1"		Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DesabilitaAutomatico"	Tipo="booleano"					Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Resenha"					Tipo="memo"						Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Publicar"				Tipo="texto"	Tamanho="1"	Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Destaque"				Tipo="booleano"					Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PrioridadeDestaque"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="ImagemInternet"			Tipo="texto"	Tamanho="100"	Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="Parcelas"				Tipo="int"						Nulo="False" Acesso="LE"/>
+    <Propriedade Nome="EntregaGratuita"			Tipo="booleano"					Nulo="false" Acesso="LE"/>
+    <Propriedade Nome="RetiradaBilheteria"		Tipo="booleano"					Nulo="false" Acesso="LE"/>
+    <Propriedade Nome="Financeiro"		Tipo="booleano"					Nulo="false" Acesso="LE"/>
+    <Propriedade Nome="Atencao"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Censura"		 Tipo="texto" Tamanho="400" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="EntradaAcompanhada"		Tipo="booleano"					Nulo="true" Acesso="LE"/>
+    <Propriedade Nome="PDVSemConveniencia"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="RetiradaIngresso"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="MeiaEntrada"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Promocoes"  Tipo="texto" Tamanho="800" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AberturaPortoes"  Tipo="texto" Tamanho="100" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DuracaoEvento"  Tipo="texto" Tamanho="100" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Release"  Tipo="texto" Tamanho="1000" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DescricaoPadraoApresentacao"  Tipo="texto" Tamanho="1600" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PublicarSemVendaMotivo"				Tipo="int"	Tamanho="1"	Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="ContratoID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="PermitirVendaSemContrato"		Tipo="booleano"					Nulo="false" Acesso="LE"/>
+    <Propriedade Nome="LocalImagemMapaID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="DataAberturaVenda"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="EventoSubTipoID"		Tipo="int"						Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="ObrigatoriedadeID"		Tipo="int"						Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="EscolherLugarMarcado"		Tipo="booleano"					Nulo="true" Acesso="LE"/>
+    <Propriedade Nome="MapaEsquematicoID"   Tipo="int"  Nulo ="true" Acesso="LE"/>
+    <Propriedade Nome="ExibeQuantidade" Tipo="booleano" Nulo="False" />
+    <Propriedade Nome="PalavraChave"  Tipo="texto"  Tamanho="1000"  Acesso="LE" Nulo="True"/>
+    <Propriedade Nome="NivelRisco"   Tipo="int"  Nulo ="true" Acesso="LE"/>
+    <Propriedade Nome="HabilitarRetiradaTodosPDV" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TipoImpressao" Tipo="texto"  Tamanho="1" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TipoCodigoBarra" Tipo="texto"  Tamanho="1" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="FilmeID" Tipo="int"  Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ImagemDestaque"			Tipo="texto"	Tamanho="100"	Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="LimiteMaximoIngressosEvento"		Tipo="int" Nulo="True" Acesso="LE"/>
+    <Propriedade Nome="CodigoPos"   Tipo="int"  Nulo ="true" Acesso="LE"/>
+    <Propriedade Nome="VenderPos" Tipo="booleano" Nulo="true" />
+    <Propriedade Nome="BaseCalculo" Tipo="texto"  Tamanho="1" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TipoCalculoDesconto" Tipo="texto"  Tamanho="1" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TipoCalculo" Tipo="texto"  Tamanho="1" Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="Alvara"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AVCB"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VendaSemAlvara"	Tipo="booleano"	Nulo="True"	Acesso="LE"/>
+
+    <Propriedade Nome="DataEmissaoAlvara"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataValidadeAlvara"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+
+    <Propriedade Nome="DataEmissaoAvcb"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="DataValidadeAvcb"					Tipo="datahora"			Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Lotacao"		Tipo="int"				Nulo="True" Acesso="LE" />
+
+
+    <Propriedade Nome="FonteImposto"   Tipo="texto"  Tamanho="20" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PorcentagemImposto"	Tipo="decimal"	Tamanho="3"	Decimal="2"	Nulo="True"	Acesso="LE"	/>  
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Todos" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todos os eventos
+    </Metodo>
+    <Metodo Nome="DestaquesHome" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todos os eventos em destaque na home do website
+    </Metodo>
+    <Metodo Nome="Setores" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter todos os setores desse evento
+    </Metodo>
+    <Metodo Nome="Novo" Tipo="int">
+      <!-- Fabio -->
+      Gerar um evento completo de acordo com o dataset.
+      <Parametros>
+        <Parametro Nome="info" Tipo="DataSet">
+          DataSet contendo todas as informações para gerar um evento. (Evento, Preços, CanalPreços, Apresentações e ApresentacaoSetores)
+        </Parametro>
+        <Parametro Nome="empresaID" Tipo="int">
+          empresaID
+        </Parametro>
+
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Apresentacoes" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter apresentacoes desse evento
+    </Metodo>
+    <Metodo Nome="Apresentacoes" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter apresentacoes desse evento de acordo com as disponibilidades
+      <Parametros>
+        <Parametro Nome="disponibilidade" Tipo="Apresentacao.Disponibilidade" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="Canais" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter canais desse evento
+    </Metodo>
+    <Metodo Nome="ExcluirCascata"	Tipo="bool">
+      Chama Cascata da Apresentacao e exlcui este evento e CanalEvento
+    </Metodo>
+    <Metodo Nome="VendasGerenciais" Tipo="DataTable">
+      Vendas Gerenciais por evento com Quantidade e Valores dos Ingressos dos Vendidos e Cancelados e Total
+      Com porcentagem
+      <Parametros>
+        <Parametro Nome="dataInicial" Tipo="string" />
+        <Parametro Nome="dataFinal" Tipo="string" />
+        <Parametro Nome="comCortesia" Tipo="bool" />
+        <Parametro Nome="apresentacaoID" Tipo="int" />
+        <Parametro Nome="eventoID" Tipo="int" />
+        <Parametro Nome="localID" Tipo="int" />
+        <Parametro Nome="empresaID" Tipo="int" />
+        <Parametro Nome="vendasCanal" Tipo="bool" />
+        <Parametro Nome="tipoLinha" Tipo="string" />
+        <Parametro Nome="disponivel" Tipo="bool" />
+        <Parametro Nome="empresaVendeIngressos" Tipo="bool" />
+        <Parametro Nome="empresaPromoveEventos" Tipo="bool" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="LinhasVendasGerenciais" Tipo="DataTable">
+      Eventos por período do Caixa e situacao dos ingressos
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressosPorEvento" Tipo="int">
+      Obter quantidade de ingressos em função do IngressoIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="ValorIngressosPorEvento" Tipo="decimal">
+      Obter valores de ingressos em função do IngressoIDs
+      <Parametros>
+        <Parametro Nome="ingressoLogIDs" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="LinhasBorderoFormaPagamento" Tipo="DataTable">
+      Linhas de Forma Pagamento no Borderô por Evento
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="BorderoFormaPagamento" Tipo="DataTable">
+      Usado no Bordero por FormaPagamento
+      <Parametros>
+        <Parametro Nome="apresentacoes" Tipo="string" />
+      </Parametros>
+    </Metodo>
+
+  </Metodos>
+</Classe>
+
+
+

@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<xs:schema id="Buffer" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Buffer" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Local">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Logradouro" type="xs:string" minOccurs="0" />
+              <xs:element name="Numero" type="xs:int" minOccurs="0" />
+              <xs:element name="Complemento" type="xs:string" minOccurs="0" />
+              <xs:element name="Bairro" type="xs:string" minOccurs="0" />
+              <xs:element name="CEP" type="xs:string" minOccurs="0" />
+              <xs:element name="Cidade" type="xs:string" minOccurs="0" />
+              <xs:element name="Estado" type="xs:string" minOccurs="0" />
+              <xs:element name="Estacionamento" type="xs:boolean" minOccurs="0" />
+              <xs:element name="EstacionamentoObs" type="xs:string" minOccurs="0" />
+              <xs:element name="AcessoNecessidadeEspecial" type="xs:boolean" minOccurs="0" />
+              <xs:element name="AcessoNecessidadeEspecialObs" type="xs:string" minOccurs="0" />
+              <xs:element name="ArCondicionado" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ComoChegar" type="xs:string" minOccurs="0" />
+              <xs:element name="HorariosBilheteria" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalFormasPagamento" type="xs:string" minOccurs="0" />
+              <xs:element name="Carregou" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Evento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalID" type="xs:int" minOccurs="0" />
+              <xs:element name="Atencao" type="xs:string" minOccurs="0" />
+              <xs:element name="ObrigaCadastroCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Estado" type="xs:string" minOccurs="0" />
+              <xs:element name="PDVSemConveniencia" type="xs:string" minOccurs="0" />
+              <xs:element name="Censura" type="xs:string" minOccurs="0" />
+              <xs:element name="EntradaAcompanhada" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RetiradaIngresso" type="xs:string" minOccurs="0" />
+              <xs:element name="MeiaEntrada" type="xs:string" minOccurs="0" />
+              <xs:element name="Promocoes" type="xs:string" minOccurs="0" />
+              <xs:element name="AberturaPortoes" type="xs:string" minOccurs="0" />
+              <xs:element name="DuracaoEvento" type="xs:string" minOccurs="0" />
+              <xs:element name="Release" type="xs:string" minOccurs="0" />
+              <xs:element name="DescricaoPadrao" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxaConveniencia" type="xs:int" minOccurs="0" />
+              <xs:element name="TaxaMinima" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TaxaMaxima" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ObrigatoriedadeID" type="xs:int" minOccurs="0" />
+              <xs:element name="Carregou" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TipoImpressao" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Apresentacao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Horario" type="xs:string" minOccurs="0" />
+              <xs:element name="EventoID" type="xs:int" minOccurs="0" />
+              <xs:element name="Descricao" type="xs:string" minOccurs="0" />
+              <xs:element name="DescricaoPadraoApresentacao" type="xs:string" minOccurs="0" />
+              <xs:element name="DescricaoPadrao" type="xs:boolean" minOccurs="0" />
+              <xs:element name="QuantidadeApresentacao" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadePorClienteApresentacao" type="xs:int" minOccurs="0" />
+              <xs:element name="ApresentacaoCotaID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Setor">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Acesso" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalID" type="xs:int" minOccurs="0" />
+              <xs:element name="Produto" type="xs:boolean" minOccurs="0" />
+              <xs:element name="LugarMarcado" type="xs:string" minOccurs="0" />
+              <xs:element name="ApresentacaoID" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdeDisponivel" type="xs:int" minOccurs="0" />
+              <xs:element name="QtdeBloqueado" type="xs:int" minOccurs="0" />
+              <xs:element name="ObservacaoImportante" type="xs:string" minOccurs="0" />
+              <xs:element name="DistanciaPalco" type="xs:int" minOccurs="0" />
+              <xs:element name="ApresentacaoSetorCotaID" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadeApresentacaoSetor" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadePorClienteApresentacaoSetor" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Preco">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="CorID" type="xs:int" minOccurs="0" />
+              <xs:element name="Valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ApresentacaoSetorID" type="xs:int" minOccurs="0" />
+              <xs:element name="ApresentacaoID" type="xs:int" minOccurs="0" />
+              <xs:element name="SetorID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Cortesia">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Bloqueio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="CorID" type="xs:int" minOccurs="0" />
+              <xs:element name="RGB" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Pacote">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LocalID" type="xs:int" minOccurs="0" />
+              <xs:element name="Obs" type="xs:string" minOccurs="0" />
+              <xs:element name="TaxaConveniencia" type="xs:int" minOccurs="0" />
+              <xs:element name="TaxaMinima" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TaxaMaxima" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PermitirCancelamentoAvulso" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PacoteItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PacoteID" type="xs:int" minOccurs="0" />
+              <xs:element name="EventoID" type="xs:int" minOccurs="0" />
+              <xs:element name="SetorID" type="xs:int" minOccurs="0" />
+              <xs:element name="LocalID" type="xs:int" minOccurs="0" />
+              <xs:element name="SetorNome" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Regiao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="EventoID" type="xs:int" minOccurs="0" />
+              <xs:element name="TaxaEntregaID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TaxaEntrega">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RegiaoID" type="xs:int" minOccurs="0" />
+              <xs:element name="EventoID" type="xs:int" minOccurs="0" />
+              <xs:element name="Prazo" type="xs:int" minOccurs="0" />
+              <xs:element name="Estado" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Mapa">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ApresentacaoSetorID" type="xs:int" minOccurs="0" />
+              <xs:element name="Mapa" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CotaItemFormaPagamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CotaItemID" type="xs:int" minOccurs="0" />
+              <xs:element name="FormaPagamentoID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CotaItem">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="CotaID" type="xs:int" minOccurs="0" />
+              <xs:element name="PrecoIniciaCom" type="xs:string" minOccurs="0" />
+              <xs:element name="ParceiroID" type="xs:int" minOccurs="0" />
+              <xs:element name="ValidaBin" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TextoValidacao" type="xs:string" minOccurs="0" />
+              <xs:element name="ObrigatoriedadeID" type="xs:int" minOccurs="0" />
+              <xs:element name="Quantidade" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadePorCliente" type="xs:int" minOccurs="0" />
+              <xs:element name="CPFResponsavel" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Termo" type="xs:string" minOccurs="0" />
+              <xs:element name="Nominal" type="xs:boolean" minOccurs="0" />
+              <xs:element name="QuantidadePorCodigo" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CodigoPromo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CodigoPromoID" type="xs:int" minOccurs="0" />
+              <xs:element name="ParceiroID" type="xs:int" minOccurs="0" />
+              <xs:element name="Codigo" type="xs:string" minOccurs="0" />
+              <xs:element name="TamanhoCodigo" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FormaPagamento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Tipo" type="xs:int" minOccurs="0" />
+              <xs:element name="Parcelas" type="xs:int" minOccurs="0" />
+              <xs:element name="TEFID" type="xs:int" minOccurs="0" />
+              <xs:element name="Dias" type="xs:int" minOccurs="0" />
+              <xs:element name="TaxaAdm" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IR" type="xs:string" minOccurs="0" />
+              <xs:element name="Itau" type="xs:boolean" minOccurs="0" />
+			  <xs:element name="BandeiraNome" type="xs:string" minOccurs="0" />
+			  <xs:element name="BandeiraID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FormaPagamentoEvento">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FormaPagamentoID" type="xs:int" minOccurs="0" />
+              <xs:element name="EventoID" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PacoteLugarMarcado">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="PacoteID" type="xs:int" minOccurs="0" />
+              <xs:element name="SetorID" type="xs:int" minOccurs="0" />
+              <xs:element name="ApresentacaoID" type="xs:int" minOccurs="0" />
+              <xs:element name="ApresentacaoSetorID" type="xs:int" minOccurs="0" />
+              <xs:element name="LugarMarcado" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ValeIngressoTipo">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValidadeDiasImpressao" type="xs:int" minOccurs="0" />
+              <xs:element name="ValidadeData" type="xs:string" minOccurs="0" />
+              <xs:element name="ClienteTipo" type="xs:string" minOccurs="0" />
+              <xs:element name="ProcedimentoTroca" type="xs:string" minOccurs="0" />
+              <xs:element name="SaudacaoNominal" type="xs:string" minOccurs="0" />
+              <xs:element name="SaudacaoPadrao" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantidadeLimitada" type="xs:string" minOccurs="0" />
+              <xs:element name="CodigoTrocaFixo" type="xs:string" minOccurs="0" />
+              <xs:element name="Acumulativo" type="xs:string" minOccurs="0" />
+              <xs:element name="Quantidade" type="xs:string" default=" - " minOccurs="0" />
+              <xs:element name="ValorPagamento" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ValorTipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:length value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TrocaConveniencia" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TrocaEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TrocaIngresso" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="TaxaEntregaPadrao">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="Valor" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RegiaoID" type="xs:int" minOccurs="0" />
+              <xs:element name="EventoID" type="xs:int" minOccurs="0" />
+              <xs:element name="Prazo" type="xs:int" minOccurs="0" />
+              <xs:element name="Estado" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RegiaoValeIngresso">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Obrigatoriedade">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RG" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPF" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Telefone" type="xs:boolean" minOccurs="0" />
+              <xs:element name="TelefoneComercial" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Celular" type="xs:boolean" minOccurs="0" />
+              <xs:element name="DataNascimento" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Email" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CEPEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="EnderecoEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NumeroEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ComplementoEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BairroEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CidadeEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="EstadoEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CEPCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="EnderecoCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NumeroCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="ComplementoCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="BairroCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CidadeCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="EstadoCliente" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NomeEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPFEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RGEntrega" type="xs:boolean" minOccurs="0" />
+              <xs:element name="CPFResponsavel" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NomeResponsavel" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Serie">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID" type="xs:int" minOccurs="0" />
+              <xs:element name="Nome" type="xs:string" minOccurs="0" />
+              <xs:element name="QuantidadeMinimaGrupo" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadeMaximaGrupo" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadeMinimaApresentacao" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadeMaximaApresentacao" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadeMinimaIngressosPorApresentacao" type="xs:int" minOccurs="0" />
+              <xs:element name="QuantidadeMaximaIngressosPorApresentacao" type="xs:int" minOccurs="0" />
+              <xs:element name="Descricao" type="xs:string" minOccurs="0" />
+              <xs:element name="Regras" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

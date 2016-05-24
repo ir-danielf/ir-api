@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="EventoBordero">
+  <Propriedades>
+    <Propriedade Nome="EventoID"		Tipo="int"						Nulo="False"	Acesso="LE"								/>
+    <Propriedade Nome="GestorRazaoSocial"			Tipo="texto"						Tamanho="50"	Nulo="True"	Acesso="LE"								/>
+    <Propriedade Nome="GestorCpfCnpj"			Tipo="texto"						Tamanho="50"	Nulo="True"	Acesso="LE"								/>
+    <Propriedade Nome="GestorEndereco"			Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"								/>
+    <Propriedade Nome="ProdutorRazaoSocial"			Tipo="texto"						Tamanho="50"	Nulo="True"	Acesso="LE"								/>
+    <Propriedade Nome="ProdutorCpfCnpj"			Tipo="texto"						Tamanho="50"	Nulo="True"	Acesso="LE"								/>
+    <Propriedade Nome="ProdutorEndereco"			Tipo="texto"	Tamanho="50"	Nulo="True"	Acesso="LE"								/>
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>
+

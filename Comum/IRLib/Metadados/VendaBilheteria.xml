@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="VendaBilheteria">
+  <Propriedades>
+    <!-- ID é IDENTITY!! -->
+    <Propriedade Nome="CaixaID"						                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ClienteID"					                          Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Senha"		                    Tamanho = "10"	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DataVenda"					                          Tipo="datahora"		Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Status"		                  Tamanho = "1" 	Tipo="texto"			Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TaxaEntregaID"				                        Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TaxaConvenienciaValorTotal"	Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="ComissaoValorTotal"        	Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="ValorTotal"					        Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="Obs"							                            Tipo="memo"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NotaFiscalCliente"           Tamanho="600"   Tipo="texto"      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NotaFiscalEstabelecimento"   Tamanho="600"   Tipo="texto"      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="IndiceInstituicaoTransacao"  Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="IndiceTipoCartao"            Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NSUSitef"                    Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NSUHost"                     Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoAutorizacaoCredito"    Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="BIN"                         Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ModalidadePagamentoCodigo"   Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ModalidadePagamentoTexto"    Tamanho="100"   Tipo="texto"      Nulo="True" Acesso="LE" />
+    <Propriedade Nome="DDD"                         Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NumeroCelular"               Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ModelIDCelular"              Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="FabricanteCelular"           Tamanho="50"     Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NivelRisco"                  Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="IP"                          Tamanho="15"     Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Fraude"                       Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AprovacaoAutomatica"         Tipo="booleano"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="QuantidadeImpressoesInternet"  Tipo="int"    Nulo="True"   Acesso="LE" />
+    <Propriedade Nome="VendaCancelada"         Tipo="booleano"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="MotivoID"         Tipo="int"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ClienteEnderecoID" Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="EntregaControleID" Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="EntregaAgendaID" Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="PdvID" Tipo="int"				Nulo="True" Acesso="LE" />
+    <Propriedade Nome="TaxaEntregaValor" Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="PagamentoProcessado"         Tipo="booleano"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="NomeCartao"                          Tamanho="50"     Tipo="texto"        Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ValorSeguro" Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="TaxaProcessamentoValor" Tamanho="12"    Tipo="decimal"		Nulo="True" Acesso="LE" Decimal="2" />
+    <Propriedade Nome="TaxaProcessamentoCancelada" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="Score" Tipo="int" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="RetornoAccertify" Tipo="Texto" Tamanho="50" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="AccertifyForceStatus" Tipo="Texto" Tamanho="1" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VendaBilhereriaIDTroca" Tipo="int" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="CodigoRastreio" Tipo="Texto" Tamanho="30" Nulo="True" Acesso="LE" />
+
+    <Propriedade Nome="EntregaCancelada" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="ConvenienciaCancelada" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="SeguroCancelado" Tipo="booleano" Nulo="True" Acesso="LE" />
+    <Propriedade Nome="VendaBilhereriaIDVenda" Tipo="int" Nulo="True" Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+    <Metodo Nome="Senhas" Tipo="DataTable">
+      <!-- Fabio -->
+      Obter as senhas de um cliente
+      <Parametros>
+        <Parametro Nome="ClienteID" Tipo="int" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="GerarSenha" Tipo="string">
+      <!-- Fabio -->
+      Gerar uma senha para essa venda
+    </Metodo>
+    <Metodo Nome="Itens" Tipo="DataTable">
+      Obter as senhas de um cliente
+    </Metodo>
+    <Metodo Nome="DadosParaIngresso" Tipo="DataTable">
+      Obtendo um DataTable dos dados para Impressao de Ingressos em funcao da Senha
+    </Metodo>
+    <Metodo Nome="DadosParaIngresso" Tipo="DataTable">
+      Obtendo um DataTable dos dados para Impressao de Ingressos em funcao dos Itens de Venda
+      <Parametros>
+        <Parametro Nome="itens" Tipo="int[]">
+          Itens selecionados
+        </Parametro>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="EmitirComprovante" Tipo="bool">
+      Saber se deve Emitir Comprovante pelo flag do Canal em que esta Venda foi efetuada
+    </Metodo>
+    <Metodo Nome="Total" Tipo="decimal">
+      Obtem o valor Total de uma Venda
+    </Metodo>
+    <Metodo Nome="VendasResumo" Tipo="DataTable">
+      Obtem os dados para Vendas Resumo
+      <Parametros>
+        <Parametro Nome="caixaID" Tipo="int">
+          Relatorio de qual Caixa
+        </Parametro>
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeIngressos" Tipo="int">
+      Quantidade de ingressos por senha
+    </Metodo>
+    <Metodo Nome="QuantidadePagamentos" Tipo="int">
+      Quantidade de parcelas de pagamentos por senha
+    </Metodo>
+    <Metodo Nome="ParcelasPagamento" Tipo="DataTable">
+      Obter as parcelas de uma Venda
+      <Parametros>
+        <Parametro Nome="registroZero" Tipo="string" />
+        <Parametro Nome="valorTotal" Tipo="decimal" />
+      </Parametros>
+    </Metodo>
+    <Metodo Nome="QuantidadeItens" Tipo="int">
+      Obter quantidade de itens por Venda
+    </Metodo>
+    <Metodo Nome="FormasPagamento" Tipo="DataTable">
+      Obter as forma de pagamento de uma venda
+    </Metodo>
+  </Metodos>
+</Classe>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Conciliacao">
+  <Propriedades>
+    <Propriedade Nome="Nome"		      Tipo="texto"	Tamanho="50"	Nulo="False"	Acesso="LE"/>
+    <Propriedade Nome="TimeStampCriacao"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="TimeStampEnvio"	Tipo="datahora"		Nulo="True"	Acesso="LE"/>
+  </Propriedades>
+</Classe>

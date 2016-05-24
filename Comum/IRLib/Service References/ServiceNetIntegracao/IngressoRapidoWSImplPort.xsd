@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://impl.net.marketdata.com.br/" elementFormDefault="unqualified" targetNamespace="http://impl.net.marketdata.com.br/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="validaCPF" type="tns:validaCPF" />
+  <xs:element name="validaCPFResponse" type="tns:validaCPFResponse" />
+  <xs:complexType name="validaCPF">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element minOccurs="0" name="senha" type="xs:string" />
+      <xs:element name="cpf" type="tns:cpf" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="validaCPFResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="cpf">
+    <xs:restriction base="xs:string" />
+  </xs:simpleType>
+</xs:schema>

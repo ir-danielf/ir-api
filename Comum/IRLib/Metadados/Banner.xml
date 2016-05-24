@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="Banner">
+  <Propriedades>
+    <Propriedade Nome="Nome"		    			    Tipo="texto"	  Tamanho="100"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Descricao"             Tipo="texto"	  Tamanho="150"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Img"		    			      Tipo="texto"	  Tamanho="50"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Alt"		    			      Tipo="texto"	  Tamanho="255"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Url"		    			      Tipo="texto"	  Tamanho="255"	Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Target"		    			  Tipo="int"	                  Nulo="True"	Acesso="LE" />
+    <Propriedade Nome="Localizacao"	          Tipo="int"						                  	Acesso="LE" />
+    <Propriedade Nome="Posicao" 	            Tipo="int"						        Nulo="True"	Acesso="LE" />   
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="PrecoTipo">
+  <Propriedades>
+    <Propriedade Nome="Nome"	Tipo="texto"	  Tamanho="30"	Nulo="False"	Acesso="LE" />
+  </Propriedades>
+  <Metodos>
+  </Metodos>
+</Classe>

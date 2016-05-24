@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<Classe Nome="MensagemRegional">
+  <Propriedades>
+    <Propriedade Nome="RegionalID"  Tipo="int"  />
+    <Propriedade Nome="MensagemID"  Tipo="int"  />
+  </Propriedades>
+</Classe>
+

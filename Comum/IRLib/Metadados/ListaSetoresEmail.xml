@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Classe Nome="ListaSetoresEmail">
+  <Propriedades>
+    <Propriedade Nome="Setor" Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Email" Tipo="texto"	Tamanho="100"	Nulo="True"	Acesso="LE"/>
+    <Propriedade Nome="Responsavel" Tipo="texto" Tamanho="100" Nulo="True" Acesso="LE" />
+  </Propriedades>
+</Classe>
