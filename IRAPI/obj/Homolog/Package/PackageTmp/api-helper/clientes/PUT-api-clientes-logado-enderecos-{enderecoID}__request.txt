@@ -1,0 +1,10 @@
+﻿{
+        "CEP":"96202-720",
+        "Endereco":"Rua Sarandi",
+        "Numero":"1501",
+        "Cidade":"Pelotas",
+        "Estado":"RS",
+        "Complemento":"",
+        "Bairro":"Gaivotas",
+        "EnderecoPrincipal":"F"
+}

@@ -1,0 +1,38 @@
+diff a/IRAPI/Controllers/NPSController.cs b/IRAPI/Controllers/NPSController.cs	(rejected hunks)
+@@ -17,6 +17,36 @@
+     public class NpsController : MasterApiController
+     {
+         /// <summary>
++        /// Método da API para enviar dados diretamente para a API do NPS.
++        /// </summary>
++        /// <param name="Name">Nome do cliente que efetuou a compra do Ingresso</param>
++        /// <param name="Email">E-mail para onde deverá ser disparado a pesquisa de satisfação</param>
++        /// <param name="Delay">Tempo medido em segundos para envio do e-mail, controle este feito pela API</param>
++        /// <param name="Canal">Indicar o canal de comunicacao onde foi realizada a compra do ingresso</param>
++        [Route("nps/sendtodelighted")]
++        [HttpPost]
++        public RetornoModel SendDataNPS([FromBody]NpsAdicionarAgendamentoModel rq)
++        {
++            RetornoModel ret = new RetornoModel();
++            ret.Mensagem = "OK";
++            ret.Sucesso = true;
++            try
++            {
++                using (var bo = new NetPromoterServiceBO())
++                {
++                    bo.SendDataNPS(rq.Name, rq.Email, rq.Delay, rq.Canal);
++                }
++            }
++            catch (Exception ex)
++            {
++                ret.Mensagem = ex.Message;
++                ret.Sucesso = false;
++            }
++
++            return ret;
++        }
++
++        /// <summary>
+         /// Método da API que realiza o agendamento para o envio de uma pesquisa de satisfação ao cliente que efetua compra de
+         /// ingressos na Ingresso Rápido. Este método apenas armazena o agendamento em uma tabela, um robô irá ler os dados
+         /// gravados nesta tabela para chamar uma API que realiza o envio do e-mail com a pesquisa de satisfação.

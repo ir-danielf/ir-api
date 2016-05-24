@@ -1,0 +1,30 @@
+Searching 143 files for "victor"
+
+C:\RCA\IR\Code\IRAPI\api-helper\clientes\GET-api-clientes-logado-compras-{id}.txt:
+   73          "FeedbackPosVenda": null,
+   74          "PagamentoProcessado": "T",
+   75:         "NomeCartao": "SILVA JARDIM",
+   76          "ValorSeguro": 0,
+   77          "TaxaProcessamentoValor": 0,
+
+C:\RCA\IR\Code\IRAPI\api-helper\clientes\POST-api-clientes__request.txt:
+    4      "CPF": "41588066401",
+    5      "Senha": "lerolero123*",
+    6:     "Email": "victor_ratuchenei@hotmail.com",
+    7      "DataCadastro": "",
+    8      "UltimoAcesso": "",
+
+C:\RCA\IR\Code\IRAPI\api-helper\clientes\POST-api-clientes__response.txt:
+    8          "CPF": "41588066401",
+    9          "Senha": "",
+   10:         "Email": "victor_ratuchenei@hotmail.com",
+   11          "DataCadastro": "20141110103807",
+   12          "UltimoAcesso": "20141110103807",
+   ..
+   35              "Celular": null,
+   36              "DataNascimento": null,
+   37:             "Email": "victor_ratuchenei@hotmail.com",
+   38              "RecebeEmail": null,
+   39              "CEP": null,
+
+4 matches across 3 files

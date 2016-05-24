@@ -1,0 +1,35 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "LimiteTotalItensCarrinho": 8,
+    "VendaBilheteria": null,
+    "EntregaControles": null,
+    "EntregaComEndereco": false,
+    "EntregaControleID": 0,
+    "ClienteEnderecoID": 0,
+    "PDVID": 0,
+    "CarrinhoItens": [],
+    "SessionID": "fb85ff4a-35e4-43aa-b37b-6f7d7331902c",
+    "Login": null,
+    "ClienteID": 0,
+    "ValeIngressos": null,
+    "Total": {
+      "ValorTotal": 0.0,
+      "ValorDesconto": 0.0,
+      "ValorTaxaEntrega": 0.0,
+      "ValorTaxaConveniencia": 0.0,
+      "ValorIngressos": 0.0
+    },
+    "Pagamento": null,
+    "EstruturaVenda": {
+      "LojaID": 2,
+      "CaixaID": 0,
+      "CanalID": 2,
+      "UsuarioID": 1657,
+      "CanalTipo": 0,
+      "CanalVerificado": false,
+      "CaixaErrado": false
+    }
+  }
+}

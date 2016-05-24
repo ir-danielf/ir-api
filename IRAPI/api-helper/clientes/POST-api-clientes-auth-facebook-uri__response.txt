@@ -1,0 +1,6 @@
+﻿{
+  "Sucesso": true,
+  "Tipo": "nenhum",
+  "Mensagem": "OK",
+  "Retorno": "https://www.facebook.com/dialog/oauth?client_id=1510458085882044&client_secret=377cff5c6e72484db541df978c998605&redirect_uri=http%3A%2F%2Flocalhost%3A1412%2FLoginCadastro.aspx&response_type=code&scope=email"
+}

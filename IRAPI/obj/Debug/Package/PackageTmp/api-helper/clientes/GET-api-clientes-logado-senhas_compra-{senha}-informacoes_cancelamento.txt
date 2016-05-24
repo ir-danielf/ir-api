@@ -1,0 +1,88 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "CompraID": 14096502,
+    "SenhaCompra": "7314096502",
+    "DataCompra": "2015-04-13T18:06:37",
+    "CaixaID": 1012007,
+    "CancelamentoIndisponivel": true,
+    "CancelamentoIndisponivelMotivo": "Esta compra só pode ser cancelada na Bilheteria Internet POS.",
+    "ValorSeguro": 0.00,
+    "TaxaConvencienciaCancelada": false,
+    "TaxaEntregaCancelada": false,
+    "ValorSeguroCancelado": false,
+    "SenhaTaxaConvencienciaCancelada": "",
+    "SenhaTaxaEntregaCancelada": "",
+    "SenhaValorSeguroCancelado": "",
+    "PodeCancelarEntrega": false,
+    "PodeCancelarSeguro": false,
+    "Ingressos": [
+      {
+        "ID": 197470727,
+        "Codigo": "I 33",
+        "LugarID": 2542466,
+        "PrecoID": 2610625,
+        "EventoID": 38296,
+        "EventoNome": "220 Volts",
+        "LocalID": 9,
+        "LocalNome": "Teatro Procópio Ferreira",
+        "PrecoNome": ".Santander",
+        "PrecoValor": 120.00,
+        "TimeStampReserva": "2015-03-17T21:00:00",
+        "TaxaConveniencia": 21.60,
+        "PacoteGrupo": "",
+        "PacoteID": 0,
+        "PacotePermitirCancelamentoAvulso": false,
+        "SetorID": 21581,
+        "SetorNome": "Setor I - 220Volts",
+        "ApresentacaoID": 189555,
+        "ApresentacaoHorario": "2015-04-17T21:00:00",
+        "Cancelado": true,
+        "StatusCancelamentoCodigo": "A",
+        "StatusCancelamento": "Devolução Automatica",
+        "PodeCancelarTaxaConveniencia": false,
+        "SenhaCancelamento": "2114096575",
+        "CancelamentoIndisponivel": true,
+        "CancelamentoIndisponivelMotivo": "Ingresso já foi cancelado.",
+        "TemDevolucao": false
+      }
+    ],
+    "Pagamentos": [
+      {
+        "ID": 2,
+        "FormaPagamentoNome": "Visa 01X",
+        "FormaPagamentoTipo": "Crédito 01x",
+        "Parcelas": 1,
+        "Valor": 601.80,
+        "NomeTitular": "",
+        "CPFTitular": "",
+        "NumeroCartao": "",
+        "Bandeira": "",
+        "TransactionID": ""
+      }
+    ],
+    "TotalCompra": {
+      "ValorTotal": 601.80,
+      "ValorDesconto": 0.00,
+      "ValorTaxaEntrega": 0.00,
+      "ValorTaxaConveniencia": 91.80,
+      "ValorIngressos": 510.00
+    },
+    "FormaDevolucaoDisponivel": "N",
+    "BancosIR": [
+      {
+        "ID": 0,
+        "Codigo": "246",
+        "NomeBanco": "Banco ABC Brasil S.A.",
+        "IRDeposita": false
+      },
+      {
+        "ID": 0,
+        "Codigo": "75 ",
+        "NomeBanco": "Banco ABN AMRO S.A.",
+        "IRDeposita": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,786 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0047)http://ir-hlg.homologaprojeto.com.br/irHelp -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>IR API - Exemplo Carrinho</title>
+    <link href="../assets/default.css" rel="stylesheet">
+    <script src="../assets/modernizr.js"></script>
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">Voltar para Índice da API</a>
+                <a class="navbar-brand" href="../objeto.html">Objetos</a>
+                <a class="navbar-brand" href="../enumerador.html">Enumeradores</a>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        <link type="text/css" href="../assets/HelpPage.css" rel="stylesheet">
+        <header class="help-page">
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <h1>Carrinho</h1>
+                    <h3>Objeto que contém as informações de um item de carrinho</h3>
+                </div>
+            </div>
+        </header>
+        <div id="body" class="help-page">
+            <section class="featured">
+                <div class="content-wrapper">
+                    <p>
+                        
+                    </p>
+                </div>
+            </section>
+            <br />
+            <section class="content-wrapper main-content clear-fix">
+                <table class="help-page-table">
+                    <thead>
+                        <tr><th>Propriedade</th><th>Descrição</th><th>Tipo</th><th>Informação Adicional</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="parameter-name">ID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do carrinho</p>
+                            </td>
+                            <td class="parameter-type">
+                                integer
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ClienteID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do cliente dono do carrinho</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Codigo</td>
+                            <td class="parameter-documentation">
+                                <p>Codigo do ingresso do carrinho</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">LugarID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Lugar</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">EventoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Evento</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">IngressoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">TipoLugar</td>
+                            <td class="parameter-documentation">
+                                <p>Tipo de lugar</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ApresentacaoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da apresentação</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">SetorID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Setor</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PrecoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Preco</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">LocalID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Local</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Local</td>
+                            <td class="parameter-documentation">
+                                <p>Descrição do Local</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Evento</td>
+                            <td class="parameter-documentation">
+                                <p>Descrição do Evento</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ApresentacaoDataHora</td>
+                            <td class="parameter-documentation">
+                                <p>Data e hora da apresentação</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Setor</td>
+                            <td class="parameter-documentation">
+                                <p>Nome do setor</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PrecoNome</td>
+                            <td class="parameter-documentation">
+                                <p>Descrição do preco</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">TimeStamp</td>
+                            <td class="parameter-documentation">
+                                <p>Tempo para expirar a reserva de um carrinho</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PrecoValor</td>
+                            <td class="parameter-documentation">
+                                <p>Valor do preco selecionado</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>decimal</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">TaxaConveniencia</td>
+                            <td class="parameter-documentation">
+                                <p>Valor da taxa de conveniencia</p>
+                            </td>
+                            <td class="parameter-type">
+                                decimal
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">SessionID</td>
+                            <td class="parameter-documentation">
+                                <p>SessionID do cliente</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Status</td>
+                            <td class="parameter-documentation">
+                               <p>Status do carrinho</p> 
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">TagOrigem</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PacoteGrupo</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PacoteNome</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Grupo</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Classificacao</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PrecoExclusivoCodigoID</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">LocalImagemNome</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValeIngressoTipoID</td>
+                            <td class="parameter-documentation">
+                                <p>Tipo do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValidadeData</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValeIngressoNome</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValidadeDiasImpressao</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Acumulativo</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValeIngressoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Vale Ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">VendaBilheteriaID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da Venda Bilheteria</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CotaItemID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da Cota Item</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CotaItemIDAPS</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da Cota Item</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">IsSpecial</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">EmpresaID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da Empresa</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">SeriaID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da Serie</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">DonoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Dono</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">DonoCPF</td>
+                            <td class="parameter-documentation">
+                                <p>CPF do dono</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CodigoPromocional</td>
+                            <td class="parameter-documentation">
+                                <p>Codigo promocional da cota</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CotaVerificada</td>
+                            <td class="parameter-documentation">
+                                <p>Identifica se uma cota já foi verificada</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>boolean</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">valorTaxaProcessamento</td>
+                            <td class="parameter-documentation">
+                                <p>Valor da taxa de processamento</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>decimal</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PacoteID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Pacote</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">GerenciamentoIngressoID</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">VoucherID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Voucher</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">StatusAsEnum</td>
+                            <td class="parameter-documentation">
+                                <p>Status do carrinho</p>
+                            </td>
+                            <td class="parameter-type">
+                                enumCarrinhoStatus
+                            </td>
+                            <td class="parameter-annotations">
+                                <p>Converte a propriedade Status de string para enumCarrinhoStatus. Quando mudar esta propriedade Status será alterado automaticamente</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">TimeStampAsDateTime</td>
+                            <td class="parameter-documentation">
+                                <p>Tempo para expirar um carrinho</p>
+                            </td>
+                            <td class="parameter-type">
+                                DateTime
+                            </td>
+                            <td class="parameter-annotations">
+                                <p>Converte a propriedade TimeStamp de string para DateTime. Quando mudar esta propriedade TimeStamp será alterado automaticamente</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ApresentacaoDataHoraAsDateTime</td>
+                            <td class="parameter-documentation">
+                                <p>Data e hora da apresentação</p>
+                            </td>
+                            <td class="parameter-type">
+                                DateTime
+                            </td>
+                            <td class="parameter-annotations">
+                                <p>Converte a propriedade ApresentacaoDataHora de string para DateTime. Quando mudar esta propriedade ApresentacaoDataHora será alterado automaticamente</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">FilmeID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Filme</p>
+                            </td>
+                            <td class="parameter-type">
+                                integer
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CodigoProgramacao</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">NVendeLugar</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                boolean
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">PossuiTaxaProcessamento</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                boolean
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">SetorObject</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                <a href="#">Setor</a>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">EventoObject</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                <a href="#">Evento</a>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ApresentacaoObject</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                <a href="#">Apresentacao</a>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CotaItemObject</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                <a href="#">tCotaItem</a>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Precos</td>
+                            <td class="parameter-documentation">
+                                <p></p>
+                            </td>
+                            <td class="parameter-type">
+                                List<<a href="#">Preco</a>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <hr>
+        <footer>
+            <p>© 2014 - Ingresso Rápido</p>
+        </footer>
+    </div>
+
+    <script src="./assets/jquery"></script>
+
+    <script src="./assets/bootstrap"></script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "FirstItemOnPage": 0,
+    "HasNextPage": true,
+    "HasPreviousPage": false,
+    "IsFirstPage": true,
+    "IsLastPage": false,
+    "LastItemOnPage": 0,
+    "PageCount": 21,
+    "PageNumber": 1,
+    "PageSize": 1,
+    "TotalItemCount": 21,
+    "Itens": [
+      {
+        "ID": 14096538,
+        "Senha": "1314096538",
+        "DataCompra": "2015-04-14T19:13:47",
+        "CanalID": 2,
+        "CanalNome": "PIR - BR Internet",
+        "LojaID": 2,
+        "LojaNome": "00 Internet",
+        "ValorTotal": 0.38,
+        "StatusCodigo": "N",
+        "Status": "Em Análise",
+        "StatusCancelamentoCodigo": "S",
+        "StatusCancelamento": "Sim",
+        "PermissaoImprimir": "F",
+		"PermissaoCancelarData": "F",
+        "Ingressos": 8,
+        "ValeIngressos": 0,
+        "EventosID": "39245"
+      }
+    ]
+  }
+}

@@ -1,0 +1,580 @@
+2016-04-19 16:39:47,306 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 16:40:21,464 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 16:45:08,767 [10] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 16:45:20,651 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][731][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL BradleyKLarry@inbound.plus, CPF 415.906.073-09
+2016-04-19 16:45:50,211 [10] ERROR Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][758][Post]	##Post.CadastroCliente.EXCEPTION## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Referência de objeto não definida para uma instância de um objeto.
+System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em IRAPI.Controllers.ClienteController.Post(Login login) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 745
+2016-04-19 16:51:43,421 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 16:51:44,129 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 16:52:51,849 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 16:52:57,065 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL BradleyKLarry@inbound.plus, CPF 415.906.073-09
+2016-04-19 16:53:22,594 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-19 16:53:22,597 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-19 16:55:09,497 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-19 16:55:09,499 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-19 16:55:33,205 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-19 16:55:33,208 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-19 16:55:34,525 [7] ERROR Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][765][Post]	##Post.CadastroCliente.EXCEPTION## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG No MediaTypeFormatter is available to read an object of type 'ErrorInfo' from content with media type 'text/html'.
+System.Net.Http.UnsupportedMediaTypeException: No MediaTypeFormatter is available to read an object of type 'ErrorInfo' from content with media type 'text/html'.
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, IEnumerable`1 formatters)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content)
+   em IRCore.BusinessObject.ClienteBO.BiletoSignUp(Login _login, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1418
+   em IRAPI.Controllers.ClienteController.Post(Login login) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 755
+2016-04-19 17:00:52,152 [18] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 17:00:53,153 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:00:59,026 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL BradleyKLarry@inbound.plus, CPF 415.906.073-09
+2016-04-19 17:01:42,594 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1419][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'BradleyKLarry@inbound.plus' STATUS_CODE: '422', MSG: 'Error processing the request', ERRORS: 'MISSING_REQUIRED_FIELDS'
+2016-04-19 17:01:45,378 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][774][Post]	##Post.CadastroCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:03:34,710 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:03:42,835 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL MiguelBarbosaCosta@inbound.plus, CPF 714.915.751-31
+2016-04-19 17:05:45,892 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1402][BiletoSignUp]	##ClienteBO.BiletoSignUp.SUCCESS## EMAIL: 'MiguelBarbosaCosta@inbound.plus' 
+2016-04-19 17:05:50,287 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-19 17:05:50,516 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][963][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-19 17:05:50,623 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][162][Cadastrar]	##ClienteBO.Cadastrar## LOGINID 0, CLIENTEID 0, EMAIL miguelbarbosacosta@inbound.plus, CPF 71491575131, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 17:05:50,627 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][784][Salvar]	##ClienteBO.Salvar## LOGINID 0, CLIENTEID 0, EMAIL miguelbarbosacosta@inbound.plus, CPF 71491575131, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 17:06:18,977 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Opened connection at 19/04/2016 17:06:18 -03:00
+
+2016-04-19 17:06:19,203 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+[dbo].[salvar_tCliente2ComContatoTipoID]
+2016-04-19 17:06:19,221 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- UsuarioID: '1657' (Type = Int32)
+
+2016-04-19 17:06:19,248 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteID: '0' (Type = Int32)
+
+2016-04-19 17:06:19,251 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TimeStamp: '201604191706169534' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,253 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Nome: 'MIGUEL BARBOSA COSTA' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,256 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RG: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,260 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPF: '71491575131' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,262 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CarteiraEstudante: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,264 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Sexo: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,266 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefone: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,268 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Telefone: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,270 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,272 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,276 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDCelular: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,279 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Celular: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,281 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DataNascimento: '' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-19 17:06:19,285 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Email: 'miguelbarbosacosta@inbound.plus' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,287 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RecebeEmail: 'F' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-19 17:06:19,291 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,294 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,296 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,298 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,300 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,303 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,305 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,311 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,313 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,315 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,317 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteIndicacaoID: 'null' (Type = Int32)
+
+2016-04-19 17:06:19,320 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Obs: 'null' (Type = String, Size = 1073741823)
+
+2016-04-19 17:06:19,324 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,327 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,329 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,332 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,335 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Senha: '' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,337 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Ativo: 'T' (Type = StringFixedLength, Size = 4000)
+
+2016-04-19 17:06:19,341 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- StatusAtual: 'L' (Type = StringFixedLength, Size = 4000)
+
+2016-04-19 17:06:19,345 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- AtualizacaoDuplicidade: 'null' (Type = Int32)
+
+2016-04-19 17:06:19,347 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,349 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,351 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RGEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,354 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Pais: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,360 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFResponsavel: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,363 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ContatoTipoID: 'null' (Type = Int32)
+
+2016-04-19 17:06:19,365 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CNPJ: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,366 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeFantasia: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,368 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RazaoSocial: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,371 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- InscricaoEstadual: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,375 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Profissao: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,378 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SituacaoProfissionalID: 'null' (Type = Int32)
+
+2016-04-19 17:06:19,380 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,383 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,386 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- LoginOSESP: 'null' (Type = String, Size = 4000)
+
+2016-04-19 17:06:19,389 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SiteID: '1' (Type = Int32)
+
+2016-04-19 17:06:19,452 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Executing at 19/04/2016 17:06:19 -03:00
+
+2016-04-19 17:06:19,529 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Completed in 73 ms with result: SqlDataReader
+
+2016-04-19 17:06:20,314 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Closed connection at 19/04/2016 17:06:20 -03:00
+
+2016-04-19 17:06:21,514 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 19/04/2016 17:06:21 -03:00
+]	SQL dbSite
+2016-04-19 17:06:21,568 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 19/04/2016 17:06:21 -03:00
+]	SQL dbSite
+2016-04-19 17:06:27,325 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId], [CreatedAPIUsuarioId], [LoginAPIUsuarioId])
+VALUES (@0, @1, @2, @3, @4, @5, @6, @7, NULL, NULL, NULL, @8, @9, @10, @11, NULL, NULL, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-19 17:06:27,330 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-19 17:06:27,333 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '5147135' (Type = Int32)
+]	SQL dbSite
+2016-04-19 17:06:27,336 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '71491575131' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-19 17:06:27,339 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: 'ZzeVS4ZGvTbH+NKgl03evw==' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-19 17:06:27,360 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'miguelbarbosacosta@inbound.plus' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-19 17:06:27,368 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160419170550' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-19 17:06:27,376 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160419170550' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-19 17:06:27,381 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-19 17:06:27,384 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-19 17:06:27,387 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-19 17:06:27,392 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-19 17:06:27,396 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '19/04/2016 17:05:49' (Type = DateTime2)
+]	SQL dbSite
+2016-04-19 17:06:27,398 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '0b1e7cac-9ff4-40f7-bf88-595600d06c99' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-19 17:06:27,402 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 19/04/2016 17:06:27 -03:00
+]	SQL dbSite
+2016-04-19 17:06:27,475 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 69 ms with result: SqlDataReader
+]	SQL dbSite
+2016-04-19 17:06:27,478 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-19 17:06:27,539 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 19/04/2016 17:06:27 -03:00
+]	SQL dbSite
+2016-04-19 17:06:27,544 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 19/04/2016 17:06:27 -03:00
+]	SQL dbSite
+2016-04-19 17:06:27,710 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][791][Salvar]	##ClienteBO.Salvar.SUCCESS## LOGINID 1775739, CLIENTEID 5147135, EMAIL miguelbarbosacosta@inbound.plus, CPF 71491575131, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 17:06:27,713 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][188][Cadastrar]	##ClienteBO.Cadastrar.SUCCESS## LOGINID 1775739, CLIENTEID 5147135, EMAIL miguelbarbosacosta@inbound.plus, CPF 71491575131, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 17:06:27,719 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1775739, CLIENTEID 5147135, EMAIL miguelbarbosacosta@inbound.plus, CPF 71491575131, SALVARULTIMOACESSO False
+2016-04-19 17:06:27,721 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1775739, CLIENTEID 5147135, EMAIL miguelbarbosacosta@inbound.plus, CPF 71491575131
+2016-04-19 17:06:31,063 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2779][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, CLIENTE 0
+2016-04-19 17:06:31,194 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][787][Post]	##Post.CadastroCliente.SUCCESS## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90
+2016-04-19 17:06:31,211 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-19 17:06:31,213 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-19 17:06:31,216 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-19 17:06:31,267 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-19 17:10:35,342 [18] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 17:10:36,286 [24] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:11:04,853 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:11:05,902 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL MiguelBarbosaCosta@inbound.plus, CPF 714.915.751-31
+2016-04-19 17:11:07,660 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1419][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_EMAIL'
+2016-04-19 17:11:07,673 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][774][Post]	##Post.CadastroCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:16:11,052 [35] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 17:16:11,657 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:16:12,706 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL MiguelBarbosaCosta@inbound.plus, CPF 714.915.751-31
+2016-04-19 17:16:15,336 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1419][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_EMAIL'
+2016-04-19 17:16:15,340 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][774][Post]	##Post.CadastroCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:17:48,785 [29] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:17:53,419 [29] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL MiguelBarbosaCosta@inbound.plus, CPF 714.915.751-31
+2016-04-19 17:18:11,205 [29] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1419][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_EMAIL'
+2016-04-19 17:18:28,106 [29] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][774][Post]	##Post.CadastroCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:20:28,614 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 17:20:29,233 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:20:30,255 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL MiguelBarbosaCosta@inbound.plus, CPF 714.915.751-31
+2016-04-19 17:20:32,100 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1419][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_EMAIL'
+2016-04-19 17:20:32,103 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][774][Post]	##Post.CadastroCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:21:17,748 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:21:17,846 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:21:17,850 [8] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:21:18,792 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1303][BiletoSignIn]	##ClienteBO.BiletoSignIn.ERROR## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-19 17:21:18,794 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][100][PostAuth]	##Post.AuthCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:22:49,105 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:22:59,683 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:23:00,703 [8] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:23:58,225 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1259][BiletoSignIn]	##ClienteBO.BiletoSignIn.SUCCESS## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'OK'
+2016-04-19 17:24:00,842 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][981][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:24:04,478 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1283][BiletoSignIn]	##ClienteBO.BiletoSignIn.AtualizarLoginNaBileto## USER: MiguelBarbosaCosta@inbound.plus, FLEGADO: True
+2016-04-19 17:24:14,537 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2779][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, CLIENTE 5147135
+2016-04-19 17:24:14,672 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][115][PostAuth]	##Post.AuthCliente.SUCCESS## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90
+2016-04-19 17:24:14,687 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI5UDBrbkxvRi04Zk9pSmdTS1BLazFnIiwiaWF0IjoxNDYxMDk3NDI5LCJleHAiOjE0NjEwOTgwMjksIm5iZiI6MTQ2MTA5NzM2OSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.br93AvztBabl_g9z3-SrE8XFrOfwo4bJHy7620J6XGk","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:24:14,690 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI5UDBrbkxvRi04Zk9pSmdTS1BLazFnIiwiaWF0IjoxNDYxMDk3NDI5LCJleHAiOjE0NjEwOTgwMjksIm5iZiI6MTQ2MTA5NzM2OSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.br93AvztBabl_g9z3-SrE8XFrOfwo4bJHy7620J6XGk","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:24:14,693 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI5UDBrbkxvRi04Zk9pSmdTS1BLazFnIiwiaWF0IjoxNDYxMDk3NDI5LCJleHAiOjE0NjEwOTgwMjksIm5iZiI6MTQ2MTA5NzM2OSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.br93AvztBabl_g9z3-SrE8XFrOfwo4bJHy7620J6XGk","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:24:14,748 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI5UDBrbkxvRi04Zk9pSmdTS1BLazFnIiwiaWF0IjoxNDYxMDk3NDI5LCJleHAiOjE0NjEwOTgwMjksIm5iZiI6MTQ2MTA5NzM2OSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.br93AvztBabl_g9z3-SrE8XFrOfwo4bJHy7620J6XGk","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:26:34,535 [18] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 17:26:35,492 [26] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:26:36,459 [26] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:26:36,466 [26] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:26:37,896 [26] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1259][BiletoSignIn]	##ClienteBO.BiletoSignIn.SUCCESS## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'OK'
+2016-04-19 17:26:37,901 [26] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][981][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:26:38,319 [26] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1283][BiletoSignIn]	##ClienteBO.BiletoSignIn.AtualizarLoginNaBileto## USER: MiguelBarbosaCosta@inbound.plus, FLEGADO: True
+2016-04-19 17:26:38,362 [26] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2779][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, CLIENTE 5147135
+2016-04-19 17:26:38,453 [26] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][115][PostAuth]	##Post.AuthCliente.SUCCESS## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90
+2016-04-19 17:26:38,490 [26] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJidnVCSDZCRzl3b3VoVkttLXVLVmNBIiwiaWF0IjoxNDYxMDk3NTk3LCJleHAiOjE0NjEwOTgxOTcsIm5iZiI6MTQ2MTA5NzUzNywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.HLcvh9VWhC8PnIreBHKMHIalKhjphSLTCNpllWiyoLM","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:26:38,496 [26] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJidnVCSDZCRzl3b3VoVkttLXVLVmNBIiwiaWF0IjoxNDYxMDk3NTk3LCJleHAiOjE0NjEwOTgxOTcsIm5iZiI6MTQ2MTA5NzUzNywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.HLcvh9VWhC8PnIreBHKMHIalKhjphSLTCNpllWiyoLM","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:26:38,500 [26] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJidnVCSDZCRzl3b3VoVkttLXVLVmNBIiwiaWF0IjoxNDYxMDk3NTk3LCJleHAiOjE0NjEwOTgxOTcsIm5iZiI6MTQ2MTA5NzUzNywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.HLcvh9VWhC8PnIreBHKMHIalKhjphSLTCNpllWiyoLM","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:26:38,549 [26] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJidnVCSDZCRzl3b3VoVkttLXVLVmNBIiwiaWF0IjoxNDYxMDk3NTk3LCJleHAiOjE0NjEwOTgxOTcsIm5iZiI6MTQ2MTA5NzUzNywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.HLcvh9VWhC8PnIreBHKMHIalKhjphSLTCNpllWiyoLM","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:27:07,553 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:27:07,757 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta123@inbound.plus
+2016-04-19 17:27:07,760 [9] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:27:08,671 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1303][BiletoSignIn]	##ClienteBO.BiletoSignIn.ERROR## EMAIL: 'MiguelBarbosaCosta123@inbound.plus' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-19 17:27:08,683 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][100][PostAuth]	##Post.AuthCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:28:24,980 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:28:28,318 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta123@inbound.plus
+2016-04-19 17:28:28,323 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:29:08,570 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1303][BiletoSignIn]	##ClienteBO.BiletoSignIn.ERROR## EMAIL: 'MiguelBarbosaCosta123@inbound.plus' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-19 17:29:08,573 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][100][PostAuth]	##Post.AuthCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:31:30,313 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 17:31:31,123 [15] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:31:33,346 [15] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta123@inbound.plus
+2016-04-19 17:31:33,353 [15] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:31:34,397 [15] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1303][BiletoSignIn]	##ClienteBO.BiletoSignIn.ERROR## EMAIL: 'MiguelBarbosaCosta123@inbound.plus' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-19 17:31:34,400 [15] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][100][PostAuth]	##Post.AuthCliente.ERROR## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, MSG Sucesso = false
+2016-04-19 17:31:42,670 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 17:31:42,796 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, USER MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:31:42,799 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-19 17:31:43,800 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1259][BiletoSignIn]	##ClienteBO.BiletoSignIn.SUCCESS## EMAIL: 'MiguelBarbosaCosta@inbound.plus' STATUS_CODE: 'OK'
+2016-04-19 17:31:43,836 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][981][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME MiguelBarbosaCosta@inbound.plus
+2016-04-19 17:31:44,409 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1283][BiletoSignIn]	##ClienteBO.BiletoSignIn.AtualizarLoginNaBileto## USER: MiguelBarbosaCosta@inbound.plus, FLEGADO: True
+2016-04-19 17:31:44,472 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2779][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, CLIENTE 5147135
+2016-04-19 17:31:44,563 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][115][PostAuth]	##Post.AuthCliente.SUCCESS## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90
+2016-04-19 17:31:44,578 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:31:44,581 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:31:44,610 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 17:31:44,686 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147135,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 18:03:52,684 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-19 18:04:01,653 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 18:07:52,406 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-19 18:08:07,171 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][735][Post]	##Post.CadastroCliente## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, EMAIL MatheusCavalcantiDias@inbound.plus, CPF 64637636400
+2016-04-19 18:08:57,921 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1407][BiletoSignUp]	##ClienteBO.BiletoSignUp.SUCCESS## EMAIL: 'MatheusCavalcantiDias@inbound.plus' 
+2016-04-19 18:09:07,928 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-19 18:09:09,930 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][963][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-19 18:09:14,597 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][162][Cadastrar]	##ClienteBO.Cadastrar## LOGINID 0, CLIENTEID 0, EMAIL matheuscavalcantidias2@inbound.plus, CPF 64637636400, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 18:09:24,164 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][784][Salvar]	##ClienteBO.Salvar## LOGINID 0, CLIENTEID 0, EMAIL matheuscavalcantidias2@inbound.plus, CPF 64637636400, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 18:09:40,421 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Opened connection at 19/04/2016 18:09:40 -03:00
+
+2016-04-19 18:09:40,717 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+[dbo].[salvar_tCliente2ComContatoTipoID]
+2016-04-19 18:09:40,720 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- UsuarioID: '1657' (Type = Int32)
+
+2016-04-19 18:09:40,722 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteID: '0' (Type = Int32)
+
+2016-04-19 18:09:40,724 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TimeStamp: '201604191809396911' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,726 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Nome: 'MATHEUS CAVALCANTI DIAS' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,728 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RG: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,731 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPF: '64637636400' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,733 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CarteiraEstudante: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,736 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Sexo: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,738 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefone: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,741 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Telefone: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,743 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,744 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,747 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDCelular: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,749 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Celular: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,751 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DataNascimento: '' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-19 18:09:40,753 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Email: 'matheuscavalcantidias2@inbound.plus' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,755 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RecebeEmail: 'F' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-19 18:09:40,797 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,800 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,802 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,805 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,807 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,809 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,811 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,813 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,815 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,817 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,818 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteIndicacaoID: 'null' (Type = Int32)
+
+2016-04-19 18:09:40,821 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Obs: 'null' (Type = String, Size = 1073741823)
+
+2016-04-19 18:09:40,823 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,825 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,827 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,829 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,832 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Senha: '' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,835 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Ativo: 'T' (Type = StringFixedLength, Size = 4000)
+
+2016-04-19 18:09:40,838 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- StatusAtual: 'L' (Type = StringFixedLength, Size = 4000)
+
+2016-04-19 18:09:40,840 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- AtualizacaoDuplicidade: 'null' (Type = Int32)
+
+2016-04-19 18:09:40,843 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,847 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,851 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RGEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,854 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Pais: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,857 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFResponsavel: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,861 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ContatoTipoID: 'null' (Type = Int32)
+
+2016-04-19 18:09:40,877 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CNPJ: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,893 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeFantasia: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,896 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RazaoSocial: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,899 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- InscricaoEstadual: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,902 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Profissao: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,905 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SituacaoProfissionalID: 'null' (Type = Int32)
+
+2016-04-19 18:09:40,909 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,912 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,914 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- LoginOSESP: 'null' (Type = String, Size = 4000)
+
+2016-04-19 18:09:40,917 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SiteID: '1' (Type = Int32)
+
+2016-04-19 18:09:40,959 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Executing at 19/04/2016 18:09:40 -03:00
+
+2016-04-19 18:09:41,070 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Completed in 105 ms with result: SqlDataReader
+
+2016-04-19 18:09:41,456 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Closed connection at 19/04/2016 18:09:41 -03:00
+
+2016-04-19 18:10:09,007 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 19/04/2016 18:10:09 -03:00
+]	SQL dbSite
+2016-04-19 18:10:09,051 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 19/04/2016 18:10:09 -03:00
+]	SQL dbSite
+2016-04-19 18:10:10,453 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId], [CreatedAPIUsuarioId], [LoginAPIUsuarioId])
+VALUES (@0, @1, @2, @3, @4, @5, @6, @7, NULL, NULL, NULL, @8, @9, @10, @11, NULL, NULL, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-19 18:10:10,455 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-19 18:10:10,457 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '5147136' (Type = Int32)
+]	SQL dbSite
+2016-04-19 18:10:10,459 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '64637636400' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-19 18:10:10,461 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: 'ZzeVS4ZGvTbH+NKgl03evw==' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-19 18:10:10,464 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'matheuscavalcantidias2@inbound.plus' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-19 18:10:10,467 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160419180916' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-19 18:10:10,469 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160419180916' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-19 18:10:10,471 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-19 18:10:10,473 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-19 18:10:10,475 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-19 18:10:10,477 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-19 18:10:10,480 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '19/04/2016 18:09:00' (Type = DateTime2)
+]	SQL dbSite
+2016-04-19 18:10:10,483 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: 'e9a401c3-2d13-4ec0-9e74-de93beccefe1' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-19 18:10:10,487 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 19/04/2016 18:10:10 -03:00
+]	SQL dbSite
+2016-04-19 18:10:10,516 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 27 ms with result: SqlDataReader
+]	SQL dbSite
+2016-04-19 18:10:10,519 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-19 18:10:10,555 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 19/04/2016 18:10:10 -03:00
+]	SQL dbSite
+2016-04-19 18:10:10,558 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 19/04/2016 18:10:10 -03:00
+]	SQL dbSite
+2016-04-19 18:10:16,392 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][791][Salvar]	##ClienteBO.Salvar.SUCCESS## LOGINID 1775740, CLIENTEID 5147136, EMAIL matheuscavalcantidias2@inbound.plus, CPF 64637636400, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 18:10:19,280 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][188][Cadastrar]	##ClienteBO.Cadastrar.SUCCESS## LOGINID 1775740, CLIENTEID 5147136, EMAIL matheuscavalcantidias2@inbound.plus, CPF 64637636400, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-19 18:10:22,394 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1775740, CLIENTEID 5147136, EMAIL matheuscavalcantidias2@inbound.plus, CPF 64637636400, SALVARULTIMOACESSO False
+2016-04-19 18:10:26,787 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1775740, CLIENTEID 5147136, EMAIL matheuscavalcantidias2@inbound.plus, CPF 64637636400
+2016-04-19 18:10:57,647 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2779][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90, CLIENTE 5147135
+2016-04-19 18:10:57,740 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][787][Post]	##Post.CadastroCliente.SUCCESS## SESSION 654849eb-2bfb-427c-a1a4-8960eccbfa90
+2016-04-19 18:10:57,769 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147136,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 18:10:57,771 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147136,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 18:10:57,774 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147136,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}
+2016-04-19 18:10:57,808 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5147136,"SessionID":"654849eb-2bfb-427c-a1a4-8960eccbfa90","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiI1VGZPaUp3VWxnUkRkNVQzVktLUTV3IiwiaWF0IjoxNDYxMDk3OTAzLCJleHAiOjE0NjEwOTg1MDMsIm5iZiI6MTQ2MTA5Nzg0MywicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjBiMWU3Y2FjLTlmZjQtNDBmNy1iZjg4LTU5NTYwMGQwNmM5OVwiLFwidGVuYW50SWRcIjoxfSJ9.yZ555iEglmYnEWmZLm2P5Ib6hNsnezZHWfBBOHCIbUw","biletoUuid":"0b1e7cac-9ff4-40f7-bf88-595600d06c99","Guid":null}

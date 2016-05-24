@@ -1,0 +1,262 @@
+2016-05-09 12:03:07,516 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 12:07:54,384 [13] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][285][GetEvento]	##GET.Eventos.eventos/id## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:00.8774033, MSG OK
+2016-05-09 12:07:54,462 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 12:07:54,466 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][61][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 12:07:54,471 [13] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 12:07:54,514 [13] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 12:15:40,185 [13] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][285][GetEvento]	##GET.Eventos.eventos/id## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:02:49.9145057, MSG OK
+2016-05-09 12:15:40,210 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 16:29:58,194 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 16:30:41,268 [8] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][285][GetEvento]	##GET.Eventos.eventos/id## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:01.0321724, MSG OK
+2016-05-09 16:30:41,590 [8] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 17:06:13,458 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 17:06:26,143 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][242][GetEvento]	##GET.Eventos.eventos/id.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Must declare the scalar variable "@canalId".
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'AS'.
+Must declare the scalar variable "@canalId".
+Incorrect syntax near ')'.
+Must declare the scalar variable "@canalId".
+Incorrect syntax near ')'., TEMPO DECORRIDO 00:00:02.7363037
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@canalId".
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'AS'.
+Must declare the scalar variable "@canalId".
+Incorrect syntax near ')'.
+Must declare the scalar variable "@canalId".
+Incorrect syntax near ')'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 373
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 idEvento, Boolean canalPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 220
+ClientConnectionId:acbaa34c-4b9d-4882-8afe-7c16b2380b8f
+Error Number:137,State:2,Class:15
+2016-05-09 17:06:27,031 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][244][GetEvento]	System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@canalId".
+Incorrect syntax near the keyword 'with'. If this statement is a common table expression, an xmlnamespaces clause or a change tracking context clause, the previous statement must be terminated with a semicolon.
+Incorrect syntax near the keyword 'AS'.
+Must declare the scalar variable "@canalId".
+Incorrect syntax near ')'.
+Must declare the scalar variable "@canalId".
+Incorrect syntax near ')'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 373
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 idEvento, Boolean canalPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 220
+ClientConnectionId:acbaa34c-4b9d-4882-8afe-7c16b2380b8f
+Error Number:137,State:2,Class:15
+2016-05-09 18:16:27,396 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 18:16:42,880 [10] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][244][GetEvento]	##GET.Eventos.eventos/id.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Invalid object name 'tEvento'., TEMPO DECORRIDO 00:00:00.6823712
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'tEvento'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 373
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+ClientConnectionId:1a34edee-e588-4c54-ac98-11b6bf61563f
+Error Number:208,State:1,Class:16
+2016-05-09 18:16:44,439 [10] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][246][GetEvento]	System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'tEvento'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 373
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+ClientConnectionId:1a34edee-e588-4c54-ac98-11b6bf61563f
+Error Number:208,State:1,Class:16
+2016-05-09 18:20:07,470 [9] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 18:20:09,392 [16] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][244][GetEvento]	##GET.Eventos.eventos/id.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Error parsing column 6 (RetiradaBilheteria=T - String), TEMPO DECORRIDO 00:00:00.4474135
+System.Data.DataException: Error parsing column 6 (RetiradaBilheteria=T - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialized97ef18f-f7f1-4590-a4b4-21b5de9c003e(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialized97ef18f-f7f1-4590-a4b4-21b5de9c003e(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3f(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1949
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 371
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+2016-05-09 18:20:09,525 [16] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][246][GetEvento]	System.Data.DataException: Error parsing column 6 (RetiradaBilheteria=T - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialized97ef18f-f7f1-4590-a4b4-21b5de9c003e(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialized97ef18f-f7f1-4590-a4b4-21b5de9c003e(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3f(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1949
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 371
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+2016-05-09 18:46:17,641 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 18:46:30,883 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][244][GetEvento]	##GET.Eventos.eventos/id.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Error parsing column 7 (DisponivelAvulso=1 - String), TEMPO DECORRIDO 00:00:00.5165940
+System.Data.DataException: Error parsing column 7 (DisponivelAvulso=1 - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialize887380ae-f582-478a-a141-b13dd68d9a02(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialize887380ae-f582-478a-a141-b13dd68d9a02(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3f(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1949
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 363
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+2016-05-09 18:46:31,136 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][246][GetEvento]	System.Data.DataException: Error parsing column 7 (DisponivelAvulso=1 - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialize887380ae-f582-478a-a141-b13dd68d9a02(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialize887380ae-f582-478a-a141-b13dd68d9a02(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3f(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1949
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 363
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+2016-05-09 18:50:39,904 [14] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-09 18:50:42,514 [16] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][264][GetEvento]	##GET.Eventos.eventos/id## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:00.7982513, MSG OK
+2016-05-09 18:50:42,630 [16] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-09 18:52:07,219 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][244][GetEvento]	##GET.Eventos.eventos/id.EXCEPTION## SESSION 8dfb46d2-dc99-4d63-a5bb-3ed9b3f2a76e, MSG Invalid column name 'LongitudeAsDecimal'.
+Invalid column name 'LatitudeAsDecimal'., TEMPO DECORRIDO 00:00:00.0896781
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'LongitudeAsDecimal'.
+Invalid column name 'LatitudeAsDecimal'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 363
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+ClientConnectionId:23412580-39e7-4374-bbc4-c90ffddb2305
+Error Number:207,State:1,Class:16
+2016-05-09 18:52:07,363 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][246][GetEvento]	System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'LongitudeAsDecimal'.
+Invalid column name 'LatitudeAsDecimal'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Func`8 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1762
+   em IRCore.DataAccess.ADO.EventoADO.Consultar(Int32 eventoId, Int32 canalId, Boolean isPos) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 363
+   em IRCore.BusinessObject.EventoBO.Consultar(Int32 eventoId, Boolean isPOS, Boolean mostrarEstatistica) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 121
+   em IRAPI.Controllers.EventoController.GetEvento(Int32 id, Int32 mostrarEstatistica) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 222
+ClientConnectionId:23412580-39e7-4374-bbc4-c90ffddb2305
+Error Number:207,State:1,Class:16
+2016-05-09 18:52:25,345 [6] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][264][GetEvento]	##GET.Eventos.eventos/id## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:00.1426221, MSG OK
+2016-05-09 18:52:25,347 [6] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}

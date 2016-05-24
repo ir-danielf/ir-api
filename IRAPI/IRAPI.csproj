@@ -1,0 +1,666 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <PostSharpHostConfigurationFile>web.config</PostSharpHostConfigurationFile>
+    <SkipPostSharp>True</SkipPostSharp>
+    <DontImportPostSharp>True</DontImportPostSharp>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FB55591A-4C02-45E5-BCD5-D21C23EE1046}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IRAPI</RootNamespace>
+    <AssemblyName>IRAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>App_Data\IRAPI.XML</DocumentationFile>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <SkipPostSharp>True</SkipPostSharp>
+    <PostSharpConstraintVerificationEnabled>False</PostSharpConstraintVerificationEnabled>
+    <PostSharpRuntimeVerificationEnabled>False</PostSharpRuntimeVerificationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.2.12.0.2\lib\net40-client\CsvHelper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Facebook.6.4.2\lib\net45\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\packages\IRLibOld\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.WebApi.MessageHandlers.Compression">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.MessageHandlers.Compression.1.2.1\lib\portable-net45+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1\Microsoft.AspNet.WebApi.MessageHandlers.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NewRelic.Api.Agent, Version=4.6.29.0, Culture=neutral, PublicKeyToken=06552fced0b33d87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\NewRelic.Agent.Api.4.6.29.0\lib\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Moscou\Site\Site\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.28\lib\net45\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.2\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.2\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.2\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.1.0\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.1.0\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.1.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.2.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Facebook">
+      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.2.1.0\lib\net45\Microsoft.Owin.Security.Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Google">
+      <HintPath>..\packages\Microsoft.Owin.Security.Google.2.1.0\lib\net45\Microsoft.Owin.Security.Google.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Twitter">
+      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.2.1.0\lib\net45\Microsoft.Owin.Security.Twitter.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
+      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.2.1.0\lib\net45\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.0\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Common\Exception\CompraException.cs" />
+    <Compile Include="Controllers\NetController.cs" />
+    <Compile Include="Controllers\NpsController.cs" />
+    <Compile Include="Controllers\OsespController.cs" />
+    <Compile Include="Controllers\PingController.cs" />
+    <Compile Include="Controllers\VariavelController.cs" />
+    <Compile Include="Controllers\ReservaController.cs" />
+    <Compile Include="Controllers\ValeIngressoController.cs" />
+    <Compile Include="Controllers\VoucherController.cs" />
+    <Compile Include="Enumerator\Enumerador.cs" />
+    <Compile Include="Models\NpsModel.cs" />
+    <Compile Include="Models\RetornoOsespModel.cs" />
+    <Compile Include="Models\SessionModel.cs" />
+    <Compile Include="Models\AuxiliarModel.cs" />
+    <Compile Include="Filters\IRAPIAuthorize.cs" />
+    <Compile Include="Controllers\ClienteController.cs" />
+    <Compile Include="Controllers\EstadoController.cs" />
+    <Compile Include="Controllers\EventoController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LocalController.cs" />
+    <Compile Include="Controllers\MasterApiController.cs" />
+    <Compile Include="Controllers\TipoController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EventoModel.cs" />
+    <Compile Include="Models\ReservaModel.cs" />
+    <Compile Include="Models\ClienteModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Providers\SimpleRefreshTokenProvider.cs" />
+    <Compile Include="Startup.cs" />
+    <Compile Include="Util\LogHttpUtil.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="api-helper\assets\default.css" />
+    <Content Include="api-helper\assets\HelpPage.css" />
+    <Content Include="api-helper\assets\modernizr.js" />
+    <Content Include="api-helper\autenticacao\HEADER-api-refresh_token.txt" />
+    <Content Include="api-helper\autenticacao\POST-api-refresh_token.html" />
+    <Content Include="api-helper\autenticacao\POST-api-refresh_token__request.txt" />
+    <Content Include="api-helper\autenticacao\POST-api-refresh_token__response.txt" />
+    <Content Include="api-helper\autenticacao\POST-api-token.html" />
+    <Content Include="api-helper\autenticacao\POST-api-token__response.txt" />
+    <Content Include="api-helper\autenticacao\HEADER-api-token.txt" />
+    <Content Include="api-helper\autenticacao\POST-api-token__request.txt" />
+    <Content Include="api-helper\clientes\DELETE-api-clientes-auth.html" />
+    <Content Include="api-helper\clientes\DELETE-api-clientes-auth.txt" />
+    <Content Include="api-helper\clientes\DELETE-api-clientes-logado-enderecos-{enderecoID}.txt" />
+    <Content Include="api-helper\clientes\DELETE-api-clientes-logado-enderecos-{enderecoID}.html" />
+    <Content Include="api-helper\clientes\DELETE-api-clientes-logado-senhas_compra-{senha}-agregado.html" />
+    <Content Include="api-helper\clientes\DELETE-api-clientes-logado-senhas_compra-{senha}-agregado__response.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-meus_ingressos.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-meus_ingressos.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-compras-agregados.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_compra-{senha}-informacoes_cancelamento.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_compra-{senha}-informacoes_cancelamento.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-accountkit.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-cadastro-accountkit.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-cadastro.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-cadastro-accountkit__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-cadastro__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-cadastro-accountkit__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-cadastro__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-uri.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-uri__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-uri__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-accountkit__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-accountkit__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-logado-senhas_cancelamento.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-logado-senhas_cancelamento.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_cancelamento-{senha}.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_cancelamento-{senha}.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_cancelamento.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_cancelamento.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_compra-{senha}.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_compra-{senha}.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_compra.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-senhas_compra.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-compras-agregados.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-enderecos.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-compras.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-compras-{id}.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-compras.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado-enderecos.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-logado.txt" />
+    <Content Include="api-helper\clientes\GET-api-clientes-senha-{token}.html" />
+    <Content Include="api-helper\clientes\GET-api-clientes-senha-{token}.txt" />
+    <Content Include="api-helper\clientes\GET-clientes-logado-compras-{PedidoID}.html" />
+    <Content Include="api-helper\clientes\HEADER-api-clientes.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-vinculo.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-vinculo__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook-vinculo__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth-facebook__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-recuperar.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-recuperar__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-recuperar__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-envia_link.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-logado-senhas_cancelamento__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-envia_link__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-envia_link__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-envia_nova.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-logado-enderecos__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-logado-enderecos__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-envia_nova__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-senha-envia_nova__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-logado-enderecos.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth.html" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth__request.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes-auth__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes__response.txt" />
+    <Content Include="api-helper\clientes\POST-api-clientes__request.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-enderecos-{enderecoID}.html" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-senha.html" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-senhas_compra-{senha}-agregado.html" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-senhas_compra-{senha}-agregado__request.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-senhas_compra-{senha}-agregado__response.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado.html" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado__request.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado__response.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-senha-{token}.html" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-senha-{token}__response.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-senha-{token}__request.txt" />
+    <Content Include="api-helper\enumeradores\enumStatusCota.html" />
+    <Content Include="api-helper\estados\GET-api-estados-{uf}-cidades--apenasEventos={apenasEventos}.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-enderecos-{enderecoID}__response.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-enderecos-{enderecoID}__request.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-senha__response.txt" />
+    <Content Include="api-helper\clientes\PUT-api-clientes-logado-senha__request.txt" />
+    <Content Include="api-helper\estados\GET-api-estados-{uf}-cidades-{cidade}-postos_venda.txt" />
+    <Content Include="api-helper\estados\GET-api-estados--apenasEventos={apenasEventos}.txt" />
+    <Content Include="api-helper\estados\HEADER-api-estados.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-info_meia_entrada-{eventoID}.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-info_meia_entrada-{eventoID}.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores-{setorID}-mapa_lugares_mesa.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores-{setorID}-mapa_lugares_mesa.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores-{setorID}-mapa_lugares.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-destaques--tipo={tipo}-regiao={regiao}.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-formas_pagamento.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-mapa_esquematico.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos--busca={busca}.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-pacotes.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}.html" />
+    <Content Include="api-helper\eventos\GET-api-eventos--busca={busca}&amp;localid={localid}&amp;uf={uf}&amp;cidade={cidade}&amp;tipoid={tipoid}&amp;subtipoID={subtipoID}&amp;pg={pg}&amp;qtdpg={qtdpg}.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-destaques--tipo={tipo}&amp;regiao={regiao}.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-formas_pagamento.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-pacotes.html" />
+    <Content Include="api-helper\eventos\HEADER-api-allow-anonymous.txt" />
+    <Content Include="api-helper\eventos\HEADER-api-eventos.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores-{setorID}-mapa_lugares.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores.txt" />
+    <Content Include="api-helper\eventos\GET-api-eventos-{eventoID}-apresentacoes-{apresentacaoID}-mapa_esquematico.txt" />
+    <Content Include="api-helper\enumerador.html" />
+    <Content Include="api-helper\net\GET-api-net-clientes-compra_cota-{cpf}.html" />
+    <Content Include="api-helper\net\GET-api-net-clientes-compra_cota-{cpf}.txt" />
+    <Content Include="api-helper\objeto.html" />
+    <Content Include="api-helper\index.html" />
+    <Content Include="api-helper\locais\GET-api-locais--busca={busca}&amp;uf={uf}&amp;cidade={cidade}.html" />
+    <Content Include="api-helper\locais\GET-api-locais--busca={busca}-uf={uf}-cidade={cidade}.txt" />
+    <Content Include="api-helper\locais\GET-api-locais-{id}.txt" />
+    <Content Include="api-helper\locais\HEADER-api-locais.txt" />
+    <Content Include="api-helper\objetos\carrinho.html" />
+    <Content Include="api-helper\objetos\valeIngresso.html" />
+    <Content Include="api-helper\objetos\compraPagamentoModel.html" />
+    <Content Include="api-helper\objetos\compraEstruturaVendaModel.html" />
+    <Content Include="api-helper\objetos\compraTotalModel.html" />
+    <Content Include="api-helper\objetos\login.html" />
+    <Content Include="api-helper\objetos\EntregaControle.html" />
+    <Content Include="api-helper\objetos\vendaBilheteria.html" />
+    <Content Include="api-helper\objetos\compra.html" />
+    <Content Include="api-helper\osesp\DELETE-api-osesp-auth.html" />
+    <Content Include="api-helper\osesp\DELETE-api-osesp-auth.txt" />
+    <Content Include="api-helper\osesp\GET-api-osesp-clientes-logado.html" />
+    <Content Include="api-helper\osesp\GET-api-osesp-clientes-logado__response.txt" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores-{setorID}-mapa_lugares.html" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores-{setorID}-mapa_lugares.txt" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores.html" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos-{eventoID}-apresentacoes-{apresentacaoID}-setores.txt" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos-{eventoID}.html" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos-{eventoID}.txt" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos.html" />
+    <Content Include="api-helper\osesp\GET-api-osesp-eventos.txt" />
+    <Content Include="api-helper\osesp\POST-api-osesp-clientes-auth.html" />
+    <Content Include="api-helper\osesp\POST-api-osesp-clientes-auth__request.txt" />
+    <Content Include="api-helper\osesp\POST-api-osesp-clientes-auth__response.txt" />
+    <Content Include="api-helper\osesp\POST-api-osesp-eventos-bloquear-{ingressoID}.html" />
+    <Content Include="api-helper\osesp\POST-api-osesp-eventos-bloquear-{ingressoID}.txt" />
+    <Content Include="api-helper\osesp\DELETE-api-osesp-eventos-desbloquear-{ingressoID}.html" />
+    <Content Include="api-helper\osesp\POST-api-osesp-eventos-desbloquear-{ingressoID}.txt" />
+    <Content Include="api-helper\osesp\PUT-api-osesp-clientes-logado.html" />
+    <Content Include="api-helper\osesp\PUT-api-osesp-clientes-logado__request.txt" />
+    <Content Include="api-helper\osesp\PUT-api-osesp-clientes-logado__response.txt" />
+    <Content Include="api-helper\osesp\POST-api-osesp-eventos-bloquear-{ingressoID}-request.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-mesas-{lugarID}.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-eventos-{eventoID}.html" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-eventos-{eventoID}__response.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-ingressos-{ingressoID}.html" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-ingressos-{ingressoID}__response.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-mesas-{lugarID}-troca_preco__request.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-ingressos-{ingressoID}-troca_preco__request.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-ingressos-{ingressoID}-troca_preco__response.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-mesas-{lugarID}-troca_preco__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-vale_ingressos__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-vale_ingressos__reponse.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-pagamentos__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-pagamentos__reponse.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-vale_ingressos-{codigo}.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-mesas-{lugarID}__response.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-mesas-{lugarID}.html" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-pacotes-{pacoteID}-{pacoteGrupo}.html" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-pacotes-{pacoteID}-{pacoteGrupo}__response.txt" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual-vale_ingressos-{codigo}.html" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual.html" />
+    <Content Include="api-helper\estados\GET-api-estados--apenasEventos={apenasEventos}.html" />
+    <Content Include="api-helper\estados\GET-api-estados-{uf}-cidades--apenasEventos={apenasEventos}.html" />
+    <Content Include="api-helper\estados\GET-api-estados-{uf}-cidades-{cidade}-postos_venda.html" />
+    <Content Include="api-helper\locais\GET-api-locais-{id}.html" />
+    <Content Include="api-helper\reservas\DELETE-api-reservas-atual.txt" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-paypal-token.html" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-paypal-token.txt" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-cotas.txt" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-cotas.html" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-entregas.html" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-entregas.txt" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-formas_pagamento.txt" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-formas_pagamento.html" />
+    <Content Include="api-helper\reservas\HEADER-api-reservas-atual.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-cotas.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-cotas__response.txt" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-entregas-cep.html" />
+    <Content Include="api-helper\reservas\GET-api-reservas-atual-entregas-cep__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-entregas-temp.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-entregas-temp__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-entregas-temp__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-entregas.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-cotas__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-ingressos-qtd.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-ingressos.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-mesas-qtd.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-mesas.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-pacotes.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-pacotes__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-pacotes__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-entregas__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-entregas__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-ingressos-qtd__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-ingressos-qtd__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-ingressos__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-ingressos__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-mesas__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-mesas-qtd__request.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-mesas__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-mesas-qtd__response.txt" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-pagamentos.html" />
+    <Content Include="api-helper\reservas\POST-api-reservas-atual-vale_ingressos.html" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-mesas-{lugarID}-troca_preco_response.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-mesas-{lugarID}-troca_preco_request.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-aumenta_tempo__response.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-aumenta_tempo__request.txt" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-aumenta_tempo.html" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-ingressos-{ingressoID}-troca_preco.html" />
+    <Content Include="api-helper\reservas\PUT-api-reservas-atual-mesas-{lugarID}-troca_preco.html" />
+    <Content Include="api-helper\tipos\GET-api-tipos-{tipoId}-subtipos--apenasEventos={apenasEventos}.html" />
+    <Content Include="api-helper\tipos\GET-api-tipos--apenasEventos={apenasEventos}.txt" />
+    <Content Include="api-helper\tipos\GET-api-tipos-{tipoId}-subtipos--apenasEventos={apenasEventos}.txt" />
+    <Content Include="api-helper\tipos\HEADER-api-tipos.txt" />
+    <Content Include="api-helper\tipos\GET-api-tipos--apenasEventos={apenasEventos}.html" />
+    <Content Include="api-helper\usuarios\POST-api-usuarios-auth.html" />
+    <Content Include="api-helper\vales_ingresso\GET-api-vales_ingresso-{codigo}.html" />
+    <Content Include="api-helper\vales_ingresso\GET-api-vales_ingresso-{codigo}__reponse.txt" />
+    <Content Include="api-helper\vales_ingresso\HEADER-api-vales-ingresso.txt" />
+    <Content Include="api-helper\variaveis\PUT-api-variaveis-sessao.html" />
+    <Content Include="api-helper\variaveis\PUT-api-variaveis-sessao.txt" />
+    <Content Include="api-helper\variaveis\GET-api-variaveis-servidor_infos.html" />
+    <Content Include="api-helper\variaveis\GET-api-variaveis-servidor_infos.txt" />
+    <Content Include="api-helper\variaveis\GET-api-variaveis-sessao--completo={completo}.html" />
+    <Content Include="api-helper\variaveis\GET-api-variaveis-sessao-completo.txt" />
+    <Content Include="api-helper\variaveis\HEADER-api-variaveis.txt" />
+    <Content Include="api-helper\variaveis\GET-api-variaveis-sessao.txt" />
+    <Content Include="api-helper\variaveis\objeto.html" />
+    <Content Include="api-helper\voucher\GET-api-clientes-vouchers-{cpf}.html" />
+    <Content Include="api-helper\voucher\GET-api-clientes-vouchers-{cpf}.txt" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="AppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="api-helper\assets\.DS_Store" />
+    <Content Include="sdk-js\2186b36a4d29f3bd331692cffe1f1388.txt" />
+    <Content Include="sdk-js\a057ba9007643c66027475b3e419a85b.txt" />
+    <Content Include="sdk-js\b55e04519ede6f9dbbeea2bc2b81541f.txt" />
+    <Content Include="sdk-js\index.html" />
+    <Content Include="sdk-js\irapi-source.js" />
+    <Content Include="sdk-js\irapi-source.local.js" />
+    <Content Include="sdk-js\irapi.js" />
+    <Content Include="sdk-js\js\jquery-2.1.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Comum\CTLib\CTLib.csproj">
+      <Project>{D6C8573F-35C1-4D4F-B361-E917C52B361D}</Project>
+      <Name>CTLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Comum\IRLib\IRLib.csproj">
+      <Project>{6a046605-146b-4dc3-8270-8593fba71eb6}</Project>
+      <Name>IRLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCore.BusinessObject.Identity.2.1.0\IRCore.BusinessObject.Identity.2.1.0.csproj">
+      <Project>{53723c07-ee79-4b98-be2a-aa3a67237e7f}</Project>
+      <Name>IRCore.BusinessObject.Identity.2.1.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCore.BusinessObject\IRCore.BusinessObject.csproj">
+      <Project>{45a52f80-55a6-47b5-86b9-3330a2709457}</Project>
+      <Name>IRCore.BusinessObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCore.DataAccess.ADO\IRCore.DataAccess.ADO.csproj">
+      <Project>{39a8fd75-fc28-49a8-933a-3f735f96f137}</Project>
+      <Name>IRCore.DataAccess.ADO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCore.DataAccess.Model\IRCore.DataAccess.Model.csproj">
+      <Project>{d099b23d-6352-4336-bae8-1a5c97f515d9}</Project>
+      <Name>IRCore.DataAccess.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IRCore.Util\IRCore.Util.csproj">
+      <Project>{98388fcf-f690-4576-b6cb-e054f4a72097}</Project>
+      <Name>IRCore.Util</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Site\IngressoRapidoLib\IngressoRapidoLib.csproj">
+      <Project>{C69042FC-BB1B-4C28-9B3B-3CA5F9F0F7FF}</Project>
+      <Name>IngressoRapidoLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AppSettings.staging.config">
+      <DependentUpon>AppSettings.config</DependentUpon>
+    </Content>
+    <Content Include="AppSettings.production.config">
+      <DependentUpon>AppSettings.config</DependentUpon>
+    </Content>
+    <None Include="Properties\PublishProfiles\production v1.3.pubxml" />
+    <None Include="Properties\PublishProfiles\production v1.2.pubxml" />
+    <None Include="Properties\PublishProfiles\staging.pubxml" />
+    <None Include="Properties\PublishProfiles\development.pubxml" />
+    <None Include="Web.production.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.staging.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homolog|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>App_Data\IRAPI.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Producao|AnyCPU'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>38381</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/IRAPI</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+  </Target>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <Import Project="..\packages\PostSharp.4.1.24\tools\PostSharp.targets" Condition="Exists('..\packages\PostSharp.4.1.24\tools\PostSharp.targets')" />
+  <Target Name="EnsurePostSharpImported" BeforeTargets="BeforeBuild" Condition="'$(PostSharp30Imported)' == ''">
+    <Error Condition="!Exists('..\packages\PostSharp.4.1.24\tools\PostSharp.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://www.postsharp.net/links/nuget-restore." />
+    <Error Condition="Exists('..\packages\PostSharp.4.1.24\tools\PostSharp.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://www.postsharp.net/links/nuget-restore." />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,343 @@
+2016-05-03 11:18:12,845 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-03 11:26:47,079 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-03 11:27:13,814 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Providers\ApplicationOAuthProvider.cs][147][GrantResourceOwnerCredentials]	System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'INGRESSORAPIDO\WSDES111$'.
+   em System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   em System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   em System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.Open()
+   em Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 3309
+   em Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1310
+   em Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1185
+   em IRCore.DataAccess.ADO.Estrutura.ContextoConexao.get_conIngresso() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs:linha 96
+   em IRCore.DataAccess.ADO.Estrutura.MasterADOBase.get_conIngresso() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADOBase.cs:linha 80
+   em IRCore.DataAccess.ADO.APIUsuarioADO.Consultar(String login) na c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs:linha 41
+   em IRCore.BusinessObject.APIUsuarioBO.Consultar(String login) na c:\Git\Code\IRCore.BusinessObject\APIUsuarioBO.cs:linha 43
+   em IRAPI.Providers.ApplicationOAuthProvider.<GrantResourceOwnerCredentials>d__8.MoveNext() na c:\Git\Code\IRAPI\Providers\ApplicationOAuthProvider.cs:linha 42
+ClientConnectionId:6bcae1d1-45a9-4d46-8262-e56fc0c0622f
+Error Number:18456,State:1,Class:14
+2016-05-03 11:29:14,973 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-03 11:29:15,754 [15] ERROR IRAPI [c:\Git\Code\IRAPI\Providers\ApplicationOAuthProvider.cs][147][GrantResourceOwnerCredentials]	System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'INGRESSORAPIDO\WSDES111$'.
+   em System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   em System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   em System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.Open()
+   em Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 3309
+   em Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1310
+   em Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1185
+   em IRCore.DataAccess.ADO.Estrutura.ContextoConexao.get_conIngresso() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs:linha 96
+   em IRCore.DataAccess.ADO.Estrutura.MasterADOBase.get_conIngresso() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADOBase.cs:linha 80
+   em IRCore.DataAccess.ADO.APIUsuarioADO.Consultar(String login) na c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs:linha 41
+   em IRCore.BusinessObject.APIUsuarioBO.Consultar(String login) na c:\Git\Code\IRCore.BusinessObject\APIUsuarioBO.cs:linha 43
+   em IRAPI.Providers.ApplicationOAuthProvider.<GrantResourceOwnerCredentials>d__8.MoveNext() na c:\Git\Code\IRAPI\Providers\ApplicationOAuthProvider.cs:linha 42
+ClientConnectionId:d19906a0-7004-452c-83a6-239aff3fc6bb
+Error Number:18456,State:1,Class:14
+2016-05-03 11:38:50,770 [24] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-03 11:42:26,249 [11] ERROR IRAPI [c:\Git\Code\IRAPI\Providers\ApplicationOAuthProvider.cs][147][GrantResourceOwnerCredentials]	System.Data.SqlClient.SqlException (0x80131904): Login failed for user 'INGRESSORAPIDO\WSDES111$'.
+   em System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, DbConnectionPool pool, String accessToken, Boolean applyTransientFaultHandling)
+   em System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   em System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.Open()
+   em Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 3309
+   em Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1310
+   em Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1185
+   em IRCore.DataAccess.ADO.Estrutura.ContextoConexao.get_conIngresso() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs:linha 96
+   em IRCore.DataAccess.ADO.Estrutura.MasterADOBase.get_conIngresso() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADOBase.cs:linha 80
+   em IRCore.DataAccess.ADO.APIUsuarioADO.Consultar(String login) na c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs:linha 41
+   em IRCore.BusinessObject.APIUsuarioBO.Consultar(String login) na c:\Git\Code\IRCore.BusinessObject\APIUsuarioBO.cs:linha 43
+   em IRAPI.Providers.ApplicationOAuthProvider.<GrantResourceOwnerCredentials>d__8.MoveNext() na c:\Git\Code\IRAPI\Providers\ApplicationOAuthProvider.cs:linha 42
+ClientConnectionId:8d1af100-6f10-4eae-acbd-70fc589302d6
+Error Number:18456,State:1,Class:14
+2016-05-03 11:43:46,996 [24] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-03 11:44:23,454 [19] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, USER 21511181850
+2016-05-03 11:44:24,123 [19] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][148][PostAuth]	##Post.AuthCliente.ERROR## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Sucesso = false
+2016-05-03 11:44:56,874 [21] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, USER 21511181850
+2016-05-03 11:44:56,877 [21] DEBUG IRAPI [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-05-03 11:44:56,972 [21] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][92][PostAuth]	##Post.AuthCliente.ByPassBileto## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, USER 21511181850, MSG: Login por CPF, bypass no Bileto
+2016-05-03 11:44:56,976 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][979][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME 21511181850
+2016-05-03 11:44:57,278 [21] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][115][PostAuth]	##Post.AuthCliente.ERROR## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Sucesso = false
+2016-05-03 11:45:08,578 [20] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, USER 21511181850
+2016-05-03 11:45:08,581 [20] DEBUG IRAPI [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-05-03 11:45:08,641 [20] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][92][PostAuth]	##Post.AuthCliente.ByPassBileto## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, USER 21511181850, MSG: Login por CPF, bypass no Bileto
+2016-05-03 11:45:08,644 [20] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][979][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME 21511181850
+2016-05-03 11:45:08,743 [20] INFO  IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][259][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 72752, CLIENTEID 288337, EMAIL ferreiradaniel@hom.gmail.com, CPF 21511181850, SALVARULTIMOACESSO True
+2016-05-03 11:45:08,783 [20] INFO  IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][292][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 72752, CLIENTEID 288337, EMAIL ferreiradaniel@hom.gmail.com, CPF 21511181850
+2016-05-03 11:45:08,828 [20] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][130][PostAuth]	##Post.AuthCliente.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:45:08,835 [20] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:45:08,837 [20] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][61][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:45:08,842 [20] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:45:08,884 [20] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:45:27,639 [19] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][1369][GetComprasLogado]	##Get.Compras## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:45:27,644 [19] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:45:27,647 [19] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:45:27,732 [19] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:45:27,736 [19] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:45:27,772 [19] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:45:29,324 [19] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:45:53,802 [9] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:46:19,734 [20] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][280][GetEvento]	##GET.Eventos.eventos/id## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TEMPO DECORRIDO 00:00:00.9823539, MSG OK
+2016-05-03 11:46:19,738 [20] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:46:45,625 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\SetorBO.cs][51][Listar]	##Get.Listar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, CANALID 2, DATA: 03/05/2016 11:46:45, MSG: Início do método de listar setores
+2016-05-03 11:46:46,955 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\SetorBO.cs][65][Listar]	##Get.Listar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TEMPO DECORRIDO: 00:00:01.3264022, DATA: 03/05/2016 11:46:46, MSG: Fim do método de listar setores
+2016-05-03 11:46:46,958 [11] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][468][GetSetores]	##GET.Eventos/id/apresentacao/id/setores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TEMPO DECORRIDO 00:00:01.4613699, MSG OK
+2016-05-03 11:46:46,961 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:47:38,747 [9] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:47:54,118 [9] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:48:33,364 [11] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][2155][ReservaIngressoPorQuantidade]	##Post.AddIngressoQTD## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:48:33,370 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:48:33,373 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:48:33,376 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:48:33,645 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:48:33,647 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:48:33,716 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:48:33,845 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:48:33,849 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 0, DESC 0, ENTR 0, FEE 0
+2016-05-03 11:48:34,222 [11] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][2216][ReservaIngressoPorQuantidade]	##Post.AddIngressoQTD.Dados## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, SETOR 27990, APR 235795, PREÇO 3449818, QTD 3
+2016-05-03 11:48:41,235 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:48:41,238 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:48:41,405 [11] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][2371][ReservaIngressoPorQuantidade]	##Post.AddIngressoQTD.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, 00:00:08.0379092
+2016-05-03 11:48:41,408 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:49:26,403 [21] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][438][GetEntregas]	##Get.Entregas.CEP## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, CEP 06236020
+2016-05-03 11:49:26,407 [21] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:26,409 [21] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:26,412 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:49:26,481 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:49:26,484 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:49:26,503 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:49:26,632 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:26,841 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:49:26,845 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:26,848 [21] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:49:27,096 [21] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][477][GetEntregas]	##Get.Entregas.CEP.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, CEP 06236020
+2016-05-03 11:49:27,100 [21] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:49:53,399 [11] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][394][GetEntregas]	##Get.Entregas## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:53,403 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:53,406 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:53,410 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:49:53,493 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:49:53,496 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:49:53,517 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:49:53,645 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:53,800 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:49:53,804 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:53,807 [11] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:49:53,810 [11] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][429][GetEntregas]	##Get.Entregas.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:49:53,814 [11] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:51:26,327 [12] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1129][PostEntregaTemporaria]	##Post.EntregaTemporaria## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGA 11, PDV 0
+2016-05-03 11:51:26,330 [12] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:51:26,333 [12] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:51:26,337 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:51:26,401 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:51:26,404 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:51:26,424 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:51:26,556 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:51:26,693 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:51:26,697 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:51:26,700 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:51:26,720 [12] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][82][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em IRAPI.Controllers.ReservaController.PostEntregaTemporaria(EntregaTempModel entregaModel) na c:\Git\Code\IRAPI\Controllers\ReservaController.cs:linha 1166
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 51
+---> (Exceção Interna N° 0) System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em IRAPI.Controllers.ReservaController.PostEntregaTemporaria(EntregaTempModel entregaModel) na c:\Git\Code\IRAPI\Controllers\ReservaController.cs:linha 1166
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-05-03 11:52:00,676 [12] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][394][GetEntregas]	##Get.Entregas## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:00,679 [12] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:00,682 [12] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:00,686 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:52:00,759 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:52:00,762 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:52:00,784 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:52:00,928 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:01,096 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:52:01,098 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:01,102 [12] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:52:01,105 [12] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][429][GetEntregas]	##Get.Entregas.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:01,108 [12] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:52:28,268 [13] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1129][PostEntregaTemporaria]	##Post.EntregaTemporaria## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGA 860, PDV 0
+2016-05-03 11:52:28,271 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:28,274 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:28,278 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:52:28,352 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:52:28,356 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:52:28,379 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:52:28,556 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:28,910 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:52:28,913 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:28,916 [13] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:52:28,920 [13] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1349][PostEntregaTemporaria]	##Post.EntregaTemporaria.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGA 860, PDV 0
+2016-05-03 11:52:28,923 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":860,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:52:28,927 [13] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][61][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":860,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:52:28,930 [13] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":860,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:52:28,979 [13] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":860,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:52:48,792 [16] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][489][GetFormasPagamento]	##Get.FormasPagamento## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:48,795 [16] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:48,799 [16] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:48,802 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:52:48,926 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:52:48,929 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:52:48,950 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:52:49,100 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:49,273 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:52:49,276 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:49,279 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:52:49,360 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\FormaPagamentoBO.cs][75][ListarEvento]	##FormaPagamentoBO.ObtendoFormaPagamento## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:49,426 [16] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\FormaPagamento.cs][361][FormasDePagamentoPrioritarias]	##FormaPagamento.ObtendoFormasDePagamentoPrioritarias## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, SQL EXEC FormasDePagamento @ClienteID = 288337, @SessionID = '5e6f8697-becd-4b71-84e5-af3a44308499'
+2016-05-03 11:52:49,456 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\FormaPagamentoBO.cs][93][ListarEvento]	##FormaPagamentoBO.ObtendoFormaPagamento## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, PGTO_COUNT 8
+2016-05-03 11:52:49,762 [16] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\FormaPagamentoBO.cs][113][ListarEvento]	##FormaPagamentoBO.ObtendoFormaPagamento.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, PGTO_COUNT 8
+2016-05-03 11:52:49,766 [16] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][531][GetFormasPagamento]	##Get.FormasPagamento.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:52:49,770 [16] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":860,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:54:21,051 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1371][PostFinalizarCompra]	##Post.FinalizarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,054 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,057 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,060 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:54:21,124 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:54:21,128 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:54:21,150 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:54:21,291 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,454 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:54:21,457 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,459 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:54:21,654 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\CarrinhoADO.cs][292][Verificar]	##CarrinhoADO.Verificar## SQL select count(a.ID) from tApresentacao(NOLOCK) a where a.ID in (235795,235795,235795) and DisponivelVenda <> 'T'
+2016-05-03 11:54:21,681 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\CarrinhoADO.cs][292][Verificar]	##CarrinhoADO.Verificar## SQL select count(a.ID) from tApresentacao(NOLOCK) a where a.ID in (235795,235795,235795) and DisponivelVenda <> 'T'
+2016-05-03 11:54:21,811 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][406][FinalizarCompra]	##VendaBilheteriaBO.FinalizandoCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,814 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:21,817 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:54:21,820 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1487][PostFinalizarCompra]	##Post.FinalizarCompra.ERROR## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Sucesso = false
+2016-05-03 11:54:45,126 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1371][PostFinalizarCompra]	##Post.FinalizarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,129 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,131 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,133 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:54:45,218 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:54:45,221 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:54:45,240 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:54:45,366 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,498 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:54:45,501 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,504 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:54:45,507 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\CarrinhoADO.cs][292][Verificar]	##CarrinhoADO.Verificar## SQL select count(a.ID) from tApresentacao(NOLOCK) a where a.ID in (235795,235795,235795) and DisponivelVenda <> 'T'
+2016-05-03 11:54:45,525 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\CarrinhoADO.cs][292][Verificar]	##CarrinhoADO.Verificar## SQL select count(a.ID) from tApresentacao(NOLOCK) a where a.ID in (235795,235795,235795) and DisponivelVenda <> 'T'
+2016-05-03 11:54:45,578 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][406][FinalizarCompra]	##VendaBilheteriaBO.FinalizandoCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,581 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,584 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:54:45,587 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][429][FinalizarCompra]	##VendaBilheteriaBO.FinalizandoCompra.VerificandoBlackList## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,727 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][534][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,907 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][664][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:45,910 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1487][PostFinalizarCompra]	##Post.FinalizarCompra.ERROR## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Sucesso = false
+2016-05-03 11:54:56,588 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1371][PostFinalizarCompra]	##Post.FinalizarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:56,592 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][100][CarregarCompra]	##CarregarCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:56,595 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][167][CarregarCliente]	##CarregarCliente## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:56,598 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][889][Consultar]	##ClienteBO.Consultar## CLIENTE 288337
+2016-05-03 11:54:56,682 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][909][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 288337 LOGIN_CPF 21511181850, LOGIN_EMAIL ferreiradaniel@hom.gmail.com
+2016-05-03 11:54:56,685 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1067][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 288337
+2016-05-03 11:54:56,708 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1072][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 288337, END_COUNT 3
+2016-05-03 11:54:56,859 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][40][Carregar]	##EntregaBO.Carregar## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,032 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\EntregaBO.cs][47][Carregar]	##EntregaBO.Carregar.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, ENTREGAS 1, ENTR_COM_END 'False'
+2016-05-03 11:54:57,035 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,037 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:54:57,040 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\CarrinhoADO.cs][292][Verificar]	##CarrinhoADO.Verificar## SQL select count(a.ID) from tApresentacao(NOLOCK) a where a.ID in (235795,235795,235795) and DisponivelVenda <> 'T'
+2016-05-03 11:54:57,077 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\CarrinhoADO.cs][292][Verificar]	##CarrinhoADO.Verificar## SQL select count(a.ID) from tApresentacao(NOLOCK) a where a.ID in (235795,235795,235795) and DisponivelVenda <> 'T'
+2016-05-03 11:54:57,180 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][406][FinalizarCompra]	##VendaBilheteriaBO.FinalizandoCompra## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,183 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][606][CalcularValores]	##CarrinhoBO.CalculaValores## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,185 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\CarrinhoBO.cs][663][CalcularValores]	##CarrinhoBO.CalculaValores.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, TOTAL 1008,00, DESC 0,00, ENTR 0, FEE 168,00
+2016-05-03 11:54:57,187 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][429][FinalizarCompra]	##VendaBilheteriaBO.FinalizandoCompra.VerificandoBlackList## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,230 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][534][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,363 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][664][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,452 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\CompraTemporaria.cs][375][ConsultarSeExiste]	##CompraTemporaria.ConsultandoSeExiste## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,569 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\CompraTemporaria.cs][401][ConsultarSeExiste]	##CompraTemporaria.ConsultandoSeExiste.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Encontrado: False
+2016-05-03 11:54:57,620 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\DB\CompraTemporariaDB.cs][96][Inserir]	##CompraTemporariaDB.Inserindo## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:57,639 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\DB\CompraTemporariaDB.cs][123][Inserir]	##CompraTemporariaDB.Inserindo.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG Inserido: True
+2016-05-03 11:54:57,645 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][1196][EfetuarPagamentoTEF]	##VendaBilheteriaBO.EfetuarPagamentoTEF## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:58,105 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][534][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:58,191 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][664][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:58,195 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\VendaBilheteriaBO.cs][1674][EfetuaVendaSistema]	##VendaBilheteriaBO.EfetuandoVendaSistema## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:58,215 [7] DEBUG IRAPI [c:\Git\Code\IRCore.BusinessObject\ecommerce\Venda.cs][22][EfetuaVendaSistemaTEF]	##Venda.EfetuaVendaSistemaTEF## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:58,543 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][1582][VenderWeb]	##BilheteriaPartial.VenderWeb## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:58,590 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][1693][VenderInternet]	##BilheteriaPartial.VenderInternet## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:54:59,053 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][5273][EfetuaPagamentoAdyen]	##BilheteriaPartial.EfetuandoPagamentoAdyen## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, VLR 1008,00
+2016-05-03 11:54:59,060 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Adyen\Adyen.cs][72][EfetuarPagamento]	##Adyen.EfetuandoPagamento## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:01,939 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][1916][VenderInternet]	##BilheteriaPartial.VenderInternet.Inserindo_tVendaBilheteria## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:02,131 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][1922][VenderInternet]	##BilheteriaPartial.VenderInternet.Inserindo_tVendaBilheteria.SUCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, VendaBil_ID 17141457
+2016-05-03 11:55:02,147 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][1936][VenderInternet]	##BilheteriaPartial.VenderInternet.Inserindo_VendaBilheteriaItem## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:02,569 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Cartao.cs][77][InserirCartao]	##Cartão.InserindoCartao## CLIENTE 288337
+2016-05-03 11:55:02,757 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Cartao.cs][115][InserirCartao]	##Cartão.InserindoCartao.SUCCESS## CLIENTE 288337, NOME_CARTAO DANIEL FERREIRA, CARTAO_ID 5466097
+2016-05-03 11:55:02,760 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][2466][VenderInternet]	##BilheteriaPartial.VenderInternet.SemValeIngresso## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:02,805 [7] DEBUG IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][2521][VenderInternet]	##BilheteriaPartial.VenderInternet.InserirVendaBilheteriaFormaPagamento## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:02,826 [7] INFO  IRAPI [c:\Git\Code\Comum\IRLib\Codigo\Temp_Partial_Class\BilheteriaPartial.cs][2539][VenderInternet]	##BilheteriaPartial.VenderInternet.oAdyen.CapturarPagamento## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499, MSG: Captura será realizada no HammerHead
+2016-05-03 11:55:02,939 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][534][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:03,038 [7] DEBUG IRAPI [c:\Git\Code\Site\IngressoRapidoLib\Lib\CarrinhoLista.cs][664][CarregarDadosPorClienteID]	##CarrinhoLista.CarregandoDadosDeCota.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:10,456 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\ReservaController.cs][1522][PostFinalizarCompra]	##Post.FinalizarCompra.SUCCESS## SESSION 5e6f8697-becd-4b71-84e5-af3a44308499
+2016-05-03 11:55:10,460 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:55:10,463 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][61][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:55:10,466 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}
+2016-05-03 11:55:10,512 [7] DEBUG IRAPI [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":288337,"SessionID":"5e6f8697-becd-4b71-84e5-af3a44308499","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":"460d6ca8-fca6-4025-9eb8-f42492240dec","Guid":null}

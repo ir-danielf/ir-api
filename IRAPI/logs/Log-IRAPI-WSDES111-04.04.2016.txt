@@ -1,0 +1,403 @@
+2016-04-04 12:01:20,524 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 12:01:45,841 [11] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 12:03:36,338 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 12:04:05,356 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, TOKEN CAAVdwO2oOLwBAJA26C6RgRcFclWnzOOZAHYm270vunc6j1uW3QZCBZCo2QhxpvY2H8XDeLcwHgdR4m9X7PUNcxZCmu9UAfNwg2bGy30pZAs1BbxpaCfhHg9YzEuxsqddZAEUd68kLiDBGZCSMPBFZBGV4SZCwUN5TZAcVZB2vj5GYFeYUn4WhNuiteXr5vZAIim09HuXGADwZAdNZB87FjeBDyIci7, CODE 
+2016-04-04 12:04:20,630 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499
+2016-04-04 12:04:30,869 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][856][Consultar]	##ClienteBO.Consultar## CLIENTE 4183908
+2016-04-04 12:04:31,624 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][876][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183908 LOGIN_CPF 18288873316, LOGIN_EMAIL brendagomesalves@teleworm.us
+2016-04-04 12:04:43,285 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1074][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183908
+2016-04-04 12:04:44,408 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1081][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183908, END_COUNT 2
+2016-04-04 12:07:56,036 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][976][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.1@mail.com
+2016-04-04 12:08:05,038 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][984][ConsultarUsername]	##ClienteBO.ConsultarUserName.Login.SUCCESS## USERNAME ir.dan.1@mail.com
+2016-04-04 12:08:14,485 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][225][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, MSG não possui cadastro // preencha os campos
+2016-04-04 12:18:47,344 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 12:20:04,769 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 12:20:06,065 [25] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 12:20:06,989 [25] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, TOKEN CAAVdwO2oOLwBAJA26C6RgRcFclWnzOOZAHYm270vunc6j1uW3QZCBZCo2QhxpvY2H8XDeLcwHgdR4m9X7PUNcxZCmu9UAfNwg2bGy30pZAs1BbxpaCfhHg9YzEuxsqddZAEUd68kLiDBGZCSMPBFZBGV4SZCwUN5TZAcVZB2vj5GYFeYUn4WhNuiteXr5vZAIim09HuXGADwZAdNZB87FjeBDyIci7, CODE 
+2016-04-04 12:20:07,203 [25] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499
+2016-04-04 12:20:07,356 [25] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][856][Consultar]	##ClienteBO.Consultar## CLIENTE 4183908
+2016-04-04 12:20:07,741 [25] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][876][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183908 LOGIN_CPF 18288873316, LOGIN_EMAIL brendagomesalves@teleworm.us
+2016-04-04 12:20:07,757 [25] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1074][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183908
+2016-04-04 12:20:07,902 [25] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1081][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183908, END_COUNT 2
+2016-04-04 12:20:08,396 [25] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][976][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.1@mail.com
+2016-04-04 12:20:08,503 [25] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][984][ConsultarUsername]	##ClienteBO.ConsultarUserName.Login.SUCCESS## USERNAME ir.dan.1@mail.com
+2016-04-04 12:20:08,516 [25] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][223][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, MSG não possui cadastro // preencha os campos
+2016-04-04 12:23:34,903 [14] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 12:24:43,188 [29] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 12:24:55,022 [29] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, TOKEN CAAVdwO2oOLwBAJA26C6RgRcFclWnzOOZAHYm270vunc6j1uW3QZCBZCo2QhxpvY2H8XDeLcwHgdR4m9X7PUNcxZCmu9UAfNwg2bGy30pZAs1BbxpaCfhHg9YzEuxsqddZAEUd68kLiDBGZCSMPBFZBGV4SZCwUN5TZAcVZB2vj5GYFeYUn4WhNuiteXr5vZAIim09HuXGADwZAdNZB87FjeBDyIci7, CODE 
+2016-04-04 12:24:55,104 [29] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499
+2016-04-04 12:24:55,122 [29] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][856][Consultar]	##ClienteBO.Consultar## CLIENTE 4183908
+2016-04-04 12:24:55,560 [29] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][876][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183908 LOGIN_CPF 18288873316, LOGIN_EMAIL brendagomesalves@teleworm.us
+2016-04-04 12:24:55,574 [29] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1074][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183908
+2016-04-04 12:24:55,647 [29] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1081][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183908, END_COUNT 2
+2016-04-04 12:25:43,959 [29] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][976][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.1@mail.com
+2016-04-04 12:25:44,133 [29] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][984][ConsultarUsername]	##ClienteBO.ConsultarUserName.Login.SUCCESS## USERNAME ir.dan.1@mail.com
+2016-04-04 12:25:44,146 [29] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][223][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, MSG não possui cadastro // preencha os campos
+2016-04-04 19:14:11,838 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 19:14:28,982 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:14:36,377 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:14:44,861 [5] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, TOKEN CAAVdwO2oOLwBAAeBC0skJjaO5U9iZAK44F3cusOEg2JRxFHf3Bpm2eaxhSzdmrM8mV9KAsP1R1MrA0TdfBKOrDZAQf6LULvjwYabTiATZAGvXdIY9R9FXPl01DmOW201Exny9705tqIZCq64cFsSdgF6IK2pOpIZCCNVZCZAhcj2EZCYJpP0Dqk1LK9bheBSeU2zBMd7NYiTAjdbn7rMk7g4, CODE 
+2016-04-04 19:14:48,432 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499
+2016-04-04 19:14:48,461 [5] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183908
+2016-04-04 19:14:51,226 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 04/04/2016 19:14:51 -03:00
+]	SQL dbSite
+2016-04-04 19:14:51,259 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 04/04/2016 19:14:51 -03:00
+]	SQL dbSite
+2016-04-04 19:14:52,284 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId])
+VALUES (@0, @1, @2, NULL, @3, @4, @5, @6, NULL, NULL, NULL, @7, NULL, NULL, NULL, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-04 19:14:52,286 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-04 19:14:52,300 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183908' (Type = Int32)
+]	SQL dbSite
+2016-04-04 19:14:52,303 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '18288873316' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-04 19:14:52,306 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-04 19:14:52,308 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: '20160404191448' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-04 19:14:52,329 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160404191448' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-04 19:14:52,332 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-04 19:14:52,338 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-04 19:14:52,341 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-04 19:14:52,345 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 04/04/2016 19:14:52 -03:00
+]	SQL dbSite
+2016-04-04 19:14:52,523 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Failed in 172 ms with error: Cannot insert the value NULL into column 'Email', table 'SiteIRHomolog.dbo.Login'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+]	SQL dbSite
+2016-04-04 19:14:52,526 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-04 19:14:52,591 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 04/04/2016 19:14:52 -03:00
+]	SQL dbSite
+2016-04-04 19:14:52,668 [5] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][178][CarregarCliente]	##CarregarCliente.EXCEPTION## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, MSG An error occurred while updating the entries. See the inner exception for details.
+System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Email', table 'SiteIRHomolog.dbo.Login'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   em System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   em System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   em System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   em System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   em System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   em System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   em System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   em System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   em System.Data.Entity.DbContext.SaveChanges()
+   em IRCore.DataAccess.Model.DbContextExtension.Save(DbContext db, Boolean withException) na c:\Git\Code\IRCore.DataAccess.ADO\Extensions\DbContextExtension.cs:linha 112
+   em IRCore.DataAccess.Model.DbContextExtension.Save[T](DbContext db, T obj, Boolean updateDataBase, Boolean withException, String[] pkNames) na c:\Git\Code\IRCore.DataAccess.ADO\Extensions\DbContextExtension.cs:linha 101
+   em IRCore.DataAccess.ADO.Estrutura.MasterADO`1.Salvar[T](T obj, Boolean updateDataBase, Boolean withException, String[] pkNames) na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADO.cs:linha 241
+   em IRCore.BusinessObject.ClienteBO._CarregarLoginFromCliente(tCliente cliente, Boolean salvarLogin) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 838
+   em IRCore.BusinessObject.ClienteBO.Consultar(Int32 clienteID, Boolean salvarLogin) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 853
+   em IRAPI.Controllers.MasterApiController.CarregarCliente(ClienteBO clienteBO, Boolean carregarEnderecos) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 169
+2016-04-04 19:15:40,361 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:15:42,179 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, TOKEN CAAVdwO2oOLwBAAeBC0skJjaO5U9iZAK44F3cusOEg2JRxFHf3Bpm2eaxhSzdmrM8mV9KAsP1R1MrA0TdfBKOrDZAQf6LULvjwYabTiATZAGvXdIY9R9FXPl01DmOW201Exny9705tqIZCq64cFsSdgF6IK2pOpIZCCNVZCZAhcj2EZCYJpP0Dqk1LK9bheBSeU2zBMd7NYiTAjdbn7rMk7g4, CODE 
+2016-04-04 19:15:48,054 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499
+2016-04-04 19:16:00,325 [6] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183908
+2016-04-04 19:16:47,678 [6] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][178][CarregarCliente]	##CarregarCliente.EXCEPTION## SESSION 31362bf9-5ff2-4a79-971f-ecba2e4fc499, MSG Referência de objeto não definida para uma instância de um objeto.
+System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em IRCore.BusinessObject.ClienteBO.Consultar(Int32 clienteID, Boolean salvarLogin) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 865
+   em IRAPI.Controllers.MasterApiController.CarregarCliente(ClienteBO clienteBO, Boolean carregarEnderecos) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 169
+2016-04-04 19:17:39,672 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:17:41,845 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAAeBC0skJjaO5U9iZAK44F3cusOEg2JRxFHf3Bpm2eaxhSzdmrM8mV9KAsP1R1MrA0TdfBKOrDZAQf6LULvjwYabTiATZAGvXdIY9R9FXPl01DmOW201Exny9705tqIZCq64cFsSdgF6IK2pOpIZCCNVZCZAhcj2EZCYJpP0Dqk1LK9bheBSeU2zBMd7NYiTAjdbn7rMk7g4, CODE 
+2016-04-04 19:17:44,518 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-04 19:17:59,409 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:17:59,412 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:18:01,395 [6] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOK_ID: '128691584194667' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-04 19:18:33,744 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:18:33,747 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:18:49,659 [6] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOK_ID: '128691584194667' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-04 19:19:05,786 [6] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][965][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.1@mail.com
+2016-04-04 19:19:05,907 [6] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][973][ConsultarUsername]	##ClienteBO.ConsultarUserName.Login.SUCCESS## USERNAME ir.dan.1@mail.com
+2016-04-04 19:19:05,910 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][225][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG não possui cadastro // preencha os campos
+2016-04-04 19:21:35,337 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:21:46,735 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-04 19:23:45,701 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:23:45,704 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:24:32,376 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:24:32,380 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:25:01,908 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:25:01,912 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:25:40,240 [6] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.Net.Http.UnsupportedMediaTypeException: No MediaTypeFormatter is available to read an object of type 'ErrorInfo' from content with media type 'text/html'.
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, IEnumerable`1 formatters)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content)
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1443
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) System.Net.Http.UnsupportedMediaTypeException: No MediaTypeFormatter is available to read an object of type 'ErrorInfo' from content with media type 'text/html'.
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, IEnumerable`1 formatters)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content)
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1443
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-04 19:28:55,505 [46] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 19:28:56,227 [36] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:29:20,358 [35] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:29:25,671 [35] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-04 19:30:10,429 [35] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:30:10,433 [35] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:30:33,676 [35] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1427][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.SUCCESS## EMAIL: 'ir.dan.1@mail.com' 
+2016-04-04 19:30:59,400 [35] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em IRCore.BusinessObject.Models.Bileto.Account.op_Explicit(Account account) na c:\Git\Code\IRCore.BusinessObject\Models\Bileto\AccountModel.cs:linha 60
+   em IRCore.BusinessObject.Models.Bileto.ExportResponse.op_Explicit(ExportResponse response) na c:\Git\Code\IRCore.BusinessObject\Models\Bileto\AccountModel.cs:linha 188
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1429
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) System.NullReferenceException: Referência de objeto não definida para uma instância de um objeto.
+   em IRCore.BusinessObject.Models.Bileto.Account.op_Explicit(Account account) na c:\Git\Code\IRCore.BusinessObject\Models\Bileto\AccountModel.cs:linha 60
+   em IRCore.BusinessObject.Models.Bileto.ExportResponse.op_Explicit(ExportResponse response) na c:\Git\Code\IRCore.BusinessObject\Models\Bileto\AccountModel.cs:linha 188
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1429
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-04 19:36:30,556 [37] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:36:45,823 [37] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-04 19:36:46,755 [37] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:36:46,758 [37] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:36:47,716 [37] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.Net.Http.UnsupportedMediaTypeException: No MediaTypeFormatter is available to read an object of type 'ErrorInfo' from content with media type 'application/octet-stream'.
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, IEnumerable`1 formatters)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content)
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1443
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) System.Net.Http.UnsupportedMediaTypeException: No MediaTypeFormatter is available to read an object of type 'ErrorInfo' from content with media type 'application/octet-stream'.
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger, CancellationToken cancellationToken)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, Type type, IEnumerable`1 formatters, IFormatterLogger formatterLogger)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content, IEnumerable`1 formatters)
+   em System.Net.Http.HttpContentExtensions.ReadAsAsync[T](HttpContent content)
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1443
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-04 19:53:01,129 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-04 19:53:01,699 [61] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:53:21,229 [52] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-04 19:53:26,229 [52] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-04 19:53:56,221 [52] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-04 19:53:56,225 [52] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-04 19:54:02,676 [52] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1416][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.SUCCESS## EMAIL: 'ir.dan.3@mail.com' 
+2016-04-04 19:54:29,993 [52] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.InvalidOperationException: O cabeçalho especificado não foi encontrado.
+   em System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1418
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) System.InvalidOperationException: O cabeçalho especificado não foi encontrado.
+   em System.Net.Http.Headers.HttpHeaders.GetValues(String name)
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1418
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 380
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+

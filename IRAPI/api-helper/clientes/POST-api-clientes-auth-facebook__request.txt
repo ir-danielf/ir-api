@@ -1,0 +1,5 @@
+﻿{ 
+	"facebookAccessToken" : "CAAVdwO2oOLwBANEGxnwHlbMTWhV9FhT3ihZBYZCa8ZAADet3qwx5MVustZBWoLFSqJXOdImOkyBDzp3v8qYo3t6SrJWkmFStEHlY8TSQVqTSnSnzJilRwSfSLU7b0HSkZBYBStA9OJYwZCf7aZBC5bMoQYr6KzZCJx77jhhFN66g48QjmeVxZAveMkdgPxuSZAfRJTMkbDofcZBwQZDZD"
+	"facebookAccessCode" : "CAAMosn146ooBAG4dNDsokzMUFOmI7hdwk8rB68nCgdoITuhToV9v28I4Mp7SpfpKNcRfdNa0ZAiRtu6xEvbVNGwhIxCGSgcgT0hQHZAzVzfLTRhfr6smlNTMZB2BqZA6gmDoZB96hsuSc6rHtso3P3enmkPbKePT8tmBIV3SWQ2EceEvGuBzwyAMouZAvbRRYlQPX6sNzfShwNlRiiDUBp", 
+	"urlRet" : "http://www.ingressorapdio.com.br/LoginCadastro.aspx" 
+}

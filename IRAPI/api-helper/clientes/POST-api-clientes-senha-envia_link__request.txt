@@ -1,0 +1,6 @@
+{
+  "email":"silva.jardim@rcadigital.com.br",
+  "url":"https://api.ingressorapido.com.br",
+  "cpf": "95465877880",
+  "nome": "SILVA JARDIM"
+}

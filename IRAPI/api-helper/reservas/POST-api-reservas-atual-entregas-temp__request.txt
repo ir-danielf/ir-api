@@ -1,0 +1,13 @@
+﻿{
+	"entregaControleID": "860",
+	"enderecoTemp": {
+		"CEP": "70000000",
+		"Endereco": "Avenida Teste",
+		"Numero": "330",
+		"Cidade": "São Paulo",
+		"Estado": "SP",
+		"Complemento": "Condominio Teste",
+		"Bairro": "Barueri",
+	},
+	"pdvID": "85"
+}

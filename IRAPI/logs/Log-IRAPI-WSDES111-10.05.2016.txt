@@ -1,0 +1,92 @@
+2016-05-10 11:25:28,549 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-10 11:26:08,161 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][173][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Invalid column name 'PopulaSiteIR'., TEMPO DECORRIDO 00:00:00.3986553
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PopulaSiteIR'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<QueryImpl>d__11`1.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1553
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1443
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem, List`1 eventoIDs, List`1 eventoIDsNaoExibir) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1053
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem, List`1 eventoIDs, List`1 eventoIDsNaoExibir) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1269
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem, List`1 eventoIDs, List`1 eventoIDsNaoExibir) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 158
+ClientConnectionId:fe93157f-21ad-41e8-b012-369e2663fea9
+Error Number:207,State:1,Class:16
+2016-05-10 11:26:08,628 [7] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][175][Get]	System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'PopulaSiteIR'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<QueryImpl>d__11`1.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1553
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.Query[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Boolean buffered, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1443
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem, List`1 eventoIDs, List`1 eventoIDsNaoExibir) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1053
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem, List`1 eventoIDs, List`1 eventoIDsNaoExibir) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1269
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem, List`1 eventoIDs, List`1 eventoIDsNaoExibir) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 158
+ClientConnectionId:fe93157f-21ad-41e8-b012-369e2663fea9
+Error Number:207,State:1,Class:16
+2016-05-10 12:55:51,127 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-10 14:20:08,380 [6] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][173][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Identificador inválido. (Exceção de HRESULT: 0x80070006 (E_HANDLE)), TEMPO DECORRIDO 01:23:44.9749466
+System.Runtime.InteropServices.COMException (0x80070006): Identificador inválido. (Exceção de HRESULT: 0x80070006 (E_HANDLE))
+   em System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.Open()
+   em Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 3309
+   em Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1310
+   em Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1185
+   em IRCore.DataAccess.ADO.Estrutura.ContextoConexao.get_conSite() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs:linha 116
+   em IRCore.DataAccess.ADO.Estrutura.MasterADOBase.get_conSite() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADOBase.cs:linha 86
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1148
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1254
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 158
+2016-05-10 14:20:08,696 [6] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][175][Get]	System.Runtime.InteropServices.COMException (0x80070006): Identificador inválido. (Exceção de HRESULT: 0x80070006 (E_HANDLE))
+   em System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   em System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   em System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   em System.Data.SqlClient.SqlConnection.Open()
+   em Dapper.SqlMapper.ExecuteCommand(IDbConnection cnn, CommandDefinition& command, Action`2 paramReader) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 3309
+   em Dapper.SqlMapper.ExecuteImpl(IDbConnection cnn, CommandDefinition& command) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1310
+   em Dapper.SqlMapper.Execute(IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1185
+   em IRCore.DataAccess.ADO.Estrutura.ContextoConexao.get_conSite() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs:linha 116
+   em IRCore.DataAccess.ADO.Estrutura.MasterADOBase.get_conSite() na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADOBase.cs:linha 86
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1148
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1254
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 158
+2016-05-10 17:41:17,877 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-10 17:41:42,090 [7] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}

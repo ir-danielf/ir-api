@@ -1,0 +1,22 @@
+﻿{
+    "Sucesso": true,
+    "Mensagem": "OK",
+    "Retorno": [
+        {
+            "Voucher": "RCANETTESTE1",
+            "Senha": "2414093583",
+            "Evento": "RCA Digital 2015",
+            "Apresentacao": "20150819170100",
+            "Setor": "Cadeira",
+            "Ingresso": "*ND*"
+        },
+        {
+            "Voucher": "RCANETTESTE1",
+            "Senha": "2414093583",
+            "Evento": "RCA Digital 2015",
+            "Apresentacao": "20150819170100",
+            "Setor": "Cadeira",
+            "Ingresso": "*ND*"
+        }
+    ]
+}

@@ -1,0 +1,71 @@
+{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "entregaControles": [
+      {
+        "Entrega": {
+          "TipoAsEnum": "entregaEmCasaNormal",
+          "ID": 2,
+          "Nome": "Mensageiro",
+          "PrazoEntrega": 5,
+          "Disponivel": "T",
+          "ProcedimentoEntrega": "\r\n<b>Seus ingressos serão entregues em ATÉ 15  (quinze) dias úteis no endereço informado em sua compra.\r\nCaso o seu evento ocorra antes do prazo informado acima, a sua entrega será realizada ATÉ A DATA DE SEU EVENTO.</b>\r\n\r\nSerão realizadas 2 tentativas de entrega em horário comercial (segunda a sexta-feira, das 8.00h às 18.00h). \r\nEm caso de ausência do destinatário, os seus ingressos retornarão a Ingresso Rápido e as tentativas serão informadas ao cliente por e-mail\r\n\r\nCaso não solicite nova entrega, seus ingressos ficarão disponíveis para retirada nos locais abaixo, sendo necessária a apresentação dos mesmos documentos listados na entrega.\r\n- Até 1 dia antes do evento: nos pontos de venda da Ingresso Rápido (consulte em nosso site os pontos autorizados para retirada)\r\n- No dia do evento: na bilheteria do local, com uma hora de antecedência.\r\n\r\nEm casos de cancelamento do evento, os valores relativos às entregas já efetuadas não serão devolvidos.\r\n\r\nATENÇÃO: SUA COMPRA ESTÁ SUJEITA A ANÁLISE. No caso do pedido ser analisado por nosso departamento de segurança, \r\nO PRAZO DE ENTREGA SERÁ CONTADO A PARTIR DA LIBERAÇÃO DO PEDIDO.",
+          "EnviaAlerta": "F",
+          "Padrao": "T",
+          "PermitirImpressaoInternet": "F",
+          "Tipo": "N",
+          "Ativo": "T",
+          "DiasTriagem": 0,
+          "De": 0,
+          "Ate": 0
+        },
+        "AtivaAsBool": true,
+        "ID": 14,
+        "EntregaID": 2,
+        "EntregaAreaID": 26,
+        "PeriodoID": 0,
+        "QuantidadeEntregas": 0,
+        "Valor": 15.0,
+        "DiasTriagem": 0,
+        "ProcedimentoEntrega": "",
+        "Ativa": "T"
+      },
+      {
+        "Entrega": {
+          "TipoAsEnum": "entregaEmCasaNormal",
+          "ID": 5,
+          "Nome": "Sedex",
+          "PrazoEntrega": 10,
+          "Disponivel": "T",
+          "ProcedimentoEntrega": "<br /><br /><b>ATENCÃO:</b><br /><br />Você receberá seus ingressos pelo correio em até 15 dias úteis após a confirmação do pagamento de sua compra, no endereço informado em seu cadastro. Em caso de atraso da entrega ou não recebimento de seus ingressos pelos correios em 48 horas ANTES DA DATA DO EVENTO, entre em contato conosco através de nosso SAC.<br /><br />Providenciaremos a retirada de seus ingressos na bilheteria do local do evento.<br /><br />Em casos de cancelamento do evento, os valores relativos às entregas já efetuadas não serão devolvidos.<br /><br /><br /><b>ATENCÃO:</b><br /><br />SUA COMPRA ESTÁ SUJEITA A ANÁLISE. No caso do pedido ser analisado por nosso departamento de segurança, O PRAZO DE ENTREGA SERÁ CONTADO A PARTIR DA LIBERAÇÃO DO PEDIDO.",
+          "EnviaAlerta": "F",
+          "Padrao": "T",
+          "PermitirImpressaoInternet": "F",
+          "Tipo": "N",
+          "Ativo": "T",
+          "DiasTriagem": 0,
+          "De": 0,
+          "Ate": 0
+        },
+        "AtivaAsBool": true,
+        "ID": 149,
+        "EntregaID": 5,
+        "EntregaAreaID": 26,
+        "PeriodoID": 0,
+        "QuantidadeEntregas": 0,
+        "Valor": 15.0,
+        "DiasTriagem": 0,
+        "ProcedimentoEntrega": "",
+        "Ativa": "T"
+      }
+    ],
+    "enderecoTemp": {
+      "CEP": "03274160",
+      "Endereco": "Olímpio José Gonçalves",
+      "Cidade": "São Paulo",
+      "Estado": "SP",
+      "Bairro": "Vila Santa Clara"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+﻿[
+    {
+        "CarrinhoID": 36561759,
+        "CodigoPromocional": "teste",
+        "DonoIngresso": {
+            "ID": 0,
+            "Nome": "João da Silva",
+            "RG": "8888334433",
+            "CPF": "00122133141",
+            "Email": "teste@teste.com",
+            "DataNascimento": "19801231",
+            "Telefone": "5399999999",
+            "CPFResponsavel": "00122133141",
+            "NomeResponsavel": "João da Silva",
+            "DataNascimentoAsDateTime": "1980-12-31"
+        }
+    }
+]

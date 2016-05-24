@@ -1,0 +1,8 @@
+﻿{
+    "access_token": "Td1y0NIMCqKN9R4iLKbHYhIpJH-Wu6vTAZ59K6kIVlVoA3XlPQ3kHbc-z1jirqhiQ8m5OZ8f98Qr11a7a12XC3OClY0f6bzWaOW6CnO-tW8PzY7aZCw4EBAo6xzzVqcB97TG4lDWQBcLwlOx69zZkIdS6GYwxLKavo2HHeUipGPaW5tWknNxOOAW8Dsc5leCTDSTYQiXVGpB56DH5UzQX2eJcrlhqtBlDaq2AVTMSCA_opauYrsk45EO-In3p6FZAxwue9kRxN3Z5F1zVPNpBQzGiIt2sdWNdW04Xt615yfO1QR84peFbF8EPGQyruRyTzb7fa3GSl7PxG3OxdOzm-ndswgHgH__nqrXKwj9hQioGykezohd0TkE12fCzMvoKpuqR44mmzy5fw0IW1TPkA",
+    "token_type": "bearer",
+    "expires_in": 1209599,
+    "userName": "teste_webServer",
+    ".issued": "Mon, 03 Nov 2014 13:50:14 GMT",
+    ".expires": "Mon, 17 Nov 2014 13:50:14 GMT"
+}

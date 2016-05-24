@@ -1,0 +1,11 @@
+﻿{
+    "Sucesso": true,
+    "Mensagem": "OK",
+    "Retorno": [
+        "Caxias do Sul",
+        "Lajeado",
+        "Novo Hamburgo",
+        "Pelotas",
+        "Porto Alegre"
+    ]
+}

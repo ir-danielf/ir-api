@@ -1,0 +1,18 @@
+[
+	{
+		"formaPagamento": {
+			"IR_FormaPagamentoID": 0,
+			"Nome": "foobar",
+			"Parcelas": 1
+		},
+		"NomeCartao":null,
+		"NumeroCartao":null,
+		"CodigoSeguranca":null,
+		"MesValidade":0,
+		"AnoValidade":0,
+		"Valor":0,
+		"IP":null,
+		"ParceiroID":null,
+		"CodigoTrocaFixo":null
+	}
+]

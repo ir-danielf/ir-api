@@ -1,0 +1,3 @@
+﻿Content-Type: application/x-www-form-urlencoded
+Accept-Charset: UTF-8
+ClientInfo: appTeste

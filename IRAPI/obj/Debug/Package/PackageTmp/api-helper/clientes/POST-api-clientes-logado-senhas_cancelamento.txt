@@ -1,0 +1,6 @@
+﻿{
+  "Sucesso": true,
+  "Tipo": "canceladoComSucesso",
+  "Mensagem": "Você pode consultar o status do seu cancelamento através do menu Minhas Compras ou através do nosso SAC.",
+  "Retorno": "1714096546"
+}

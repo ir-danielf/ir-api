@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>GET reservas/atual/entregas</title>
+    <link href="../assets/default.css" rel="stylesheet">
+    <script src="../assets/modernizr.js"></script>
+</head>
+<body>
+    
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">Voltar para Índice da API</a>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        <link type="text/css" href="./assets/HelpPage.css" rel="stylesheet">
+
+        <div id="body" class="help-page">
+
+            <h1>GET reservas/atual/entregas</h1>
+
+            <h3>Breve Descrição</h3>
+            <p>Retorna as entregas do usuário usuário.</p>
+
+            <h2>Request</h2>
+            <p><span><b>GET https://api.ingressorapido.com.br/services/api/v1.2/reservas/atual/entregas </b> </span></p>
+            <div class="row">
+                <div class="col-sm-8">
+                    <span><b>Header:</b></span>
+                    <iframe src="HEADER-api-reservas-atual.txt" width="100%" height="130px"></iframe>
+                </div>
+                <div class="col-sm-4">
+                    <span><b>Obrigatório:</b></span>
+                    <br />
+                    <ul>
+                        <li>ClientInfo:  identificador da aplicação, string</li>
+                        <li>Authorization: Bearer ...token...</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h2>Response</h2>
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <span><b>Json:</b></span>
+                    <iframe src="GET-api-reservas-atual-entregas.txt" width="100%" height="1000px"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <hr />
+        <footer>
+            <p>&copy; 2014 - Ingresso Rápido</p>
+        </footer>
+    </div>
+
+    <script src="/irbundles/jquery?v=FVs3ACwOLIVInrAl5sdzR2jrCDmVOWFbZMY6g6Q0ulE1"></script>
+    <script src="/irbundles/bootstrap?v=2Fz3B0iizV2NnnamQFrx-NbYJNTFeBJ2GM05SilbtQU1"></script>
+
+</body>
+
+</html>

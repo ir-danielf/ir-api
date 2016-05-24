@@ -1,0 +1,24 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "EntregaDisponivel": false,
+    "EntregaControles": null,
+    "EntregaArea": null,
+    "ID": 756208,
+    "CEP": "96202720",
+    "Endereco": "Rua Sarandi",
+    "Numero": "1501",
+    "Cidade": "Rio Grande",
+    "Estado": "RS",
+    "Complemento": "",
+    "Bairro": "Cassino",
+    "Nome": "SILVA JARDIM",
+    "CPF": "95465877880",
+    "RG": "9382736454",
+    "ClienteID": 3954598,
+    "EnderecoTipoID": null,
+    "EnderecoPrincipal": "F",
+    "StatusConsulta": null
+  }
+}

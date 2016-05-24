@@ -1,0 +1,1425 @@
+2016-04-05 10:50:01,182 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 10:50:05,453 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 10:54:06,267 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 10:54:15,424 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 10:54:42,212 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 10:54:42,239 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 10:54:51,699 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1448][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.ERROR## EMAIL: 'ir.dan.3@mail.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-05 11:03:15,411 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 11:03:19,420 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 11:03:30,972 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 11:03:30,979 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 11:03:50,535 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1417][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.SUCCESS## EMAIL: 'ir.dan.4@zoho.com' 
+2016-04-05 11:03:57,788 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 11:03:57,791 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 11:04:14,052 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 11:04:14,062 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 11:04:52,038 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][105][Cadastrar]	##ClienteBO.Cadastrar##
+2016-04-05 11:05:09,581 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][941][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-05 11:05:15,669 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][917][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-05 11:05:38,963 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][735][Salvar]	##ClienteBO.Salvar##
+2016-04-05 11:05:44,653 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Opened connection at 05/04/2016 11:05:44 -03:00
+
+2016-04-05 11:05:44,782 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+[dbo].[salvar_tCliente2ComContatoTipoID]
+2016-04-05 11:05:44,786 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- UsuarioID: '1657' (Type = Int32)
+
+2016-04-05 11:05:44,789 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteID: '0' (Type = Int32)
+
+2016-04-05 11:05:44,792 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TimeStamp: '201604051105442777' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,794 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Nome: 'Daniel Ird' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,797 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RG: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,799 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPF: '99878578682' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,802 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CarteiraEstudante: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,804 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Sexo: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,807 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefone: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,810 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Telefone: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,813 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,816 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,818 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDCelular: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,821 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Celular: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,824 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DataNascimento: '' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-05 11:05:44,826 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Email: 'ir.dan.4@zoho.com' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,829 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RecebeEmail: 'F' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-05 11:05:44,832 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,834 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,837 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,840 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,842 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,846 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,848 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,851 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,853 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,856 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,898 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteIndicacaoID: 'null' (Type = Int32)
+
+2016-04-05 11:05:44,901 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Obs: 'null' (Type = String, Size = 1073741823)
+
+2016-04-05 11:05:44,903 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,906 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,908 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,911 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,913 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Senha: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,916 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Ativo: 'T' (Type = StringFixedLength, Size = 4000)
+
+2016-04-05 11:05:44,919 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- StatusAtual: 'L' (Type = StringFixedLength, Size = 4000)
+
+2016-04-05 11:05:44,922 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- AtualizacaoDuplicidade: 'null' (Type = Int32)
+
+2016-04-05 11:05:44,924 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,927 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,930 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RGEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,933 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Pais: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,935 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFResponsavel: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,938 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ContatoTipoID: 'null' (Type = Int32)
+
+2016-04-05 11:05:44,941 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CNPJ: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,943 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeFantasia: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,945 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RazaoSocial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,948 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- InscricaoEstadual: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,950 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Profissao: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,952 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SituacaoProfissionalID: 'null' (Type = Int32)
+
+2016-04-05 11:05:44,955 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,957 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,960 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- LoginOSESP: 'null' (Type = String, Size = 4000)
+
+2016-04-05 11:05:44,963 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SiteID: '1' (Type = Int32)
+
+2016-04-05 11:05:44,994 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Executing at 05/04/2016 11:05:44 -03:00
+
+2016-04-05 11:05:47,157 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Completed in 2157 ms with result: SqlDataReader
+
+2016-04-05 11:05:47,459 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Closed connection at 05/04/2016 11:05:47 -03:00
+
+2016-04-05 11:05:52,940 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 11:05:52 -03:00
+]	SQL dbSite
+2016-04-05 11:05:52,988 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 11:05:52 -03:00
+]	SQL dbSite
+2016-04-05 11:05:54,115 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId])
+VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, NULL, @10, @11, @12, @13, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-05 11:05:54,118 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 11:05:54,120 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183977' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:05:54,123 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '99878578682' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 11:05:54,126 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:05:54,129 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.4@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 11:05:54,132 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405110502' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:05:54,134 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405110502' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:05:54,137 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:05:54,140 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:05:54,143 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '116279502106002' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:05:54,146 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: 'CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 11:05:54,148 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '0' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:05:54,151 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:05:54,154 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '05/04/2016 11:04:40' (Type = DateTime2)
+]	SQL dbSite
+2016-04-05 11:05:54,157 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @13: '078dc143-f554-4094-9973-2d63c1f33075' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-05 11:05:54,159 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 11:05:54 -03:00
+]	SQL dbSite
+2016-04-05 11:05:54,240 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 77 ms with result: SqlDataReader
+]	SQL dbSite
+2016-04-05 11:05:54,243 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 11:05:54,324 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 11:05:54 -03:00
+]	SQL dbSite
+2016-04-05 11:05:54,327 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 11:05:54 -03:00
+]	SQL dbSite
+2016-04-05 11:05:56,532 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][748][Salvar]	##ClienteBO.Salvar.SUCCESS## True
+2016-04-05 11:06:02,043 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][254][VerificarLogin]	##ClienteBO.VerificarLogin## Salvar último acesso False
+2016-04-05 11:06:06,178 [5] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][284][VerificarLogin]	##ClienteBO.VerificarLogin.SUCCESS##
+2016-04-05 11:06:43,046 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183977,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 11:06:43,051 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183977,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 11:06:43,056 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183977,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 11:06:43,192 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183977,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 11:41:42,103 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 11:41:49,976 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 11:44:07,948 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 11:44:17,874 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa, CODE 
+2016-04-05 11:44:19,698 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 11:44:19,716 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 11:44:20,052 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 11:44:20,055 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 11:44:20,125 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 11:44:41,185 [9] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 11:44:41,190 [9] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 11:44:45,610 [9] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '116279502106002' STATUS_CODE: 'OK'
+2016-04-05 11:45:35,033 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][965][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.4@zoho.com
+2016-04-05 11:45:35,105 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][973][ConsultarUsername]	##ClienteBO.ConsultarUserName.Login.SUCCESS## USERNAME ir.dan.4@zoho.com
+2016-04-05 11:45:38,891 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 11:45:38 -03:00
+]	SQL dbSite
+2016-04-05 11:45:38,944 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 11:45:38 -03:00
+]	SQL dbSite
+2016-04-05 11:45:40,124 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId])
+VALUES (@0, @1, @2, @3, @4, @5, @6, @7, NULL, NULL, NULL, @8, NULL, NULL, NULL, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-05 11:45:40,127 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 11:45:40,131 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183977' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:45:40,133 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '99878578682' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 11:45:40,136 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:45:40,139 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.4@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 11:45:40,141 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405114535' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:45:40,144 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405114535' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:45:40,147 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:45:40,150 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:45:40,153 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:45:40,171 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 11:45:40 -03:00
+]	SQL dbSite
+2016-04-05 11:45:40,223 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 46 ms with result: SqlDataReader
+]	SQL dbSite
+2016-04-05 11:45:40,225 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 11:45:40,294 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 11:45:40 -03:00
+]	SQL dbSite
+2016-04-05 11:45:40,298 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 11:45:40 -03:00
+]	SQL dbSite
+2016-04-05 11:45:40,322 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][977][ConsultarUsername]	##ClienteBO.ConsultarUserName.Cliente.SUCCESS## USERNAME ir.dan.4@zoho.com
+2016-04-05 11:45:40,327 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][234][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG já possui cadastro, por favor realize o login
+2016-04-05 11:47:15,468 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 11:47:19,446 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa, CODE 
+2016-04-05 11:47:20,878 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 11:47:20,881 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 11:47:20,946 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 11:47:20,948 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 11:47:20,967 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 11:47:28,624 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 11:47:28,628 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 11:47:32,646 [7] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '116279502106002' STATUS_CODE: 'OK'
+2016-04-05 11:47:52,401 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 11:47:52 -03:00
+]	SQL dbSite
+2016-04-05 11:47:52,456 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 11:47:52 -03:00
+]	SQL dbSite
+2016-04-05 11:47:52,535 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][UPDATE [dbo].[Login]
+SET [ClienteID] = @0, [CPF] = @1, [Senha] = @2, [Email] = @3, [DataCadastro] = @4, [UltimoAcesso] = @5, [Ativo] = @6, [StatusAtual] = @7, [FaceBookUserID] = @8, [FaceBookUserToken] = @9, [FaceBookUserInfos] = @10, [SiteID] = @11, [SyncStatus] = NULL, [SyncDate] = NULL, [BiletoUuid] = NULL, [AccountKitId] = NULL
+WHERE ([ID] = @12)
+]	SQL dbSite
+2016-04-05 11:47:52,539 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183977' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:47:52,542 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '99878578682' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 11:47:52,544 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:47:52,546 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.4@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 11:47:52,549 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405110502' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:47:52,551 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405114751' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:47:52,554 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:47:52,556 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:47:52,558 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '116279502106002' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:47:52,561 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: 'CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 11:47:52,564 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '{"id":"116279502106002","email":"ir.dan.4@zoho.com","name":"Daniel Ird"}' (Type = AnsiString, Size = -1)
+]	SQL dbSite
+2016-04-05 11:47:52,566 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:47:52,569 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '761310' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:47:52,572 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 11:47:52 -03:00
+]	SQL dbSite
+2016-04-05 11:47:52,615 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 39 ms with result: 1
+]	SQL dbSite
+2016-04-05 11:47:52,618 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 11:47:52,644 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 11:47:52 -03:00
+]	SQL dbSite
+2016-04-05 11:47:52,647 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 11:47:52 -03:00
+]	SQL dbSite
+2016-04-05 11:47:59,839 [7] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.AtualizarLoginNaBileto## FACEBOOK_ID: 116279502106002, FLEGADO: True
+2016-04-05 11:48:00,878 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][254][VerificarLogin]	##ClienteBO.VerificarLogin## Salvar último acesso False
+2016-04-05 11:48:00,882 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][284][VerificarLogin]	##ClienteBO.VerificarLogin.SUCCESS##
+2016-04-05 11:48:04,295 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][214][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 11:48:04,309 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183977,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 11:50:22,615 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 11:50:24,514 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa, CODE 
+2016-04-05 11:50:25,790 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 11:50:25,793 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 11:50:25,921 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 11:50:25,923 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 11:50:25,945 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 11:50:34,416 [9] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 11:50:34,419 [9] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 11:50:36,848 [9] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '116279502106002' STATUS_CODE: 'OK'
+2016-04-05 11:51:50,710 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 11:51:50 -03:00
+]	SQL dbSite
+2016-04-05 11:51:50,733 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 11:51:50 -03:00
+]	SQL dbSite
+2016-04-05 11:51:50,736 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][UPDATE [dbo].[Login]
+SET [ClienteID] = @0, [CPF] = @1, [Senha] = @2, [Email] = @3, [DataCadastro] = @4, [UltimoAcesso] = @5, [Ativo] = @6, [StatusAtual] = @7, [FaceBookUserID] = @8, [FaceBookUserToken] = @9, [FaceBookUserInfos] = @10, [SiteID] = @11, [SyncStatus] = NULL, [SyncDate] = NULL, [BiletoUuid] = NULL, [AccountKitId] = NULL
+WHERE ([ID] = @12)
+]	SQL dbSite
+2016-04-05 11:51:50,740 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183977' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:51:50,743 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '99878578682' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 11:51:50,745 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:51:50,748 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.4@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 11:51:50,751 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405110502' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:51:50,753 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405115150' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 11:51:50,756 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:51:50,759 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 11:51:50,762 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '116279502106002' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 11:51:50,765 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: 'CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 11:51:50,767 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '{"id":"116279502106002","email":"ir.dan.4@zoho.com","name":"Daniel Ird"}' (Type = AnsiString, Size = -1)
+]	SQL dbSite
+2016-04-05 11:51:50,770 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:51:50,772 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '761310' (Type = Int32)
+]	SQL dbSite
+2016-04-05 11:51:50,775 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 11:51:50 -03:00
+]	SQL dbSite
+2016-04-05 11:51:50,800 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 22 ms with result: 1
+]	SQL dbSite
+2016-04-05 11:51:50,803 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 11:51:50,836 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 11:51:50 -03:00
+]	SQL dbSite
+2016-04-05 11:51:50,839 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 11:51:50 -03:00
+]	SQL dbSite
+2016-04-05 11:51:50,870 [9] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.AtualizarLoginNaBileto## FACEBOOK_ID: 116279502106002, FLEGADO: True
+2016-04-05 11:51:50,872 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][254][VerificarLogin]	##ClienteBO.VerificarLogin## Salvar último acesso False
+2016-04-05 11:51:50,875 [9] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][284][VerificarLogin]	##ClienteBO.VerificarLogin.SUCCESS##
+2016-04-05 11:51:50,972 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][214][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 11:51:50,976 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183977,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 12:44:41,528 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 12:44:47,998 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:30:23,311 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 14:30:27,951 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:33:59,462 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:34:17,484 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAKH2o7OZAjsd0tF2JwrZA28jZC9d2NrZAt3dt2NYWRvifl7SKfYwSD1oePxIZAZAEqUu0sUbnYYrW7ZA8ei4qBtTpjzmni0e9WVxYmbxKBEOpah6jrjZC1zALxCX7Dtw7Ohslb0EkFjBrbv5eXfKQlPAZBd6DamSpE9KYQISGI1GsPHfPUweQjH93oIelkuTETgKA4q1CBsZBa, CODE 
+2016-04-05 14:34:19,712 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 14:34:19,752 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 14:34:20,200 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 14:34:20,203 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 14:34:20,577 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 14:34:22,995 [8] ERROR Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][325][FacebookGetUsuario]	Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: Session has expired on Tuesday, 05-Apr-16 09:00:00 PDT. The current time is Tuesday, 05-Apr-16 10:34:22 PDT.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 321
+2016-04-05 14:34:39,553 [8] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: Session has expired on Tuesday, 05-Apr-16 09:00:00 PDT. The current time is Tuesday, 05-Apr-16 10:34:23 PDT.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 326
+   em IRAPI.Controllers.ClienteController.PostFacebookAuth(ClienteAuthFacebookRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 195
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: Session has expired on Tuesday, 05-Apr-16 09:00:00 PDT. The current time is Tuesday, 05-Apr-16 10:34:23 PDT.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 326
+   em IRAPI.Controllers.ClienteController.PostFacebookAuth(ClienteAuthFacebookRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 195
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-05 14:35:26,808 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:35:29,751 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAAlMNJYpk97j5GaZCRyVXqxngUDdgsgS5UnNU8FOcxyTbbLgL7NVVezNwmqcLs6soR6EZBRJZCHtlsWwhXVaF3xpZA9IEE9HajCE5U292j0F3kc7QVVwd5OYqoxuzKXuzfatSvw8RwQFJYjZAZBGZCger5RZAaRf5hZA6Lzc0pvtrxMoPd33FLW4q1aXGLcviuuY2PGAkqz2l, CODE 
+2016-04-05 14:35:31,136 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 14:35:31,141 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 14:35:31,219 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 14:35:31,222 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 14:35:31,244 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 14:35:49,718 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 14:35:49,723 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 14:36:08,131 [7] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOK_ID: '116279502106002' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-05 14:36:15,709 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][965][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.4@zoho.com
+2016-04-05 14:36:15,849 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][234][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG já possui cadastro, por favor realize o login
+2016-04-05 14:36:31,071 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:36:33,281 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAAlMNJYpk97j5GaZCRyVXqxngUDdgsgS5UnNU8FOcxyTbbLgL7NVVezNwmqcLs6soR6EZBRJZCHtlsWwhXVaF3xpZA9IEE9HajCE5U292j0F3kc7QVVwd5OYqoxuzKXuzfatSvw8RwQFJYjZAZBGZCger5RZAaRf5hZA6Lzc0pvtrxMoPd33FLW4q1aXGLcviuuY2PGAkqz2l, CODE 
+2016-04-05 14:36:33,285 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 14:36:33,287 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 14:36:33,483 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 14:36:33,486 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 14:36:33,526 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 14:36:37,493 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 14:36:37,496 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 14:36:41,046 [7] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOK_ID: '116279502106002' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-05 14:37:01,524 [7] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][965][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.4@zoho.com
+2016-04-05 14:37:30,923 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][234][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG já possui cadastro, por favor realize o login
+2016-04-05 14:38:09,700 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:38:12,514 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAAlMNJYpk97j5GaZCRyVXqxngUDdgsgS5UnNU8FOcxyTbbLgL7NVVezNwmqcLs6soR6EZBRJZCHtlsWwhXVaF3xpZA9IEE9HajCE5U292j0F3kc7QVVwd5OYqoxuzKXuzfatSvw8RwQFJYjZAZBGZCger5RZAaRf5hZA6Lzc0pvtrxMoPd33FLW4q1aXGLcviuuY2PGAkqz2l, CODE 
+2016-04-05 14:38:13,783 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 14:38:13,787 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 14:38:14,073 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 14:38:14,076 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 14:38:14,095 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 14:38:22,197 [8] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 14:38:22,200 [8] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 14:38:25,543 [8] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOK_ID: '116279502106002' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-05 14:38:25,546 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][965][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.4@zoho.com
+2016-04-05 14:38:25,608 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][234][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG já possui cadastro, por favor realize o login
+2016-04-05 14:54:39,244 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 14:54:41,280 [13] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:55:36,263 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 14:55:42,800 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 14:55:42,823 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 14:55:43,202 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 14:55:43,206 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 14:55:43,279 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 14:56:08,153 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 14:56:08,159 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 14:56:14,444 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1452][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.ERROR## EMAIL: 'ir.dan.5@zoho.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'INVALID_CREDENTIAL'
+2016-04-05 15:00:43,570 [14] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 15:00:44,191 [19] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 15:01:43,647 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 15:01:48,145 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 15:01:48,189 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183977
+2016-04-05 15:01:48,448 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183977 LOGIN_CPF 99878578682, LOGIN_EMAIL ir.dan.4@zoho.com
+2016-04-05 15:01:48,454 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183977
+2016-04-05 15:01:48,565 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183977, END_COUNT 0
+2016-04-05 15:02:07,078 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 15:02:07,081 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 15:02:12,549 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1417][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.SUCCESS## EMAIL: 'ir.dan.5@zoho.com' 
+2016-04-05 15:02:23,322 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 15:02:23,325 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 15:02:31,063 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 15:02:31,068 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 15:02:45,632 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][105][Cadastrar]	##ClienteBO.Cadastrar##
+2016-04-05 15:02:52,652 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][941][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-05 15:02:54,560 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][917][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-05 15:03:03,415 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][735][Salvar]	##ClienteBO.Salvar##
+2016-04-05 15:03:10,669 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Opened connection at 05/04/2016 15:03:10 -03:00
+
+2016-04-05 15:03:10,813 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+[dbo].[salvar_tCliente2ComContatoTipoID]
+2016-04-05 15:03:10,817 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- UsuarioID: '1657' (Type = Int32)
+
+2016-04-05 15:03:10,819 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteID: '0' (Type = Int32)
+
+2016-04-05 15:03:10,822 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TimeStamp: '201604051503102573' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,824 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Nome: 'Daniel Ire' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,826 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RG: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,830 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPF: '13582154564' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,832 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CarteiraEstudante: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,835 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Sexo: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,838 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefone: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,840 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Telefone: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,866 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,869 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,872 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDCelular: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,874 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Celular: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,876 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DataNascimento: '' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-05 15:03:10,879 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Email: 'ir.dan.5@zoho.com' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,881 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RecebeEmail: 'F' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-05 15:03:10,883 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,886 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,888 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,891 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,893 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,896 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,898 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,901 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,904 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,906 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,909 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteIndicacaoID: 'null' (Type = Int32)
+
+2016-04-05 15:03:10,912 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Obs: 'null' (Type = String, Size = 1073741823)
+
+2016-04-05 15:03:10,914 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,917 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,919 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,922 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,925 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Senha: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,927 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Ativo: 'T' (Type = StringFixedLength, Size = 4000)
+
+2016-04-05 15:03:10,930 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- StatusAtual: 'L' (Type = StringFixedLength, Size = 4000)
+
+2016-04-05 15:03:10,933 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- AtualizacaoDuplicidade: 'null' (Type = Int32)
+
+2016-04-05 15:03:10,935 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,937 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,940 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RGEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,942 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Pais: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,945 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFResponsavel: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,948 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ContatoTipoID: 'null' (Type = Int32)
+
+2016-04-05 15:03:10,951 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CNPJ: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,953 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeFantasia: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,956 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RazaoSocial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,959 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- InscricaoEstadual: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,961 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Profissao: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,964 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SituacaoProfissionalID: 'null' (Type = Int32)
+
+2016-04-05 15:03:10,967 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,970 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,972 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- LoginOSESP: 'null' (Type = String, Size = 4000)
+
+2016-04-05 15:03:10,974 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SiteID: '1' (Type = Int32)
+
+2016-04-05 15:03:10,989 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Executing at 05/04/2016 15:03:10 -03:00
+
+2016-04-05 15:03:14,382 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Completed in 3389 ms with result: SqlDataReader
+
+2016-04-05 15:03:14,713 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Closed connection at 05/04/2016 15:03:14 -03:00
+
+2016-04-05 15:03:32,922 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 15:03:32 -03:00
+]	SQL dbSite
+2016-04-05 15:03:33,009 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 15:03:32 -03:00
+]	SQL dbSite
+2016-04-05 15:03:35,252 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId])
+VALUES (@0, @1, @2, @3, @4, @5, @6, @7, @8, @9, NULL, @10, @11, @12, @13, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-05 15:03:35,254 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 15:03:35,256 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183978' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:03:35,258 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '13582154564' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 15:03:35,260 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 15:03:35,263 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.5@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 15:03:35,266 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405150250' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 15:03:35,269 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405150250' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 15:03:35,271 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 15:03:35,273 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 15:03:35,275 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '109516976117332' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 15:03:35,278 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: 'CAAVdwO2oOLwBABLswiOA0hxS69wBwlQEJ6EMlEYYvgEJ6mznYVniUT3fUMyAwDDd00ArTzT2Wk1hz7jd785zKc6qY5dMI8UYXdVeLsJ38s7v8x7utCQoE6Uh1gkYD1TPTkZBo1zZBgt5F53OszZCDJzRhnvfxBRZCOel1RwtzLzkKLQ2bQRZBnbWtNlw1b8SaXwRGOQveTFXsXq6ZBrrbc' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 15:03:35,280 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:03:35,283 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:03:35,286 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '05/04/2016 15:02:35' (Type = DateTime2)
+]	SQL dbSite
+2016-04-05 15:03:35,289 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @13: '53e37489-1163-4781-af89-7aca03e40aa2' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-05 15:03:35,291 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 15:03:35 -03:00
+]	SQL dbSite
+2016-04-05 15:03:35,522 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 228 ms with result: SqlDataReader
+]	SQL dbSite
+2016-04-05 15:03:35,525 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 15:03:35,748 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 15:03:35 -03:00
+]	SQL dbSite
+2016-04-05 15:03:35,751 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 15:03:35 -03:00
+]	SQL dbSite
+2016-04-05 15:03:38,818 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][748][Salvar]	##ClienteBO.Salvar.SUCCESS## True
+2016-04-05 15:03:38,821 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][254][VerificarLogin]	##ClienteBO.VerificarLogin## Salvar último acesso False
+2016-04-05 15:03:38,823 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][284][VerificarLogin]	##ClienteBO.VerificarLogin.SUCCESS##
+2016-04-05 15:03:39,661 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183978,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 15:03:39,663 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183978,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 15:03:39,703 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183978,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 15:03:39,959 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183978,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 15:04:08,855 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 15:04:11,948 [23] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBABLswiOA0hxS69wBwlQEJ6EMlEYYvgEJ6mznYVniUT3fUMyAwDDd00ArTzT2Wk1hz7jd785zKc6qY5dMI8UYXdVeLsJ38s7v8x7utCQoE6Uh1gkYD1TPTkZBo1zZBgt5F53OszZCDJzRhnvfxBRZCOel1RwtzLzkKLQ2bQRZBnbWtNlw1b8SaXwRGOQveTFXsXq6ZBrrbc, CODE 
+2016-04-05 15:04:13,479 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 15:04:13,487 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][845][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 15:04:13,866 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][865][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 15:04:13,869 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1063][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 15:04:13,930 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1070][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 15:04:29,493 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 15:04:29,497 [23] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 15:04:34,098 [23] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '109516976117332' STATUS_CODE: 'OK'
+2016-04-05 15:05:19,914 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 15:05:19 -03:00
+]	SQL dbSite
+2016-04-05 15:05:19,993 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 15:05:19 -03:00
+]	SQL dbSite
+2016-04-05 15:05:20,012 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][UPDATE [dbo].[Login]
+SET [ClienteID] = @0, [CPF] = @1, [Senha] = @2, [Email] = @3, [DataCadastro] = @4, [UltimoAcesso] = @5, [Ativo] = @6, [StatusAtual] = @7, [FaceBookUserID] = @8, [FaceBookUserToken] = @9, [FaceBookUserInfos] = @10, [SiteID] = @11, [SyncStatus] = @12, [SyncDate] = @13, [BiletoUuid] = @14, [AccountKitId] = NULL
+WHERE ([ID] = @15)
+]	SQL dbSite
+2016-04-05 15:05:20,017 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183978' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:05:20,019 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '13582154564' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 15:05:20,022 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 15:05:20,025 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.5@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 15:05:20,035 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405150250' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 15:05:20,041 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405150510' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 15:05:20,062 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 15:05:20,065 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 15:05:20,068 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '109516976117332' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 15:05:20,072 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: 'CAAVdwO2oOLwBABLswiOA0hxS69wBwlQEJ6EMlEYYvgEJ6mznYVniUT3fUMyAwDDd00ArTzT2Wk1hz7jd785zKc6qY5dMI8UYXdVeLsJ38s7v8x7utCQoE6Uh1gkYD1TPTkZBo1zZBgt5F53OszZCDJzRhnvfxBRZCOel1RwtzLzkKLQ2bQRZBnbWtNlw1b8SaXwRGOQveTFXsXq6ZBrrbc' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 15:05:20,074 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '{"id":"109516976117332","email":"ir.dan.5@zoho.com","name":"Daniel Ire"}' (Type = AnsiString, Size = -1)
+]	SQL dbSite
+2016-04-05 15:05:20,079 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:05:20,083 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:05:20,090 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @13: '05/04/2016 15:02:35' (Type = DateTime2)
+]	SQL dbSite
+2016-04-05 15:05:20,093 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @14: '53e37489-1163-4781-af89-7aca03e40aa2' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-05 15:05:20,099 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @15: '761312' (Type = Int32)
+]	SQL dbSite
+2016-04-05 15:05:20,102 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 15:05:20 -03:00
+]	SQL dbSite
+2016-04-05 15:05:20,189 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 82 ms with result: 1
+]	SQL dbSite
+2016-04-05 15:05:20,193 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 15:05:20,519 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 15:05:20 -03:00
+]	SQL dbSite
+2016-04-05 15:05:20,523 [23] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 15:05:20 -03:00
+]	SQL dbSite
+2016-04-05 15:05:24,548 [23] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.AtualizarLoginNaBileto## FACEBOOK_ID: 109516976117332, FLEGADO: True
+2016-04-05 15:05:25,110 [23] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][254][VerificarLogin]	##ClienteBO.VerificarLogin## Salvar último acesso False
+2016-04-05 15:05:25,114 [23] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][284][VerificarLogin]	##ClienteBO.VerificarLogin.SUCCESS##
+2016-04-05 15:05:28,003 [23] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][214][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 15:05:28,007 [23] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183978,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 16:46:43,386 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-05 16:46:45,524 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 16:50:46,369 [11] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 16:50:56,710 [11] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBABLswiOA0hxS69wBwlQEJ6EMlEYYvgEJ6mznYVniUT3fUMyAwDDd00ArTzT2Wk1hz7jd785zKc6qY5dMI8UYXdVeLsJ38s7v8x7utCQoE6Uh1gkYD1TPTkZBo1zZBgt5F53OszZCDJzRhnvfxBRZCOel1RwtzLzkKLQ2bQRZBnbWtNlw1b8SaXwRGOQveTFXsXq6ZBrrbc, CODE 
+2016-04-05 16:50:58,494 [11] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 16:50:58,498 [11] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 16:50:58,864 [11] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 16:50:58,873 [11] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 16:50:59,336 [11] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 16:51:01,192 [11] ERROR Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][319][FacebookGetUsuario]	Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: Session has expired on Tuesday, 05-Apr-16 12:00:00 PDT. The current time is Tuesday, 05-Apr-16 12:51:00 PDT.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 315
+2016-04-05 16:51:04,319 [11] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: Session has expired on Tuesday, 05-Apr-16 12:00:00 PDT. The current time is Tuesday, 05-Apr-16 12:51:01 PDT.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 320
+   em IRAPI.Controllers.ClienteController.PostFacebookAuth(ClienteAuthFacebookRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 195
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: Session has expired on Tuesday, 05-Apr-16 12:00:00 PDT. The current time is Tuesday, 05-Apr-16 12:51:01 PDT.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 320
+   em IRAPI.Controllers.ClienteController.PostFacebookAuth(ClienteAuthFacebookRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 195
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-05 16:52:34,671 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 16:52:36,369 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN CAAVdwO2oOLwBAKOzAGEsfTfiRQYjoH5ExblZCXRFVmkmKUVCYgKnn3QYVLEF8Fd2mH9Evbhw2EQBORX0JCgfwOW7pqqRV4qT2bZAhcL54mrQMGXFeZBPG82z5pZCOnSxEWN1vrlX9fhsh20LCrRQfyiXy77pmqol3H7dayWszj2BWSGtCnbNcF5ScXqIdGWkKSZAhZAv9XQW2fSmfo23Gb, CODE 
+2016-04-05 16:52:38,687 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 16:52:38,691 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 16:52:38,834 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 16:52:38,837 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 16:52:38,871 [8] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 16:52:57,599 [8] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 16:52:57,621 [8] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 16:53:02,074 [8] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '109516976117332' STATUS_CODE: 'OK'
+2016-04-05 16:53:14,415 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 16:53:14 -03:00
+]	SQL dbSite
+2016-04-05 16:53:14,466 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 16:53:14 -03:00
+]	SQL dbSite
+2016-04-05 16:53:15,615 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][UPDATE [dbo].[Login]
+SET [ClienteID] = @0, [CPF] = @1, [Senha] = @2, [Email] = @3, [DataCadastro] = @4, [UltimoAcesso] = @5, [Ativo] = @6, [StatusAtual] = @7, [FaceBookUserID] = @8, [FaceBookUserToken] = @9, [FaceBookUserInfos] = @10, [SiteID] = @11, [SyncStatus] = @12, [SyncDate] = @13, [BiletoUuid] = @14, [AccountKitId] = NULL
+WHERE ([ID] = @15)
+]	SQL dbSite
+2016-04-05 16:53:15,620 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183978' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:53:15,623 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '13582154564' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 16:53:15,626 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: '' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 16:53:15,629 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: 'ir.dan.5@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 16:53:15,632 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405150250' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 16:53:15,635 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: '20160405165310' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 16:53:15,638 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 16:53:15,641 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 16:53:15,644 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: '109516976117332' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 16:53:15,648 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: 'CAAVdwO2oOLwBAKOzAGEsfTfiRQYjoH5ExblZCXRFVmkmKUVCYgKnn3QYVLEF8Fd2mH9Evbhw2EQBORX0JCgfwOW7pqqRV4qT2bZAhcL54mrQMGXFeZBPG82z5pZCOnSxEWN1vrlX9fhsh20LCrRQfyiXy77pmqol3H7dayWszj2BWSGtCnbNcF5ScXqIdGWkKSZAhZAv9XQW2fSmfo23Gb' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 16:53:15,651 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '{"id":"109516976117332","email":"ir.dan.5@zoho.com","name":"Daniel Ire"}' (Type = AnsiString, Size = -1)
+]	SQL dbSite
+2016-04-05 16:53:15,656 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:53:15,658 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:53:15,661 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @13: '05/04/2016 15:05:40' (Type = DateTime2)
+]	SQL dbSite
+2016-04-05 16:53:15,665 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @14: '53e37489-1163-4781-af89-7aca03e40aa2' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-05 16:53:15,668 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @15: '761312' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:53:15,672 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 16:53:15 -03:00
+]	SQL dbSite
+2016-04-05 16:53:15,723 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Completed in 44 ms with result: 1
+]	SQL dbSite
+2016-04-05 16:53:15,726 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 16:53:15,767 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Committed transaction at 05/04/2016 16:53:15 -03:00
+]	SQL dbSite
+2016-04-05 16:53:15,771 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 16:53:15 -03:00
+]	SQL dbSite
+2016-04-05 16:53:18,547 [8] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.AtualizarLoginNaBileto## FACEBOOK_ID: 109516976117332, FLEGADO: True
+2016-04-05 16:53:18,554 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][249][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 761312, CLIENTEID 4183978, EMAIL ir.dan.5@zoho.com, CPF 13582154564, SALVARULTIMOACESSO False
+2016-04-05 16:53:18,558 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][279][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 761312, CLIENTEID 4183978, EMAIL ir.dan.5@zoho.com, CPF 13582154564
+2016-04-05 16:53:19,269 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][212][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 16:53:19,294 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":4183978,"SessionID":"ac2e1a70-9d0f-4413-9a71-c72d4c5c678b","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-04-05 16:58:22,443 [24] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 16:58:24,511 [24] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][187][PostFacebookAuth]	##Post.AuthFacebook## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, TOKEN EAAVdwO2oOLwBABIUG0OGX2pkPDSqfhllqpB35AhVDh8n3HoWWSUevzjtXCwcaxurl5NFfTxSYKLZAUxvTRuuVZA3QtO678akBJZCPMNz9OMIPzvIrQU9GZCZCVZAdZBsqMo5BF6CrxdDqZAesKiGwysrZBcK4rJRZBq4hP4LYDfoZCteFlJHcRWgX2P, CODE 
+2016-04-05 16:58:24,514 [24] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 16:58:24,517 [24] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 16:58:24,726 [24] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 16:58:24,730 [24] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 16:58:24,761 [24] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 16:58:27,531 [24] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 16:58:27,534 [24] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 16:58:29,108 [24] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOK_ID: '115271712207102' STATUS_CODE: 'Unauthorized', MSG: '', ERRORS: ''
+2016-04-05 16:58:29,203 [24] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][953][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME ir.dan.6@zoho.com
+2016-04-05 16:58:29,301 [24] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][961][ConsultarUsername]	##ClienteBO.ConsultarUserName.Login.SUCCESS## USERNAME ir.dan.6@zoho.com
+2016-04-05 16:58:29,305 [24] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][223][PostFacebookAuth]	##Post.AuthFacebook.ERROR## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG não possui cadastro // preencha os campos
+2016-04-05 16:59:27,044 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 16:59:28,139 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 16:59:28,142 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 16:59:29,097 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 16:59:29,100 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 16:59:29,787 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 16:59:30,192 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 16:59:30,195 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 16:59:36,898 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1405][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.SUCCESS## EMAIL: 'ir.dan.6@zoho.com' 
+2016-04-05 16:59:36,900 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 16:59:36,904 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 16:59:37,711 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 16:59:37,714 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 16:59:38,099 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][929][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-05 16:59:38,658 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][905][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-05 16:59:38,826 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][154][Cadastrar]	##ClienteBO.Cadastrar## LOGINID 0, CLIENTEID 0, EMAIL ir.dan.6@zoho.com, CPF 55234237265, SENHA , FACEBOOKID 115271712207102, ACCOUNTKITID 
+2016-04-05 16:59:38,831 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][729][Salvar]	##ClienteBO.Salvar## LOGINID 0, CLIENTEID 0, EMAIL ir.dan.6@zoho.com, CPF 55234237265, SENHA , FACEBOOKID 115271712207102, ACCOUNTKITID 
+2016-04-05 16:59:40,678 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Opened connection at 05/04/2016 16:59:40 -03:00
+
+2016-04-05 16:59:40,734 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+[dbo].[salvar_tCliente2ComContatoTipoID]
+2016-04-05 16:59:40,738 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- UsuarioID: '1657' (Type = Int32)
+
+2016-04-05 16:59:40,741 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteID: '0' (Type = Int32)
+
+2016-04-05 16:59:40,744 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TimeStamp: '201604051659405565' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,747 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Nome: 'Daniel Irf' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,750 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RG: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,752 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPF: '55234237265' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,755 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CarteiraEstudante: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,757 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Sexo: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,760 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefone: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,762 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Telefone: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,765 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,767 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,770 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDCelular: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,772 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Celular: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,775 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DataNascimento: '' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-05 16:59:40,777 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Email: 'ir.dan.6@zoho.com' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,780 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RecebeEmail: 'F' (Type = AnsiStringFixedLength, Size = 8000)
+
+2016-04-05 16:59:40,783 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,786 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,788 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,791 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,794 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,796 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CEPCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,799 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EnderecoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,802 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NumeroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,804 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CidadeCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,807 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- EstadoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,810 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ClienteIndicacaoID: 'null' (Type = Int32)
+
+2016-04-05 16:59:40,813 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Obs: 'null' (Type = String, Size = 1073741823)
+
+2016-04-05 16:59:40,816 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,818 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,821 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ComplementoCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,825 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- BairroCliente: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,827 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Senha: '' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,830 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Ativo: 'T' (Type = StringFixedLength, Size = 4000)
+
+2016-04-05 16:59:40,833 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- StatusAtual: 'L' (Type = StringFixedLength, Size = 4000)
+
+2016-04-05 16:59:40,835 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- AtualizacaoDuplicidade: 'null' (Type = Int32)
+
+2016-04-05 16:59:40,839 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,841 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,844 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RGEntrega: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,846 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Pais: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,849 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CPFResponsavel: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,851 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- ContatoTipoID: 'null' (Type = Int32)
+
+2016-04-05 16:59:40,855 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- CNPJ: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,859 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- NomeFantasia: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,861 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- RazaoSocial: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,864 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- InscricaoEstadual: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,867 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Profissao: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,869 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SituacaoProfissionalID: 'null' (Type = Int32)
+
+2016-04-05 16:59:40,872 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- DDDTelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,874 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- TelefoneComercial2: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,877 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- LoginOSESP: 'null' (Type = String, Size = 4000)
+
+2016-04-05 16:59:40,879 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- SiteID: '1' (Type = Int32)
+
+2016-04-05 16:59:40,882 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Executing at 05/04/2016 16:59:40 -03:00
+
+2016-04-05 16:59:42,410 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+-- Completed in 1523 ms with result: SqlDataReader
+
+2016-04-05 16:59:42,627 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][37][dbIngresso]	SQL dbIngresso
+Closed connection at 05/04/2016 16:59:42 -03:00
+
+2016-04-05 16:59:43,524 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Opened connection at 05/04/2016 16:59:43 -03:00
+]	SQL dbSite
+2016-04-05 16:59:43,654 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Started transaction at 05/04/2016 16:59:43 -03:00
+]	SQL dbSite
+2016-04-05 16:59:43,669 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][INSERT [dbo].[Login]([ClienteID], [CPF], [Senha], [Email], [DataCadastro], [UltimoAcesso], [Ativo], [StatusAtual], [FaceBookUserID], [FaceBookUserToken], [FaceBookUserInfos], [SiteID], [SyncStatus], [SyncDate], [BiletoUuid], [AccountKitId])
+VALUES (@0, @1, NULL, @2, @3, @4, @5, @6, @7, @8, NULL, @9, @10, @11, @12, NULL)
+SELECT [ID]
+FROM [dbo].[Login]
+WHERE @@ROWCOUNT > 0 AND [ID] = scope_identity()]	SQL dbSite
+2016-04-05 16:59:43,671 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 16:59:43,674 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @0: '4183980' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:59:43,677 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @1: '55234237265' (Type = String, Size = 30)
+]	SQL dbSite
+2016-04-05 16:59:43,679 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @2: 'ir.dan.6@zoho.com' (Type = String, Size = 200)
+]	SQL dbSite
+2016-04-05 16:59:43,683 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @3: '20160405165938' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 16:59:43,686 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @4: '20160405165938' (Type = String, Size = 14)
+]	SQL dbSite
+2016-04-05 16:59:43,689 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @5: 'T' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 16:59:43,692 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @6: 'L' (Type = StringFixedLength, Size = 1)
+]	SQL dbSite
+2016-04-05 16:59:43,695 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @7: '115271712207102' (Type = String, Size = 100)
+]	SQL dbSite
+2016-04-05 16:59:43,699 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @8: 'EAAVdwO2oOLwBABIUG0OGX2pkPDSqfhllqpB35AhVDh8n3HoWWSUevzjtXCwcaxurl5NFfTxSYKLZAUxvTRuuVZA3QtO678akBJZCPMNz9OMIPzvIrQU9GZCZCVZAdZBsqMo5BF6CrxdDqZAesKiGwysrZBcK4rJRZBq4hP4LYDfoZCteFlJHcRWgX2P' (Type = String, Size = 300)
+]	SQL dbSite
+2016-04-05 16:59:43,701 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @9: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:59:43,704 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @10: '1' (Type = Int32)
+]	SQL dbSite
+2016-04-05 16:59:43,707 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @11: '05/04/2016 16:59:38' (Type = DateTime2)
+]	SQL dbSite
+2016-04-05 16:59:43,710 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- @12: '5bc587f1-22b3-4ef1-800a-ed8bd038f0d3' (Type = String, Size = 255)
+]	SQL dbSite
+2016-04-05 16:59:43,713 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Executing at 05/04/2016 16:59:43 -03:00
+]	SQL dbSite
+2016-04-05 16:59:44,049 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][-- Failed in 332 ms with error: Cannot insert the value NULL into column 'Senha', table 'SiteIRHomolog.dbo.Login'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+]	SQL dbSite
+2016-04-05 16:59:44,052 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][
+]	SQL dbSite
+2016-04-05 16:59:44,226 [14] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\ContextoConexao.cs][67][Closed connection at 05/04/2016 16:59:44 -03:00
+]	SQL dbSite
+2016-04-05 16:59:44,396 [14] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'SiteIRHomolog.dbo.Login'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   em System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   em System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   em System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   em System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   em System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   em System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   em System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   em System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   em System.Data.Entity.DbContext.SaveChanges()
+   em IRCore.DataAccess.Model.DbContextExtension.Save(DbContext db, Boolean withException) na c:\Git\Code\IRCore.DataAccess.ADO\Extensions\DbContextExtension.cs:linha 112
+   em IRCore.DataAccess.Model.DbContextExtension.Save[T](DbContext db, T obj, Boolean updateDataBase, Boolean withException, String[] pkNames) na c:\Git\Code\IRCore.DataAccess.ADO\Extensions\DbContextExtension.cs:linha 101
+   em IRCore.DataAccess.ADO.Estrutura.MasterADO`1.Salvar[T](T obj, Boolean updateDataBase, Boolean withException, String[] pkNames) na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADO.cs:linha 241
+   em IRCore.BusinessObject.ClienteBO.Salvar(Login login, Int32 usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 734
+   em IRCore.BusinessObject.ClienteBO.Cadastrar(Login login, Int32 usuarioID) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 178
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1429
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 390
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) System.Data.Entity.Infrastructure.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.Entity.Core.UpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'SiteIRHomolog.dbo.Login'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.<Reader>b__c(DbCommand t, DbCommandInterceptionContext`1 c)
+   em System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext,TResult](TTarget target, Func`3 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   em System.Data.Entity.Infrastructure.Interception.DbCommandDispatcher.Reader(DbCommand command, DbCommandInterceptionContext interceptionContext)
+   em System.Data.Entity.Internal.InterceptableDbCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.ExecuteReader(CommandBehavior behavior)
+   em System.Data.Entity.Core.Mapping.Update.Internal.DynamicUpdateCommand.Execute(Dictionary`2 identifierValues, List`1 generatedValues)
+   em System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Data.Entity.Core.Mapping.Update.Internal.UpdateTranslator.Update()
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.<Update>b__2(UpdateTranslator ut)
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update[T](T noChangesResult, Func`2 updateFunction)
+   em System.Data.Entity.Core.EntityClient.Internal.EntityAdapter.Update()
+   em System.Data.Entity.Core.Objects.ObjectContext.<SaveChangesToStore>b__35()
+   em System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChangesToStore(SaveOptions options, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction)
+   em System.Data.Entity.Core.Objects.ObjectContext.<>c__DisplayClass2a.<SaveChangesInternal>b__27()
+   em System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChangesInternal(SaveOptions options, Boolean executeInExistingTransaction)
+   em System.Data.Entity.Core.Objects.ObjectContext.SaveChanges(SaveOptions options)
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Data.Entity.Internal.InternalContext.SaveChanges()
+   em System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   em System.Data.Entity.DbContext.SaveChanges()
+   em IRCore.DataAccess.Model.DbContextExtension.Save(DbContext db, Boolean withException) na c:\Git\Code\IRCore.DataAccess.ADO\Extensions\DbContextExtension.cs:linha 112
+   em IRCore.DataAccess.Model.DbContextExtension.Save[T](DbContext db, T obj, Boolean updateDataBase, Boolean withException, String[] pkNames) na c:\Git\Code\IRCore.DataAccess.ADO\Extensions\DbContextExtension.cs:linha 101
+   em IRCore.DataAccess.ADO.Estrutura.MasterADO`1.Salvar[T](T obj, Boolean updateDataBase, Boolean withException, String[] pkNames) na c:\Git\Code\IRCore.DataAccess.ADO\Estrutura\MasterADO.cs:linha 241
+   em IRCore.BusinessObject.ClienteBO.Salvar(Login login, Int32 usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 734
+   em IRCore.BusinessObject.ClienteBO.Cadastrar(Login login, Int32 usuarioID) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 178
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignUp(Login loginInfo, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1429
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 390
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-05 16:59:48,791 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 16:59:49,962 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 16:59:49,964 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 16:59:50,495 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 16:59:50,498 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 16:59:50,530 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 16:59:50,780 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 16:59:50,783 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 16:59:53,671 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1440][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.ERROR## EMAIL: 'ir.dan.6@zoho.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-05 17:01:06,958 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 17:01:07,382 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 17:01:07,385 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 17:01:07,762 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 17:01:07,765 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 17:01:07,955 [14] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 17:01:08,391 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 17:01:08,394 [14] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 17:01:09,695 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1440][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.ERROR## EMAIL: 'ir.dan.6@zoho.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-05 17:01:28,604 [13] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][58][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-05 17:01:45,393 [13] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][163][CarregarCliente]	##CarregarCliente## SESSION ac2e1a70-9d0f-4413-9a71-c72d4c5c678b
+2016-04-05 17:01:45,396 [13] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][833][Consultar]	##ClienteBO.Consultar## CLIENTE 4183978
+2016-04-05 17:01:45,642 [13] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][853][Consultar]	##ClienteBO.Consultar.SUCCESS## CLIENTE 4183978 LOGIN_CPF 13582154564, LOGIN_EMAIL ir.dan.5@zoho.com
+2016-04-05 17:01:45,645 [13] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1051][CarregarEnderecos]	##ClienteBO.CarregarEnderecos## CLIENTE 4183978
+2016-04-05 17:01:45,708 [13] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1058][CarregarEnderecos]	##ClienteBO.CarregarEnderecos.SUCCESS## CLIENTE 4183978, END_COUNT 0
+2016-04-05 17:01:53,668 [13] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 17:01:53,671 [13] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 17:01:54,699 [13] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1440][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.ERROR## EMAIL: 'ir.dan.6@zoho.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-05 17:02:16,866 [13] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncUsername não encontrada no Web.Config
+2016-04-05 17:02:16,870 [13] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração SyncPassword não encontrada no Web.Config
+2016-04-05 17:02:27,446 [13] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1440][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.ERROR## EMAIL: 'ir.dan.6@zoho.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'

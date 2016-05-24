@@ -1,0 +1,37 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "FirstItemOnPage": 0,
+    "HasNextPage": true,
+    "HasPreviousPage": false,
+    "IsFirstPage": true,
+    "IsLastPage": false,
+    "LastItemOnPage": 0,
+    "PageCount": 43,
+    "PageNumber": 1,
+    "PageSize": 1,
+    "TotalItemCount": 43,
+    "Itens": [
+      {
+        "ID": 14096348,
+        "SenhaCancelamento": "3614096348",
+        "SenhaCompra": "4514096346",
+        "DataCancelamento": "2015-03-26T18:36:03",
+        "DataCompra": "2015-03-26T17:29:08",
+        "CanalID": 885,
+        "CanalNome": "PIR - PDV SP Sala São Paulo",
+        "LojaID": 1411,
+        "LojaNome": "02 SSP PDV",
+        "ValorCancelamento": 0.01,
+        "ValorCompra": 6.06,
+        "StatusCancelamento": "A",
+        "Ingressos": 1,
+        "ValeIngressos": 0,
+        "TaxaConveniencia": false,
+        "TaxaEntrega": false,
+        "SeguroMondial": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,260 @@
+2016-05-11 12:56:28,566 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 12:56:41,373 [8] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][149][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Must declare the scalar variable "@canalId".
+Incorrect syntax near the keyword 'IS'.
+Incorrect syntax near ')'.
+Incorrect syntax near 'e'., TEMPO DECORRIDO 00:00:00.9179961
+System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@canalId".
+Incorrect syntax near the keyword 'IS'.
+Incorrect syntax near ')'.
+Incorrect syntax near 'e'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1151
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1257
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+ClientConnectionId:7ed92fee-a708-48b2-a54f-d19642faa161
+Error Number:137,State:2,Class:15
+2016-05-11 12:56:42,809 [8] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][151][Get]	System.Data.SqlClient.SqlException (0x80131904): Must declare the scalar variable "@canalId".
+Incorrect syntax near the keyword 'IS'.
+Incorrect syntax near ')'.
+Incorrect syntax near 'e'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1151
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1257
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+ClientConnectionId:7ed92fee-a708-48b2-a54f-d19642faa161
+Error Number:137,State:2,Class:15
+2016-05-11 13:12:26,615 [25] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 13:12:31,144 [14] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][149][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Invalid object name 'tEvento'., TEMPO DECORRIDO 00:00:02.9945012
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'tEvento'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+ClientConnectionId:035b1d8f-8a9c-419f-a040-97665a01b7b9
+Error Number:208,State:1,Class:16
+2016-05-11 13:12:31,223 [14] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][151][Get]	System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'tEvento'.
+   em System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   em System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   em System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   em System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   em System.Data.SqlClient.SqlDataReader.get_MetaData()
+   em System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   em System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   em System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   em System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1812
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+ClientConnectionId:035b1d8f-8a9c-419f-a040-97665a01b7b9
+Error Number:208,State:1,Class:16
+2016-05-11 14:23:49,158 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 14:23:56,947 [7] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][161][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:04.5096993, MSG Nenhum evento encontrado
+2016-05-11 14:24:33,461 [11] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][149][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Error parsing column 6 (RetiradaBilheteria=T - String), TEMPO DECORRIDO 00:00:03.2326906
+System.Data.DataException: Error parsing column 6 (RetiradaBilheteria=T - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserializea990793e-a3d2-47e2-8801-0b9c88a2e829(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserializea990793e-a3d2-47e2-8801-0b9c88a2e829(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3c(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1942
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+2016-05-11 14:24:33,578 [11] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][151][Get]	System.Data.DataException: Error parsing column 6 (RetiradaBilheteria=T - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserializea990793e-a3d2-47e2-8801-0b9c88a2e829(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserializea990793e-a3d2-47e2-8801-0b9c88a2e829(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3c(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1942
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+2016-05-11 14:42:17,812 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 14:42:23,717 [34] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][149][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Error parsing column 12 (ExibeQuantidade=F - String), TEMPO DECORRIDO 00:00:02.7997213
+System.Data.DataException: Error parsing column 12 (ExibeQuantidade=F - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialize5704d421-a9b7-4496-aec2-5c091acc1140(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialize5704d421-a9b7-4496-aec2-5c091acc1140(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3c(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1942
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+2016-05-11 14:42:23,811 [34] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][151][Get]	System.Data.DataException: Error parsing column 12 (ExibeQuantidade=F - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialize5704d421-a9b7-4496-aec2-5c091acc1140(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialize5704d421-a9b7-4496-aec2-5c091acc1140(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3c(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1942
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+2016-05-11 14:46:38,601 [43] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 14:46:42,539 [25] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][149][Get]	##GET.Eventos.eventos.EXCEPTION## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, MSG Error parsing column 14 (PermiteVendaPacote=F - String), TEMPO DECORRIDO 00:00:02.5158860
+System.Data.DataException: Error parsing column 14 (PermiteVendaPacote=F - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialize73021160-aed3-4209-be30-db4a685d9338(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialize73021160-aed3-4209-be30-db4a685d9338(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3c(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1942
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+2016-05-11 14:46:42,565 [25] ERROR IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][151][Get]	System.Data.DataException: Error parsing column 14 (PermiteVendaPacote=F - String) ---> System.FormatException: Cadeia de caracteres não foi reconhecida como Boolean válido.
+   em System.Boolean.Parse(String value)
+   em System.String.System.IConvertible.ToBoolean(IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   em System.Convert.ChangeType(Object value, Type conversionType)
+   em Deserialize73021160-aed3-4209-be30-db4a685d9338(IDataReader )
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 4045
+   em Deserialize73021160-aed3-4209-be30-db4a685d9338(IDataReader )
+   em Dapper.SqlMapper.<>c__DisplayClass46`8.<GenerateMapper>b__3c(IDataReader r) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1942
+   em Dapper.SqlMapper.<MultiMapImpl>d__20`8.MoveNext() na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1833
+   em System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   em System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   em Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1793
+   em Dapper.SqlMapper.Query[TFirst,TSecond,TThird,TFourth,TReturn](IDbConnection cnn, String sql, Func`5 map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) na d:\Dev\dapper-dot-net\Dapper NET40\SqlMapper.cs:linha 1681
+   em IRCore.DataAccess.ADO.EventoADO.ListarQueryPaged(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1152
+   em IRCore.DataAccess.ADO.EventoADO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Int32 quantidadeDias, List`1 diasSemana, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.DataAccess.ADO\EventoADO.cs:linha 1259
+   em IRCore.BusinessObject.EventoBO.Listar(Int32 pageNumber, Int32 pageSize, String busca, Int32 localID, String estado, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 tipoPeriodo, enumTipoDias tipoDias, Nullable`1 latitude, Nullable`1 longitude, Double distancia, enumEventoOrdem ordem) na c:\Git\Code\IRCore.BusinessObject\EventoBO.cs:linha 246
+   em IRAPI.Controllers.EventoController.Get(String busca, Int32 localid, String uf, String cidade, Int32 tipoID, Int32 subtipoID, Nullable`1 latitude, Nullable`1 longitude, Double distancia, Int32 pg, Int32 qtdpg, enumEventoOrdem ordem) na c:\Git\Code\IRAPI\Controllers\EventoController.cs:linha 134
+2016-05-11 14:48:00,750 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 14:48:06,115 [38] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:03.4095087, MSG OK
+2016-05-11 14:48:06,234 [38] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 14:49:15,836 [42] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:03.3396482, MSG OK
+2016-05-11 14:49:15,836 [42] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 14:50:15,313 [42] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:03.5181506, MSG OK
+2016-05-11 14:50:15,315 [42] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:12:23,305 [1] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 15:12:29,022 [9] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:02.8761293, MSG OK
+2016-05-11 15:12:29,151 [9] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:16:20,155 [14] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 15:16:23,828 [5] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:02.8704396, MSG OK
+2016-05-11 15:16:23,925 [5] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:18:07,934 [12] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:02.9491059, MSG OK
+2016-05-11 15:18:07,934 [12] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:31:38,581 [14] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 15:31:41,567 [20] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:02.0060505, MSG OK
+2016-05-11 15:31:41,683 [20] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:46:50,341 [33] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 15:47:00,689 [28] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:07.3730715, MSG OK
+2016-05-11 15:47:00,789 [28] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:53:48,971 [18] DEBUG IRAPI [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-05-11 15:53:51,193 [25] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:01.1400777, MSG OK
+2016-05-11 15:53:51,300 [25] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}
+2016-05-11 15:55:51,291 [24] INFO  IRAPI [c:\Git\Code\IRAPI\Controllers\EventoController.cs][170][Get]	##GET.Eventos.eventos## SESSION ba4e8e86-44f6-44c6-a834-14060ed24bd6, TEMPO DECORRIDO 00:00:00.3507530, MSG OK
+2016-05-11 15:55:51,293 [24] DEBUG IRAPI [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][57][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"ba4e8e86-44f6-44c6-a834-14060ed24bd6","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":null,"biletoUuid":null,"Guid":null}

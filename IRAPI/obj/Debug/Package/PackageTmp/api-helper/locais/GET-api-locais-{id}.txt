@@ -1,0 +1,28 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "ID": 10818,
+    "IR_LocalID": 6,
+    "Nome": "HSBC Brasil",
+    "Cidade": "São Paulo",
+    "Estado": "SP",
+    "Obs": "<img src=\"mapas/mapa_esquematicohsbc.jpg\",border=\"0\"><br /><b><i>Os setores do Mapa de Assentos são meramente ilustrativos e sujeitos a alterações de  acordo com a casa e a produção do espetáculo.</i></b><br /> <br />A divulgação do mapa de assentos tem o intuito de mostrar aos clientes a posição dos lugares adquiridos em relação ao palco, não representa necessariamente o posicionamento da mesa, dentro de um determinado setor.<br /><br />HSBC BRASIL<br />Rua Bragança Paulista, 1281 <br />Chácara Santo Antônio / São Paulo - SP<br /><br />HORÁRIO DE FUNCIONAMENTO DA BILHETERIA:<br />De segunda à sábado das 12h às 22h<br />Domingos e feriados das 12h às 20h<br /><br />Formas de pagamento aceitas na bilheteria: Cartões de Débito e Crédito ( Visa, Mastercard, Dinners, American Express e Rede Shop)<br /><br />Possui acesso específico para cadeirantes.<br />Ar-condicionado.<br /><br />Estacionamento com manobrista ( Ticket pode ser comprado antecipadamente, nos canais da Ingresso Rápido)<br /><br />MEIA-ENTRADA - Válida para Estudantes, Professores da Rede Pública Estadual e Idosos.<br />Esclarecemos que a venda de meia-entrada é direta, pessoal e intransferível e está condicionada ao comparecimento do beneficiário aos pontos de venda ou a bilheteria, munido de documento original que comprove condição prevista em lei.<br />Estudantes - carterinha, boleto de pagamento recente e identidade;<br />Idosos - Identidade que comprove ser maior de 60 anos;<br />Professor da Rede Pública Estadual- Crachá ou contra cheque e identidade.<br />É obrigatório a apresentação dos documentos também na entrada do espetáculo.<br /><br />Como chegar: Vindo da Marginal Pinheiros sentido bairro fazer o retorno na ponte João Dias, novamente na Marginal sentido centro seguir em frente e virar à direita após a Giroflex.<br /><br /><input type=\"button\" value=\"Como Chegar\" onclick=\"javascript:window.open('mapas/HSBC_local.jpg','teste','toolbar=0,location=0,directories=0,status=1,menubar=0,scrollbars=1,resizable=1,screenX=0,screenY=0,left=0,top=0,width=348,height=343');void(0);\">",
+    "Endereco": "Rua Braganca Paulista, 1281 - Chácara Sto Antônio",
+    "CEP": "04727002",
+    "DDDTelefone": "11",
+    "Telefone": "40031212",
+    "ComoChegar": "Vindo da Marginal Pinheiros sentido bairro fazer o retorno na ponte João Dias, novamente na Marginal sentido centro seguir em frente e virar à direita após a Giroflex.<br />",
+    "TaxaMaximaEmpresa": 0.00,
+    "BannersPadraoSite": true,
+    "EmpresaID": 9,
+    "Pais": "Brasil",
+    "Imagem": "lI000006.jpg",
+    "CodigoPraca": "",
+    "Latitude": "-23,6384494",
+    "Longitude": "-46,7197368",
+    "Evento": null
+  }
+}
+
+

@@ -1,0 +1,30 @@
+﻿{
+  "Sucesso": true,
+  "Mensagem": "OK",
+  "Retorno": {
+    "LimiteTotalItensCarrinho": 8,
+    "EntregaComEndereco": false,
+    "EntregaControleID": 0,
+    "ClienteEnderecoID": 0,
+    "PDVID": 0,
+    "CarrinhoItens": [],
+    "SessionID": "2829effb-8bb5-4559-bcca-eb1e4f8cf65c",
+    "ClienteID": 0,
+    "Total": {
+      "ValorTotal": 0,
+      "ValorDesconto": 0,
+      "ValorTaxaEntrega": 0,
+      "ValorTaxaConveniencia": 0,
+      "ValorIngressos": 0
+    },
+    "ValorTotalSeguro": 0,
+    "StatusCotaPendente": {
+      "Nenhuma": true,
+      "Nominal": false,
+      "Bin": false,
+      "NaoBin": false,
+      "Promocional": false,
+      "Outras": false
+    }
+  }
+}

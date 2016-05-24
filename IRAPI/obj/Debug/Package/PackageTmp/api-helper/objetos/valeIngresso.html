@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0047)http://ir-hlg.homologaprojeto.com.br/irHelp -->
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>IR API - Exemplo Vale Ingresso</title>
+    <link href="../assets/default.css" rel="stylesheet">
+    <script src="../assets/modernizr.js"></script>
+</head>
+
+<body cz-shortcut-listen="true">
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="../index.html">Voltar para Índice da API</a>
+                <a class="navbar-brand" href="../objeto.html">Objetos</a>
+                <a class="navbar-brand" href="../enumerador.html">Enumeradores</a>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        <link type="text/css" href="../assets/HelpPage.css" rel="stylesheet">
+        <header class="help-page">
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <h1>Vale Ingresso</h1>
+                    <h3>Objeto que contém um vale ingresso</h3>
+                </div>
+            </div>
+        </header>
+        <div id="body" class="help-page">
+            <section class="featured">
+                <div class="content-wrapper">
+                    <p>
+                        
+                    </p>
+                </div>
+            </section>
+            <br />
+            <section class="content-wrapper main-content clear-fix">
+                <table class="help-page-table">
+                    <thead>
+                        <tr><th>Propriedade</th><th>Descrição</th><th>Tipo</th><th>Informação Adicional</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="parameter-name">ID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                integer
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValeIngressoTipoID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do tipo do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CodigoTroca</td>
+                            <td class="parameter-documentation">
+                                <p>Codigo de troca do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">DataCriacao</td>
+                            <td class="parameter-documentation">
+                                <p>Data de criação do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">DataExpiracao</td>
+                            <td class="parameter-documentation">
+                                <p>Data que expira o vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">Status</td>
+                            <td class="parameter-documentation">
+                                <p>Status do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">VendaBilheteriaID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da venda Bilheteria</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ClienteID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do cliente</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">SessionID</td>
+                            <td class="parameter-documentation">
+                                <p>SessionID do cliente</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">TimeStampReserva</td>
+                            <td class="parameter-documentation">
+                                <p>Tempo pra expirar a reserva de um vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">LojaID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador da Loja</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">UsuarioID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Usuario</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CanalID</td>
+                            <td class="parameter-documentation">
+                                <p>Identificador do Canal</p>
+                            </td>
+                            <td class="parameter-type">
+                                Nullable<<span>integer</span>>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ClienteNome</td>
+                            <td class="parameter-documentation">
+                                <p>Nome do Cliente</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">CodigoBarra</td>
+                            <td class="parameter-documentation">
+                                <p>Código de Barras do Vale Ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                string
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="parameter-name">ValeIngressoTipo</td>
+                            <td class="parameter-documentation">
+                                <p>Objeto contendo o tipo do vale ingresso</p>
+                            </td>
+                            <td class="parameter-type">
+                                <a href="#">tValeIngressoTipo</a>
+                            </td>
+                            <td class="parameter-annotations">
+                                <p></p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <hr>
+        <footer>
+            <p>© 2014 - Ingresso Rápido</p>
+        </footer>
+    </div>
+
+    <script src="./assets/jquery"></script>
+
+    <script src="./assets/bootstrap"></script>
+
+</body>
+</html>

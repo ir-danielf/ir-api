@@ -1,0 +1,3 @@
+2016-04-06 18:14:56,539 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-06 18:17:19,086 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][56][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA
+2016-04-06 18:17:29,478 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][56][ExecuteAsync]	##Master.ExecuteAsync## SESSION NA

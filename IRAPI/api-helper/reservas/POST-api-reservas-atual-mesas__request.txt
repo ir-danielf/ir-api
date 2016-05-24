@@ -1,0 +1,20 @@
+﻿{
+    limparReservaAnterior: true,
+    mesas: [
+     { 
+      "apresentacaoID": 193823,
+      "lugarID": 2638092,
+      "precoId": 2725276
+     },
+     { 
+      "apresentacaoID": 193823,
+      "lugarID": 2638093,
+      "precoId": 2725276
+     },
+     { 
+      "apresentacaoID": 193823,
+      "lugarID": 2638094,
+      "precoId": 2725276
+     }     
+    ] 
+}

@@ -1,0 +1,357 @@
+2016-04-26 10:56:45,823 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 10:56:50,643 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, USER brendagomesalves@teleworm.us
+2016-04-26 10:56:50,643 [6] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 10:56:52,187 [6] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1259][BiletoSignIn]	##ClienteBO.BiletoSignIn.SUCCESS## EMAIL: 'brendagomesalves@teleworm.us' STATUS_CODE: 'OK'
+2016-04-26 10:56:52,187 [6] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][981][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME brendagomesalves@teleworm.us
+2016-04-26 10:56:52,483 [6] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1285][BiletoSignIn]	##ClienteBO.BiletoSignIn.AtualizarLoginNaBileto## USER: brendagomesalves@teleworm.us, FLEGADO: True
+2016-04-26 10:56:52,514 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2799][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159589
+2016-04-26 10:56:52,586 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][123][PostAuth]	##Post.AuthCliente.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 10:56:52,626 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 10:56:52,629 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 10:56:52,643 [6] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 10:56:52,675 [6] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:14:30,297 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][743][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL andrew.silva@movile.com, CPF 30826599265
+2016-04-26 11:14:30,313 [10] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 11:14:31,384 [10] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1429][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'andrew.silva@movile.com' STATUS_CODE: 'ServiceUnavailable', MSG: '', ERRORS: ''
+2016-04-26 11:14:31,399 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][785][Post]	##Post.CadastroCliente.ERROR## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Sucesso = false
+2016-04-26 11:25:16,481 [19] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][743][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL andrew.silva@movile.com, CPF 30826599265
+2016-04-26 11:25:16,483 [19] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][17][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 11:25:17,786 [19] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1429][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'andrew.silva@movile.com' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-26 11:25:17,803 [19] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][785][Post]	##Post.CadastroCliente.ERROR## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Sucesso = false
+2016-04-26 11:53:18,989 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 11:53:23,525 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][743][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL crutchfield0101@zoho.com, CPF 542.522.175-47
+2016-04-26 11:53:23,529 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 11:53:23,595 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração BILETO_ENABLED não encontrada no Web.Config
+2016-04-26 11:53:23,597 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][772][Post]	##Post.CadastroCliente.BiletoInativo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL crutchfield0101@zoho.com, MSG`: Bileto inativo, cadastrando local
+2016-04-26 11:53:23,604 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-26 11:53:23,715 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][963][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-26 11:53:23,782 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][162][Cadastrar]	##ClienteBO.Cadastrar## LOGINID 0, CLIENTEID 0, EMAIL crutchfield0101@zoho.com, CPF 54252217547, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-26 11:53:23,786 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][784][Salvar]	##ClienteBO.Salvar## LOGINID 0, CLIENTEID 0, EMAIL crutchfield0101@zoho.com, CPF 54252217547, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-26 11:53:27,686 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][791][Salvar]	##ClienteBO.Salvar.SUCCESS## LOGINID 1790878, CLIENTEID 5159591, EMAIL crutchfield0101@zoho.com, CPF 54252217547, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-26 11:53:27,689 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][188][Cadastrar]	##ClienteBO.Cadastrar.SUCCESS## LOGINID 1790878, CLIENTEID 5159591, EMAIL crutchfield0101@zoho.com, CPF 54252217547, SENHA ZzeVS4ZGvTbH+NKgl03evw==, FACEBOOKID , ACCOUNTKITID 
+2016-04-26 11:53:27,693 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790878, CLIENTEID 5159591, EMAIL crutchfield0101@zoho.com, CPF 54252217547, SALVARULTIMOACESSO False
+2016-04-26 11:53:27,695 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790878, CLIENTEID 5159591, EMAIL crutchfield0101@zoho.com, CPF 54252217547
+2016-04-26 11:53:27,822 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2808][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5045579
+2016-04-26 11:53:27,892 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][807][Post]	##Post.CadastroCliente.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 11:53:27,954 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159591,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:53:27,957 [7] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159591,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:53:27,960 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159591,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:53:27,995 [7] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159591,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:54:10,729 [5] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][743][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL crutchfield0101@zoho.com, CPF 542.522.175-47
+2016-04-26 11:54:10,732 [5] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 11:54:10,802 [5] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][767][Post]	##Post.CadastroCliente.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL crutchfield0101@zoho.com, MSG`: Cadastrando no Bileto
+2016-04-26 11:54:12,420 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1411][BiletoSignUp]	##ClienteBO.BiletoSignUp.SUCCESS## EMAIL: 'crutchfield0101@zoho.com' 
+2016-04-26 11:54:12,491 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-26 11:54:12,520 [5] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][135][Cadastrar]	##ClienteBO.Cadastrar.ERROR## CLIENTEID 0, EMAIL crutchfield0101@zoho.com, CPF 54252217547, MSG Já existe um usuário cadastrado com este e-mail. Por favor clique em esqueci minha senha ou realize o login.
+2016-04-26 11:54:12,556 [5] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2808][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159591
+2016-04-26 11:54:12,603 [5] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][807][Post]	##Post.CadastroCliente.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 11:54:12,607 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:54:12,610 [5] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:54:12,613 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 11:54:12,647 [5] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":0,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:28:06,376 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 12:31:56,217 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][483][PostFacebookCadastroAuth]	##Post.CadastroFacebook.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL libby0101@zoho.com, MSG: Cadastrando no Bileto
+2016-04-26 12:31:57,765 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1459][BiletoFacebookSignUp]	##ClienteBO.BiletoFacebookSignUp.SUCCESS## EMAIL: 'libby0101@zoho.com' 
+2016-04-26 12:31:58,739 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-26 12:31:58,769 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][963][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-26 12:31:58,796 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][162][Cadastrar]	##ClienteBO.Cadastrar## LOGINID 0, CLIENTEID 0, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:31:58,800 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][784][Salvar]	##ClienteBO.Salvar## LOGINID 0, CLIENTEID 0, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:32:02,636 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][791][Salvar]	##ClienteBO.Salvar.SUCCESS## LOGINID 1790879, CLIENTEID 5159592, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:32:02,638 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][188][Cadastrar]	##ClienteBO.Cadastrar.SUCCESS## LOGINID 1790879, CLIENTEID 5159592, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:32:02,642 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790879, CLIENTEID 5159592, EMAIL libby0101@zoho.com, CPF 23626999190, SALVARULTIMOACESSO False
+2016-04-26 12:32:02,645 [8] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790879, CLIENTEID 5159592, EMAIL libby0101@zoho.com, CPF 23626999190
+2016-04-26 12:32:02,651 [8] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2828][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 0
+2016-04-26 12:32:02,746 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159592,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:32:02,750 [8] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159592,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:32:02,767 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159592,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:32:02,802 [8] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159592,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:33:33,414 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-26 12:33:33,445 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][963][ConsultarCPF]	##ClienteBO.ConsultarCPF##
+2016-04-26 12:33:33,476 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][162][Cadastrar]	##ClienteBO.Cadastrar## LOGINID 0, CLIENTEID 0, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:33:33,478 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][784][Salvar]	##ClienteBO.Salvar## LOGINID 0, CLIENTEID 0, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:33:33,774 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][791][Salvar]	##ClienteBO.Salvar.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:33:33,777 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][188][Cadastrar]	##ClienteBO.Cadastrar.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SENHA , FACEBOOKID 102474950165394, ACCOUNTKITID 
+2016-04-26 12:33:33,780 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SALVARULTIMOACESSO False
+2016-04-26 12:33:33,784 [9] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190
+2016-04-26 12:33:33,787 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][489][PostFacebookCadastroAuth]	##Post.CadastroFacebook.BiletoInativo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL libby0101@zoho.com, MSG: Bileto inativo, cadastrando local
+2016-04-26 12:33:33,790 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2828][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159592
+2016-04-26 12:33:33,876 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:33:33,879 [9] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:33:33,882 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 12:33:33,957 [9] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 14:47:33,871 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 14:47:42,264 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][245][PostFacebookAuth]	##Post.AuthFacebook## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, TOKEN CAAVdwO2oOLwBAPMoNAoD1YpNe9WcbmwD860ZCWFd0PtTngGAFTjUqy1IbxgSXxeUln8GxV25haPkWMIa1vU4yL8ZAgDgA9qaIlHJ5bNEeBi4vMMZAuXWdHkpIZCPIZBid9VjthwHXkc6BNLoUfMFFxpObO4StEZBisKNfPzJrom7CmBZAupUnOYsiPIBtCxZCt9wrqdwEnDrAwZDZD, CODE 
+2016-04-26 14:47:43,259 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][266][PostFacebookAuth]	##Post.AuthFacebook.ByPassBileto## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, FACEBOOKID , MSG: Bileto inativo, logando local.
+2016-04-26 14:47:49,062 [10] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SALVARULTIMOACESSO True
+2016-04-26 14:47:49,082 [10] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190
+2016-04-26 14:47:49,088 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2843][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159593
+2016-04-26 14:47:49,155 [10] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][282][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 14:47:49,203 [10] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 14:50:37,855 [14] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][245][PostFacebookAuth]	##Post.AuthFacebook## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, TOKEN CAAVdwO2oOLwBAPMoNAoD1YpNe9WcbmwD860ZCWFd0PtTngGAFTjUqy1IbxgSXxeUln8GxV25haPkWMIa1vU4yL8ZAgDgA9qaIlHJ5bNEeBi4vMMZAuXWdHkpIZCPIZBid9VjthwHXkc6BNLoUfMFFxpObO4StEZBisKNfPzJrom7CmBZAupUnOYsiPIBtCxZCt9wrqdwEnDrAwZDZD, CODE 
+2016-04-26 14:50:38,316 [14] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][261][PostFacebookAuth]	##Post.AuthFacebook.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, FACEBOOKID , MSG: Autenticando via facebook no Bileto.
+2016-04-26 14:50:41,547 [14] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '102474950165394' STATUS_CODE: 'OK'
+2016-04-26 14:50:41,900 [14] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.AtualizarLoginNaBileto## FACEBOOK_ID: 102474950165394, FLEGADO: True
+2016-04-26 14:50:41,904 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SALVARULTIMOACESSO False
+2016-04-26 14:50:41,906 [14] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190
+2016-04-26 14:50:41,911 [14] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2843][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159593
+2016-04-26 14:50:41,940 [14] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][282][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 14:50:41,943 [14] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 15:22:55,039 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 15:22:59,910 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][250][PostFacebookAuth]	##Post.AuthFacebook## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, TOKEN CAAVdwO2oOLwBAPMoNAoD1YpNe9WcbmwD860ZCWFd0PtTngGAFTjUqy1IbxgSXxeUln8GxV25haPkWMIa1vU4yL8ZAgDgA9qaIlHJ5bNEeBi4vMMZAuXWdHkpIZCPIZBid9VjthwHXkc6BNLoUfMFFxpObO4StEZBisKNfPzJrom7CmBZAupUnOYsiPIBtCxZCt9wrqdwEnDrAwZDZD, CODE 
+2016-04-26 15:23:00,666 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][266][PostFacebookAuth]	##Post.AuthFacebook.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, FACEBOOKID , MSG: Autenticando via facebook no Bileto.
+2016-04-26 15:23:02,756 [6] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.SUCCESS## EMAIL: '102474950165394' STATUS_CODE: 'OK'
+2016-04-26 15:23:06,418 [6] INFO  Site [][0][]	##ClienteBO.BiletoFacebookSignIn.AtualizarLoginNaBileto## FACEBOOK_ID: 102474950165394, FLEGADO: True
+2016-04-26 15:23:06,424 [6] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SALVARULTIMOACESSO False
+2016-04-26 15:23:06,428 [6] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190
+2016-04-26 15:23:06,470 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2863][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159593
+2016-04-26 15:23:06,512 [6] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][292][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 15:23:06,577 [6] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 15:24:52,215 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][250][PostFacebookAuth]	##Post.AuthFacebook## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, TOKEN CAAVdwO2oOLwBAPMoNAoD1YpNe9WcbmwD860ZCWFd0PtTngGAFTjUqy1IbxgSXxeUln8GxV25haPkWMIa1vU4yL8ZAgDgA9qaIlHJ5bNEeBi4vMMZAuXWdHkpIZCPIZBid9VjthwHXkc6BNLoUfMFFxpObO4StEZBisKNfPzJrom7CmBZAupUnOYsiPIBtCxZCt9wrqdwEnDrAwZDZD, CODE 
+2016-04-26 15:24:52,690 [9] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][266][PostFacebookAuth]	##Post.AuthFacebook.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, FACEBOOKID , MSG: Autenticando via facebook no Bileto.
+2016-04-26 15:25:13,922 [9] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.AggregateException: Um ou mais erros. ---> System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRCore.BusinessObject.ClienteBO.Post[T](HttpClient client, String requestUri, T value, Boolean biletoKey) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1217
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignIn(Object _facebookInfo, String _facebookToken) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1348
+   em IRAPI.Controllers.ClienteController.PostFacebookAuth(ClienteAuthFacebookRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 267
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) System.AggregateException: Um ou mais erros. ---> System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRCore.BusinessObject.ClienteBO.Post[T](HttpClient client, String requestUri, T value, Boolean biletoKey) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1217
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignIn(Object _facebookInfo, String _facebookToken) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1348
+   em IRAPI.Controllers.ClienteController.PostFacebookAuth(ClienteAuthFacebookRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 267
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+---> (Exceção Interna N° 0) System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---<---
+<---
+
+2016-04-26 15:29:57,631 [1] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 15:29:58,674 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][250][PostFacebookAuth]	##Post.AuthFacebook## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, TOKEN CAAVdwO2oOLwBAPMoNAoD1YpNe9WcbmwD860ZCWFd0PtTngGAFTjUqy1IbxgSXxeUln8GxV25haPkWMIa1vU4yL8ZAgDgA9qaIlHJ5bNEeBi4vMMZAuXWdHkpIZCPIZBid9VjthwHXkc6BNLoUfMFFxpObO4StEZBisKNfPzJrom7CmBZAupUnOYsiPIBtCxZCt9wrqdwEnDrAwZDZD, CODE 
+2016-04-26 15:29:59,311 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][266][PostFacebookAuth]	##Post.AuthFacebook.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, FACEBOOKID , MSG: Autenticando via facebook no Bileto.
+2016-04-26 15:30:20,470 [22] ERROR Site [][0][]	##ClienteBO.BiletoFacebookSignIn.ERROR## FACEBOOKID: 102474950165394, MSG: Bileto offline, ERROR: Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRCore.BusinessObject.ClienteBO.Post[T](HttpClient client, String requestUri, T value, Boolean biletoKey) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1217
+   em IRCore.BusinessObject.ClienteBO.BiletoFacebookSignIn(Object _facebookInfo, String _facebookToken) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1365
+---> (Exceção Interna N° 0) System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---<---
+
+2016-04-26 15:30:22,557 [22] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][261][VerificarLogin]	##ClienteBO.VerificaLogin## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190, SALVARULTIMOACESSO True
+2016-04-26 15:30:22,593 [22] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][294][VerificarLogin]	##ClienteBO.VerificaLogin.SUCCESS## LOGINID 1790880, CLIENTEID 5159593, EMAIL libby0101@zoho.com, CPF 23626999190
+2016-04-26 15:30:22,598 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2863][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159593
+2016-04-26 15:30:22,670 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][292][PostFacebookAuth]	##Post.AuthFacebook.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 15:30:22,710 [22] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5159593,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ6VVZaMTRNNzFTVTh3c1FCbVVKUkhRIiwiaWF0IjoxNDYxNjc5MDEyLCJleHAiOjE0NjE2Nzk2MTIsIm5iZiI6MTQ2MTY3ODk1MiwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.Gud2QRVPlOysXd4dqHZNzhlqBTIc-DdRfONyQle9048","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 15:33:16,061 [15] DEBUG Site [c:\Git\Code\IRAPI\App_Start\WebApiConfig.cs][25][Register]	##WebApiConfig.Register##
+2016-04-26 15:33:17,103 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][793][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL MatheusCavalcantiDias@inbound.plus, CPF 64637636400
+2016-04-26 15:33:17,110 [7] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 15:33:17,162 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][817][Post]	##Post.CadastroCliente.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL MatheusCavalcantiDias@inbound.plus, MSG`: Cadastrando no Bileto
+2016-04-26 15:33:38,265 [7] ERROR Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1459][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: MatheusCavalcantiDias@inbound.plus, MSG: Bileto offline, ERROR: Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRCore.BusinessObject.ClienteBO.Post[T](HttpClient client, String requestUri, T value, Boolean biletoKey) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1217
+   em IRCore.BusinessObject.ClienteBO.BiletoSignUp(Login _login, Int32 _usuarioId) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 1455
+---> (Exceção Interna N° 0) System.Net.Http.HttpRequestException: Ocorreu um erro ao enviar a solicitação. ---> System.Net.WebException: Impossível conectar-se ao servidor remoto ---> System.Net.Sockets.SocketException: Uma tentativa de conexão falhou porque o componente conectado não respondeu
+corretamente após um período de tempo ou a conexão estabelecida falhou
+porque o host conectado não respondeu 10.10.90.6:443
+   em System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   em System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Net.HttpWebRequest.EndGetRequestStream(IAsyncResult asyncResult, TransportContext& context)
+   em System.Net.Http.HttpClientHandler.GetRequestStreamCallback(IAsyncResult ar)
+   --- Fim do rastreamento de pilha de exceções internas ---<---
+
+2016-04-26 15:33:38,351 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][972][ConsultarEmail]	##ClienteBO.ConsultarEmail##
+2016-04-26 15:33:38,505 [7] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][135][Cadastrar]	##ClienteBO.Cadastrar.ERROR## CLIENTEID 0, EMAIL matheuscavalcantidias@inbound.plus, CPF 64637636400, MSG Já existe um usuário cadastrado com este e-mail. Por favor clique em esqueci minha senha ou realize o login.
+2016-04-26 15:33:38,515 [7] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][848][Post]	##Post.CadastroCliente.ERROR## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Sucesso = false
+2016-04-26 15:33:57,616 [17] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][793][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL MatheusCavalcantiDias@inbound.plus, CPF 64637636400
+2016-04-26 15:33:57,619 [17] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 15:33:57,656 [17] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][817][Post]	##Post.CadastroCliente.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL MatheusCavalcantiDias@inbound.plus, MSG`: Cadastrando no Bileto
+2016-04-26 15:33:58,967 [17] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1496][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'MatheusCavalcantiDias@inbound.plus' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-26 15:33:58,970 [17] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][848][Post]	##Post.CadastroCliente.ERROR## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Sucesso = false
+2016-04-26 15:34:05,503 [11] ERROR Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][334][FacebookGetUsuario]	Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: The session is invalid because the user logged out.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 330
+2016-04-26 15:34:05,668 [11] ERROR Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][96][ExecuteAsync]	##Master.ExecuteAsync.EXCEPTION## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Um ou mais erros.
+System.AggregateException: Um ou mais erros. ---> Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: The session is invalid because the user logged out.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 335
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 481
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
+   --- Fim do rastreamento de pilha de exceções internas ---
+   em System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   em System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   em System.Threading.Tasks.Task`1.get_Result()
+   em IRAPI.Controllers.MasterApiController.ExecuteAsync(HttpControllerContext controllerContext, CancellationToken cancellationToken) na c:\Git\Code\IRAPI\Controllers\MasterApiController.cs:linha 65
+---> (Exceção Interna N° 0) Facebook.FacebookOAuthException: (OAuthException - #190) Error validating access token: The session is invalid because the user logged out.
+   em Facebook.FacebookClient.ProcessResponse(HttpHelper httpHelper, String responseString, Type resultType, Boolean containsEtag, IList`1 batchEtags)
+   em Facebook.FacebookClient.Api(HttpMethod httpMethod, String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters, Type resultType)
+   em Facebook.FacebookClient.Get(String path, Object parameters)
+   em Facebook.FacebookClient.Get(String path)
+   em IRCore.BusinessObject.ClienteBO.FacebookGetUsuario(String access_token) na c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs:linha 335
+   em IRAPI.Controllers.ClienteController.PostFacebookCadastroAuth(ClienteAuthFacebookCadasrtoRequestModel facebookInfo) na c:\Git\Code\IRAPI\Controllers\ClienteController.cs:linha 481
+   em lambda_method(Closure , Object , Object[] )
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.<>c__DisplayClass10.<GetExecutor>b__9(Object instance, Object[] methodParameters)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ActionExecutor.Execute(Object instance, Object[] arguments)
+   em System.Web.Http.Controllers.ReflectedHttpActionDescriptor.ExecuteAsync(HttpControllerContext controllerContext, IDictionary`2 arguments, CancellationToken cancellationToken)
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ApiControllerActionInvoker.<InvokeActionAsyncCore>d__0.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.ActionFilterResult.<ExecuteAsync>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Filters.AuthorizationFilterAttribute.<ExecuteAuthorizationFilterAsyncCore>d__2.MoveNext()
+--- Fim do rastreamento de pilha do local anterior onde a exceção foi gerada ---
+   em System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   em System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   em System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()<---
+
+2016-04-26 15:35:35,520 [17] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][793][Post]	##Post.CadastroCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL MatheusCavalcantiDias@inbound.plus, CPF 64637636400
+2016-04-26 15:35:35,522 [17] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 15:35:35,627 [17] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][817][Post]	##Post.CadastroCliente.BiletoAtivo## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, EMAIL MatheusCavalcantiDias@inbound.plus, MSG`: Cadastrando no Bileto
+2016-04-26 15:35:36,668 [17] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1496][BiletoSignUp]	##ClienteBO.BiletoSignUp.ERROR## EMAIL: 'MatheusCavalcantiDias@inbound.plus' STATUS_CODE: 'BadRequest', MSG: '', ERRORS: 'DUPLICATED_CREDENTIAL'
+2016-04-26 15:35:36,671 [17] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][848][Post]	##Post.CadastroCliente.ERROR## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, MSG Sucesso = false
+2016-04-26 15:35:44,807 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][62][PostAuth]	##Post.AuthCliente## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, USER brendagomesalves@teleworm.us
+2016-04-26 15:35:44,810 [22] DEBUG Site [c:\Git\Code\IRCore.Util\ConfiguracaoAppUtil.cs][14][Get]	Configuração CaptchaObrigatorio não encontrada no Web.Config
+2016-04-26 15:35:45,935 [22] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1272][BiletoSignIn]	##ClienteBO.BiletoSignIn.SUCCESS## EMAIL: 'brendagomesalves@teleworm.us' STATUS_CODE: 'OK'
+2016-04-26 15:35:45,938 [22] DEBUG Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][981][ConsultarUsername]	##ClienteBO.ConsultarUserName## USERNAME brendagomesalves@teleworm.us
+2016-04-26 15:35:46,150 [22] INFO  Site [c:\Git\Code\IRCore.BusinessObject\ClienteBO.cs][1298][BiletoSignIn]	##ClienteBO.BiletoSignIn.AtualizarLoginNaBileto## USER: brendagomesalves@teleworm.us, FLEGADO: True
+2016-04-26 15:35:46,196 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][2863][SalvarEnderecoTemp]	##Salvar.EntregaTemporaria.Logado## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9, CLIENTE 5159593
+2016-04-26 15:35:46,241 [22] INFO  Site [c:\Git\Code\IRAPI\Controllers\ClienteController.cs][130][PostAuth]	##Post.AuthCliente.SUCCESS## SESSION 03c10383-76de-4db3-bfc8-afc858ce26d9
+2016-04-26 15:35:46,249 [22] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][71][ExecuteAsync]	##Master.ExecuteAsync## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ5bjVnd1N1OVZ2VFZ6d1FJLWM2LS13IiwiaWF0IjoxNDYxNjk1NzQ1LCJleHAiOjE0NjE2OTYzNDUsIm5iZiI6MTQ2MTY5NTY4NSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.THF8zDjPNDbJUK9nGlQp5fMJ_us5OnVz9dm_UNUGC3g","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 15:35:46,251 [22] DEBUG Site [c:\Git\Code\IRAPI\Controllers\MasterApiController.cs][75][ExecuteAsync]	##Master.ExecuteAsync.AtualizarSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ5bjVnd1N1OVZ2VFZ6d1FJLWM2LS13IiwiaWF0IjoxNDYxNjk1NzQ1LCJleHAiOjE0NjE2OTYzNDUsIm5iZiI6MTQ2MTY5NTY4NSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.THF8zDjPNDbJUK9nGlQp5fMJ_us5OnVz9dm_UNUGC3g","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 15:35:46,289 [22] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][203][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ5bjVnd1N1OVZ2VFZ6d1FJLWM2LS13IiwiaWF0IjoxNDYxNjk1NzQ1LCJleHAiOjE0NjE2OTYzNDUsIm5iZiI6MTQ2MTY5NTY4NSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.THF8zDjPNDbJUK9nGlQp5fMJ_us5OnVz9dm_UNUGC3g","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
+2016-04-26 15:35:46,324 [22] DEBUG Site [c:\Git\Code\IRCore.DataAccess.ADO\APIUsuarioADO.cs][226][AtualizarSessao]	##Master.ExecuteAsync.AtualizandoSessionData.SUCCESS## SESSION_DATA {"EntregaControleID":0,"ClienteEnderecoID":0,"PDVID":0,"ClienteID":5045579,"SessionID":"03c10383-76de-4db3-bfc8-afc858ce26d9","UsuarioID":1657,"LojaID":2,"CanalID":2,"ValesIngressoID":null,"EnderecoTemp":null,"SiteID":1,"TokenPayPal":null,"biletoToken":"eyJraWQiOiJrMSIsImFsZyI6IkhTMjU2In0.eyJpc3MiOiJiaWxldG8iLCJqdGkiOiJ5bjVnd1N1OVZ2VFZ6d1FJLWM2LS13IiwiaWF0IjoxNDYxNjk1NzQ1LCJleHAiOjE0NjE2OTYzNDUsIm5iZiI6MTQ2MTY5NTY4NSwicGwiOiJ7XCJhY2NvdW50SWRcIjpcIjE2NDRhNDI1LWJlMjYtNDc0Zi1hNTFkLWE4N2IzMTU5NDczMlwiLFwidGVuYW50SWRcIjoxfSJ9.THF8zDjPNDbJUK9nGlQp5fMJ_us5OnVz9dm_UNUGC3g","biletoUuid":"66eec9f4-8d74-42c3-828e-1295a0ab318e","Guid":null}
