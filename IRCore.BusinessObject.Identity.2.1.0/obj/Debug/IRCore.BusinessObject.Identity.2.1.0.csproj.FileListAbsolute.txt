@@ -69,6 +69,9 @@ C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRCore.BusinessOb
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRCore.DataAccess.ADO.dll
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRCore.DataAccess.Model.dll
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRCore.Util.dll
+C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Microsoft.Owin.Security.OAuth.dll
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRLib.dll
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\CTLib.dll
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IngressoRapido.dll
@@ -103,13 +106,10 @@ C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Microsoft.Owin.Se
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRLib.pdb
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\CTLib.pdb
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IngressoRapido.pdb
-C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\PagedList.xml
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Facebook.xml
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Newtonsoft.Json.xml
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\IRAPI.SDK.pdb
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\LinqToExcel.xml
-C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Flurl.pdb
-C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Flurl.xml
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\System.Net.Http.Formatting.xml
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\EntityFramework.xml
 C:\Git-d\ir-api\IRCore.BusinessObject.Identity.2.1.0\bin\Debug\Dapper.pdb

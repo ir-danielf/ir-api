@@ -1,2 +1,0 @@
-﻿Content-Type: application/json
-Accept-Charset: UTF-8

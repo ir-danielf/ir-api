@@ -77,7 +77,6 @@ C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\Dapper.xml
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\EntityFramework.xml
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\log4net.xml
-C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\PagedList.xml
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\System.Web.Razor.xml
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\IRAPI.SDK.pdb
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\EPPlus.xml

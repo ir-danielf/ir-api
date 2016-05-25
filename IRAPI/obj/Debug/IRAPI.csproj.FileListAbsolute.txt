@@ -192,10 +192,7 @@ C:\Git-d\ir-api\IRAPI\bin\CsvHelper.pdb
 C:\Git-d\ir-api\IRAPI\bin\CsvHelper.xml
 C:\Git-d\ir-api\IRAPI\bin\EntityFramework.xml
 C:\Git-d\ir-api\IRAPI\bin\EntityFramework.SqlServer.xml
-C:\Git-d\ir-api\IRAPI\bin\Facebook.xml
 C:\Git-d\ir-api\IRAPI\bin\Newtonsoft.Json.xml
-C:\Git-d\ir-api\IRAPI\bin\PagedList.xml
-C:\Git-d\ir-api\IRAPI\bin\RestSharp.xml
 C:\Git-d\ir-api\IRAPI\bin\System.Net.Http.Extensions.xml
 C:\Git-d\ir-api\IRAPI\bin\System.Net.Http.Formatting.xml
 C:\Git-d\ir-api\IRAPI\bin\System.Net.Http.Primitives.xml
@@ -225,8 +222,6 @@ C:\Git-d\ir-api\IRAPI\bin\System.Web.Http.Owin.xml
 C:\Git-d\ir-api\IRAPI\bin\IRAPI.SDK.pdb
 C:\Git-d\ir-api\IRAPI\bin\EPPlus.xml
 C:\Git-d\ir-api\IRAPI\bin\LinqToExcel.xml
-C:\Git-d\ir-api\IRAPI\bin\Flurl.pdb
-C:\Git-d\ir-api\IRAPI\bin\Flurl.xml
 C:\Git-d\ir-api\IRAPI\bin\Dapper.pdb
 C:\Git-d\ir-api\IRAPI\bin\Dapper.xml
 C:\Git-d\ir-api\IRAPI\bin\log4net.xml

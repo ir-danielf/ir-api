@@ -1,3 +1,0 @@
-﻿{
-  "urlRet" : "http://www.ingressorapido.com.br/LoginCadastro.aspx"
-}

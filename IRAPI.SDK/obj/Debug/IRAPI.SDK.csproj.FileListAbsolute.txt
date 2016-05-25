@@ -14,9 +14,9 @@ C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\IRAPI.SDK.pdb
 C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\Newtonsoft.Json.dll
 C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\RestSharp.dll
 C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\System.Net.Http.Formatting.dll
+C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\Newtonsoft.Json.xml
 C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\System.Net.Http.Formatting.xml
 C:\Git-d\ir-api\IRAPI.SDK\obj\Debug\IRAPI.SDK.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRAPI.SDK\obj\Debug\IRAPI.SDK.dll
 C:\Git-d\ir-api\IRAPI.SDK\obj\Debug\IRAPI.SDK.pdb
-C:\Git-d\ir-api\IRAPI.SDK\bin\Debug\Newtonsoft.Json.xml

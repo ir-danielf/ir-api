@@ -1,8 +1,0 @@
-﻿{
-  "setorID": 13860,
-  "apresentacaoID": 174746,
-  "precos":[{
-    "precoID": 2388361,
-    "quantidade": 1             
-  }]
-}

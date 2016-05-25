@@ -1,4 +1,0 @@
-﻿{
-    "accessToken": "EMAWcknPZBr9lhmcbGvL2Fp4kFle0bk4XQKx7i3qEcEE55reqy21QD80Pc8qqV3LbUDaDisgN44zGOA1YvlXJuSoStDR6KvBi6D4EbVHwZDZD",
-    "guid": "43cd38d1-545a-4b88-a1ce-0b66f8ee4e33"
-}

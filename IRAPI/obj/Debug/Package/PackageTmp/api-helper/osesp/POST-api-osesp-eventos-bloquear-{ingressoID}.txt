@@ -1,8 +1,0 @@
-﻿{
-    "Sucesso": true,
-    "Mensagem": "OK",
-    "Retorno": {
-        "BloqueioID": 6687,
-        "Status": "Bloqueado"
-    }
-}

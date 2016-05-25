@@ -36,6 +36,7 @@ C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IngressoRapido.dll.config
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IngressoRapido.dll
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IngressoRapido.pdb
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\CTLib.dll
+C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\EntityFramework.dll
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IRCore.Util.dll
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IRLib.dll
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\Newtonsoft.Json.dll
@@ -56,7 +57,6 @@ C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IRCore.Util.pdb
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\EntityFramework.xml
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\IRAPI.SDK.pdb
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\EPPlus.xml
-C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\PagedList.xml
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\log4net.xml
 C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\Site\IngressoRapidoLib\obj\Debug\IngressoRapidoLib.csprojResolveAssemblyReference.cache

@@ -1,4 +1,0 @@
-﻿{ 
-    "oldPassword":"abc123*",
-    "newPassword":"abc123"
-}

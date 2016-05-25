@@ -1,5 +1,0 @@
-﻿{
-  "entregaControleID" : 137,
-  "clienteEnderecoID" : 0,
-  "pdvID":0
-}

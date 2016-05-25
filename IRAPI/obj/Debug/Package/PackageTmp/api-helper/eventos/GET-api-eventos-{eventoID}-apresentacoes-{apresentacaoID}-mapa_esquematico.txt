@@ -1,9 +1,0 @@
-﻿{
-    "Sucesso": true,
-    "Mensagem": "OK",
-    "Retorno": {
-        "urlMapa": "http://api.ingressorapido.com.br/ImagensSistema/MapaEsquematico/me000709.gif",
-        "mapaSetor": []
-    }
-}
-

@@ -1,7 +1,0 @@
-﻿{
-  "Sucesso": true,
-  "Mensagem": "OK",
-  "Retorno": {
-    "token": "EC-00C953277X1446307"
-  }
-}

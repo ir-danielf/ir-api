@@ -1,4 +1,0 @@
-﻿{
-  "Sucesso": true,
-  "Mensagem": "OK"
-}

@@ -74,7 +74,6 @@ C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\Newtonsoft.Json.xml
 C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\System.Web.Razor.xml
 C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\IRAPI.SDK.pdb
 C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\EPPlus.xml
-C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\PagedList.xml
 C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\log4net.xml
 C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\IRCore.DataAccess.Model\obj\Debug\IRCore.DataAccess.Model.csprojResolveAssemblyReference.cache

@@ -1,4 +1,0 @@
-{
-  "emailcpf": "username@email.com.br",
-  "url": "http://www.ingressorapido.com.br"
-}
