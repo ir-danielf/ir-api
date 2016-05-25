@@ -112,3 +112,4 @@ C:\Git-d\ir-api\IRCore.Web.MVC.5.2.0\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\IRCore.Web.MVC.5.2.0\obj\Debug\IRCore.Web.MVC.5.2.0.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRCore.Web.MVC.5.2.0\obj\Debug\IRCore.Web.MVC.5.2.0.dll
 C:\Git-d\ir-api\IRCore.Web.MVC.5.2.0\obj\Debug\IRCore.Web.MVC.5.2.0.pdb
+C:\Git-d\ir-api\IRCore.Web.MVC.5.2.0\bin\Debug\PagedList.xml

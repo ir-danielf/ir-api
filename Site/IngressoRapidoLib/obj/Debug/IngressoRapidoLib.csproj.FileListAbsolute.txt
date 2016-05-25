@@ -62,3 +62,4 @@ C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\Site\IngressoRapidoLib\obj\Debug\IngressoRapidoLib.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\Site\IngressoRapidoLib\obj\Debug\IngressoRapido.dll
 C:\Git-d\ir-api\Site\IngressoRapidoLib\obj\Debug\IngressoRapido.pdb
+C:\Git-d\ir-api\Site\IngressoRapidoLib\bin\Debug\PagedList.xml

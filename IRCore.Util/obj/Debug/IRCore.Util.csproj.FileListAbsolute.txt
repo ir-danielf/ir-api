@@ -38,3 +38,6 @@ C:\Git-d\ir-api\IRCore.Util\bin\Debug\System.Web.Razor.xml
 C:\Git-d\ir-api\IRCore.Util\obj\Debug\IRCore.Util.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRCore.Util\obj\Debug\IRCore.Util.dll
 C:\Git-d\ir-api\IRCore.Util\obj\Debug\IRCore.Util.pdb
+C:\Git-d\ir-api\IRCore.Util\bin\Debug\PagedList.dll
+C:\Git-d\ir-api\IRCore.Util\bin\Debug\PagedList.xml
+C:\Git-d\ir-api\IRCore.Util\bin\Debug\log4net.dll

@@ -229,3 +229,5 @@ C:\Git-d\ir-api\IRAPI\obj\Debug\IRAPI.csproj.App.config
 C:\Git-d\ir-api\IRAPI\obj\Debug\IRAPI.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRAPI\obj\Debug\IRAPI.dll
 C:\Git-d\ir-api\IRAPI\obj\Debug\IRAPI.pdb
+C:\Git-d\ir-api\IRAPI\bin\PagedList.dll
+C:\Git-d\ir-api\IRAPI\bin\PagedList.xml

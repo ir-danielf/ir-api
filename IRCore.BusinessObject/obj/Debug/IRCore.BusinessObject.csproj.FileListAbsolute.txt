@@ -129,3 +129,5 @@ C:\Git-d\ir-api\IRCore.BusinessObject\bin\Debug\EntityFramework.SqlServer.xml
 C:\Git-d\ir-api\IRCore.BusinessObject\obj\Debug\IRCore.BusinessObject.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRCore.BusinessObject\obj\Debug\IRCore.BusinessObject.dll
 C:\Git-d\ir-api\IRCore.BusinessObject\obj\Debug\IRCore.BusinessObject.pdb
+C:\Git-d\ir-api\IRCore.BusinessObject\bin\Debug\PagedList.dll
+C:\Git-d\ir-api\IRCore.BusinessObject\bin\Debug\PagedList.xml

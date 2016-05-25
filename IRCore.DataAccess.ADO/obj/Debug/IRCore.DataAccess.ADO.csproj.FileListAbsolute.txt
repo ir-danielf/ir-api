@@ -84,3 +84,5 @@ C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\obj\Debug\IRCore.DataAccess.ADO.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\obj\Debug\IRCore.DataAccess.ADO.dll
 C:\Git-d\ir-api\IRCore.DataAccess.ADO\obj\Debug\IRCore.DataAccess.ADO.pdb
+C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\PagedList.dll
+C:\Git-d\ir-api\IRCore.DataAccess.ADO\bin\Debug\PagedList.xml

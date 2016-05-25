@@ -60,3 +60,4 @@ C:\Git-d\ir-api\Comum\IRLib\obj\Debug\IRLib.Template.resources
 C:\Git-d\ir-api\Comum\IRLib\obj\Debug\IRLib.csproj.GenerateResource.Cache
 C:\Git-d\ir-api\Comum\IRLib\obj\Debug\IRLib.dll
 C:\Git-d\ir-api\Comum\IRLib\obj\Debug\IRLib.pdb
+C:\Git-d\ir-api\Comum\IRLib\bin\Debug\PagedList.xml

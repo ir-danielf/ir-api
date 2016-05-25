@@ -21,3 +21,4 @@ C:\Git-d\ir-api\Comum\CTLib\bin\Debug\log4net.xml
 C:\Git-d\ir-api\Comum\CTLib\obj\Debug\CTLib.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\Comum\CTLib\obj\Debug\CTLib.dll
 C:\Git-d\ir-api\Comum\CTLib\obj\Debug\CTLib.pdb
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\PagedList.xml

@@ -155,3 +155,5 @@ C:\Git-d\ir-api\IRCore.Test\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\IRCore.Test\obj\Debug\IRCore.Test.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRCore.Test\obj\Debug\IRCore.Test.dll
 C:\Git-d\ir-api\IRCore.Test\obj\Debug\IRCore.Test.pdb
+C:\Git-d\ir-api\IRCore.Test\bin\Debug\PagedList.dll
+C:\Git-d\ir-api\IRCore.Test\bin\Debug\PagedList.xml

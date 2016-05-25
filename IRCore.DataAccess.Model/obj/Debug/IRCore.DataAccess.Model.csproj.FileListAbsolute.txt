@@ -79,3 +79,4 @@ C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\RestSharp.xml
 C:\Git-d\ir-api\IRCore.DataAccess.Model\obj\Debug\IRCore.DataAccess.Model.csprojResolveAssemblyReference.cache
 C:\Git-d\ir-api\IRCore.DataAccess.Model\obj\Debug\IRCore.DataAccess.Model.dll
 C:\Git-d\ir-api\IRCore.DataAccess.Model\obj\Debug\IRCore.DataAccess.Model.pdb
+C:\Git-d\ir-api\IRCore.DataAccess.Model\bin\Debug\PagedList.xml
