@@ -10,3 +10,15 @@ C:\Git\Code\Comum\CTLib\bin\Debug\log4net.xml
 C:\Git\Code\Comum\CTLib\obj\Debug\CTLib.csprojResolveAssemblyReference.cache
 C:\Git\Code\Comum\CTLib\obj\Debug\CTLib.dll
 C:\Git\Code\Comum\CTLib\obj\Debug\CTLib.pdb
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\CTLib.dll.config
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\CTLib.dll
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\CTLib.pdb
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\IRCore.Util.dll
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\PagedList.dll
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\log4net.dll
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\IRCore.Util.pdb
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\PagedList.xml
+C:\Git-d\ir-api\Comum\CTLib\bin\Debug\log4net.xml
+C:\Git-d\ir-api\Comum\CTLib\obj\Debug\CTLib.csprojResolveAssemblyReference.cache
+C:\Git-d\ir-api\Comum\CTLib\obj\Debug\CTLib.dll
+C:\Git-d\ir-api\Comum\CTLib\obj\Debug\CTLib.pdb
